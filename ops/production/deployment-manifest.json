@@ -1,0 +1,29 @@
+{
+  "system": "CasePath",
+  "internal_identity": "app://casepath",
+  "repository": "aboudykeddeh276-stack/CASEPATH",
+  "source_revision": "7fd8a6244ecc5bc4d3f93d98e26f76a67be3bf7e",
+  "source_revision_message": "feat(casepath): canonical master build v1.0 [101 files - verified deploy gate]",
+  "public_target": "https://casepath.com.au/",
+  "deployment_claim_state": "PUBLIC_LIVE_OBSERVED_RECONCILIATION_PENDING",
+  "deployment_actuator": "UNRESOLVED_IN_CHAT_RUNTIME",
+  "required_chain": [
+    "source_revision",
+    "build_or_materialisation",
+    "deployment_actuator",
+    "origin_or_edge_mutation",
+    "deployment_receipt",
+    "outside_in_readback",
+    "source_readback_reconciliation",
+    "rollback_route"
+  ],
+  "promotion_rule": "Do not promote to VERIFIED_PRODUCTION_DEPLOYMENT unless the deployment actuator reports success and the externally read-back target corresponds to the intended source/materialisation.",
+  "current_observation": {
+    "public_url_is_observable": true,
+    "public_content_is_observable": true,
+    "source_to_public_byte_identity_proven_here": false,
+    "deployment_actuator_proven_here": false,
+    "rollback_proven_here": false
+  },
+  "fail_closed": true
+}
