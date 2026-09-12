@@ -1,0 +1,32 @@
+name: CasePath production readback
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  public-readback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Verify public CasePath projection
+        env:
+          EXPECTED_MARKER: "20260727iosscroll1"
+        run: |
+          python3 ops/production/readback.py \
+            --url https://casepath.com.au/ \
+            --expected-marker "$EXPECTED_MARKER" \
+            --output casepath-public-readback.json
+
+      - name: Publish readback receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: casepath-public-readback
+          path: casepath-public-readback.json
+          if-no-files-found: error
