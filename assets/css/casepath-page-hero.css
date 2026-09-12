@@ -1,0 +1,212 @@
+/**
+ * CasePath page hero — single source of truth (.cp-page-hero)
+ *
+ * Structure:
+ *   .cp-page-hero
+ *     .cp-page-hero__inner
+ *       .cp-page-hero__layout
+ *         .cp-page-hero__icon
+ *         .cp-page-hero__content
+ *           .cp-page-hero__eyebrow
+ *           h1
+ *           .cp-page-hero__statement
+ *           .cp-page-hero__support (optional)
+ *
+ * No page-specific hero CSS. No compact variants. No in-hero CTAs.
+ */
+
+:root {
+  --cp-page-header-min-height: clamp(5.5rem, 8.5vw, 7.25rem);
+  --cp-page-header-pad-y: clamp(0.85rem, 1.75vw, 1.25rem);
+  --cp-page-hero-content-gap: var(--cp-page-header-gap, 0.45rem);
+  --cp-page-hero-body-after: var(--cp-space-lg, 1.5rem);
+  --cp-page-header-pad-x: var(--cp-public-pad-x, clamp(1rem, 4vw, 1.5rem));
+  --cp-page-header-content-max: 44rem;
+  --cp-page-header-gap: 0.45rem;
+  --cp-page-header-title-size: var(--cp-type-hero);
+  --cp-page-header-title-line-height: 1.1;
+  --cp-page-header-body-size: var(--cp-type-body);
+  --cp-page-header-body-line-height: 1.58;
+}
+
+.cp-page-hero {
+  --cp-page-hero-panel-start: 68%;
+  background: linear-gradient(90deg, #17211d 0%, #202b26 calc(var(--cp-page-hero-panel-start) - 1px), #24352f var(--cp-page-hero-panel-start), #15201c 100%) !important;
+  height: auto !important;
+  min-height: var(--cp-page-header-min-height) !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: var(--cp-page-header-pad-y) var(--cp-page-header-pad-x) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  scroll-margin-top: calc(var(--cp-privacy-banner-height, 2.25rem) + 1rem);
+}
+
+.cp-page-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: calc(100% - var(--cp-page-hero-panel-start)) !important;
+  height: auto !important;
+  background: linear-gradient(180deg, rgba(52, 83, 69, 0.48) 0%, rgba(32, 55, 47, 0.74) 48%, rgba(17, 28, 24, 0.88) 100%) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.025) !important;
+  pointer-events: none !important;
+}
+
+.cp-page-hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+  pointer-events: none !important;
+}
+
+.cp-page-hero__inner {
+  width: 100% !important;
+  max-width: var(--cp-page-header-content-max) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: var(--cp-page-hero-content-gap) !important;
+  box-sizing: border-box !important;
+}
+
+.cp-page-hero .cp-page-hero__inner {
+  gap: var(--cp-page-hero-content-gap) !important;
+}
+
+.cp-page-hero__layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.cp-page-hero__icon {
+  flex-shrink: 0;
+}
+
+.cp-page-hero__icon .cp-icon-badge {
+  margin-bottom: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.cp-page-hero__icon .cp-icon-badge .cp-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.cp-page-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--cp-page-hero-content-gap);
+  min-width: 0;
+  flex: 1;
+}
+
+.cp-page-hero__content > * {
+  margin: 0 !important;
+}
+
+.cp-page-hero__eyebrow {
+  margin: 0 !important;
+  font-size: var(--cp-type-caption) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: var(--sage-light, #6aab7c) !important;
+}
+
+.cp-page-hero h1 {
+  margin: 0 !important;
+  font-family: var(--cp-font-serif, Georgia, "Times New Roman", serif) !important;
+  font-size: var(--cp-page-header-title-size) !important;
+  font-weight: 700 !important;
+  line-height: var(--cp-page-header-title-line-height) !important;
+  letter-spacing: 0 !important;
+  color: #fff !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+  overflow: hidden !important;
+}
+
+.cp-page-hero h1 em {
+  font-style: normal !important;
+  font-size: 1em !important;
+  color: #fff !important;
+}
+
+.cp-page-hero__statement {
+  max-width: 38rem !important;
+  margin: 0 !important;
+  font-family: var(--cp-font-sans, system-ui, sans-serif) !important;
+  font-size: var(--cp-type-body) !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: var(--cp-page-header-body-line-height) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.cp-page-hero__support {
+  max-width: 38rem !important;
+  margin: 0 !important;
+  font-family: var(--cp-font-sans, system-ui, sans-serif) !important;
+  font-size: var(--cp-type-small, 0.9rem) !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  color: rgba(255, 255, 255, 0.68) !important;
+}
+
+.cp-page-hero .cp-page-hero__inner > * + h1 {
+  margin-top: 0 !important;
+}
+
+.cp-page-hero .cp-page-hero__inner > h1 + p {
+  margin-top: var(--cp-page-hero-content-gap) !important;
+}
+
+body.public-static-shell .cp-page-hero + .section-wrap,
+body.public-static-shell .cp-page-hero + .mission-content,
+body.public-static-shell .cp-page-hero + .hiw-content,
+body.public-static-shell .cp-page-hero + div:not(.cp-page-hero),
+body.casepath-app-surface .cp-page-hero + .section-wrap,
+body.casepath-app-surface .cp-page-hero + div:not(.cp-page-hero) {
+  padding-top: var(--cp-page-hero-body-after) !important;
+}
+
+.cp-surface-page .cp-page-hero {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --cp-page-header-min-height: 0;
+    --cp-page-header-pad-y: 0.95rem;
+    --cp-page-hero-body-after: 1.1rem;
+    --cp-page-header-title-size: clamp(1.75rem, 8vw, 2.25rem);
+    --cp-page-header-body-size: 0.9rem;
+    --cp-page-header-body-line-height: 1.55;
+  }
+
+  .cp-page-hero__layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+  }
+}

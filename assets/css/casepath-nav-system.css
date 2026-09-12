@@ -1,0 +1,1261 @@
+/**
+ * casepath-nav-system.css — AUTHORITATIVE header / nav / auth / dropdown chrome.
+ *
+ * Load order (last wins for nav):
+ *   styles.css → public-static-pages.css → casepath-shell.css → casepath-polish-pass.css → THIS FILE
+ *
+ * Legacy nav button rules in styles.css are quarantined when .casepath-nav-categorized is present.
+ */
+
+@import url("casepath-design-tokens.css");
+
+/* --- Layout containment & stacking (dropdowns must not shift page content) --- */
+:root {
+  --cp-disclaimer-z: 1;
+  --cp-header-z: 120;
+  --cp-nav-dropdown-z: 200;
+  --cp-nav-mobile-drawer-z: 10200;
+  --cp-auth-modal-z: 103000;
+  /* Primary nav row: five items (How It Works + 3 dropdowns + Pricing). */
+  /* Compact capsule: tighter gap (~-30%) and reduced vertical/horizontal pad. */
+  --cp-header-nav-row-gap: 0.35rem;
+  --cp-header-nav-row-pad: 0.18rem 0.28rem;
+}
+
+.disclaimer-banner {
+  position: relative;
+  z-index: var(--cp-disclaimer-z);
+  flex-shrink: 0;
+}
+
+header.header {
+  position: relative;
+  z-index: var(--cp-header-z);
+  overflow: visible;
+}
+
+/* Auth modal must sit above header, mobile nav drawer (10200), and scrims */
+#auth-modal.modal-overlay {
+  z-index: var(--cp-auth-modal-z) !important;
+  pointer-events: auto;
+}
+
+#auth-modal.modal-overlay.show {
+  z-index: var(--cp-auth-modal-z) !important;
+  pointer-events: auto;
+}
+
+#auth-modal.modal-overlay .modal {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+header.header .nav-wrapper.casepath-nav-categorized {
+  position: relative;
+  overflow: visible;
+}
+
+.casepath-nav-categorized .nav-cat-wrap {
+  position: relative;
+  overflow: visible;
+}
+
+.casepath-nav-categorized .nav-cat-menu[hidden] {
+  pointer-events: none;
+}
+
+header.header .nav-green-bar {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+header.header + .page,
+header.header + main {
+  position: relative;
+  z-index: 0;
+}
+
+html.casepath-nav-debug header.header {
+  outline: 2px dashed #c2410c;
+  outline-offset: 2px;
+}
+
+html.casepath-nav-debug .nav-cat-menu:not([hidden]) {
+  outline: 2px dashed #2563eb;
+  outline-offset: 1px;
+}
+
+html.casepath-nav-debug .nav-green-bar {
+  outline: 2px dashed #15803d;
+  outline-offset: -1px;
+}
+
+/* --- Native control reset (prevents browser-default button / select chrome) --- */
+.casepath-nav-categorized .nav-cat-toggle,
+.casepath-nav-categorized .nav-mobile-toggle,
+.casepath-nav-categorized #lang-btn,
+.casepath-nav-categorized .lang-switch button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+/* Auth CTA interaction guard: preserve pointer across full clickable surface
+   even if legacy/inline typography layers override defaults. */
+.casepath-nav-categorized #nav-signin-btn,
+.casepath-nav-categorized #nav-signup-btn,
+.casepath-nav-categorized #navSignOutBtn,
+.casepath-nav-categorized #nav-guest-actions a,
+.casepath-nav-categorized #nav-auth-area a,
+.casepath-nav-categorized #nav-auth-area button,
+.casepath-nav-categorized .nav-cta,
+.casepath-nav-categorized .cta-primary,
+.casepath-nav-categorized .nav-mobile-link[data-cp-mobile-nav="signin"],
+.casepath-nav-categorized .nav-mobile-link[data-cp-mobile-nav="signup"],
+.casepath-nav-categorized .nav-mobile-link[data-cp-mobile-nav="login"],
+.casepath-nav-categorized .nav-mobile-link[data-cp-mobile-nav="join"],
+.casepath-nav-categorized .nav-mobile-link[data-cp-mobile-nav="get-started"] {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: auto;
+}
+
+.casepath-nav-categorized #nav-signin-btn *,
+.casepath-nav-categorized #nav-signup-btn *,
+.casepath-nav-categorized #navSignOutBtn *,
+.casepath-nav-categorized #nav-guest-actions a *,
+.casepath-nav-categorized #nav-auth-area a *,
+.casepath-nav-categorized #nav-auth-area button * {
+  cursor: inherit;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.casepath-nav-categorized .nav-cat-toggle,
+.casepath-nav-categorized .nav-cat-link,
+.casepath-nav-categorized #lang-btn,
+.casepath-nav-categorized #nav-signin-btn,
+.casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+#casepath-nav-quick-exit-slot .casepath-quick-exit-btn,
+#casepath-utility-quick-exit-slot .casepath-quick-exit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-family: inherit;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+/* --- Layout: logo zone | nav zone | account zone --- */
+@media (min-width: 901px) {
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: clamp(1rem, 2.5vw, 2.75rem) !important;
+    padding-right: clamp(1rem, 3vw, 2.25rem) !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+  }
+
+  .casepath-nav-categorized .header-logo-zone {
+    order: 1;
+    flex: 0 0 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .casepath-nav-categorized .header-logo-zone .casepath-brand {
+    margin-right: 0;
+  }
+
+  .casepath-nav-categorized .header-nav-zone {
+    order: 2;
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .casepath-nav-categorized .header-nav-zone .nav-site-links {
+    flex: 1 1 auto;
+    flex-shrink: 1;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .casepath-nav-categorized .header-search-zone {
+    order: 3;
+    flex: 0 0 auto;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+    margin-left: 0.25rem;
+    margin-right: 0.15rem;
+  }
+
+  .casepath-nav-categorized .header-account-zone {
+    order: 4;
+    flex: 0 0 auto;
+    margin-left: 0;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .casepath-nav-categorized .header-account-zone .nav-trailing {
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    min-width: max-content;
+  }
+
+  .casepath-nav-categorized .nav-trailing .header-actions,
+  .casepath-nav-categorized #nav-auth-area,
+  .casepath-nav-categorized #nav-guest-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    white-space: nowrap;
+    min-width: max-content;
+  }
+
+  .casepath-nav-categorized .nav-account-status {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: var(--cp-type-caption);
+    color: var(--soft, #6b7a6e);
+    line-height: 1.2;
+  }
+
+  .casepath-nav-categorized .nav-account-status:empty {
+    display: none;
+  }
+
+  .casepath-nav-categorized #nav-pricing.nav-cat-link {
+    margin-right: 0;
+  }
+
+  .casepath-nav-categorized .casepath-brand {
+    order: initial;
+    flex: 0 0 auto;
+  }
+
+  .casepath-nav-categorized .nav-site-links {
+    order: initial;
+  }
+
+  .casepath-nav-categorized .nav-trailing {
+    order: initial;
+  }
+
+  .casepath-nav-categorized #nav-main-grid.nav-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    min-width: 0;
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+  }
+}
+
+.casepath-nav-categorized .nav-cat-wrap {
+  position: relative;
+}
+
+.header .casepath-nav-categorized {
+  z-index: 20;
+}
+
+/* Dropdown panels (structure + visibility) */
+.casepath-nav-categorized .nav-cat-menu {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--cp-nav-dropdown-z, 1000);
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+}
+
+.casepath-nav-categorized .nav-cat-wrap--align-end .nav-cat-menu {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.casepath-nav-categorized .nav-cat-menu[hidden] {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.casepath-nav-categorized .nav-cat-toggle[aria-expanded="true"] .nav-cat-chevron {
+  transform: rotate(180deg);
+}
+
+.casepath-nav-categorized .nav-mobile-groups {
+  display: none;
+}
+
+.casepath-nav-categorized .nav-item-tag {
+  font-size: var(--cp-type-caption);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sage, #4a7c59);
+  margin-left: 0.25rem;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.casepath-nav-categorized .nav-cat-menu a[data-cr-locked="true"]::after,
+.casepath-nav-categorized .nav-cat-link[data-cr-locked="true"]::after,
+.casepath-nav-categorized .nav-mobile-link[data-cr-locked="true"]::after {
+  content: "";
+  width: 0.78rem;
+  height: 0.78rem;
+  margin-left: 0.42rem;
+  flex: 0 0 0.78rem;
+  opacity: 0.58;
+  background-color: currentColor;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'%3E%3Crect width='18' height='11' x='3' y='11' rx='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'%3E%3Crect width='18' height='11' x='3' y='11' rx='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+
+/* --- Design tokens --- */
+header.header {
+  --cp-header-bg: #fffdfa;
+  --cp-header-line: rgba(74, 124, 89, 0.12);
+  --cp-header-soft: #f6faf7;
+  --cp-header-soft-strong: #edf5ef;
+  --cp-header-text: var(--charcoal, #1e2420);
+  --cp-header-muted: var(--mid, #4a5548);
+  --cp-header-accent: var(--sage, #4a7c59);
+  --cp-header-control-h: var(--cp-nav-control-height, 44px);
+  --cp-header-control-radius: var(--radius-pill);
+  --cp-header-control-shadow: var(--shadow-soft);
+  --cp-header-control-shadow-hover: var(--shadow-card);
+  --cp-header-transition: 160ms ease;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  background: var(--cp-header-bg) !important;
+  border-bottom: 0 !important;
+  box-shadow: 0 1px 0 rgba(74, 124, 89, 0.08) !important;
+}
+
+header.header .nav-wrapper.casepath-nav-categorized {
+  width: 100%;
+  background: var(--cp-header-bg) !important;
+  border-bottom: 1px solid rgba(74, 124, 89, 0.06) !important;
+  box-shadow: none !important;
+  overflow: visible;
+}
+
+header.header .nav-wrapper.casepath-nav-categorized,
+header.header .nav-top-row.header-inner,
+header.header .nav-site-links {
+  overflow: visible;
+}
+
+/* --- Desktop chrome --- */
+@media (min-width: 901px) {
+  header.header .nav-top-row.header-inner,
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    min-height: 64px !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem) !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  .casepath-nav-categorized .casepath-brand-logo {
+    height: clamp(38px, 3.2vw, 48px) !important;
+    width: auto !important;
+    max-width: clamp(150px, 18vw, 218px) !important;
+    object-fit: contain !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    gap: var(--cp-header-nav-row-gap) !important;
+    padding: var(--cp-header-nav-row-pad) !important;
+    overflow: visible !important;
+    background: rgba(246, 250, 247, 0.92) !important;
+    border: 1px solid rgba(74, 124, 89, 0.1) !important;
+    border-radius: var(--radius-pill) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
+  }
+
+  header.header .nav-top-row.header-inner .nav-cat-row--desktop,
+  .casepath-nav-categorized .nav-top-row.header-inner .nav-cat-row--desktop {
+    padding: var(--cp-header-nav-row-pad) !important;
+    overflow: visible !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-link,
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-wrap {
+    flex: 0 0 auto;
+    flex-shrink: 0;
+  }
+
+  /* Capsule-only control sizing — do not affect lang / sign-in / signup / quick exit. */
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-link,
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-wrap > .nav-cat-toggle {
+    height: 36px !important;
+    min-height: 36px !important;
+    padding-left: 0.55rem !important;
+    padding-right: 0.55rem !important;
+  }
+
+  /* Workspace shortcut lives in the primary nav; keep account rail compact when signed in. */
+  .casepath-nav-categorized #nav-header-workspace {
+    display: none !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-toggle,
+  .casepath-nav-categorized .nav-cat-link {
+    height: var(--cp-header-control-h) !important;
+    min-height: var(--cp-header-control-h) !important;
+    padding: 0 var(--space-4) !important;
+    gap: 0.28rem !important;
+    color: var(--cp-header-muted) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    border-radius: var(--cp-header-control-radius) !important;
+    box-shadow: none !important;
+    font-size: var(--cp-type-small)) !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+    line-height: 1 !important;
+    transition: background var(--cp-header-transition), color var(--cp-header-transition), border-color var(--cp-header-transition), box-shadow var(--cp-header-transition) !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-toggle:hover,
+  .casepath-nav-categorized .nav-cat-toggle:focus-visible,
+  .casepath-nav-categorized .nav-cat-toggle[aria-expanded="true"],
+  .casepath-nav-categorized .nav-cat-link:hover,
+  .casepath-nav-categorized .nav-cat-link:focus-visible {
+    color: var(--cp-header-text) !important;
+    background: #fff !important;
+    border-color: rgba(74, 124, 89, 0.14) !important;
+    box-shadow: var(--cp-header-control-shadow) !important;
+    outline: none !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-toggle:focus-visible,
+  .casepath-nav-categorized .nav-cat-link:focus-visible {
+    box-shadow: var(--cp-header-control-shadow), 0 0 0 3px rgba(74, 124, 89, 0.16) !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-chevron {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: var(--cp-type-caption) !important;
+    opacity: 0.58 !important;
+    line-height: 1 !important;
+    transition: transform var(--cp-header-transition);
+  }
+
+  .casepath-nav-categorized #lang-btn,
+  .casepath-nav-categorized #nav-signin-btn,
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn {
+    height: var(--cp-header-control-h) !important;
+    min-height: var(--cp-header-control-h) !important;
+    padding: 0 var(--space-4) !important;
+    border-radius: var(--cp-header-control-radius) !important;
+    font-size: var(--cp-type-small)) !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+    line-height: 1 !important;
+    transform: none !important;
+    transition: background var(--cp-header-transition), border-color var(--cp-header-transition), box-shadow var(--cp-header-transition), color var(--cp-header-transition) !important;
+  }
+
+  .casepath-nav-categorized #lang-btn,
+  body:not(.page-satellite) .casepath-nav-categorized #nav-signin-btn {
+    background: #fff !important;
+    color: var(--cp-header-muted) !important;
+    border: 1px solid rgba(74, 124, 89, 0.16) !important;
+    box-shadow: var(--cp-header-control-shadow) !important;
+  }
+
+  .casepath-nav-categorized #lang-btn {
+    gap: 0.34rem !important;
+    padding-left: 0.78rem !important;
+    padding-right: 0.72rem !important;
+  }
+
+  .casepath-nav-categorized #lang-btn:hover,
+  .casepath-nav-categorized #lang-btn:focus-visible,
+  body:not(.page-satellite) .casepath-nav-categorized #nav-signin-btn:hover,
+  body:not(.page-satellite) .casepath-nav-categorized #nav-signin-btn:focus-visible {
+    background: var(--cp-header-soft) !important;
+    color: var(--cp-header-text) !important;
+    border-color: rgba(74, 124, 89, 0.28) !important;
+    box-shadow: var(--cp-header-control-shadow-hover) !important;
+  }
+
+  body:not(.page-satellite) .casepath-nav-categorized #nav-signin-btn {
+    text-decoration: none !important;
+  }
+
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+  .casepath-nav-categorized #nav-auth-area .nav-cta.cta-primary,
+  .casepath-nav-categorized #nav-guest-actions .nav-cta.cta-primary {
+    background: #4f765c !important;
+    color: #fff !important;
+    border: 1px solid rgba(45, 82, 57, 0.18) !important;
+    box-shadow: var(--shadow-soft) !important;
+    margin-left: 0 !important;
+  }
+
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary:hover,
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary:focus-visible,
+  .casepath-nav-categorized #nav-auth-area .nav-cta.cta-primary:hover {
+    background: #436b50 !important;
+    border-color: rgba(45, 82, 57, 0.25) !important;
+    box-shadow: 0 4px 12px rgba(31, 45, 35, 0.16) !important;
+  }
+
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn,
+  #casepath-utility-quick-exit-slot .casepath-quick-exit-btn {
+    background: #fff1f2 !important;
+    color: #9f1239 !important;
+    border: 1px solid rgba(190, 18, 60, 0.22) !important;
+    box-shadow: 0 1px 2px rgba(159, 18, 57, 0.08) !important;
+  }
+
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn:hover,
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn:focus-visible,
+  #casepath-utility-quick-exit-slot .casepath-quick-exit-btn:hover,
+  #casepath-utility-quick-exit-slot .casepath-quick-exit-btn:focus-visible {
+    background: #ffe4e6 !important;
+    color: #881337 !important;
+    border-color: rgba(190, 18, 60, 0.36) !important;
+    box-shadow: 0 4px 12px rgba(159, 18, 57, 0.12) !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-menu {
+    min-width: 15rem !important;
+    padding: var(--space-2) !important;
+    background: rgba(255, 253, 250, 0.98) !important;
+    border: 1px solid rgba(74, 124, 89, 0.13) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--cp-shadow-nav-dropdown) !important;
+    backdrop-filter: blur(10px);
+  }
+
+  .casepath-nav-categorized .nav-cat-menu a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.55rem !important;
+    min-height: 36px !important;
+    padding: 0.55rem var(--space-4) !important;
+    border-radius: var(--radius-md) !important;
+    color: var(--cp-header-muted) !important;
+    font-size: var(--cp-type-small) !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    text-decoration: none !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-menu .nav-cat-item-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: 1.1rem !important;
+    height: 1.1rem !important;
+    color: var(--sage, #4a7c59) !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-menu .nav-cat-item-icon .cp-icon {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-menu .nav-cat-item-label {
+    flex: 1 1 auto !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-menu a:hover,
+  .casepath-nav-categorized .nav-cat-menu a:focus-visible {
+    background: var(--cp-header-soft-strong) !important;
+    color: var(--cp-header-text) !important;
+    outline: none !important;
+  }
+
+  header.header .nav-green-bar,
+  .nav-green-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    background: linear-gradient(180deg, #3f6d52 0%, #365f47 100%) !important;
+    border-top: 1px solid rgba(74, 124, 89, 0.1) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 1px 0 rgba(31, 45, 35, 0.05) !important;
+    color: rgba(255, 255, 255, 0.94) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  header.header .nav-green-bar:not(.cp-announcement-bar),
+  .nav-green-bar:not(.cp-announcement-bar) {
+    min-height: 34px !important;
+    padding: 0.42rem 1rem !important;
+    font-size: var(--cp-type-caption) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Legacy brand-stack grid — superseded by 3-zone flex when header-account-chrome uses single row */
+  .casepath-nav-categorized .nav-top-row.header-inner.header-inner--brand-stack {
+    display: flex !important;
+    grid-template-columns: none !important;
+    column-gap: unset !important;
+    min-height: 64px !important;
+    padding-left: clamp(1rem, 2.5vw, 2.75rem) !important;
+    padding-right: clamp(1rem, 3vw, 2.25rem) !important;
+  }
+
+  .casepath-nav-categorized .nav-top-row.header-inner.header-inner--brand-stack .nav-brand-stack {
+    display: contents !important;
+  }
+
+  .casepath-nav-categorized .nav-top-row.header-inner.header-inner--brand-stack .casepath-brand {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+
+  .casepath-nav-categorized .nav-top-row.header-inner.header-inner--brand-stack .nav-site-links {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    justify-self: unset !important;
+  }
+
+  .casepath-nav-categorized .nav-top-row.header-inner.header-inner--brand-stack .nav-account-meta {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+
+  .casepath-nav-categorized .nav-top-row.header-inner.header-inner--brand-stack .nav-quick-exit-slot--desktop {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+
+  .nav-top-row.header-inner.header-inner--brand-stack #lang-btn,
+  .nav-top-row.header-inner.header-inner--brand-stack .nav-header-workspace,
+  .nav-top-row.header-inner.header-inner--brand-stack .nav-signout-utility,
+  .nav-top-row.header-inner.header-inner--brand-stack #nav-signin-btn,
+  .nav-top-row.header-inner.header-inner--brand-stack #nav-signup-btn.nav-cta.cta-primary {
+    height: var(--cp-header-control-h) !important;
+    min-height: var(--cp-header-control-h) !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/*
+ * Mid-desktop compaction (five primary nav items + account rail).
+ * Verified failure mode: at ~1100–1200px "Your Case" overlapped the account
+ * zone because the prior compact query ended at 1180px and left padding/gaps
+ * too large for How It Works + Learn + Prepare + Pricing + Your Case.
+ * Do not hide/remove Pricing; adapt spacing instead.
+ */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  :root {
+    --cp-header-nav-row-gap: 0.2rem;
+    --cp-header-nav-row-pad: 0.12rem 0.18rem;
+  }
+
+  header.header .nav-top-row.header-inner,
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    gap: 0.45rem !important;
+    padding-left: clamp(0.7rem, 1.4vw, 1.15rem) !important;
+    padding-right: clamp(0.55rem, 1.2vw, 0.95rem) !important;
+  }
+
+  .casepath-nav-categorized .header-logo-zone {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .casepath-nav-categorized .header-nav-zone,
+  .casepath-nav-categorized .header-nav-zone .nav-site-links {
+    justify-content: flex-start !important;
+  }
+
+  .casepath-nav-categorized .casepath-brand-logo {
+    height: 36px !important;
+    max-width: 148px !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop {
+    gap: var(--cp-header-nav-row-gap) !important;
+    padding: var(--cp-header-nav-row-pad) !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-link,
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-wrap > .nav-cat-toggle {
+    height: 34px !important;
+    min-height: 34px !important;
+    padding-left: 0.38rem !important;
+    padding-right: 0.38rem !important;
+    font-size: var(--cp-type-caption) !important;
+  }
+
+  .casepath-nav-categorized .header-account-zone,
+  .casepath-nav-categorized .header-account-zone .nav-trailing,
+  .casepath-nav-categorized .nav-trailing .header-actions,
+  .casepath-nav-categorized #nav-auth-area,
+  .casepath-nav-categorized #nav-guest-actions {
+    gap: 4px !important;
+  }
+
+  .casepath-nav-categorized #lang-btn,
+  .casepath-nav-categorized #nav-signin-btn,
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn {
+    height: 34px !important;
+    min-height: 34px !important;
+    font-size: var(--cp-type-caption) !important;
+  }
+
+  .casepath-nav-categorized #lang-btn {
+    gap: 0.18rem !important;
+    padding-left: 0.42rem !important;
+    padding-right: 0.38rem !important;
+  }
+
+  .casepath-nav-categorized #nav-signin-btn,
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn {
+    padding-left: 0.55rem !important;
+    padding-right: 0.55rem !important;
+  }
+
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary {
+    max-width: none !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+  }
+
+  .casepath-nav-categorized .nav-top-row.header-inner.header-inner--brand-stack .nav-quick-exit-slot--desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1220px) {
+  :root {
+    --cp-header-nav-row-gap: 0.12rem;
+    --cp-header-nav-row-pad: 0.1rem 0.12rem;
+  }
+
+  header.header .nav-top-row.header-inner,
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    gap: 0.32rem !important;
+    padding-left: 0.65rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .casepath-nav-categorized .header-logo-zone {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .casepath-nav-categorized .casepath-brand-logo {
+    height: 30px !important;
+    max-width: 112px !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-link,
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-wrap > .nav-cat-toggle {
+    height: 32px !important;
+    min-height: 32px !important;
+    padding-left: 0.28rem !important;
+    padding-right: 0.28rem !important;
+  }
+
+  .casepath-nav-categorized .header-account-zone {
+    min-width: 0;
+  }
+
+  .casepath-nav-categorized #lang-btn {
+    gap: 0.12rem !important;
+    padding-left: 0.32rem !important;
+    padding-right: 0.28rem !important;
+  }
+
+  .casepath-nav-categorized #lang-current-flag {
+    font-size: 0.9em;
+    line-height: 1;
+  }
+
+  .casepath-nav-categorized #nav-signin-btn,
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn {
+    height: 32px !important;
+    min-height: 32px !important;
+    padding-left: 0.45rem !important;
+    padding-right: 0.45rem !important;
+  }
+}
+
+/* Narrow desktop rail just above the mobile drawer breakpoint */
+@media (min-width: 1025px) and (max-width: 1120px) {
+  header.header .nav-top-row.header-inner,
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    gap: 0.28rem !important;
+    padding-left: 0.55rem !important;
+    padding-right: 0.4rem !important;
+  }
+
+  .casepath-nav-categorized .header-logo-zone {
+    min-width: 0 !important;
+  }
+
+  .casepath-nav-categorized .casepath-brand-logo {
+    height: 28px !important;
+    max-width: 96px !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-link,
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-wrap > .nav-cat-toggle {
+    padding-left: 0.22rem !important;
+    padding-right: 0.22rem !important;
+  }
+
+  .casepath-nav-categorized .header-account-zone,
+  .casepath-nav-categorized .header-account-zone .nav-trailing,
+  .casepath-nav-categorized .nav-trailing .header-actions,
+  .casepath-nav-categorized #nav-guest-actions {
+    gap: 3px !important;
+  }
+}
+
+/* --- Mobile chrome --- */
+@media (max-width: 1025px) {
+  .casepath-nav-categorized .nav-cat-row--desktop {
+    display: none !important;
+  }
+
+  .casepath-nav-categorized .nav-mobile-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    width: 100%;
+    padding: 0.35rem 0;
+  }
+
+  .casepath-nav-categorized .nav-mobile-group-label {
+    font-size: var(--cp-type-caption);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(74, 90, 78, 0.62);
+    margin: 0.65rem 1.15rem 0.15rem;
+  }
+
+  .casepath-nav-categorized .nav-mobile-link {
+    display: block;
+    padding: 0.55rem 1.15rem;
+    font-size: var(--cp-type-small);
+    font-weight: 600;
+    color: var(--charcoal, #1e2420);
+    text-decoration: none;
+  }
+
+  .casepath-nav-categorized .nav-mobile-link[data-cr-locked="true"] {
+    display: flex;
+    align-items: center;
+  }
+
+  .casepath-nav-categorized .nav-mobile-link:hover,
+  .casepath-nav-categorized .nav-mobile-link:focus-visible {
+    background: var(--sage-pale, #e8f0eb);
+    color: var(--sage, #4a7c59);
+  }
+
+  header.header .nav-top-row.header-inner,
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    padding: 0.56rem 0.85rem !important;
+    gap: 0.6rem !important;
+  }
+
+  .casepath-nav-categorized .header-logo-zone {
+    order: 1 !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .casepath-nav-categorized .header-nav-zone {
+    order: 4 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .casepath-nav-categorized .header-account-zone {
+    order: 3 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    white-space: normal;
+  }
+
+  .casepath-nav-categorized .casepath-brand {
+    order: initial !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .casepath-nav-categorized .casepath-brand-logo {
+    height: 38px !important;
+    max-width: 158px !important;
+    width: auto !important;
+  }
+
+  .casepath-nav-categorized .nav-trailing {
+    order: 3 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 0.42rem !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+  }
+
+  .casepath-nav-categorized .nav-trailing .header-actions,
+  .casepath-nav-categorized #nav-auth-area,
+  .casepath-nav-categorized #nav-guest-actions {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex-wrap: wrap !important;
+    gap: 0.42rem !important;
+  }
+
+  .casepath-nav-categorized .nav-site-links {
+    order: 4 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .casepath-nav-categorized .nav-mobile-toggle {
+    width: 100% !important;
+    min-height: 42px !important;
+    padding: 0 0.9rem !important;
+    background: var(--cp-header-soft, #f6faf7) !important;
+    border: 1px solid rgba(74, 124, 89, 0.14) !important;
+    border-radius: 12px !important;
+    color: var(--cp-header-text, #1e2420) !important;
+    font-weight: 700 !important;
+    box-shadow: var(--cp-header-control-shadow, 0 1px 2px rgba(31, 45, 35, 0.06)) !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .casepath-nav-categorized #nav-main-grid.nav-grid {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .casepath-nav-categorized #lang-btn,
+  .casepath-nav-categorized #nav-signin-btn,
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary {
+    height: 38px !important;
+    min-height: 38px !important;
+    border-radius: 999px !important;
+    font-weight: 650 !important;
+    font-size: var(--cp-type-small) !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+  }
+
+  header.header .nav-green-bar:not(.cp-announcement-bar),
+  .nav-green-bar:not(.cp-announcement-bar) {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    min-height: 32px !important;
+    padding: 0.42rem 0.8rem !important;
+    font-size: var(--cp-type-caption) !important;
+  }
+}
+
+/* Design-system lockdown — active category + resilient mobile chrome */
+.casepath-nav-categorized .nav-cat-toggle.active,
+.casepath-nav-categorized .nav-cat-link.active {
+  color: var(--cp-header-text, var(--charcoal)) !important;
+  background: #fff !important;
+  border-color: rgba(74, 124, 89, 0.22) !important;
+  box-shadow: var(--cp-header-control-shadow, 0 1px 2px rgba(31, 45, 35, 0.06)) !important;
+}
+
+@media (max-width: 1025px) {
+  .casepath-nav-categorized .nav-mobile-toggle {
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  header.header:has(.casepath-nav-categorized) {
+    min-height: 3.25rem;
+  }
+}
+
+/* Canonical navbar auth state — guest vs authenticated (no mixed UI) */
+html.casepath-auth-nav-authenticated #nav-guest-actions,
+.nav-auth-area--signed-in #nav-guest-actions {
+  display: none !important;
+}
+
+html.casepath-auth-nav-authenticated #navSignOutBtn,
+.nav-auth-area--signed-in #navSignOutBtn {
+  display: inline-flex !important;
+}
+
+html.casepath-auth-nav-guest #navSignOutBtn,
+.nav-auth-area--guest #navSignOutBtn {
+  display: none !important;
+}
+
+html.casepath-auth-nav-guest #nav-guest-actions,
+.nav-auth-area--guest #nav-guest-actions {
+  display: flex !important;
+}
+
+html.casepath-auth-nav-authenticated #nav-signin-btn,
+html.casepath-auth-nav-authenticated #nav-signup-btn,
+.nav-auth-area--signed-in #nav-signin-btn,
+.nav-auth-area--signed-in #nav-signup-btn {
+  display: none !important;
+}
+
+html.casepath-auth-nav-hydrating #nav-guest-actions,
+html.casepath-auth-nav-hydrating #navSignOutBtn,
+html.casepath-auth-nav-hydrating #nav-signin-btn,
+html.casepath-auth-nav-hydrating #nav-signup-btn,
+.nav-auth-area--hydrating #nav-guest-actions,
+.nav-auth-area--hydrating #navSignOutBtn {
+  pointer-events: none;
+  opacity: 0.72;
+}
+
+.casepath-nav-categorized .nav-account-status {
+  max-width: 9.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1180px) {
+  .casepath-nav-categorized .nav-account-status {
+    max-width: 7rem;
+    font-size: var(--cp-type-caption);
+  }
+
+  .casepath-nav-categorized .header-account-zone {
+    gap: 8px;
+  }
+
+  .casepath-nav-categorized .nav-trailing .header-actions,
+  .casepath-nav-categorized #nav-auth-area,
+  .casepath-nav-categorized #nav-guest-actions {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 1025px) {
+  html.casepath-auth-nav-authenticated #nav-signin-btn {
+    display: none !important;
+  }
+}
+
+/* --- Quick Exit explanatory tooltip (canonical mount: casepath-quick-exit.js) --- */
+.cp-quick-exit-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.cp-quick-exit-tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: auto;
+  z-index: 9999;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: 240px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(20, 28, 24, 0.96);
+  color: #f4f7f5;
+  font-family: var(--font-family-base, inherit);
+  font-size: var(--cp-type-small);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.22),
+    0 2px 8px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    visibility 160ms ease;
+}
+
+.cp-quick-exit-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 14px;
+  left: auto;
+  margin: 0;
+  border: 4px solid transparent;
+  border-bottom-color: rgba(20, 28, 24, 0.96);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cp-quick-exit-wrap:hover .cp-quick-exit-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.cp-quick-exit-wrap:focus-within:has(.casepath-quick-exit-btn:focus-visible) .cp-quick-exit-tooltip,
+.cp-quick-exit-wrap.is-tooltip-visible .cp-quick-exit-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .cp-quick-exit-tooltip {
+    right: -8px;
+    max-width: min(240px, calc(100vw - 24px));
+    font-size: var(--cp-type-small);
+  }
+
+  .cp-quick-exit-tooltip::before {
+    right: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-quick-exit-tooltip {
+    transition: none;
+  }
+}
+
+/* Tablet/mobile: hide desktop category row (aligned with shell ≥1025 desktop floor). */
+@media (max-width: 1025px) {
+  .nav-top-row.header-inner .nav-cat-row--desktop,
+  .casepath-nav-categorized .nav-cat-row--desktop {
+    display: none !important;
+  }
+}

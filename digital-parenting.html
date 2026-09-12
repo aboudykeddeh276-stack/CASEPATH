@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="casepath-build" content="20260727iosscroll1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Digital parenting guidance for Australian families &mdash; healthy screen time, child online safety, internet safety for children, gaming, social media, technology boundaries and family technology agreements.">
+<title>CasePath &mdash; Digital Parenting</title>
+<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/public-static-pages.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-shell.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-polish-pass.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-nav-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-ui-governance.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-header-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-smart-search.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-page-hero.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-mobile-overflow-guard.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-icons.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-editorial-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/static-guide-theme.css?v=20260727iosscroll1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Duplicated from index.html inline styles &mdash; resource cards + Kids guide widgets */
+#page-digital-parenting .mh-resources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1rem;margin-bottom:1rem;align-items:stretch}
+#page-digital-parenting .mh-resource-card{display:flex;flex-direction:column;height:100%;min-height:0;background:white;border:1px solid var(--border);border-radius:14px;max-width:100%;box-sizing:border-box;overflow:hidden}
+#page-digital-parenting .mh-resource-top{display:flex;align-items:flex-start;gap:0.75rem;padding:0.9rem 1rem;min-height:4.75rem;flex-shrink:0;box-sizing:border-box}
+#page-digital-parenting .mh-resource-icon.cp-icon{flex-shrink:0;margin-top:0.12rem}
+#page-digital-parenting .mh-resource-header{flex:1;min-width:0;display:flex;flex-direction:column;gap:0.2rem;justify-content:center}
+#page-digital-parenting .mh-resource-top strong{display:block;font-size: var(--cp-type-h3);font-weight:var(--cp-weight-bold);line-height:1.3;overflow-wrap:break-word;word-break:normal;hyphens:auto;text-wrap:pretty;color:var(--charcoal)}
+#page-digital-parenting .mh-resource-tag{display:block;font-size:var(--cp-type-caption);font-weight:var(--cp-weight-semibold);text-transform:uppercase;letter-spacing:0.06em;color:var(--mid);line-height:1.35;overflow-wrap:anywhere;word-break:break-word}
+#page-digital-parenting .mh-resource-card p{flex:1;font-size:var(--cp-type-small);color:var(--mid);padding:0.75rem 1rem 0.25rem;margin:0;line-height:var(--cp-leading-body);overflow-wrap:anywhere;word-break:break-word}
+#page-digital-parenting .mh-contact{font-size:var(--cp-type-small);font-weight:var(--cp-weight-semibold);padding:0.5rem 1rem 1rem;color:var(--charcoal);margin-top:auto;overflow-wrap:anywhere;word-break:break-word}
+#page-digital-parenting .mh-contact a{color:var(--sage);text-decoration:none}
+/* --- KIDS --- */
+.kids-need-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1rem;margin-top:1rem;align-items:stretch}
+.kids-need-tile{display:flex;flex-direction:column;height:100%;background:#fafafa;border-radius:12px;padding:1.1rem;min-width:0;max-width:100%;box-sizing:border-box;overflow:hidden;overflow-wrap:anywhere;word-break:break-word}
+.kids-need-tile-header{display:flex;align-items:flex-start;gap:0.65rem;min-height:2.35rem;margin-bottom:0.45rem}
+.kids-need-tile-header .cp-icon{flex-shrink:0;margin-bottom:0;margin-top:0.05rem}
+.kids-need-tile-header strong{flex:1;min-width:0;display:block;font-size: var(--cp-type-h3));margin-bottom:0;line-height:1.32;color:var(--charcoal);overflow-wrap:anywhere;word-break:break-word;hyphens:auto}
+.kids-need-tile p{flex:1;font-size:var(--cp-type-small);margin:0;color:var(--mid);line-height:var(--cp-leading-body)}
+.kids-dos-donts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;min-width:0;max-width:100%}
+@media(max-width:768px){.kids-dos-donts{grid-template-columns:1fr}}
+.kids-col-header{display:flex;align-items:center;gap:0.45rem;font-weight:var(--cp-weight-bold);font-size:var(--cp-type-small);padding:0.45rem 1rem;border-radius:8px 8px 0 0;margin-bottom:2px;line-height:1.2}
+.kids-col-header .cp-icon{width:1.1rem;height:1.1rem;vertical-align:0;flex-shrink:0}
+.kids-col-header--dont .cp-icon{color:#b91c1c}
+.kids-col-header--do .cp-icon{color:var(--sage)}
+.kids-item{font-size:var(--cp-type-small);padding:0.6rem 0.9rem;border-bottom:1px solid #f0f0f0;line-height:var(--cp-leading-body);color:var(--charcoal)}
+.kids-do{border-left:3px solid var(--sage)}
+.kids-dont{border-left:3px solid #b91c1c}
+.kids-age-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.kids-age-btn{padding:0.4rem 1rem;border-radius:100px;border:1px solid var(--border);background:white;font-size:var(--cp-type-small);font-weight:var(--cp-weight-semibold);cursor:pointer;font-family:inherit;color:var(--mid);transition:all 0.18s}
+.kids-age-btn.active{background:var(--sage);color:white;border-color:var(--sage)}
+.kids-age-content{display:flex;flex-direction:column;gap:0.75rem}
+.kids-age-content div{background:#fafafa;border-radius:10px;padding:0.75rem 1rem;font-size:var(--cp-type-small);line-height:var(--cp-leading-body);color:var(--charcoal);min-width:0;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere;word-break:break-word}
+.kids-law-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1rem;margin-top:1rem}
+.kids-law-item{display:flex;gap:0.75rem;align-items:flex-start;background:#fafafa;border-radius:12px;padding:0.9rem;min-width:0;max-width:100%;box-sizing:border-box}
+.kids-law-num{width:26px;height:26px;background:var(--sage);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:var(--cp-type-caption);font-weight:var(--cp-weight-bold);flex-shrink:0;margin-top:2px}
+.kids-law-item strong{display:block;font-size:var(--cp-type-small);margin-bottom:0.2rem}
+.kids-law-item p{font-size:var(--cp-type-small);margin:0;color:var(--mid);line-height:var(--cp-leading-body)}
+@media(max-width:640px){
+  #page-digital-parenting .mh-resource-top{min-height:4.25rem;padding:0.8rem 0.85rem;gap:0.65rem}
+  #page-digital-parenting .mh-resource-top strong{font-size: var(--cp-type-h3);line-height:1.32}
+  .kids-need-tile-header strong{font-size: var(--cp-type-h3)}
+}
+@media(max-width:480px){
+  #page-digital-parenting .mh-resource-top strong{font-size: var(--cp-type-h3)}
+}
+#page-digital-parenting .kids-ext-btn{display:inline-flex;align-items:center;gap:0.45rem;padding:0.55rem 1.15rem;border-radius:10px;background:var(--sage);color:#fff !important;font-weight:var(--cp-weight-semibold);text-decoration:none;font-size:var(--cp-type-small);line-height:1.3;border:1px solid rgba(45,82,57,.2);font-family:inherit;cursor:pointer}
+#page-digital-parenting .kids-ext-btn:hover,#page-digital-parenting .kids-ext-btn:focus-visible{background:#3f6d52;color:#fff !important}
+#page-digital-parenting .kids-ext-btn:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+#page-digital-parenting .kids-ext-btn .cp-icon{width:1.05rem;height:1.05rem;color:currentColor;margin:0;vertical-align:0}
+#page-digital-parenting .mh-contact a.kids-ext-btn{color:#fff !important}
+#page-digital-parenting .kids-ext-btn--card{padding:0.4rem 0.85rem;font-size:var(--cp-type-caption)}
+#page-digital-parenting .kids-partner-note{margin-top:1.25rem;background:rgba(232,240,235,0.55);border:1px solid var(--border);border-left:4px solid var(--sage);border-radius:12px;padding:1rem 1.15rem}
+#page-digital-parenting .kids-partner-note strong{display:block;margin-bottom:0.4rem;color:var(--charcoal);font-size:var(--cp-type-small)}
+#page-digital-parenting .kids-partner-note p{margin:0;font-size:var(--cp-type-small);line-height:var(--cp-leading-body);color:var(--mid)}
+#page-digital-parenting .kids-partner-note p + p{margin-top:0.65rem}
+#page-digital-parenting .kids-online-safety h3{margin:1.25rem 0 0.65rem;font-size:var(--cp-type-h3);color:var(--charcoal)}
+#page-digital-parenting .kids-aus-innovation{margin-top:1rem;background:#f7f9f8;border:1px solid var(--border);border-left:4px solid #5b7c8a;border-radius:12px;padding:1.1rem 1.2rem}
+#page-digital-parenting .kids-aus-innovation__header{display:flex;align-items:flex-start;gap:0.7rem;margin-bottom:0.65rem}
+#page-digital-parenting .kids-aus-innovation__header .cp-icon{flex-shrink:0;margin-top:0.1rem;color:#5b7c8a}
+#page-digital-parenting .kids-aus-innovation h3{margin:0;font-size:var(--cp-type-h3);color:var(--charcoal);line-height:1.3}
+#page-digital-parenting .kids-aus-innovation p{margin:0;font-size:var(--cp-type-small);line-height:var(--cp-leading-body);color:var(--mid)}
+#page-digital-parenting .kids-aus-innovation p + p{margin-top:0.7rem}
+</style>
+<script src="/assets/js/casepath-icon-repair.js?v=20260727iosscroll1" defer></script>
+</head>
+<body class="public-static-shell" data-casepath-active-nav="digital-parenting" data-template-family="public-editorial">
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<!-- cp-header:disclaimer -->
+<div class="disclaimer-banner disclaimer-banner--trust" role="note" aria-label="Legal information notice">
+  <span class="disclaimer-banner__primary">CasePath helps you organise, prepare and understand family law processes &mdash; not replace a lawyer.</span>
+  <span class="disclaimer-banner__secondary">For legal advice about your specific situation, contact a qualified family lawyer or Legal Aid.</span>
+</div>
+
+<!-- cp-header:utility-bar -->
+<div class="casepath-utility-bar casepath-utility-bar--refined" role="toolbar" aria-label="Safety utilities">
+  <span id="casepath-utility-quick-exit-slot"></span>
+
+</div>
+
+<!-- cp-header:shell -->
+<header class="header cp-site-header">
+  <!-- cp-header:nav -->
+  <nav class="nav-wrapper casepath-nav-categorized" aria-label="Site">
+  <div class="nav-top-row header-inner">
+
+    <div class="header-logo-zone">
+      <a href="/" class="casepath-brand" aria-label="CasePath Home">
+        <img
+          src="/assets/branding/casepath-logo-horizontal.png"
+          srcset="
+            /assets/branding/casepath-logo-horizontal.png 1x,
+            /assets/branding/casepath-logo-horizontal@2x.png 2x
+          "
+          alt="CasePath"
+          class="casepath-brand-logo" width="220" height="44"
+          decoding="async"
+          fetchpriority="high"
+        >
+      </a>
+    </div>
+
+    <div class="header-nav-zone">
+    <div class="nav-site-links" aria-label="Main menu">
+
+      <button type="button" class="nav-mobile-toggle" id="nav-mobile-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-main-grid">
+
+        Menu <span class="nav-mobile-chevron" aria-hidden="true">&#9662;</span>
+
+      </button>
+
+      <a href="/glossary.html" id="nav-legislation" hidden>Legislation</a>
+
+      <div class="nav-grid" id="nav-main-grid">
+
+        <div class="nav-cat-row nav-cat-row--desktop" aria-label="Browse by category">
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-howitworks-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-howitworks-menu">How It Works <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-howitworks-menu" role="menu" hidden>
+
+              <a href="/how-it-works.html" id="nav-how-it-works" role="menuitem">How It Works</a>
+
+              <a href="/docs/quick-start.html" id="nav-quick-start" role="menuitem">Quick Start Guide</a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-learn-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-learn-menu">Learn <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-learn-menu" role="menu" hidden>
+
+              <a href="/mission.html" id="nav-mission" class="nav-mission-pulse" role="menuitem">Our Mission</a>
+
+              <a href="/glossary.html" id="nav-glossary" role="menuitem">Glossary</a>
+
+              <a href="/mental-health.html" id="nav-mental-health" role="menuitem">Mental Health</a>
+
+              <a href="/kids.html" id="nav-kids" role="menuitem">About the Kids</a>
+
+              <a href="/digital-parenting.html" id="nav-digital-parenting" role="menuitem">Digital Parenting</a>
+
+              <a href="/interstate-recognition.html" id="nav-interstate-recognition" role="menuitem">Interstate Recognition</a>
+
+              <a href="/what-list-is-my-case-in.html" id="nav-what-list" role="menuitem">What List Is My Case In?</a>
+
+              <a href="/your-data.html" id="nav-your-data" role="menuitem">Your Data</a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-prepare-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-prepare-menu">Prepare <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-prepare-menu" role="menu" hidden>
+
+              <a href="/prepare.html" id="nav-prepare-hub" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--map-pin"></span></span><span class="nav-cat-item-label">Start Here</span></a>
+
+              <a href="/court-documents.html" id="nav-court-documents" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--file-text"></span></span><span class="nav-cat-item-label">Court Documents</span></a>
+
+              <a href="/app/mediation/index.html" id="nav-mediation" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--handshake"></span></span><span class="nav-cat-item-label">Mediation</span></a>
+
+              <a href="/court-day-preparation.html" id="nav-court-day" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--landmark"></span></span><span class="nav-cat-item-label">Court Day</span></a>
+
+              <a href="/checklists.html" id="nav-checklists" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--check"></span></span><span class="nav-cat-item-label">Checklists</span></a>
+
+              <a href="/self-represented-guide.html" id="nav-self-represented-guide" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--book"></span></span><span class="nav-cat-item-label">Self-Representation Guide</span></a>
+
+              <a href="/more-tools.html" id="nav-more-tools" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--toolbox"></span></span><span class="nav-cat-item-label">More Tools</span></a>
+
+              <a href="/trusted-partners.html" id="nav-trusted-partners" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--users"></span></span><span class="nav-cat-item-label">Trusted Partners</span></a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap nav-cat-wrap--align-end">
+
+            <button type="button" class="nav-cat-toggle" id="nav-yourcase-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-yourcase-menu">Your Case <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-yourcase-menu" role="menu" hidden>
+
+              <a href="/app/workspace/index.html" id="nav-your-case-pulse" role="menuitem" data-protected-nav>Your Case</a>
+
+              <a href="/parenting-orders.html" id="nav-parenting-orders" class="parenting-orders nav-parenting-centre" role="menuitem">Parenting Orders</a>
+
+              <a href="/app/calendar/index.html" id="nav-calendar" role="menuitem" data-protected-nav>Calendar <span class="nav-item-tag">Preview</span></a>
+
+              <a href="/index.html?goto=qa" id="nav-ai-assistant" role="menuitem">Ask a Question</a>
+
+              <a href="/lawyer-portal.html" id="nav-lawyer-portal" role="menuitem" data-protected-nav>Lawyer Portal</a>
+
+            </div>
+
+          </div>
+
+          <a href="/pricing.html" id="nav-pricing" class="nav-cat-link">Pricing</a>
+
+        </div>
+
+        <div class="nav-mobile-groups">
+
+          <div class="nav-mobile-quick-exit">
+            <span id="casepath-nav-mobile-quick-exit-slot" class="nav-quick-exit-slot nav-quick-exit-slot--mobile"></span>
+          </div>
+
+          <p class="nav-mobile-group-label">How It Works</p>
+
+          <a href="/how-it-works.html" class="nav-mobile-link" data-cp-mobile-nav="how-it-works">How It Works</a>
+
+          <a href="/docs/quick-start.html" class="nav-mobile-link" data-cp-mobile-nav="quick-start">Quick Start Guide</a>
+
+          <p class="nav-mobile-group-label">Learn</p>
+
+          <a href="/mission.html" class="nav-mobile-link" data-cp-mobile-nav="mission">Our Mission</a>
+
+          <a href="/glossary.html" class="nav-mobile-link" data-cp-mobile-nav="glossary">Glossary</a>
+
+          <a href="/mental-health.html" class="nav-mobile-link" data-cp-mobile-nav="mental-health">Mental Health</a>
+
+          <a href="/kids.html" class="nav-mobile-link" data-cp-mobile-nav="kids">About the Kids</a>
+
+          <a href="/digital-parenting.html" class="nav-mobile-link" data-cp-mobile-nav="digital-parenting">Digital Parenting</a>
+
+          <a href="/interstate-recognition.html" class="nav-mobile-link" data-cp-mobile-nav="interstate-recognition">Interstate Recognition</a>
+
+          <a href="/what-list-is-my-case-in.html" class="nav-mobile-link" data-cp-mobile-nav="what-list">What List Is My Case In?</a>
+
+          <a href="/your-data.html" class="nav-mobile-link" data-cp-mobile-nav="your-data">Your Data</a>
+
+          <p class="nav-mobile-group-label">Prepare</p>
+
+          <a href="/prepare.html" class="nav-mobile-link" data-cp-mobile-nav="prepare">Start Here</a>
+
+          <a href="/court-documents.html" class="nav-mobile-link" data-cp-mobile-nav="court-documents">Court Documents</a>
+
+          <a href="/app/mediation/index.html" class="nav-mobile-link" data-cp-mobile-nav="mediation">Mediation</a>
+
+          <a href="/court-day-preparation.html" class="nav-mobile-link" data-cp-mobile-nav="court-day">Court Day</a>
+
+          <a href="/checklists.html" class="nav-mobile-link" data-cp-mobile-nav="checklists">Checklists</a>
+
+          <a href="/self-represented-guide.html" class="nav-mobile-link" data-cp-mobile-nav="self-represented-guide">Self-Representation Guide</a>
+
+          <a href="/more-tools.html" class="nav-mobile-link" data-cp-mobile-nav="more-tools">More Tools</a>
+
+          <a href="/trusted-partners.html" class="nav-mobile-link" data-cp-mobile-nav="trusted-partners">Trusted Partners</a>
+
+          <p class="nav-mobile-group-label">Your Case</p>
+
+          <a href="/app/workspace/index.html" class="nav-mobile-link" data-cp-mobile-nav="your-case" data-protected-nav>Your Case</a>
+
+          <a href="/parenting-orders.html" class="nav-mobile-link" data-cp-mobile-nav="parenting">Parenting Orders</a>
+
+              <a href="/app/calendar/index.html" class="nav-mobile-link" data-cp-mobile-nav="calendar" data-protected-nav>Calendar <span class="nav-item-tag">Preview</span></a>
+
+          <a href="/index.html?goto=qa" class="nav-mobile-link" data-cp-mobile-nav="qa">Ask a Question</a>
+
+          <a href="/lawyer-portal.html" class="nav-mobile-link" data-cp-mobile-nav="lawyer" data-protected-nav>Lawyer Portal</a>
+
+          <a href="/pricing.html" class="nav-mobile-link" data-cp-mobile-nav="pricing">Pricing</a>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+
+    <div class="header-search-zone" aria-label="Site search">
+      <div id="cp-smart-search-slot" class="cp-smart-search-slot"></div>
+    </div>
+
+    <div class="header-account-zone">
+    <div class="nav-trailing">
+
+      <div class="header-actions">
+
+        <div id="lang-selector-wrap" class="lang-switch">
+
+          <button type="button" id="lang-btn" onclick="toggleLangDropdown(event)"><span id="lang-current-flag">&#127462;&#127482;</span><span id="lang-current-label">EN</span><span class="nav-mobile-chevron" aria-hidden="true">&#9662;</span></button>
+
+          <div id="lang-dropdown">
+
+          <div class="lang-divider">Select language</div>
+
+          <button type="button" class="lang-option active" onclick="setLang('en','&#127462;&#127482;','EN')"><span class="lang-flag">&#127462;&#127482;</span> English</button>
+
+          <button type="button" class="lang-option" onclick="setLang('zh-CN','&#127464;&#127475;','中文')"><span class="lang-flag">&#127464;&#127475;</span> Mandarin 中文</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ar','&#127480;&#127462;','عربي')"><span class="lang-flag">&#127480;&#127462;</span> Arabic عربي</button>
+
+          <button type="button" class="lang-option" onclick="setLang('vi','&#127483;&#127475;','Việt')"><span class="lang-flag">&#127483;&#127475;</span> Vietnamese</button>
+
+          <button type="button" class="lang-option" onclick="setLang('zh-TW','&#127469;&#127472;','廣東')"><span class="lang-flag">&#127469;&#127472;</span> Cantonese 廣東話</button>
+
+          <button type="button" class="lang-option" onclick="setLang('pa','&#127470;&#127475;','ਪੰਜਾਬੀ')"><span class="lang-flag">&#127470;&#127475;</span> Punjabi</button>
+
+          <button type="button" class="lang-option" onclick="setLang('el','&#127468;&#127479;','Ελληνικά')"><span class="lang-flag">&#127468;&#127479;</span> Greek</button>
+
+          <button type="button" class="lang-option" onclick="setLang('it','&#127470;&#127481;','Italiano')"><span class="lang-flag">&#127470;&#127481;</span> Italian</button>
+
+          <button type="button" class="lang-option" onclick="setLang('de','&#127465;&#127466;','Deutsch')"><span class="lang-flag">&#127465;&#127466;</span> German</button>
+
+          <button type="button" class="lang-option" onclick="setLang('fr','&#127467;&#127479;','Français')"><span class="lang-flag">&#127467;&#127479;</span> French</button>
+
+          <button type="button" class="lang-option" onclick="setLang('hi','&#127470;&#127475;','हिन्दी')"><span class="lang-flag">&#127470;&#127475;</span> Hindi</button>
+
+          <button type="button" class="lang-option" onclick="setLang('es','&#127466;&#127480;','Español')"><span class="lang-flag">&#127466;&#127480;</span> Spanish</button>
+
+          <button type="button" class="lang-option" onclick="setLang('tl','&#127477;&#127469;','Filipino')"><span class="lang-flag">&#127477;&#127469;</span> Filipino</button>
+
+          <button type="button" class="lang-option" onclick="setLang('tr','&#127481;&#127479;','Türkçe')"><span class="lang-flag">&#127481;&#127479;</span> Turkish</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ko','&#127472;&#127479;','한국어')"><span class="lang-flag">&#127472;&#127479;</span> Korean</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ja','&#127471;&#127477;','日本語')"><span class="lang-flag">&#127471;&#127477;</span> Japanese 日本語</button>
+
+          <button type="button" class="lang-option" onclick="setLang('so','&#127480;&#127476;','Soomaali')"><span class="lang-flag">&#127480;&#127476;</span> Somali</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="nav-auth-area" class="header-actions">
+
+        <div id="nav-guest-actions">
+
+          <a id="nav-signin-btn" href="#" data-auth="signin">Sign in</a>
+
+          <a id="nav-signup-btn" href="#" data-auth="signup" class="nav-cta cta-primary">Create free account</a>
+
+        </div>
+
+        <a href="#" id="navSignOutBtn" role="button" aria-hidden="true">Sign out</a>
+
+        <span id="casepath-nav-quick-exit-slot" class="nav-quick-exit-slot nav-quick-exit-slot--desktop"></span>
+
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+
+  </nav>
+
+  <!-- cp-header:green-bar -->
+  <div class="nav-green-bar cp-announcement-bar">
+    Family law, parenting disputes &amp; protection orders — all in one place
+
+  </div>
+
+  <!-- cp-header:privacy-banner -->
+  <div class="cp-privacy-banner" role="note" aria-label="Privacy and safety notice">
+    Privacy: If your device access may be monitored, consider using a safer device. Quick Exit is in the top right of every page.
+  </div>
+
+</header>
+
+<main id="main-content">
+<div class="page" id="page-digital-parenting">
+
+  <div class="cp-page-hero">
+    <div class="cp-page-hero__inner">
+      <div class="cp-page-hero__layout">
+        <div class="cp-page-hero__icon" aria-hidden="true">
+          <span class="cp-icon-badge cp-icon-badge--on-dark cp-icon-badge--blue">
+            <span class="cp-icon cp-icon--smartphone"></span>
+          </span>
+        </div>
+        <div class="cp-page-hero__content">
+          <div class="cp-page-hero__eyebrow">About the Kids</div>
+          <h1>Digital <em>Parenting</em></h1>
+          <p class="cp-page-hero__statement">Helping children build healthy, safe and balanced relationships with technology.</p>
+          <p class="cp-page-hero__support">Educational guidance on healthy screen time, child online safety, gaming, social media and technology boundaries for Australian families.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrap cp-editorial-band">
+
+    <div class="info-card-wide" role="note" aria-label="Educational disclaimer">
+      <p class="cp-text-sm" style="margin:0;color:var(--mid)">This page provides general educational information about digital parenting and internet safety for children. It is not legal advice, medical advice or a recommendation that any particular product or service is suitable for every family. Families should consider their own circumstances and seek professional support where needed.</p>
+    </div>
+
+    <nav class="info-card-wide" aria-label="On this page">
+      <h2 style="margin-top:0;">On this page</h2>
+      <ul class="cp-text-sm" style="margin:0;padding-left:1.2rem;color:var(--mid);line-height:1.7">
+        <li><a href="#technology-childhood">Technology is part of childhood</a></li>
+        <li><a href="#healthy-screen-time">Healthy screen time</a></li>
+        <li><a href="#online-safety">Online safety</a></li>
+        <li><a href="#social-media">Social media</a></li>
+        <li><a href="#gaming">Gaming</a></li>
+        <li><a href="#family-technology-agreements">Family technology agreements</a></li>
+        <li><a href="#separated-parenting">Separated parenting</a></li>
+        <li><a href="#practical-online-safety-tools">Practical online safety tools</a></li>
+        <li><a href="#when-to-seek-help">When to seek help</a></li>
+      </ul>
+    </nav>
+
+    <section class="info-card-wide" id="technology-childhood" aria-labelledby="technology-childhood-heading">
+      <span class="cp-icon-badge cp-icon-badge--blue" aria-hidden="true"><span class="cp-icon cp-icon--globe"></span></span>
+      <h2 id="technology-childhood-heading">Technology is part of childhood</h2>
+      <p>For most Australian children, technology is no longer an optional extra. Devices and online spaces are woven into learning, communication, entertainment and friendship. Schools may use apps, shared documents and learning platforms. Children keep in touch with friends through messaging and games. Families use video calls to stay connected with grandparents and relatives. Digital parenting starts from this reality: technology is part of childhood, and the goal is not to remove it entirely, but to help children develop healthy technology habits over time.</p>
+      <p>Children use technology in different ways at different ages. Younger children may watch videos, play simple games or join a video call with a parent. Older children and teenagers may use devices for homework, group chats, creative projects, streaming and online communities. Each of these uses can be helpful, but each also needs boundaries. Learning can become distraction. Communication can become pressure. Entertainment can crowd out sleep, outdoor play and face-to-face connection.</p>
+      <p>Balance is the central idea. Digital parenting is about helping children enjoy the benefits of technology while keeping enough room for rest, movement, family time and offline relationships. Parents do not need to be technology experts. They do need to stay interested, stay involved and keep conversations open. Asking what a child enjoys online, what feels hard, and who they talk to can be more protective than relying only on rules. Healthy technology habits grow through guidance, modelling and consistent expectations &mdash; not through fear alone.</p>
+      <p>Children also learn from what adults do. Modelling calm, purposeful technology use &mdash; and showing that devices can be put away &mdash; supports the same habits families hope to teach.</p>
+    </section>
+
+    <section class="info-card-wide" id="healthy-screen-time" aria-labelledby="healthy-screen-time-heading">
+      <span class="cp-icon-badge cp-icon-badge--green" aria-hidden="true"><span class="cp-icon cp-icon--calendar"></span></span>
+      <h2 id="healthy-screen-time-heading">Healthy screen time</h2>
+      <p>Healthy screen time is less about a single magic number and more about quality, timing and overall balance. A short educational video shared with a parent is different from late-night scrolling that delays sleep. A video call with a grandparent is different from hours of unsupervised content. Australian online safety guidance for families often emphasises routines, parental involvement and age-appropriate use rather than one fixed daily limit for every child.</p>
+      <p>Routines help children know what to expect. Many families find it useful to decide when devices are available and when they are not. Common anchors include homework first, outdoor play or exercise before long sessions, and a clear wind-down before bed. Sleep is especially important. Screens close to bedtime can delay sleep, increase restlessness and make the next day harder. Keeping bedrooms as device-light spaces where possible can support healthier sleep patterns.</p>
+      <p>Exercise and outdoor play remain essential for children&rsquo;s physical health, mood and concentration. Digital entertainment becomes less helpful when it regularly replaces movement, sunlight and time outside. Family activities also matter. Shared meals, board games, walks, cooking and conversations without devices protect connection. Device-free periods do not need to be rigid to be useful &mdash; they need to be predictable enough that children can rely on them.</p>
+      <p>Practical questions often help more than counting minutes alone: Is this use helping learning or connection? Is it crowding out sleep, schoolwork or friendships? Is the child able to stop when asked? Healthy technology habits are built when screen use fits around childhood, rather than childhood fitting around screens.</p>
+    </section>
+
+    <section class="info-card-wide" id="online-safety" aria-labelledby="online-safety-heading">
+      <span class="cp-icon-badge cp-icon-badge--blue" aria-hidden="true"><span class="cp-icon cp-icon--shield-check"></span></span>
+      <h2 id="online-safety-heading">Online safety</h2>
+      <p>Child online safety covers a wide range of everyday risks. Children may encounter inappropriate content, including violence, sexual material, hate speech or content that is simply too mature for their age. They may be contacted by strangers in games, apps or comment sections. They may see scams that ask for personal details, passwords, money or photos. They may experience cyberbullying &mdash; repeated hurtful messages, exclusion, rumour-spreading or public humiliation online. They may also overshare private information without understanding how permanent or widely visible that information can become.</p>
+      <p>Privacy is a practical skill. Children can be taught not to share full names, addresses, school details, passwords, location updates or private photos with people they do not know well offline, and that once something is sent or posted, control is reduced. Safe internet for kids includes technical protections and everyday habits: thinking before posting, asking a trusted adult when something feels wrong, and treating secrets demanded by strangers as a warning sign.</p>
+      <p>Parents can support internet safety for children by combining conversation with supervision. Younger children usually need closer oversight. Older children may need more privacy as they grow, but privacy is not the same as no guidance. Checking in about apps, friends, chats and content should be framed as care, not surveillance. Technology can help reduce risk, but it cannot replace parenting. If a child sees something upsetting, parents can stay calm, thank them for speaking up, and decide together what to do next.</p>
+    </section>
+
+    <section class="info-card-wide" id="social-media" aria-labelledby="social-media-heading">
+      <span class="cp-icon-badge cp-icon-badge--orange" aria-hidden="true"><span class="cp-icon cp-icon--messages-square"></span></span>
+      <h2 id="social-media-heading">Social media</h2>
+      <p>Social media can offer connection, creativity and belonging. It can also intensify comparison, conflict, peer pressure and exposure to adult themes. Age appropriateness matters. Many platforms set minimum ages for a reason. Even when a child meets the technical age requirement, emotional readiness varies. Parents can consider whether a child can manage conflict calmly, recognise unhealthy interactions, protect private information and step away when online life becomes overwhelming.</p>
+      <p>Respectful behaviour online is part of digital parenting. Children benefit from clear expectations: no harassment, no sharing others&rsquo; images without consent, no pile-ons, and no using group chats to exclude or humiliate. The same values families teach offline &mdash; kindness, honesty, responsibility &mdash; apply in digital spaces. When mistakes happen, repair matters. Helping a child apologise, delete harmful content where possible, and restore respectful communication is part of learning.</p>
+      <p>Digital footprints are another important concept. Photos, comments, jokes and videos can travel further and last longer than children expect. A post made for friends can be screenshotted, reshared or misunderstood. Talking about digital footprints early helps children pause before posting. It also helps them understand that online behaviour can affect friendships, school communities and future opportunities.</p>
+      <p>Emotional wellbeing deserves equal attention. Constant comparison, late-night messaging and peer pressure can affect mood, sleep and self-worth. If a child becomes withdrawn, irritable, secretive about accounts, or distressed after using social media, that is a signal to slow down and talk. Social media needs boundaries, adult interest and room for offline life.</p>
+    </section>
+
+    <section class="info-card-wide" id="gaming" aria-labelledby="gaming-heading">
+      <span class="cp-icon-badge cp-icon-badge--green" aria-hidden="true"><span class="cp-icon cp-icon--users"></span></span>
+      <h2 id="gaming-heading">Gaming</h2>
+      <p>Gaming can support problem-solving, coordination, creativity and friendship. Cooperative play can be a positive shared activity, especially when families understand what is being played and who else is involved. Many games include online chat, voice channels or messaging with players outside the household. Those features can be enjoyable and also introduce strangers, unkind language, pressure to share personal details, or requests that make a child uncomfortable.</p>
+      <p>Spending is another common pressure point. In-game purchases, loot boxes and paid upgrades can escalate quickly. Families benefit from clear rules before play begins: which purchases are allowed, whether passwords are shared, and whether spending requires a parent&rsquo;s agreement each time. Healthy limits around session length, homework completion and bedtime help gaming stay one part of life rather than the centre of it.</p>
+      <p>Cooperative play and family interest can make gaming safer. Asking a child to show a favourite game, explain the rules, or introduce online friends gives parents useful context. It also signals that gaming is not a secret world. Children who feel they can talk about online experiences are more likely to report problems early.</p>
+      <p>Watch for signs that gaming may be becoming unhealthy: intense distress when devices are removed, declining sleep or school engagement, secrecy about chats, or loss of interest in offline activities. These signs invite a calm reset of expectations and balance, not shame about play.</p>
+    </section>
+
+    <section class="info-card-wide" id="family-technology-agreements" aria-labelledby="family-technology-agreements-heading">
+      <span class="cp-icon-badge cp-icon-badge--blue" aria-hidden="true"><span class="cp-icon cp-icon--handshake"></span></span>
+      <h2 id="family-technology-agreements-heading">Family technology agreements</h2>
+      <p>A family technology agreement is a simple shared understanding of how devices are used at home. It does not need legal language. It needs clear, age-appropriate expectations that children can remember and parents can apply consistently. Writing expectations down can reduce daily conflict because the rules are known in advance rather than debated in the moment.</p>
+      <p>Useful topics often include:</p>
+      <ul class="cp-text-sm" style="color:var(--mid);line-height:1.7;padding-left:1.2rem">
+        <li>Screen time windows and what happens after time is up</li>
+        <li>Homework and chores before entertainment use</li>
+        <li>Bedtime and overnight charging locations</li>
+        <li>Device-free meals and family activities</li>
+        <li>Respectful communication in chats, games and comments</li>
+        <li>What to do if something online feels unsafe, unkind or confusing</li>
+        <li>Whether passwords are shared with parents and how privacy is handled as children grow</li>
+      </ul>
+      <p>Technology boundaries work best when children help shape them. Asking for a child&rsquo;s ideas does not mean every preference becomes a rule. It means children are more likely to understand the purpose of the agreement. Agreements can also evolve. What is suitable for an eight-year-old will not be identical for a fourteen-year-old. Reviewing expectations as children mature keeps digital parenting practical and respectful.</p>
+      <p>Consistency matters more than perfection. Occasional exceptions are normal. What helps children most is knowing the usual pattern: when devices are available, what online behaviour is expected, and that adults will follow through calmly.</p>
+    </section>
+
+    <section class="info-card-wide" id="separated-parenting" aria-labelledby="separated-parenting-heading">
+      <span class="cp-icon-badge cp-icon-badge--orange" aria-hidden="true"><span class="cp-icon cp-icon--heart-handshake"></span></span>
+      <h2 id="separated-parenting-heading">Separated parenting</h2>
+      <p>When children move between households, technology rules can become another source of stress. Different homes often have different routines, and that is normal. Extreme inconsistency, however, can confuse children and create conflict. Where it is safe and possible, parents may find it helpful to agree on a small set of shared expectations &mdash; for example, no devices in bedrooms overnight, homework before entertainment, or no sharing of the other parent&rsquo;s private information online.</p>
+      <p>Communication between households about technology works best when it stays child-focused and practical. Discussing which apps a child uses, what online friends are involved, and how screen time fits around school and sleep can reduce misunderstandings. Agreed expectations can also lower conflict by making everyday decisions less personal and more predictable for the child.</p>
+      <p>Children should not be used as messengers about technology disputes, just as they should not carry adult conflict in other areas of co-parenting. If one household changes a major rule, it helps to communicate directly where safe to do so, rather than asking the child to explain or defend the change. Cooperative parenting around technology is not about identical homes. It is about reducing unnecessary friction so children can move between households with clearer boundaries and less loyalty pressure.</p>
+      <p>This section is educational only. It does not advise on parenting orders, parenting plans, court strategy or what arrangements a court may consider suitable. Families with legal questions about parenting arrangements should seek independent legal advice. CasePath&rsquo;s <a href="/kids.html">About the Kids</a> and <a href="/parenting-orders.html">Parenting Orders</a> pages provide general information that may help families orient themselves, alongside professional advice where needed.</p>
+    </section>
+
+    <section class="info-card-wide kids-online-safety" id="practical-online-safety-tools" aria-labelledby="practical-tools-heading">
+      <span class="cp-icon-badge cp-icon-badge--blue" aria-hidden="true"><span class="cp-icon cp-icon--shield-check"></span></span>
+      <h2 id="practical-tools-heading">Practical online safety tools</h2>
+      <p>Education and parenting practices remain the foundation of child online safety. Some families also choose practical technology tools that may help create a safer home internet environment. Tools are one option parents may consider alongside conversation, supervision and clear household expectations. No tool replaces active parenting, and no single product is suitable for every family.</p>
+      <h3>One example parents may consider</h3>
+      <p style="margin-bottom:0.85rem;"><strong>Safer Kids WiFi</strong> is an Australian online safety solution designed to help families create a safer home internet environment.</p>
+      <p style="margin-bottom:0.85rem;">Depending on your family&rsquo;s needs, it may assist with managing online risks through adjustable website restrictions and filters that can be updated as children grow, helping reduce exposure to unsuitable content and supporting age-appropriate internet access.</p>
+      <p style="margin-bottom:0.85rem;">For many separated parents, having agreed technology boundaries can form part of broader parenting arrangements and help provide consistency between households.</p>
+      <p style="margin-bottom:1.15rem;">CasePath does not provide or manage internet filtering services. This information is shared as an educational resource that many parents may find helpful when exploring Australian online safety options.</p>
+      <p style="margin:0 0 1rem;">
+        <a class="kids-ext-btn" href="https://www.saferkidswifi.com.au/" target="_blank" rel="noopener noreferrer" aria-label="Visit Safer Kids WiFi (opens in a new tab)">
+          Visit Safer Kids WiFi
+          <span class="cp-icon cp-icon--external-link" aria-hidden="true"></span>
+        </a>
+      </p>
+      <aside class="kids-aus-innovation" aria-labelledby="dp-australian-innovation-heading">
+        <div class="kids-aus-innovation__header">
+          <span class="cp-icon cp-icon--lightbulb" aria-hidden="true"></span>
+          <h3 id="dp-australian-innovation-heading">Australian Innovation</h3>
+        </div>
+        <p>CasePath is proud to highlight Australian organisations developing practical tools that help support children and families.</p>
+        <p>Safer Kids WiFi is one example of Australian innovation focused on helping parents create a safer online environment for children. By combining education, healthy parenting practices and appropriate technology, families can make informed choices that support children&rsquo;s wellbeing both at home and online.</p>
+        <p>CasePath independently selects educational resources that may assist families. Inclusion does not constitute legal advice or an endorsement that a particular product or service is suitable for every family.</p>
+      </aside>
+    </section>
+
+    <section class="info-card-wide" id="when-to-seek-help" aria-labelledby="when-to-seek-help-heading">
+      <span class="cp-icon-badge cp-icon-badge--green" aria-hidden="true"><span class="cp-icon cp-icon--life-buoy"></span></span>
+      <h2 id="when-to-seek-help-heading">When to seek help</h2>
+      <p>Most digital parenting challenges can be addressed through conversation, clearer routines and consistent technology boundaries. Sometimes additional support is needed. Consider seeking help if a child shows ongoing distress related to online experiences, withdraws from friends or school, experiences bullying that does not stop, has major sleep disruption, or if online behaviour is significantly affecting family life or emotional wellbeing.</p>
+      <p>CasePath pages that may help families find further educational information and support pathways include:</p>
+      <ul class="cp-text-sm" style="color:var(--mid);line-height:1.8;padding-left:1.2rem;margin-bottom:1rem">
+        <li><a href="/mental-health.html">Mental Health</a> &mdash; wellbeing resources during family stress and proceedings</li>
+        <li><a href="/kids.html">About the Kids</a> &mdash; child-focused guidance through separation and co-parenting</li>
+        <li><a href="/support-tools.html">Support Tools</a> &mdash; practical checklists and support pathways</li>
+        <li><a href="/glossary.html">Glossary</a> &mdash; plain-English explanations of family law and related terms</li>
+      </ul>
+      <p class="cp-text-sm" style="margin:0;color:var(--mid)">If a child is in immediate danger, contact emergency services on <a href="tel:000" aria-label="Call emergency services on 000">000</a>. For child and youth counselling support, <a href="https://kidshelpline.com.au" target="_blank" rel="noopener noreferrer" aria-label="Kids Helpline website (opens in a new tab)">Kids Helpline</a> (<a href="tel:1800551800" aria-label="Call Kids Helpline on 1800 55 1800">1800 55 1800</a>) is available 24/7.</p>
+    </section>
+
+    <section class="info-card-wide" aria-labelledby="related-links-heading">
+      <h2 id="related-links-heading">Related links</h2>
+      <p class="cp-text-sm" style="color:var(--mid);margin-top:0">Cross-links to verified CasePath pages and glossary entries that may assist further reading:</p>
+      <div class="kids-need-grid" style="margin-top:0.75rem">
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/mental-health.html">Mental Health</a></strong></div><p>Wellbeing information and support pathways during family law stress.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/kids.html">About the Kids</a></strong></div><p>Age-appropriate guidance on supporting children through separation.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/parenting-orders.html">Parenting Orders</a></strong></div><p>General information about parenting orders and preparation tools.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/glossary.html?term=parenting-plan">Parenting Plans</a></strong></div><p>Glossary entry explaining parenting plans in plain English.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/glossary.html?term=family-violence">Family Violence</a></strong></div><p>Glossary orientation to family violence terminology used in Australian family law contexts.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/glossary.html?term=social-media-evidence">Social Media Evidence</a></strong></div><p>How social media material may be discussed in evidence contexts.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/glossary.html?term=digital-evidence">Digital Evidence</a></strong></div><p>Glossary guidance on digital evidence concepts.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/glossary.html?term=child-protection">Child Protection</a></strong></div><p>Plain-English orientation to child protection terminology.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/glossary.html?term=best-interests-of-the-child">Best Interests of the Child</a></strong></div><p>Core family law concept focused on children&rsquo;s best interests.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/glossary.html?term=family-dispute-resolution">Family Dispute Resolution</a></strong></div><p>Glossary entry on family dispute resolution processes.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/protection-orders.html">Protection Orders</a></strong></div><p>Educational information about protection order pathways.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><strong><a href="/support-tools.html">Support Tools</a></strong></div><p>Practical checklists and support resources for families.</p></div>
+      </div>
+    </section>
+
+    <div class="info-card-wide" style="margin-top:1.75rem;border-left:4px solid var(--sage);">
+      <h2 style="margin-top:0;">Next step</h2>
+      <p class="cp-text-md" style="color:var(--mid);margin:0 0 0.85rem">Digital parenting sits alongside the wider work of supporting children through family change. Continue with About the Kids for co-parenting guidance, or Parenting Orders when you are ready to explore parenting arrangements in more detail.</p>
+      <div class="ft-related-tools">
+        <div class="ft-related-tool">
+          <h3>Return to About the Kids</h3>
+          <p>Child-focused information on separation, co-parenting and support.</p>
+          <a href="/kids.html">About the Kids &rarr;</a>
+        </div>
+        <div class="ft-related-tool">
+          <h3>Learn about Parenting Orders</h3>
+          <p>Understand parenting orders, arrangements, and preparation tools on CasePath.</p>
+          <a href="/parenting-orders.html">Parenting Orders &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legal-disclaimer-bar">This page provides general information only and does not provide legal advice.<br>You should seek independent legal advice before making decisions about your matter.</div>
+</div>
+<section class="cl-connected cp-editorial-band" aria-labelledby="learn-next-title" style="max-width:960px;margin:2rem auto 3rem;padding:0 1.25rem;">
+  <h2 class="cl-connected__title" id="learn-next-title">What to do next</h2>
+  <p class="cl-connected__lead">Continue into CasePath preparation tools that already exist for your situation.</p>
+  <div class="cl-connected-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+    <a href="/prepare.html" class="cl-connected-card" style="display:block;padding:1rem;border:1px solid var(--border,#e5e0d5);border-radius:12px;text-decoration:none;color:inherit;">
+      <h3>Preparation Hub</h3>
+      <p>Map checklists, documents, mediation, and court-day tools.</p>
+      <span>Open Prepare &rarr;</span>
+    </a>
+    <a href="/checklists.html" class="cl-connected-card" style="display:block;padding:1rem;border:1px solid var(--border,#e5e0d5);border-radius:12px;text-decoration:none;color:inherit;">
+      <h3>Checklists</h3>
+      <p>Step-by-step lists for mediation, court, parenting, and safety.</p>
+      <span>Open Checklists &rarr;</span>
+    </a>
+    <a href="/app/workspace/index.html" class="cl-connected-card" style="display:block;padding:1rem;border:1px solid var(--border,#e5e0d5);border-radius:12px;text-decoration:none;color:inherit;" data-protected-nav>
+      <h3>Your Case</h3>
+      <p>Organise chronology, evidence, and deadlines in one place.</p>
+      <span>Open Your Case &rarr;</span>
+    </a>
+  </div>
+</section>
+</main>
+<footer class="casepath-site-footer" aria-label="CasePath footer">
+  <div class="casepath-site-footer-inner">
+
+    <div class="casepath-site-footer__main">
+      <div class="casepath-site-footer__brand">
+        <div class="casepath-site-footer__brand-name">CasePath</div>
+        <p class="casepath-site-footer__tagline">Helping Australians navigate family court with clearer preparation alongside appropriate legal help.</p>
+      </div>
+      <nav class="casepath-site-footer__col" aria-label="Learn">
+        <p class="casepath-site-footer__col-label">Learn</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/mission.html">Our Mission</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+          <li><a href="/mental-health.html">Mental Health</a></li>
+          <li><a href="/kids.html">About the Kids</a></li>
+          <li><a href="/digital-parenting.html">Digital Parenting</a></li>
+          <li><a href="/interstate-recognition.html">Interstate Recognition</a></li>
+          <li><a href="/what-list-is-my-case-in.html">What List Is My Case In?</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Support">
+        <p class="casepath-site-footer__col-label">Support</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/support-tools.html">Support Tools</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/mental-health.html">Mental Health</a></li>
+          <li><a href="https://www.1800respect.org.au" target="_blank" rel="noopener">1800RESPECT</a></li>
+          <li><a href="https://www.legalaid.nsw.gov.au" target="_blank" rel="noopener">Legal Aid Australia</a></li>
+          <li><a href="https://www.familyrelationships.gov.au" target="_blank" rel="noopener">Family Relationships Online</a></li>
+          <li><a href="https://www.saferkidswifi.com.au/" target="_blank" rel="noopener noreferrer">Safer Kids WiFi</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Platform">
+        <p class="casepath-site-footer__col-label">Platform</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/prepare.html">Prepare</a></li>
+          <li><a href="/app/workspace/index.html">Your Case</a></li>
+          <li><a href="/index.html?goto=qa">Ask a Question</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/self-represented-guide.html">Self-Represented Guide</a></li>
+          <li><a href="/checklists.html">Checklists</a></li>
+          <li><a href="/referrals.html">Referrals</a></li>
+          <li><a href="/lawyer-portal.html">Lawyer Portal</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Documentation">
+        <p class="casepath-site-footer__col-label">Documentation</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/docs/">Documentation Centre</a></li>
+          <li><a href="/docs/quick-start.html">Quick Start Guide</a></li>
+          <li><a href="/docs/user-manual.html">User Manual</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="casepath-site-footer__meta">
+      <nav id="casepath-footer-legal-row" class="casepath-footer-legal" aria-label="Legal and site links">
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/your-data.html">Your Data</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/ai-use-disclosure.html">AI Use Disclosure</a>
+        <a href="/mission.html">Mission</a>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/kids.html">About the Kids</a>
+        <a href="/mental-health.html">Mental Health</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="casepath-site-footer__disclaimer">
+        <p class="casepath-site-footer__disclaimer-text">
+          <strong>Disclaimer:</strong> CasePath provides general legal information only. It does not provide legal advice. Laws can change &mdash; always check <a href="https://www.legislation.gov.au" target="_blank" rel="noopener">legislation.gov.au</a> for the current version of any Act. If you need advice about your situation, contact a family lawyer or Legal Aid in your state or territory. For complex matters &mdash; especially those involving family violence, child safety, or significant assets &mdash; you should consult a qualified family lawyer. Many community legal centres offer free initial consultations. The information on this platform does not constitute a solicitor-client relationship.
+        </p>
+        <p class="casepath-site-footer__copy">&copy; 2026 CasePath. Built for every Australian going through separation.</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.105.4/dist/umd/supabase.js" integrity="sha384-7SfFUrg31wOnGWBLLniKFCNmCSguYA5wI1WPDOt7kP/mom4R9/0pwghVEnv0uwYP" crossorigin="anonymous"></script>
+<script src="/assets/js/supabase.js?v=20260727iosscroll1"></script>
+<script src="/auth/redirect.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-lang-switch.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-routes.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-access.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-nav-auth.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-nav-access.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/nav-link-fallback.js?v=20260727iosscroll1" defer></script>
+<script src="/assets/js/core/casepath-quick-exit.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-shell-active-nav.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-nav-dropdowns.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-header-sync.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/public-static-nav.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-smart-search.js?v=20260727iosscroll1"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"48b8eaf48843424caa301d0fd340c626","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+

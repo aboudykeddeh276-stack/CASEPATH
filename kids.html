@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="casepath-build" content="20260727iosscroll1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="How separation affects children in Australia &mdash; by age, best interests, co-parenting, online safety for children, court processes, and support. Guidance on healthy technology use and Australian online safety resources for families.">
+<title>CasePath &mdash; About the Kids</title>
+<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/public-static-pages.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-shell.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-polish-pass.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-nav-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-ui-governance.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-header-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-smart-search.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-page-hero.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-mobile-overflow-guard.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-icons.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-editorial-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/static-guide-theme.css?v=20260727iosscroll1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Duplicated from index.html inline styles &mdash; resource cards + Kids guide widgets */
+#page-kids .mh-resources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1rem;margin-bottom:1rem;align-items:stretch}
+#page-kids .mh-resource-card{display:flex;flex-direction:column;height:100%;min-height:0;background:white;border:1px solid var(--border);border-radius:14px;max-width:100%;box-sizing:border-box;overflow:hidden}
+#page-kids .mh-resource-top{display:flex;align-items:flex-start;gap:0.75rem;padding:0.9rem 1rem;min-height:4.75rem;flex-shrink:0;box-sizing:border-box}
+#page-kids .mh-resource-icon.cp-icon{flex-shrink:0;margin-top:0.12rem}
+#page-kids .mh-resource-header{flex:1;min-width:0;display:flex;flex-direction:column;gap:0.2rem;justify-content:center}
+#page-kids .mh-resource-top strong{display:block;font-size: var(--cp-type-h3);font-weight:var(--cp-weight-bold);line-height:1.3;overflow-wrap:break-word;word-break:normal;hyphens:auto;text-wrap:pretty;color:var(--charcoal)}
+#page-kids .mh-resource-tag{display:block;font-size:var(--cp-type-caption);font-weight:var(--cp-weight-semibold);text-transform:uppercase;letter-spacing:0.06em;color:var(--mid);line-height:1.35;overflow-wrap:anywhere;word-break:break-word}
+#page-kids .mh-resource-card p{flex:1;font-size:var(--cp-type-small);color:var(--mid);padding:0.75rem 1rem 0.25rem;margin:0;line-height:var(--cp-leading-body);overflow-wrap:anywhere;word-break:break-word}
+#page-kids .mh-contact{font-size:var(--cp-type-small);font-weight:var(--cp-weight-semibold);padding:0.5rem 1rem 1rem;color:var(--charcoal);margin-top:auto;overflow-wrap:anywhere;word-break:break-word}
+#page-kids .mh-contact a{color:var(--sage);text-decoration:none}
+/* --- KIDS --- */
+.kids-need-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1rem;margin-top:1rem;align-items:stretch}
+.kids-need-tile{display:flex;flex-direction:column;height:100%;background:#fafafa;border-radius:12px;padding:1.1rem;min-width:0;max-width:100%;box-sizing:border-box;overflow:hidden;overflow-wrap:anywhere;word-break:break-word}
+.kids-need-tile-header{display:flex;align-items:flex-start;gap:0.65rem;min-height:2.35rem;margin-bottom:0.45rem}
+.kids-need-tile-header .cp-icon{flex-shrink:0;margin-bottom:0;margin-top:0.05rem}
+.kids-need-tile-header strong{flex:1;min-width:0;display:block;font-size: var(--cp-type-h3));margin-bottom:0;line-height:1.32;color:var(--charcoal);overflow-wrap:anywhere;word-break:break-word;hyphens:auto}
+.kids-need-tile p{flex:1;font-size:var(--cp-type-small);margin:0;color:var(--mid);line-height:var(--cp-leading-body)}
+.kids-dos-donts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;min-width:0;max-width:100%}
+@media(max-width:768px){.kids-dos-donts{grid-template-columns:1fr}}
+.kids-col-header{display:flex;align-items:center;gap:0.45rem;font-weight:var(--cp-weight-bold);font-size:var(--cp-type-small);padding:0.45rem 1rem;border-radius:8px 8px 0 0;margin-bottom:2px;line-height:1.2}
+.kids-col-header .cp-icon{width:1.1rem;height:1.1rem;vertical-align:0;flex-shrink:0}
+.kids-col-header--dont .cp-icon{color:#b91c1c}
+.kids-col-header--do .cp-icon{color:var(--sage)}
+.kids-item{font-size:var(--cp-type-small);padding:0.6rem 0.9rem;border-bottom:1px solid #f0f0f0;line-height:var(--cp-leading-body);color:var(--charcoal)}
+.kids-do{border-left:3px solid var(--sage)}
+.kids-dont{border-left:3px solid #b91c1c}
+.kids-age-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.kids-age-btn{padding:0.4rem 1rem;border-radius:100px;border:1px solid var(--border);background:white;font-size:var(--cp-type-small);font-weight:var(--cp-weight-semibold);cursor:pointer;font-family:inherit;color:var(--mid);transition:all 0.18s}
+.kids-age-btn.active{background:var(--sage);color:white;border-color:var(--sage)}
+.kids-age-content{display:flex;flex-direction:column;gap:0.75rem}
+.kids-age-content div{background:#fafafa;border-radius:10px;padding:0.75rem 1rem;font-size:var(--cp-type-small);line-height:var(--cp-leading-body);color:var(--charcoal);min-width:0;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere;word-break:break-word}
+.kids-law-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1rem;margin-top:1rem}
+.kids-law-item{display:flex;gap:0.75rem;align-items:flex-start;background:#fafafa;border-radius:12px;padding:0.9rem;min-width:0;max-width:100%;box-sizing:border-box}
+.kids-law-num{width:26px;height:26px;background:var(--sage);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:var(--cp-type-caption);font-weight:var(--cp-weight-bold);flex-shrink:0;margin-top:2px}
+.kids-law-item strong{display:block;font-size:var(--cp-type-small);margin-bottom:0.2rem}
+.kids-law-item p{font-size:var(--cp-type-small);margin:0;color:var(--mid);line-height:var(--cp-leading-body)}
+@media(max-width:640px){
+  #page-kids .mh-resource-top{min-height:4.25rem;padding:0.8rem 0.85rem;gap:0.65rem}
+  #page-kids .mh-resource-top strong{font-size: var(--cp-type-h3);line-height:1.32}
+  .kids-need-tile-header strong{font-size: var(--cp-type-h3)}
+}
+@media(max-width:480px){
+  #page-kids .mh-resource-top strong{font-size: var(--cp-type-h3)}
+}
+#page-kids .kids-ext-btn{display:inline-flex;align-items:center;gap:0.45rem;padding:0.55rem 1.15rem;border-radius:10px;background:var(--sage);color:#fff !important;font-weight:var(--cp-weight-semibold);text-decoration:none;font-size:var(--cp-type-small);line-height:1.3;border:1px solid rgba(45,82,57,.2);font-family:inherit;cursor:pointer}
+#page-kids .kids-ext-btn:hover,#page-kids .kids-ext-btn:focus-visible{background:#3f6d52;color:#fff !important}
+#page-kids .kids-ext-btn:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+#page-kids .kids-ext-btn .cp-icon{width:1.05rem;height:1.05rem;color:currentColor;margin:0;vertical-align:0}
+#page-kids .mh-contact a.kids-ext-btn{color:#fff !important}
+#page-kids .kids-ext-btn--card{padding:0.4rem 0.85rem;font-size:var(--cp-type-caption)}
+#page-kids .kids-partner-note{margin-top:1.25rem;background:rgba(232,240,235,0.55);border:1px solid var(--border);border-left:4px solid var(--sage);border-radius:12px;padding:1rem 1.15rem}
+#page-kids .kids-partner-note strong{display:block;margin-bottom:0.4rem;color:var(--charcoal);font-size:var(--cp-type-small)}
+#page-kids .kids-partner-note p{margin:0;font-size:var(--cp-type-small);line-height:var(--cp-leading-body);color:var(--mid)}
+#page-kids .kids-partner-note p + p{margin-top:0.65rem}
+#page-kids .kids-online-safety h3{margin:1.25rem 0 0.65rem;font-size:var(--cp-type-h3);color:var(--charcoal)}
+#page-kids .kids-aus-innovation{margin-top:1rem;background:#f7f9f8;border:1px solid var(--border);border-left:4px solid #5b7c8a;border-radius:12px;padding:1.1rem 1.2rem}
+#page-kids .kids-aus-innovation__header{display:flex;align-items:flex-start;gap:0.7rem;margin-bottom:0.65rem}
+#page-kids .kids-aus-innovation__header .cp-icon{flex-shrink:0;margin-top:0.1rem;color:#5b7c8a}
+#page-kids .kids-aus-innovation h3{margin:0;font-size:var(--cp-type-h3);color:var(--charcoal);line-height:1.3}
+#page-kids .kids-aus-innovation p{margin:0;font-size:var(--cp-type-small);line-height:var(--cp-leading-body);color:var(--mid)}
+#page-kids .kids-aus-innovation p + p{margin-top:0.7rem}
+
+/* Featured Resource banner — educational highlight below hero */
+#page-kids .kids-featured-resource{
+  background:#EEF7FF;
+  border:1px solid rgba(74,124,89,0.16);
+  border-left:4px solid var(--sage);
+  border-radius:16px;
+  padding:clamp(1.75rem,2.5vw,2rem);
+  margin:0 0 var(--space-6,1.25rem);
+  box-shadow:var(--shadow-card,0 4px 20px rgba(20,48,31,0.08));
+  box-sizing:border-box;
+  max-width:100%;
+}
+#page-kids .kids-featured-resource__layout{
+  display:flex;
+  align-items:flex-start;
+  gap:clamp(1.15rem,2.5vw,1.75rem);
+  min-width:0;
+}
+#page-kids .kids-featured-resource__meta{
+  flex:0 0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0.55rem;
+  min-width:7.25rem;
+  max-width:9rem;
+}
+#page-kids .kids-featured-resource__meta .cp-icon-badge{flex-shrink:0}
+#page-kids .kids-featured-resource__label{
+  display:block;
+  font-size:var(--cp-type-caption);
+  font-weight:var(--cp-weight-semibold,600);
+  text-transform:uppercase;
+  letter-spacing:0.07em;
+  color:var(--sage);
+  line-height:1.35;
+}
+#page-kids .kids-featured-resource__body{
+  flex:1 1 auto;
+  min-width:0;
+}
+#page-kids .kids-featured-resource__body h2{
+  font-family:var(--cp-font-ui);
+  font-size:var(--cp-type-h3);
+  font-weight:var(--cp-weight-bold,700);
+  margin:0 0 0.65rem;
+  color:var(--charcoal);
+  line-height:1.3;
+}
+#page-kids .kids-featured-resource__body p{
+  margin:0;
+  font-size:var(--cp-type-small);
+  line-height:var(--cp-leading-body,1.7);
+  color:var(--mid);
+}
+#page-kids .kids-featured-resource__body p + p{margin-top:0.7rem}
+#page-kids .kids-featured-resource__action{
+  flex:0 0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:0.65rem;
+  min-width:10rem;
+  padding-top:0.15rem;
+}
+#page-kids .kids-featured-resource__action .kids-ext-btn{
+  white-space:nowrap;
+  min-height:var(--cp-btn-min-height,44px);
+  justify-content:center;
+}
+#page-kids .kids-featured-resource__aus{
+  margin:0;
+  font-size:var(--cp-type-caption);
+  font-weight:var(--cp-weight-semibold,600);
+  color:var(--mid);
+  line-height:1.35;
+  text-align:center;
+}
+@media (max-width:960px){
+  #page-kids .kids-featured-resource__layout{flex-wrap:wrap}
+  #page-kids .kids-featured-resource__meta{max-width:none}
+  #page-kids .kids-featured-resource__body{flex:1 1 16rem}
+  #page-kids .kids-featured-resource__action{
+    flex:1 1 100%;
+    width:100%;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    gap:1rem;
+    padding-top:0.25rem;
+  }
+  #page-kids .kids-featured-resource__aus{text-align:left}
+}
+@media (max-width:640px){
+  #page-kids .kids-featured-resource{padding:1.75rem}
+  #page-kids .kids-featured-resource__layout{
+    flex-direction:column;
+    gap:1.15rem;
+  }
+  #page-kids .kids-featured-resource__meta{
+    flex-direction:row;
+    align-items:center;
+    gap:0.75rem;
+    max-width:none;
+  }
+  #page-kids .kids-featured-resource__action{
+    flex-direction:column;
+    align-items:flex-start;
+    width:100%;
+    gap:0.55rem;
+  }
+}
+@media (prefers-color-scheme:dark){
+  #page-kids .kids-featured-resource{
+    background:rgba(30,58,95,0.22);
+    border-color:rgba(148,180,210,0.28);
+    box-shadow:0 4px 20px rgba(0,0,0,0.28);
+  }
+  #page-kids .kids-featured-resource__body h2{color:var(--charcoal)}
+  #page-kids .kids-featured-resource__body p,
+  #page-kids .kids-featured-resource__aus{color:var(--mid)}
+  #page-kids .kids-featured-resource__label{color:var(--sage)}
+}
+</style>
+<script src="/assets/js/casepath-icon-repair.js?v=20260727iosscroll1" defer></script>
+</head>
+<body class="public-static-shell" data-casepath-active-nav="kids" data-template-family="public-editorial">
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<!-- cp-header:disclaimer -->
+<div class="disclaimer-banner disclaimer-banner--trust" role="note" aria-label="Legal information notice">
+  <span class="disclaimer-banner__primary">CasePath helps you organise, prepare and understand family law processes &mdash; not replace a lawyer.</span>
+  <span class="disclaimer-banner__secondary">For legal advice about your specific situation, contact a qualified family lawyer or Legal Aid.</span>
+</div>
+
+<!-- cp-header:utility-bar -->
+<div class="casepath-utility-bar casepath-utility-bar--refined" role="toolbar" aria-label="Safety utilities">
+  <span id="casepath-utility-quick-exit-slot"></span>
+
+</div>
+
+<!-- cp-header:shell -->
+<header class="header cp-site-header">
+  <!-- cp-header:nav -->
+  <nav class="nav-wrapper casepath-nav-categorized" aria-label="Site">
+  <div class="nav-top-row header-inner">
+
+    <div class="header-logo-zone">
+      <a href="/" class="casepath-brand" aria-label="CasePath Home">
+        <img
+          src="/assets/branding/casepath-logo-horizontal.png"
+          srcset="
+            /assets/branding/casepath-logo-horizontal.png 1x,
+            /assets/branding/casepath-logo-horizontal@2x.png 2x
+          "
+          alt="CasePath"
+          class="casepath-brand-logo" width="220" height="44"
+          decoding="async"
+          fetchpriority="high"
+        >
+      </a>
+    </div>
+
+    <div class="header-nav-zone">
+    <div class="nav-site-links" aria-label="Main menu">
+
+      <button type="button" class="nav-mobile-toggle" id="nav-mobile-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-main-grid">
+
+        Menu <span class="nav-mobile-chevron" aria-hidden="true">&#9662;</span>
+
+      </button>
+
+      <a href="/glossary.html" id="nav-legislation" hidden>Legislation</a>
+
+      <div class="nav-grid" id="nav-main-grid">
+
+        <div class="nav-cat-row nav-cat-row--desktop" aria-label="Browse by category">
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-howitworks-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-howitworks-menu">How It Works <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-howitworks-menu" role="menu" hidden>
+
+              <a href="/how-it-works.html" id="nav-how-it-works" role="menuitem">How It Works</a>
+
+              <a href="/docs/quick-start.html" id="nav-quick-start" role="menuitem">Quick Start Guide</a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-learn-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-learn-menu">Learn <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-learn-menu" role="menu" hidden>
+
+              <a href="/mission.html" id="nav-mission" class="nav-mission-pulse" role="menuitem">Our Mission</a>
+
+              <a href="/glossary.html" id="nav-glossary" role="menuitem">Glossary</a>
+
+              <a href="/mental-health.html" id="nav-mental-health" role="menuitem">Mental Health</a>
+
+              <a href="/kids.html" id="nav-kids" role="menuitem">About the Kids</a>
+
+              <a href="/digital-parenting.html" id="nav-digital-parenting" role="menuitem">Digital Parenting</a>
+
+              <a href="/interstate-recognition.html" id="nav-interstate-recognition" role="menuitem">Interstate Recognition</a>
+
+              <a href="/what-list-is-my-case-in.html" id="nav-what-list" role="menuitem">What List Is My Case In?</a>
+
+              <a href="/your-data.html" id="nav-your-data" role="menuitem">Your Data</a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-prepare-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-prepare-menu">Prepare <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-prepare-menu" role="menu" hidden>
+
+              <a href="/prepare.html" id="nav-prepare-hub" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--map-pin"></span></span><span class="nav-cat-item-label">Start Here</span></a>
+
+              <a href="/court-documents.html" id="nav-court-documents" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--file-text"></span></span><span class="nav-cat-item-label">Court Documents</span></a>
+
+              <a href="/app/mediation/index.html" id="nav-mediation" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--handshake"></span></span><span class="nav-cat-item-label">Mediation</span></a>
+
+              <a href="/court-day-preparation.html" id="nav-court-day" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--landmark"></span></span><span class="nav-cat-item-label">Court Day</span></a>
+
+              <a href="/checklists.html" id="nav-checklists" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--check"></span></span><span class="nav-cat-item-label">Checklists</span></a>
+
+              <a href="/self-represented-guide.html" id="nav-self-represented-guide" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--book"></span></span><span class="nav-cat-item-label">Self-Representation Guide</span></a>
+
+              <a href="/more-tools.html" id="nav-more-tools" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--toolbox"></span></span><span class="nav-cat-item-label">More Tools</span></a>
+
+              <a href="/trusted-partners.html" id="nav-trusted-partners" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--users"></span></span><span class="nav-cat-item-label">Trusted Partners</span></a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap nav-cat-wrap--align-end">
+
+            <button type="button" class="nav-cat-toggle" id="nav-yourcase-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-yourcase-menu">Your Case <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-yourcase-menu" role="menu" hidden>
+
+              <a href="/app/workspace/index.html" id="nav-your-case-pulse" role="menuitem" data-protected-nav>Your Case</a>
+
+              <a href="/parenting-orders.html" id="nav-parenting-orders" class="parenting-orders nav-parenting-centre" role="menuitem">Parenting Orders</a>
+
+              <a href="/app/calendar/index.html" id="nav-calendar" role="menuitem" data-protected-nav>Calendar <span class="nav-item-tag">Preview</span></a>
+
+              <a href="/index.html?goto=qa" id="nav-ai-assistant" role="menuitem">Ask a Question</a>
+
+              <a href="/lawyer-portal.html" id="nav-lawyer-portal" role="menuitem" data-protected-nav>Lawyer Portal</a>
+
+            </div>
+
+          </div>
+
+          <a href="/pricing.html" id="nav-pricing" class="nav-cat-link">Pricing</a>
+
+        </div>
+
+        <div class="nav-mobile-groups">
+
+          <div class="nav-mobile-quick-exit">
+            <span id="casepath-nav-mobile-quick-exit-slot" class="nav-quick-exit-slot nav-quick-exit-slot--mobile"></span>
+          </div>
+
+          <p class="nav-mobile-group-label">How It Works</p>
+
+          <a href="/how-it-works.html" class="nav-mobile-link" data-cp-mobile-nav="how-it-works">How It Works</a>
+
+          <a href="/docs/quick-start.html" class="nav-mobile-link" data-cp-mobile-nav="quick-start">Quick Start Guide</a>
+
+          <p class="nav-mobile-group-label">Learn</p>
+
+          <a href="/mission.html" class="nav-mobile-link" data-cp-mobile-nav="mission">Our Mission</a>
+
+          <a href="/glossary.html" class="nav-mobile-link" data-cp-mobile-nav="glossary">Glossary</a>
+
+          <a href="/mental-health.html" class="nav-mobile-link" data-cp-mobile-nav="mental-health">Mental Health</a>
+
+          <a href="/kids.html" class="nav-mobile-link" data-cp-mobile-nav="kids">About the Kids</a>
+
+          <a href="/digital-parenting.html" class="nav-mobile-link" data-cp-mobile-nav="digital-parenting">Digital Parenting</a>
+
+          <a href="/interstate-recognition.html" class="nav-mobile-link" data-cp-mobile-nav="interstate-recognition">Interstate Recognition</a>
+
+          <a href="/what-list-is-my-case-in.html" class="nav-mobile-link" data-cp-mobile-nav="what-list">What List Is My Case In?</a>
+
+          <a href="/your-data.html" class="nav-mobile-link" data-cp-mobile-nav="your-data">Your Data</a>
+
+          <p class="nav-mobile-group-label">Prepare</p>
+
+          <a href="/prepare.html" class="nav-mobile-link" data-cp-mobile-nav="prepare">Start Here</a>
+
+          <a href="/court-documents.html" class="nav-mobile-link" data-cp-mobile-nav="court-documents">Court Documents</a>
+
+          <a href="/app/mediation/index.html" class="nav-mobile-link" data-cp-mobile-nav="mediation">Mediation</a>
+
+          <a href="/court-day-preparation.html" class="nav-mobile-link" data-cp-mobile-nav="court-day">Court Day</a>
+
+          <a href="/checklists.html" class="nav-mobile-link" data-cp-mobile-nav="checklists">Checklists</a>
+
+          <a href="/self-represented-guide.html" class="nav-mobile-link" data-cp-mobile-nav="self-represented-guide">Self-Representation Guide</a>
+
+          <a href="/more-tools.html" class="nav-mobile-link" data-cp-mobile-nav="more-tools">More Tools</a>
+
+          <a href="/trusted-partners.html" class="nav-mobile-link" data-cp-mobile-nav="trusted-partners">Trusted Partners</a>
+
+          <p class="nav-mobile-group-label">Your Case</p>
+
+          <a href="/app/workspace/index.html" class="nav-mobile-link" data-cp-mobile-nav="your-case" data-protected-nav>Your Case</a>
+
+          <a href="/parenting-orders.html" class="nav-mobile-link" data-cp-mobile-nav="parenting">Parenting Orders</a>
+
+              <a href="/app/calendar/index.html" class="nav-mobile-link" data-cp-mobile-nav="calendar" data-protected-nav>Calendar <span class="nav-item-tag">Preview</span></a>
+
+          <a href="/index.html?goto=qa" class="nav-mobile-link" data-cp-mobile-nav="qa">Ask a Question</a>
+
+          <a href="/lawyer-portal.html" class="nav-mobile-link" data-cp-mobile-nav="lawyer" data-protected-nav>Lawyer Portal</a>
+
+          <a href="/pricing.html" class="nav-mobile-link" data-cp-mobile-nav="pricing">Pricing</a>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+
+    <div class="header-search-zone" aria-label="Site search">
+      <div id="cp-smart-search-slot" class="cp-smart-search-slot"></div>
+    </div>
+
+    <div class="header-account-zone">
+    <div class="nav-trailing">
+
+      <div class="header-actions">
+
+        <div id="lang-selector-wrap" class="lang-switch">
+
+          <button type="button" id="lang-btn" onclick="toggleLangDropdown(event)"><span id="lang-current-flag">&#127462;&#127482;</span><span id="lang-current-label">EN</span><span class="nav-mobile-chevron" aria-hidden="true">&#9662;</span></button>
+
+          <div id="lang-dropdown">
+
+          <div class="lang-divider">Select language</div>
+
+          <button type="button" class="lang-option active" onclick="setLang('en','&#127462;&#127482;','EN')"><span class="lang-flag">&#127462;&#127482;</span> English</button>
+
+          <button type="button" class="lang-option" onclick="setLang('zh-CN','&#127464;&#127475;','中文')"><span class="lang-flag">&#127464;&#127475;</span> Mandarin 中文</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ar','&#127480;&#127462;','عربي')"><span class="lang-flag">&#127480;&#127462;</span> Arabic عربي</button>
+
+          <button type="button" class="lang-option" onclick="setLang('vi','&#127483;&#127475;','Việt')"><span class="lang-flag">&#127483;&#127475;</span> Vietnamese</button>
+
+          <button type="button" class="lang-option" onclick="setLang('zh-TW','&#127469;&#127472;','廣東')"><span class="lang-flag">&#127469;&#127472;</span> Cantonese 廣東話</button>
+
+          <button type="button" class="lang-option" onclick="setLang('pa','&#127470;&#127475;','ਪੰਜਾਬੀ')"><span class="lang-flag">&#127470;&#127475;</span> Punjabi</button>
+
+          <button type="button" class="lang-option" onclick="setLang('el','&#127468;&#127479;','Ελληνικά')"><span class="lang-flag">&#127468;&#127479;</span> Greek</button>
+
+          <button type="button" class="lang-option" onclick="setLang('it','&#127470;&#127481;','Italiano')"><span class="lang-flag">&#127470;&#127481;</span> Italian</button>
+
+          <button type="button" class="lang-option" onclick="setLang('de','&#127465;&#127466;','Deutsch')"><span class="lang-flag">&#127465;&#127466;</span> German</button>
+
+          <button type="button" class="lang-option" onclick="setLang('fr','&#127467;&#127479;','Français')"><span class="lang-flag">&#127467;&#127479;</span> French</button>
+
+          <button type="button" class="lang-option" onclick="setLang('hi','&#127470;&#127475;','हिन्दी')"><span class="lang-flag">&#127470;&#127475;</span> Hindi</button>
+
+          <button type="button" class="lang-option" onclick="setLang('es','&#127466;&#127480;','Español')"><span class="lang-flag">&#127466;&#127480;</span> Spanish</button>
+
+          <button type="button" class="lang-option" onclick="setLang('tl','&#127477;&#127469;','Filipino')"><span class="lang-flag">&#127477;&#127469;</span> Filipino</button>
+
+          <button type="button" class="lang-option" onclick="setLang('tr','&#127481;&#127479;','Türkçe')"><span class="lang-flag">&#127481;&#127479;</span> Turkish</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ko','&#127472;&#127479;','한국어')"><span class="lang-flag">&#127472;&#127479;</span> Korean</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ja','&#127471;&#127477;','日本語')"><span class="lang-flag">&#127471;&#127477;</span> Japanese 日本語</button>
+
+          <button type="button" class="lang-option" onclick="setLang('so','&#127480;&#127476;','Soomaali')"><span class="lang-flag">&#127480;&#127476;</span> Somali</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="nav-auth-area" class="header-actions">
+
+        <div id="nav-guest-actions">
+
+          <a id="nav-signin-btn" href="#" data-auth="signin">Sign in</a>
+
+          <a id="nav-signup-btn" href="#" data-auth="signup" class="nav-cta cta-primary">Create free account</a>
+
+        </div>
+
+        <a href="#" id="navSignOutBtn" role="button" aria-hidden="true">Sign out</a>
+
+        <span id="casepath-nav-quick-exit-slot" class="nav-quick-exit-slot nav-quick-exit-slot--desktop"></span>
+
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+
+  </nav>
+
+  <!-- cp-header:green-bar -->
+  <div class="nav-green-bar cp-announcement-bar">
+    Family law, parenting disputes &amp; protection orders — all in one place
+
+  </div>
+
+  <!-- cp-header:privacy-banner -->
+  <div class="cp-privacy-banner" role="note" aria-label="Privacy and safety notice">
+    Privacy: If your device access may be monitored, consider using a safer device. Quick Exit is in the top right of every page.
+  </div>
+
+</header>
+
+<main id="main-content">
+<div class="page" id="page-kids">
+
+  <div class="cp-page-hero"><div class="cp-page-hero__inner"><div class="cp-page-hero__layout"><div class="cp-page-hero__icon" aria-hidden="true"><span class="cp-icon-badge cp-icon-badge--on-dark cp-icon-badge--orange"><span class="cp-icon cp-icon--baby"></span></span></div><div class="cp-page-hero__content"><div class="cp-page-hero__eyebrow">Children &amp; parenting</div><h1>About the <em>Kids</em></h1><p class="cp-page-hero__statement">Separation changes your children&rsquo;s world &mdash; learn how to protect, support, and reassure them.</p><p class="cp-page-hero__support">Age-appropriate guidance on parenting through dispute, handover, and court processes.</p></div></div></div></div>
+  <div class="section-wrap cp-editorial-band">
+
+    <!-- Featured Resource — educational Safer Kids WiFi highlight -->
+    <aside
+      class="kids-featured-resource"
+      id="kids-featured-resource"
+      role="region"
+      aria-labelledby="kids-featured-resource-heading"
+    >
+      <div class="kids-featured-resource__layout">
+        <div class="kids-featured-resource__meta">
+          <span class="cp-icon-badge cp-icon-badge--blue" aria-hidden="true">
+            <span class="cp-icon cp-icon--shield-check"></span>
+          </span>
+          <span class="kids-featured-resource__label">Featured Resource</span>
+        </div>
+        <div class="kids-featured-resource__body">
+          <h2 id="kids-featured-resource-heading">Helping Keep Kids Safe Online</h2>
+          <p>Technology is a big part of children&rsquo;s lives. Alongside healthy parenting and communication, practical online safety tools can help families create a safer digital environment.</p>
+          <p>CasePath is pleased to highlight Safer Kids WiFi as an Australian resource that may help parents establish healthier and safer internet use at home.</p>
+        </div>
+        <div class="kids-featured-resource__action">
+          <a
+            class="kids-ext-btn"
+            href="https://www.saferkidswifi.com.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Learn more about Safer Kids WiFi (opens in a new tab)"
+          >
+            Learn More
+            <span class="cp-icon cp-icon--external-link" aria-hidden="true"></span>
+          </a>
+          <p class="kids-featured-resource__aus">
+            <span aria-hidden="true">&#x1F1E6;&#x1F1FA;</span>
+            Australian Resource
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Age-appropriate impacts -->
+    <div class="info-card-wide">
+      <span class="cp-icon-badge cp-icon-badge--orange" aria-hidden="true"><span class="cp-icon cp-icon--baby"></span></span>
+      <h2>How children experience separation &mdash; by age</h2>
+      <p style="margin-bottom:1.25rem;">Children's responses to separation are profoundly shaped by their developmental stage. Understanding what is developmentally typical &mdash; versus what signals a need for additional support &mdash; helps parents respond appropriately rather than reactively.</p>
+      <div class="kids-age-tabs">
+        <button class="kids-age-btn active" onclick="setAgeGroup('0-5')">0&ndash;5 years</button>
+        <button class="kids-age-btn" onclick="setAgeGroup('6-11')">6&ndash;11 years</button>
+        <button class="kids-age-btn" onclick="setAgeGroup('12-17')">12&ndash;17 years</button>
+      </div>
+      <div id="age-0-5" class="kids-age-content">
+        <div><strong>Regression</strong> &mdash; Toilet training regression, thumb-sucking, baby talk, increased clinginess, and sleep disturbance are all common responses to family disruption in children under 5. These are not signs of permanent damage &mdash; they are signs that the child is under stress and needs additional reassurance and routine.</div>
+        <div><strong>Separation anxiety</strong> &mdash; Very young children do not have a reliable understanding of object permanence or time. When a parent leaves, they do not know the parent is coming back. Brief, predictable separations with consistent farewell routines help build trust that the absent parent returns.</div>
+        <div><strong>Absorbing parental emotion</strong> &mdash; Infants and toddlers are exquisitely sensitive to parental emotional states. They do not understand words &mdash; but they read tone, body language, and nervous system cues. A parent who is visibly distressed at handover communicates to the child that something is wrong. Practice calm handovers even when you do not feel calm.</div>
+        <div><strong>What helps:</strong> Consistent routines across both homes; familiar objects (a stuffed animal, a blanket) that travel between homes; brief, warm, and calm handovers; age-appropriate language ("Daddy/Mummy loves you and will see you on Tuesday"); and maintained contact with grandparents and other significant people.</div>
+        <div><strong>When to seek professional help:</strong> If regression is severe or prolonged, if sleep disturbance is significantly impacting the child or parent, or if the child is consistently inconsolable during transitions, consult your GP or a child psychologist. Early Childhood Intervention Services can also support young children experiencing family stress.</div>
+      </div>
+      <div id="age-6-11" class="kids-age-content" style="display:none;">
+        <div><strong>Self-blame</strong> &mdash; Children in this age group frequently believe the separation is their fault. They may recall a recent conflict or misbehaviour and connect it (incorrectly) to the family breakdown. This belief is almost universal and must be directly, explicitly, and repeatedly addressed: "The separation is a grown-up problem. It is not your fault. Nothing you did caused this, and nothing you do will change it."</div>
+        <div><strong>Loyalty conflicts</strong> &mdash; School-age children feel intensely pulled between parents. They may modify their behaviour, opinions, and reports depending on which parent they are with, in order to avoid hurting anyone. This is not dishonesty &mdash; it is an attempt to manage an impossible emotional position. Do not debrief your child about the other household.</div>
+        <div><strong>Internalising and externalising</strong> &mdash; Some children in this age group internalise distress (appearing fine, becoming anxious, struggling at school, developing physical complaints like stomach aches). Others externalise (becoming aggressive, defiant, or attention-seeking). Both are communication &mdash; they need more support, not more discipline.</div>
+        <div><strong>Impact on school performance</strong> &mdash; Cognitive bandwidth used for emotional regulation is cognitive bandwidth unavailable for learning. It is normal for school performance to dip during periods of acute family disruption. Alert your child's teacher to the situation (briefly and without detail) so that unexplained absences or behavioural changes are understood in context.</div>
+        <div><strong>What helps:</strong> Age-appropriate, honest explanation that the separation is not their fault; maintained school routine and extracurricular activities; explicit permission to love both parents without guilt; regular, predictable contact with both parents and extended family; and a trusted adult at school who knows the situation. Do not denigrate the other parent when talking about the relationship.</div>
+      </div>
+      <div id="age-12-17" class="kids-age-content" style="display:none;">
+        <div><strong>Strong views on arrangements</strong> &mdash; Adolescents have real, considered opinions about living arrangements and will express them. Under s 60CC(3)(a) of the Family Law Act, the court must consider the child's views, with the weight given depending on the child's maturity and level of understanding. A 14-year-old's clearly expressed views about where they want to live carry significant weight. This does not mean teenagers make the final decision &mdash; but dismissing their views is both practically and legally counterproductive.</div>
+        <div><strong>Risk-taking and acting out</strong> &mdash; Adolescents experiencing family breakdown are at elevated risk of academic disengagement, substance experimentation, risk-taking behaviour, and social withdrawal. These are not simply teenage phases &mdash; they are distress signals. Peer relationships become critically important during this time, and disruption to peer networks (through school changes or relocation) compounds the stress significantly.</div>
+        <div><strong>Parentification</strong> &mdash; Teenagers are old enough to understand what is happening, which makes them vulnerable to being treated as confidants or emotional supports by parents. This is called parentification &mdash; it is inappropriate, harmful to the child's development, and &mdash; if documented by a family consultant &mdash; adversely affects parenting assessments. Do not share preparation planning, financial concerns, or hostile feelings about the other parent with your teenager.</div>
+        <div><strong>Identity and stability</strong> &mdash; Adolescence is already a period of identity formation. Family breakdown during this stage is particularly disruptive because it occurs when the adolescent needs a stable base from which to explore who they are. Consistency in school, friendships, and activities provides the scaffolding they need.</div>
+        <div><strong>What helps:</strong> Genuine respect for their views without burdening them with adult decisions; maintained peer and social connections; transparency without detail ("We're going through some legal proceedings but you don't need to worry about the details"); consistent expectations and boundaries across both homes; professional support from a youth counsellor or psychologist; and being willing to acknowledge that the arrangements might need to adapt as they get older.</div>
+      </div>
+    </div>
+
+
+    <!-- Legal framework -->
+    <details class="kids-section-collapsible info-card-wide cp-collapsible cp-collapsible--chapter">
+      <summary><h2>The legal framework &mdash; best interests of the child</h2></summary>
+      <div class="kids-section-collapsible-body cp-collapsible cp-collapsible--chapter cp-collapsible__body">
+      <p style="margin-bottom:1.25rem;">The Family Law Act 1975 (Cth) places the best interests of the child as the paramount consideration in all parenting decisions (s 60CA). This principle governs every parenting order made by the FCFCOA &mdash; from interim arrangements through to final orders. No other consideration &mdash; including what the parents want &mdash; outranks it.</p>
+      <p style="margin-bottom:1.25rem;">Following the 2023 amendments to the Family Law Act, the court must assess the child's best interests by considering several factors. The two most significant are:</p>
+      <div class="kids-law-grid">
+        <div class="kids-law-item"><div class="kids-law-num">1</div><div><strong>Protection from harm</strong><p>Protecting the child from physical or psychological harm, from being subjected to, or exposed to, abuse, neglect, or family violence (s 60CC(2)(a)). This is now the primary consideration &mdash; it outweighs the benefit of having a relationship with both parents where there is a safety concern.</p></div></div>
+        <div class="kids-law-item"><div class="kids-law-num">2</div><div><strong>Meaningful relationships</strong><p>The benefit of the child having a meaningful relationship with both of their parents &mdash; where it is safe and in the child's best interests to do so (s 60CC(2)(b)). The 2023 amendments removed the presumption of equal shared parental responsibility.</p></div></div>
+      </div>
+      <p class="cp-text-sm" style="margin-top:1.25rem;color:var(--mid)">Additional considerations under s 60CC(3) include: the child's own views (given weight according to their maturity and age), the nature of the relationship with each parent and other significant people, the willingness of each parent to facilitate the child's relationship with the other parent, the practical difficulty and expense of proposed arrangements, the capacity of each parent to meet the child's physical, emotional, and intellectual needs, and any other factor the court considers relevant.</p>
+      </div>
+    </details>
+
+    <!-- Parental responsibility -->
+    <details class="kids-section-collapsible info-card-wide cp-collapsible cp-collapsible--chapter">
+      <summary><h2>Parental responsibility &mdash; what it means and how it works</h2></summary>
+      <div class="kids-section-collapsible-body cp-collapsible cp-collapsible--chapter cp-collapsible__body">
+      <p style="margin-bottom:1.25rem;"><strong>Parental responsibility</strong> is defined under s 61B of the Family Law Act as all the duties, powers, responsibilities and authority which, by law, parents have in relation to children. It concerns decision-making &mdash; not where the child lives or how much time they spend with each parent.</p>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="background:var(--sage-pale);border-radius:12px;padding:1rem 1.25rem;border-left:4px solid var(--sage);">
+          <strong style="display:block;margin-bottom:0.3rem;">Shared parental responsibility</strong>
+          <p class="cp-text-sm" style="margin:0;color:var(--mid)">Both parents jointly make major long-term decisions about the child &mdash; including education, healthcare, religion, and relocation. This does not mean equal time. It means decisions about these major areas require consultation and agreement. Day-to-day decisions (what the child eats, bedtime, activities during your time) do not require consultation.</p>
+        </div>
+        <div style="background:#fafafa;border-radius:12px;padding:1rem 1.25rem;border-left:4px solid #c8a96e;">
+          <strong style="display:block;margin-bottom:0.3rem;">Sole parental responsibility</strong>
+          <p class="cp-text-sm" style="margin:0;color:var(--mid)">One parent makes all major decisions without consultation with the other. Courts grant sole parental responsibility where shared responsibility is unworkable &mdash; typically in high-conflict situations, where there is a history of family violence, or where one parent has been completely disengaged from the child's life.</p>
+        </div>
+        <div style="background:#fafafa;border-radius:12px;padding:1rem 1.25rem;border-left:4px solid #1565a0;">
+          <strong style="display:block;margin-bottom:0.3rem;">Specific issues orders</strong>
+          <p class="cp-text-sm" style="margin:0;color:var(--mid)">Courts can allocate parental responsibility for specific decisions to one parent &mdash; for example, one parent may have sole responsibility for medical decisions while parental responsibility for education is shared. This approach is used where parents can cooperate on some matters but not others.</p>
+        </div>
+      </div>
+      </div>
+    </details>
+
+    <!-- What children need -->
+    <details class="kids-section-collapsible info-card-wide cp-collapsible cp-collapsible--chapter">
+      <summary><h2>What children need from both parents during separation</h2></summary>
+      <div class="kids-section-collapsible-body cp-collapsible cp-collapsible--chapter cp-collapsible__body">
+      <p style="margin-bottom:1.25rem;">What distinguishes children who do well after family separation from those who struggle is remarkably consistent. The single strongest predictor of positive outcomes is not the specific parenting arrangement &mdash; it is the quality of the co-parenting relationship and the level of conflict the child is exposed to. Children are remarkably resilient when they feel safe, loved by both parents, and not caught in the middle.</p>
+      <div class="kids-need-grid">
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--shield" aria-hidden="true"></span><strong>To feel safe</strong></div><p>Children need to know they are physically safe with both parents and that adult conflict will not escalate in front of them. Witnessing parental conflict &mdash; including shouting, crying, or tense exchanges at handover &mdash; causes genuine psychological harm regardless of what the conflict is about.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--mail-x" aria-hidden="true"></span><strong>To not be the messenger</strong></div><p>Children should never carry information, money, or messages between parents. "Tell your dad he needs to pay the school fees" or "Ask your mum when she's picking you up" places children in an impossible position between two people they love equally. This is parental alienation behaviour whether intended or not.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--heart" aria-hidden="true"></span><strong>Permission to love both parents</strong></div><p>One of the most protective things any parent can say is: "It's completely okay to love [the other parent]. I want you to have a good relationship with them." Research consistently shows this explicit permission significantly reduces loyalty conflict and improves long-term outcomes.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--calendar" aria-hidden="true"></span><strong>Routine and predictability</strong></div><p>Consistent schedules, consistent bedtimes, consistent handover locations, and predictable transitions reduce anxiety and give children a reliable structure to organise their experience around. Unpredictability &mdash; even when benign &mdash; is inherently stressful for children during family disruption.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--message-circle" aria-hidden="true"></span><strong>To be heard without pressure</strong></div><p>Children should be able to express how they feel about arrangements without feeling that their opinion will determine the outcome, hurt a parent's feelings, or be used as evidence. "How are you feeling about things?" is appropriate. "Would you rather live with me or your mum/dad?" is not.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--users" aria-hidden="true"></span><strong>Continuity of important relationships</strong></div><p>School, sport, music, friends, grandparents, cousins, and pets are all stabilising anchors during a destabilising time. Wherever possible, protect these relationships. Decisions about schooling or activities should prioritise the child's existing connections &mdash; not parental convenience or strategic positioning.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--sprout" aria-hidden="true"></span><strong>To not carry adult burdens</strong></div><p>Children should not know the details of court proceedings, affidavit allegations, financial disputes, or preparation planning. They should not feel responsible for either parent's emotional state. They should not be asked to "keep secrets" from the other parent nor pressured into explaining everything that occurred at the other parent&apos;s residence. Childhood is not compatible with being a party to adult conflict.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--handshake" aria-hidden="true"></span><strong>Consistency between homes</strong></div><p>Where possible, similar expectations about bedtime, screen time, homework, and behaviour across both homes give children consistency. This does not mean identical &mdash; different homes have different rules. But extreme inconsistency creates confusion and gives children leverage to play parents against each other.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--message-square" aria-hidden="true"></span><strong>Age-appropriate honesty</strong></div><p>Children notice when something is wrong and fill silence with their own explanations &mdash; which are almost always worse than the truth. They need honest, developmentally appropriate answers: "Mum and Dad have decided not to live together anymore, but we both love you and that will never change" is enough. They do not need details about why the relationship broke down, what the other parent did, or what is happening in court. The absence of information is not protection &mdash; it is a vacuum children fill with fear and self-blame.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--heart-handshake" aria-hidden="true"></span><strong>Emotional permission</strong></div><p>Children need permission to experience the full range of emotions that come with separation &mdash; sadness, anger, confusion, relief, anxiety, loyalty conflict, or even moments of happiness. Statements like "You seem upset today" or "It's okay to miss the other parent when you're here" help children feel emotionally safe. Trying to force positivity, minimise their feelings, or treat emotional reactions as disloyalty teaches children to suppress rather than process distress.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--shield-alert" aria-hidden="true"></span><strong>Protection from adult communication conflict</strong></div><p>Children should not be exposed to hostile texts, emails, phone calls, or social media disputes between parents. Reading messages over a child's shoulder, arguing during FaceTime calls, or making sarcastic comments while communicating with the other parent places children inside adult conflict even when they are not directly involved. Parents should communicate privately, calmly, and in ways that minimise the child's awareness of conflict wherever possible.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--hourglass" aria-hidden="true"></span><strong>Time to adjust</strong></div><p>Children rarely adapt to major family change immediately. Behaviour changes, clinginess, sleep disruption, school difficulties, emotional outbursts, or withdrawal are often signs of adjustment stress rather than "bad behaviour." Children need patience, reassurance, and stability while they adapt to a new reality. The goal is not to force children to "move on" quickly &mdash; it is to help them feel secure enough that adjustment happens naturally over time.</p></div>
+      </div>
+      </div>
+    </details>
+
+    <!-- Online safety / technology — educational partner resource -->
+    <div class="info-card-wide kids-online-safety" id="helping-keep-kids-safe-online">
+      <span class="cp-icon-badge cp-icon-badge--blue" aria-hidden="true"><span class="cp-icon cp-icon--shield-check"></span></span>
+      <h2>Helping Keep Kids Safe Online</h2>
+      <p style="margin-bottom:0.85rem;">Children today spend a significant amount of time online. Alongside healthy parenting, communication and appropriate supervision, technology can also play an important role in helping create a safer online environment for children &mdash; supporting internet safety and child online safety at home.</p>
+      <p style="margin-bottom:0;">CasePath aims to connect families with practical Australian resources that support children&rsquo;s wellbeing both inside and outside the family law system, including Australian online safety tools that encourage safe internet for kids and healthy technology use.</p>
+
+      <h3>Recommended Australian Resource</h3>
+      <p style="margin-bottom:0.85rem;"><strong>Safer Kids WiFi</strong> is an Australian online safety solution designed to help families create a safer home internet environment.</p>
+      <p style="margin-bottom:0.85rem;">Depending on your family&rsquo;s needs, it may assist with managing online risks through adjustable website restrictions and filters that can be updated as children grow, helping reduce exposure to unsuitable content and supporting age-appropriate internet access.</p>
+      <p style="margin-bottom:0.85rem;">For many separated parents, having agreed technology boundaries can form part of broader parenting arrangements and help provide consistency between households.</p>
+      <p style="margin-bottom:1.15rem;">CasePath does not provide or manage internet filtering services, however we believe this is a valuable educational resource that many parents may find helpful.</p>
+      <p style="margin:0 0 0.25rem;">
+        <a class="kids-ext-btn" href="https://www.saferkidswifi.com.au/" target="_blank" rel="noopener noreferrer" aria-label="Visit Safer Kids WiFi (opens in a new tab)">
+          Visit Safer Kids WiFi
+          <span class="cp-icon cp-icon--external-link" aria-hidden="true"></span>
+        </a>
+      </p>
+
+      <div class="kids-partner-note" role="note" aria-label="Why CasePath is recommending Safer Kids WiFi">
+        <strong>Why we&rsquo;re recommending this</strong>
+        <p>Safer Kids WiFi is an Australian initiative focused on helping families create a safer home internet environment. We are pleased to highlight Australian organisations and initiatives that align with CasePath&rsquo;s goal of supporting children&rsquo;s wellbeing through practical, preventative tools and education.</p>
+        <p>This recommendation is provided as an educational resource. Parents should consider whether any service is appropriate for their own family&rsquo;s circumstances.</p>
+      </div>
+
+      <p class="cp-text-sm" style="margin:1.15rem 0 0;color:var(--mid)">For a fuller educational guide on healthy technology habits, screen time, gaming, social media and family technology agreements, see <a href="/digital-parenting.html">Digital Parenting</a>.</p>
+    </div>
+
+    <aside class="info-card-wide kids-aus-innovation" id="australian-innovation" aria-labelledby="australian-innovation-heading">
+      <div class="kids-aus-innovation__header">
+        <span class="cp-icon cp-icon--lightbulb" aria-hidden="true"></span>
+        <h3 id="australian-innovation-heading">Australian Innovation</h3>
+      </div>
+      <p>CasePath is proud to highlight Australian organisations developing practical tools that help support children and families.</p>
+      <p>Safer Kids WiFi is one example of Australian innovation focused on helping parents create a safer online environment for children. By combining education, healthy parenting practices and appropriate technology, families can make informed choices that support children&rsquo;s wellbeing both at home and online.</p>
+      <p>CasePath independently selects educational resources that may assist families. Inclusion does not constitute legal advice or an endorsement that a particular product or service is suitable for every family.</p>
+    </aside>
+
+    <!-- Do and don't -->
+    <details class="kids-section-collapsible info-card-wide cp-collapsible cp-collapsible--chapter">
+      <summary><h2>What to do and what not to do</h2></summary>
+      <div class="kids-section-collapsible-body cp-collapsible cp-collapsible--chapter cp-collapsible__body">
+      <p class="cp-text-sm" style="margin-bottom:1.25rem;color:var(--mid)">These are not judgements &mdash; they are evidence-based guidance on what the research shows improves outcomes for children of separated parents.</p>
+      <div class="kids-dos-donts">
+        <div>
+          <div class="kids-col-header kids-col-header--do" style="background:var(--sage-pale);color:var(--sage);"><span class="cp-icon cp-icon--check" aria-hidden="true"></span> Do</div>
+          <div class="kids-item kids-do">Tell children the separation is not their fault &mdash; clearly, directly, and repeatedly over time.</div>
+          <div class="kids-item kids-do">Maintain as much routine as possible across both homes &mdash; same bedtime, same homework expectations, same basic values.</div>
+          <div class="kids-item kids-do">Speak positively or neutrally about the other parent in front of the children. "Your dad/mum loves you very much" is always appropriate.</div>
+          <div class="kids-item kids-do">Keep handovers calm, brief, and consistent. Practice emotional regulation before handovers. Children read your nervous system.</div>
+          <div class="kids-item kids-do">Allow children to take photos, favourite toys, books, and comfort objects freely between homes without comment.</div>
+          <div class="kids-item kids-do">Support children's relationships with grandparents and extended family on both sides. These relationships provide stability children desperately need.</div>
+          <div class="kids-item kids-do">Seek professional help (child psychologist, school counsellor, GP) if children show sustained signs of distress. Early intervention brings best results. These professionals should be decided between both parents.</div>
+          <div class="kids-item kids-do">Communicate directly with the other parent about the children &mdash; via app, email, text or if necessary a third neutral party. Do not route communication through the children. Using a co-parenting communication app (such as OurFamilyWizard or Cozi) keeps all parenting-related messages in one place, timestamped, and separate from your personal life.</div>
+          <div class="kids-item kids-do">Be flexible with arrangements around special occasions &mdash; birthdays, events, illness. This models to children that their needs come first.</div>
+          <div class="kids-item kids-do">Acknowledge children's feelings about the separation without giving them adult detail. "I know this is hard and it is okay to feel sad" is far more helpful than an explanation of what went wrong.</div>
+          <div class="kids-item kids-do">Attend the other parent's significant life events &mdash; school concerts, sports carnivals, graduations &mdash; calmly and without incident. Courts and family consultants notice cooperative co-parenting behaviour.</div>
+          <div class="kids-item kids-do">Keep children's school, GP, extracurricular activities, and social routines intact wherever possible. Continuity in these areas is one of the strongest protective factors for children's wellbeing during separation.</div>
+          <div class="kids-item kids-do">When children return from the other parent's home, greet them warmly. Give them time to transition back before asking about their time away, without interrogation.</div>
+          <div class="kids-item kids-do">Ensure children have age-appropriate ways to contact the other parent &mdash; phone calls, video calls, or messages &mdash; without needing to ask permission, and without the calls being monitored or cut short.</div>
+        </div>
+        <div>
+          <div class="kids-col-header kids-col-header--dont" style="background:#fce7e7;color:#b91c1c;"><span class="cp-icon cp-icon--x" aria-hidden="true"></span> Don't</div>
+          <div class="kids-item kids-dont">Use children to carry messages, money, legal documents, or information to the other parent under any circumstances.</div>
+          <div class="kids-item kids-dont">Question children about what happens at the other parent's home, who visited, what was said, or what the other parent is doing.</div>
+          <div class="kids-item kids-dont">Expose children to court documents, affidavits, legal proceedings, or adult discussions about the case. Ever.</div>
+          <div class="kids-item kids-dont">Make negative comments about the other parent, their new partner, their parenting, their finances, or their character &mdash; within earshot of the children or to children directly.</div>
+          <div class="kids-item kids-dont">Allow children to feel responsible for either parent's emotional state &mdash; through explicit statements or through visible emotional distress at separations and handovers.</div>
+          <div class="kids-item kids-dont">Withhold contact with the other parent without a genuine, immediate, documented safety reason. Without such a reason &mdash; and where parenting orders are in place &mdash; withholding contact can be a contravention and is treated seriously by the court.</div>
+          <div class="kids-item kids-dont">Ask children to keep secrets from the other parent &mdash; this places children in a loyalty conflict and is a recognised form of emotional harm.</div>
+          <div class="kids-item kids-dont">Use children's stated views or preferences as strategic leverage in proceedings. Encouraging children to express particular views for legal purposes is a form of coaching that family consultants are trained to detect.</div>
+          <div class="kids-item kids-dont">Involve children in adult financial or legal discussions. Do not show them paperwork, discuss money issues, or explain why the other parent "has to pay".</div>
+          <div class="kids-item kids-dont">Introduce a new partner to your children without careful thought about timing and the children's readiness. Rushing this can increase children's anxiety and provide material that may be raised in proceedings.</div>
+          <div class="kids-item kids-dont">Permit children to opt out of court-ordered time with the other parent based on their stated preferences alone. Children should not be placed in the position of making decisions that are properly for adults and the court to make.</div>
+          <div class="kids-item kids-dont">Discuss your own emotional pain, loneliness, financial stress, or feelings about the other parent with your children or within their hearing. Children should not be your emotional support during proceedings.</div>
+          <div class="kids-item kids-dont">Change schools, relocate, or make significant decisions about the children's lives without the other parent's agreement or a court order permitting you to do so. Depending on your parental responsibility, initiating major decisions can constitute a contravention of existing orders.</div>
+          <div class="kids-item kids-dont">Tell children that the other parent does not love them, does not want to see them, or is only attending proceedings for strategic reasons. These statements are deeply harmful and are taken seriously by family consultants and courts.</div>
+          <div class="kids-item kids-dont">Allow your own conflict with the other parent to spill into how you manage children's contact &mdash; delaying pickups, cancelling time at short notice, or making changeover locations hostile. Every incident is potentially documentable.</div>
+        </div>
+      </div>
+      </div>
+    </details>
+
+    <!-- Parental alienation -->
+    <details class="kids-section-collapsible info-card-wide cp-collapsible cp-collapsible--chapter">
+      <summary><h2>Understanding parental alienation &mdash; and why it matters legally</h2></summary>
+      <div class="kids-section-collapsible-body cp-collapsible cp-collapsible--chapter cp-collapsible__body">
+      <p style="margin-bottom:1rem;"><strong>Parental alienation</strong> refers to a pattern of behaviour by one parent that undermines the child's relationship with the other parent. It ranges from subtle (sighing when the other parent's name is mentioned) to severe (actively telling a child the other parent does not love them, is dangerous, or wants to take them away).</p>
+      <p class="cp-text-sm cp-leading-body" style="margin-bottom:1.25rem;color:var(--mid)">In court, what matters is <strong>documented conduct</strong> and how it affects the child &mdash; not whether anyone uses the words "parental alienation." Statutory references on CasePath are for orientation; always check the current Act and obtain <strong>independent legal advice</strong> for your situation.</p>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.25rem;">
+        <div class="cp-text-sm cp-leading-body" style="background:#fafafa;border-radius:12px;padding:0.85rem 1rem"><strong>Why it matters legally:</strong> Under s 60CC(3)(c) of the Family Law Act, the court must consider the willingness and ability of each parent to facilitate, and encourage, a close and continuing relationship between the child and the other parent. A parent who undermines the child's relationship with the other parent is directly affecting a key factor in parenting assessments. Family consultants are specifically trained to identify alienating behaviour.</div>
+        <div class="cp-text-sm cp-leading-body" style="background:#fce7e7;border-radius:12px;padding:0.85rem 1rem;border-left:3px solid #b91c1c"><strong>Why it matters for children:</strong> Children who are alienated from a parent consistently show elevated rates of depression, anxiety, difficulties with trust and relationships, and, in adulthood, often describe profound grief about the lost relationship &mdash; regardless of which parent they originally aligned with.</div>
+      </div>
+      <p class="cp-text-sm cp-leading-body" style="margin-bottom:1rem;color:var(--mid)"><strong>Note:</strong> Not every child who resists contact with a parent is alienated. Children can have genuine, legitimate reasons to be reluctant to spend time with a parent &mdash; including exposure to family violence, parenting that is inconsistent or harsh, or simply normal developmental preferences. The distinction between alienation and legitimate resistance is complex and should be assessed by a professional.</p>
+      <p class="cp-text-sm cp-leading-body" style="margin-bottom:0;color:var(--mid)"><strong>If you are concerned this pattern is affecting your child:</strong> keep a factual record (what was said or done, when, and who was present); raise issues through your lawyer or in sworn material where appropriate; and discuss whether a family report or an Independent Children's Lawyer is suitable &mdash; these are case-specific decisions. Avoid mirroring the behaviour you complain about (negative talk about the other parent, or coaching children before interviews). Courts treat that as harmful to children and damaging to your own credibility.</p>
+      </div>
+    </details>
+
+    <!-- Family consultants and ICL -->
+    <details class="kids-section-collapsible info-card-wide cp-collapsible cp-collapsible--chapter">
+      <summary><h2>Family consultants, ICLs, and how children's voices are heard in court</h2></summary>
+      <div class="kids-section-collapsible-body cp-collapsible cp-collapsible--chapter cp-collapsible__body">
+      <p style="margin-bottom:1.25rem;">Children do not give evidence in family law proceedings. Instead, their views, needs, and wellbeing are assessed and represented through specialised processes.</p>
+      <div class="kids-need-grid">
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--file-text" aria-hidden="true"></span><strong>Family Report</strong></div><p>A report prepared by a court-appointed family consultant (psychologist or social worker) who interviews both parents, the children, and sometimes other significant people. The report makes recommendations about parenting arrangements. It is highly influential &mdash; Magistrates and Judges give it significant weight.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--baby" aria-hidden="true"></span><strong>Child Impact Report</strong></div><p>A shorter, earlier report focused on the immediate needs and circumstances of the child. Often ordered at interim stages to assist with short-term arrangements while proceedings continue.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--scale" aria-hidden="true"></span><strong>Independent Children's Lawyer (ICL)</strong></div><p>A lawyer appointed by the court to represent the children's interests &mdash; not to act on the children's instructions, but to independently assess and present what is in their best interests. ICLs interview children (depending on age), review evidence, and make submissions to the court. They are appointed in serious or complex cases.</p></div>
+        <div class="kids-need-tile"><div class="kids-need-tile-header"><span class="cp-icon cp-icon--stethoscope" aria-hidden="true"></span><strong>Expert witnesses</strong></div><p>In complex cases involving alleged child abuse, mental health conditions, or developmental concerns, the court may appoint an independent expert &mdash; typically a clinical or forensic psychologist &mdash; to assess specific issues. Their evidence is given significant weight.</p></div>
+      </div>
+      <p class="cp-text-sm cp-leading-body" style="margin-top:1rem;color:var(--mid)">If you are involved in a family report process: be honest and child-focused, not strategic. Family consultants have extensive experience distinguishing genuine child-focus from parental positioning. Preparing your children for what to say is detrimental to your case and harmful to your children. CasePath provides general information only &mdash; seek independent legal advice about your own proceedings.</p>
+      </div>
+    </details>
+
+    <!-- Support resources -->
+    <div class="info-card-wide">
+      <span class="cp-icon-badge cp-icon-badge--green" aria-hidden="true"><span class="cp-icon cp-icon--life-buoy"></span></span>
+      <h2>Support resources for children and parents</h2>
+      <div class="mh-resources-grid">
+        <div class="mh-resource-card" id="digital-parenting-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e8f4f0,#f3faf6);"><span class="mh-resource-icon cp-icon cp-icon--smartphone" aria-hidden="true"></span><div class="mh-resource-header"><strong>Digital Parenting</strong><span class="mh-resource-tag">About the Kids guide</span></div></div><p>Helping children safely navigate technology, gaming, social media and life online.</p><div class="mh-contact"><a href="/digital-parenting.html" aria-label="Open the Digital Parenting educational guide">Read the guide &rarr;</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e8f0fe,#f0f4ff);"><span class="mh-resource-icon cp-icon cp-icon--shield-check" aria-hidden="true"></span><div class="mh-resource-header"><strong>Safer Kids WiFi</strong><span class="mh-resource-tag">Australian online safety</span></div></div><p>Australian online safety tools designed to help families create a safer internet environment at home.</p><div class="mh-contact"><a class="kids-ext-btn kids-ext-btn--card" href="https://www.saferkidswifi.com.au/" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Safer Kids WiFi (opens in a new tab)">Learn More <span class="cp-icon cp-icon--external-link" aria-hidden="true"></span></a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#fdf0ee,#fff5f3);"><span class="mh-resource-icon cp-icon cp-icon--phone" aria-hidden="true"></span><div class="mh-resource-header"><strong>Kids Helpline</strong><span class="mh-resource-tag">Ages 5&ndash;25</span></div></div><p>Free, private counselling 24/7 by phone, chat or email. Trained counsellors experienced in family breakdown. Your child can call without parental permission.</p><div class="mh-contact"><a href="tel:1800551800" aria-label="Call Kids Helpline on 1800 55 1800"><strong>1800 55 1800</strong></a> &middot; <a href="https://kidshelpline.com.au" target="_blank" rel="noopener noreferrer">kidshelpline.com.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e7f3e8,#f0faf0);"><span class="mh-resource-icon cp-icon cp-icon--brain" aria-hidden="true"></span><div class="mh-resource-header"><strong>Emerging Minds</strong><span class="mh-resource-tag">Children's mental health</span></div></div><p>Free resources for parents and practitioners on supporting children's mental health during family separation. Practical, evidence-based guides for every age group.</p><div class="mh-contact"><a href="https://emergingminds.com.au" target="_blank" rel="noopener noreferrer">emergingminds.com.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e8f0fe,#f0f4ff);"><span class="mh-resource-icon cp-icon cp-icon--phone-call" aria-hidden="true"></span><div class="mh-resource-header"><strong>Parentline</strong><span class="mh-resource-tag">Parenting support</span></div></div><p>Phone counselling for parents and carers dealing with parenting stress, co-parenting conflict, and child behaviour during family change. Available in most states.</p><div class="mh-contact"><a href="tel:1300130052" aria-label="Call Parentline NSW on 1300 130 052"><strong>1300 130 052</strong></a> (NSW) &middot; <a href="tel:132289" aria-label="Call Parentline Queensland on 13 22 89"><strong>13 22 89</strong></a> (QLD)</div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#f0ebff,#f8f5ff);"><span class="mh-resource-icon cp-icon cp-icon--handshake" aria-hidden="true"></span><div class="mh-resource-header"><strong>Family Relationships Online</strong><span class="mh-resource-tag">Co-parenting resources</span></div></div><p>Government portal with co-parenting resources, parenting plans, and information about family relationship services near you. Also lists Family Relationship Centres nationally.</p><div class="mh-contact"><a href="https://www.familyrelationships.gov.au" target="_blank" rel="noopener noreferrer">familyrelationships.gov.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#fff8e1,#fffdf0);"><span class="mh-resource-icon cp-icon cp-icon--users" aria-hidden="true"></span><div class="mh-resource-header"><strong>Relationships Australia</strong><span class="mh-resource-tag">Counselling &amp; education</span></div></div><p>Separation and co-parenting counselling, children's programs, and parenting education specifically designed for separating families. Offices in every state and territory.</p><div class="mh-contact"><a href="tel:1300364277" aria-label="Call Relationships Australia on 1300 364 277"><strong>1300 364 277</strong></a> &middot; <a href="https://www.relationships.org.au" target="_blank" rel="noopener noreferrer">relationships.org.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#fce7e7,#fff5f5);"><span class="mh-resource-icon cp-icon cp-icon--wallet" aria-hidden="true"></span><div class="mh-resource-header"><strong>Child Support Agency</strong><span class="mh-resource-tag">Financial support for children</span></div></div><p>Services Australia administers child support &mdash; assessments, collection, and compliance. A child support assessment is separate from property proceedings and can be initiated independently.</p><div class="mh-contact"><a href="tel:131272" aria-label="Call Child Support Agency on 131 272"><strong>131 272</strong></a> &middot; <a href="https://www.servicesaustralia.gov.au/individuals/services/child-support" target="_blank" rel="noopener noreferrer">Child Support — Services Australia</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#fff8e1,#fffdf0);"><span class="mh-resource-icon cp-icon cp-icon--heart-off" aria-hidden="true"></span><div class="mh-resource-header"><strong>Freedom from loyalty tests</strong></div></div><p>Children are highly attuned to subtle cues &mdash; tone of voice, facial expressions, silence, or what goes unsaid. They quickly learn what earns approval and what creates tension. Even indirect comments like &quot;I guess you had more fun at Dad&apos;s&quot; or visible disappointment at transitions can function as loyalty tests. Over time, children adapt by editing themselves &mdash; downplaying positive experiences with one parent to protect the other. This is psychologically costly. Children need to be able to move between homes without performing emotional diplomacy.</p></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e8f4f8,#f0f8ff);"><span class="mh-resource-icon cp-icon cp-icon--messages-square" aria-hidden="true"></span><div class="mh-resource-header"><strong>Low-conflict communication between parents</strong></div></div><p>Children benefit when communication between parents is business-like, predictable, and contained. This does not require warmth or friendship &mdash; it requires control. Arguments via text, hostile emails, or conflict at handover all leak into the child&apos;s world, even when you think they&apos;re shielded. Using structured communication (clear, brief, child-focused) and, where needed, tools like parenting apps creates psychological distance from conflict. The goal is simple: reduce the amount of adult tension the child has to absorb.</p></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e7f3e8,#f0faf0);"><span class="mh-resource-icon cp-icon cp-icon--compass" aria-hidden="true"></span><div class="mh-resource-header"><strong>Clear roles and boundaries</strong></div></div><p>Children cope better when the roles in their world are stable and appropriate: parents make decisions, children are children. When boundaries blur &mdash; children acting as emotional support, decision-makers, or confidants &mdash; anxiety increases and development is disrupted. Statements like &quot;I don&apos;t know what I&apos;d do without you&quot; or seeking comfort from a child about the separation places them in a role they are not equipped to carry. Children need parents who are steady, contained, and able to hold the emotional weight of the situation.</p></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#f3e8ff,#faf5ff);"><span class="mh-resource-icon cp-icon cp-icon--refresh" aria-hidden="true"></span><div class="mh-resource-header"><strong>Children need emotional consistency</strong><span class="mh-resource-tag">Emotional security</span></div></div><p>Children benefit when expectations, affection, and support remain consistent across both homes. Differences between households are normal, but sudden changes in emotional availability, discipline, or parenting responses can increase anxiety and uncertainty. Consistency helps children feel secure and reduces the emotional strain often associated with separation.</p></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#fdf0ee,#fff8f5);"><span class="mh-resource-icon cp-icon cp-icon--heart-pulse" aria-hidden="true"></span><div class="mh-resource-header"><strong>beyondblue</strong><span class="mh-resource-tag">Mental health support</span></div></div><p>Information, resources, and a 24/7 support line for anxiety, depression, and emotional distress &mdash; relevant for both parents and older children navigating the stress of family breakdown.</p><div class="mh-contact"><a href="tel:1300224636" aria-label="Call beyondblue on 1300 22 4636"><strong>1300 22 4636</strong></a> &middot; <a href="https://www.beyondblue.org.au" target="_blank" rel="noopener noreferrer">beyondblue.org.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e8f4f8,#f0f8ff);"><span class="mh-resource-icon cp-icon cp-icon--scale" aria-hidden="true"></span><div class="mh-resource-header"><strong>Legal Aid (your state)</strong><span class="mh-resource-tag">Free legal advice</span></div></div><p>Each state and territory has a Legal Aid Commission offering free or low-cost family law advice, duty solicitor services at court, and referrals to community legal centres. Do not attend court without first calling Legal Aid.</p><div class="mh-contact"><a href="https://www.legalaid.nsw.gov.au" target="_blank" rel="noopener noreferrer">NSW</a> &middot; <a href="https://www.legalaid.vic.gov.au" target="_blank" rel="noopener noreferrer">VIC</a> &middot; <a href="https://www.legalaid.qld.gov.au" target="_blank" rel="noopener noreferrer">QLD</a> &middot; <a href="https://www.legalaid.wa.gov.au" target="_blank" rel="noopener noreferrer">WA</a> &middot; <a href="https://www.lsc.sa.gov.au" target="_blank" rel="noopener noreferrer">SA</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#f0faf0,#e7f3e8);"><span class="mh-resource-icon cp-icon cp-icon--brain-circuit" aria-hidden="true"></span><div class="mh-resource-header"><strong>headspace</strong><span class="mh-resource-tag">Youth mental health (12&ndash;25)</span></div></div><p>National youth mental health service with centres across Australia. Provides early intervention mental health support for young people 12&ndash;25, including those experiencing family breakdown and relationship difficulties.</p><div class="mh-contact"><a href="tel:1800650890" aria-label="Call headspace on 1800 650 890"><strong>1800 650 890</strong></a> &middot; <a href="https://www.headspace.org.au" target="_blank" rel="noopener noreferrer">headspace.org.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#fff3e0,#fffbf0);"><span class="mh-resource-icon cp-icon cp-icon--landmark" aria-hidden="true"></span><div class="mh-resource-header"><strong>Family Court of Australia</strong><span class="mh-resource-tag">Court information</span></div></div><p>The FCFCOA website provides self-represented litigant guides, form kits, eLodgment, and plain-English explanations of court processes. The most authoritative source of procedural information for anyone navigating the family court system.</p><div class="mh-contact"><a href="https://www.fcfcoa.gov.au" target="_blank" rel="noopener noreferrer">fcfcoa.gov.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#fce7e7,#fff5f5);"><span class="mh-resource-icon cp-icon cp-icon--life-buoy" aria-hidden="true"></span><div class="mh-resource-header"><strong>Lifeline</strong><span class="mh-resource-tag">Crisis support</span></div></div><p>24/7 crisis support for anyone experiencing emotional distress, overwhelm, or thoughts of self-harm. Particularly important during acute stages of separation when things can escalate quickly.</p><div class="mh-contact"><a href="tel:131114" aria-label="Call Lifeline on 13 11 14"><strong>13 11 14</strong></a> &middot; <a href="https://www.lifeline.org.au" target="_blank" rel="noopener noreferrer">lifeline.org.au</a></div></div>
+        <div class="mh-resource-card"><div class="mh-resource-top" style="background:linear-gradient(135deg,#e8f0fe,#f0f4ff);"><span class="mh-resource-icon cp-icon cp-icon--handshake" aria-hidden="true"></span><div class="mh-resource-header"><strong>Family Relationship Centres (FRCs)</strong><span class="mh-resource-tag">Mediation &amp; dispute resolution</span></div></div><p>Government-funded centres offering free or low-cost mediation, parenting support, and help developing parenting arrangements. Often the first step before court in family law matters.</p><div class="mh-contact"><a href="tel:1800050321" aria-label="Call Family Relationship Centres on 1800 050 321"><strong>1800 050 321</strong></a> &middot; <a href="https://www.familyrelationships.gov.au" target="_blank" rel="noopener noreferrer">familyrelationships.gov.au</a></div></div>
+      </div>
+    </div>
+
+    <div class="info-card-wide" style="margin-top:1.75rem;border-left:4px solid var(--sage);">
+      <h2 style="margin-top:0;">Next Step</h2>
+      <p class="cp-text-md" style="color:var(--mid);margin:0 0 0.85rem">Understanding how separation affects children is the foundation. When you are ready to explore court orders and parenting arrangements, continue to the Parenting Orders guide.</p>
+      <div class="ft-related-tools">
+        <div class="ft-related-tool">
+          <h3>Learn about Parenting Orders</h3>
+          <p>Understand parenting orders, arrangements, and the preparation tools available on CasePath.</p>
+          <a href="/parenting-orders.html">Parenting Orders &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legal-disclaimer-bar">This page provides general information only and does not provide legal advice.<br>You should seek independent legal advice before making decisions about your matter.</div>
+</div>
+
+<section class="cl-connected cp-editorial-band" aria-labelledby="learn-next-title" style="max-width:960px;margin:2rem auto 3rem;padding:0 1.25rem;">
+  <h2 class="cl-connected__title" id="learn-next-title">What to do next</h2>
+  <p class="cl-connected__lead">Continue into CasePath preparation tools that already exist for your situation.</p>
+  <div class="cl-connected-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+    <a href="/prepare.html" class="cl-connected-card" style="display:block;padding:1rem;border:1px solid var(--border,#e5e0d5);border-radius:12px;text-decoration:none;color:inherit;">
+      <h3>Preparation Hub</h3>
+      <p>Map checklists, documents, mediation, and court-day tools.</p>
+      <span>Open Prepare &rarr;</span>
+    </a>
+    <a href="/checklists.html" class="cl-connected-card" style="display:block;padding:1rem;border:1px solid var(--border,#e5e0d5);border-radius:12px;text-decoration:none;color:inherit;">
+      <h3>Checklists</h3>
+      <p>Step-by-step lists for mediation, court, parenting, and safety.</p>
+      <span>Open Checklists &rarr;</span>
+    </a>
+    <a href="/app/workspace/index.html" class="cl-connected-card" style="display:block;padding:1rem;border:1px solid var(--border,#e5e0d5);border-radius:12px;text-decoration:none;color:inherit;" data-protected-nav>
+      <h3>Your Case</h3>
+      <p>Organise chronology, evidence, and deadlines in one place.</p>
+      <span>Open Your Case &rarr;</span>
+    </a>
+  </div>
+</section>
+
+</main>
+<footer class="casepath-site-footer" aria-label="CasePath footer">
+  <div class="casepath-site-footer-inner">
+
+    <div class="casepath-site-footer__main">
+      <div class="casepath-site-footer__brand">
+        <div class="casepath-site-footer__brand-name">CasePath</div>
+        <p class="casepath-site-footer__tagline">Helping Australians navigate family court with clearer preparation alongside appropriate legal help.</p>
+      </div>
+      <nav class="casepath-site-footer__col" aria-label="Learn">
+        <p class="casepath-site-footer__col-label">Learn</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/mission.html">Our Mission</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+          <li><a href="/mental-health.html">Mental Health</a></li>
+          <li><a href="/kids.html">About the Kids</a></li>
+          <li><a href="/digital-parenting.html">Digital Parenting</a></li>
+          <li><a href="/interstate-recognition.html">Interstate Recognition</a></li>
+          <li><a href="/what-list-is-my-case-in.html">What List Is My Case In?</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Support">
+        <p class="casepath-site-footer__col-label">Support</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/support-tools.html">Support Tools</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/mental-health.html">Mental Health</a></li>
+          <li><a href="https://www.1800respect.org.au" target="_blank" rel="noopener">1800RESPECT</a></li>
+          <li><a href="https://www.legalaid.nsw.gov.au" target="_blank" rel="noopener">Legal Aid Australia</a></li>
+          <li><a href="https://www.familyrelationships.gov.au" target="_blank" rel="noopener">Family Relationships Online</a></li>
+          <li><a href="https://www.saferkidswifi.com.au/" target="_blank" rel="noopener noreferrer">Safer Kids WiFi</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Platform">
+        <p class="casepath-site-footer__col-label">Platform</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/prepare.html">Prepare</a></li>
+          <li><a href="/app/workspace/index.html">Your Case</a></li>
+          <li><a href="/index.html?goto=qa">Ask a Question</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/self-represented-guide.html">Self-Represented Guide</a></li>
+          <li><a href="/checklists.html">Checklists</a></li>
+          <li><a href="/referrals.html">Referrals</a></li>
+          <li><a href="/lawyer-portal.html">Lawyer Portal</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Documentation">
+        <p class="casepath-site-footer__col-label">Documentation</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/docs/">Documentation Centre</a></li>
+          <li><a href="/docs/quick-start.html">Quick Start Guide</a></li>
+          <li><a href="/docs/user-manual.html">User Manual</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="casepath-site-footer__meta">
+      <nav id="casepath-footer-legal-row" class="casepath-footer-legal" aria-label="Legal and site links">
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/your-data.html">Your Data</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/ai-use-disclosure.html">AI Use Disclosure</a>
+        <a href="/mission.html">Mission</a>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/kids.html">About the Kids</a>
+        <a href="/mental-health.html">Mental Health</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="casepath-site-footer__disclaimer">
+        <p class="casepath-site-footer__disclaimer-text">
+          <strong>Disclaimer:</strong> CasePath provides general legal information only. It does not provide legal advice. Laws can change &mdash; always check <a href="https://www.legislation.gov.au" target="_blank" rel="noopener">legislation.gov.au</a> for the current version of any Act. If you need advice about your situation, contact a family lawyer or Legal Aid in your state or territory. For complex matters &mdash; especially those involving family violence, child safety, or significant assets &mdash; you should consult a qualified family lawyer. Many community legal centres offer free initial consultations. The information on this platform does not constitute a solicitor-client relationship.
+        </p>
+        <p class="casepath-site-footer__copy">&copy; 2026 CasePath. Built for every Australian going through separation.</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+/* Duplicated from index.html &mdash; age band tabs on About the Kids */
+function setAgeGroup(group) {
+  ['0-5','6-11','12-17'].forEach(function(g) {
+    var el = document.getElementById('age-' + g);
+    if (el) el.style.display = (g === group ? '' : 'none');
+  });
+  document.querySelectorAll('.kids-age-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('onclick').indexOf("'" + group + "'") !== -1);
+  });
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.105.4/dist/umd/supabase.js" integrity="sha384-7SfFUrg31wOnGWBLLniKFCNmCSguYA5wI1WPDOt7kP/mom4R9/0pwghVEnv0uwYP" crossorigin="anonymous"></script>
+<script src="/assets/js/supabase.js?v=20260727iosscroll1"></script>
+<script src="/auth/redirect.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-lang-switch.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-routes.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-access.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-nav-auth.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-nav-access.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/nav-link-fallback.js?v=20260727iosscroll1" defer></script>
+<script src="/assets/js/core/casepath-quick-exit.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-shell-active-nav.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-nav-dropdowns.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-header-sync.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/public-static-nav.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-smart-search.js?v=20260727iosscroll1"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"48b8eaf48843424caa301d0fd340c626","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+

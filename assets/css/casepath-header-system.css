@@ -1,0 +1,318 @@
+/**
+ * CasePath global header system.
+ *
+ * This file is the final authority for the top-of-page stack:
+ * legal notice strip, utility bar, primary nav, thin green contextual strip.
+ * It intentionally targets the existing canonical classes so old page-specific
+ * sizing cannot make app shells or prepare pages drift away from public pages.
+ */
+
+:root {
+  --cp-header-max-width: 1400px;
+  --cp-header-pad-x: clamp(1rem, 3vw, 3rem);
+  --cp-legal-strip-min-height: 34px;
+  --cp-utility-strip-height: 34px;
+  --cp-primary-header-height: 64px;
+  --cp-primary-header-pad-y: 0.5rem;
+  --cp-header-control-height: 44px;
+  --cp-header-logo-height: clamp(38px, 3.2vw, 48px);
+  --cp-header-logo-max-width: clamp(150px, 18vw, 218px);
+  --cp-context-strip-height: 34px;
+  --cp-context-strip-pad-y: 0.42rem;
+  --cp-context-strip-pad-x: 1rem;
+  --cp-context-strip-font: var(--cp-type-small);
+  --cp-header-z: 120;
+  --cp-utility-z: 121;
+  --cp-nav-dropdown-z: 200;
+  /* Measured by casepath-header-sync.js; fallback covers wrapped mobile copy. */
+  --cp-privacy-banner-height: 2.25rem;
+}
+
+body > .disclaimer-banner,
+body > .casepath-utility-bar,
+body > header.header.cp-site-header,
+body > header.header:has(.casepath-nav-categorized) {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+
+body > .disclaimer-banner {
+  min-height: var(--cp-legal-strip-min-height);
+  padding: 0.44rem var(--cp-header-pad-x) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--cp-type-caption);
+  line-height: 1.35;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+body > .disclaimer-banner.disclaimer-banner--trust {
+  gap: 0.25rem 0.55rem;
+  flex-wrap: wrap;
+}
+
+.disclaimer-banner--trust .disclaimer-banner__primary,
+.disclaimer-banner--trust .disclaimer-banner__secondary {
+  display: inline;
+  margin: 0;
+  line-height: 1.45;
+  white-space: normal;
+}
+
+.disclaimer-banner--trust .disclaimer-banner__primary {
+  font-weight: 540;
+}
+
+.disclaimer-banner--trust .disclaimer-banner__secondary {
+  font-weight: 430;
+}
+
+.disclaimer-banner a {
+  color: var(--sage, #4a7c59);
+  font-weight: 650;
+  text-decoration: underline;
+}
+
+body > .casepath-utility-bar {
+  min-height: var(--cp-utility-strip-height);
+  padding: 0.25rem var(--cp-header-pad-x) !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  position: relative;
+  z-index: var(--cp-utility-z);
+}
+
+body > .casepath-utility-bar:empty,
+body > .casepath-utility-bar:not(:has(*:not(:empty))) {
+  display: none;
+}
+
+header.header.cp-site-header,
+header.header:has(.casepath-nav-categorized) {
+  min-height: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  position: relative;
+  z-index: var(--cp-header-z);
+  overflow: visible !important;
+}
+
+header.header .nav-wrapper.casepath-nav-categorized {
+  width: 100%;
+  min-height: var(--cp-primary-header-height);
+  overflow: visible !important;
+}
+
+header.header .nav-top-row.header-inner,
+.casepath-nav-categorized .nav-top-row.header-inner {
+  width: min(100%, var(--cp-header-max-width));
+  min-height: var(--cp-primary-header-height) !important;
+  margin: 0 auto !important;
+  padding: var(--cp-primary-header-pad-y) var(--cp-header-pad-x) !important;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+
+.casepath-nav-categorized .casepath-brand-logo {
+  height: var(--cp-header-logo-height) !important;
+  max-width: var(--cp-header-logo-max-width) !important;
+  width: auto !important;
+  display: block;
+}
+
+.casepath-nav-categorized .nav-trailing,
+.casepath-nav-categorized .header-actions,
+.casepath-nav-categorized #nav-auth-area,
+.casepath-nav-categorized #nav-guest-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.44rem !important;
+  flex-wrap: nowrap !important;
+}
+
+@media (max-width: 768px) {
+  .casepath-nav-categorized .nav-trailing,
+  .casepath-nav-categorized .header-actions,
+  .casepath-nav-categorized #nav-auth-area,
+  .casepath-nav-categorized #nav-guest-actions {
+    flex-wrap: wrap !important;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+.casepath-nav-categorized .nav-cat-toggle,
+.casepath-nav-categorized .nav-cat-link,
+.casepath-nav-categorized #lang-btn,
+.casepath-nav-categorized #nav-signin-btn,
+.casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+.casepath-nav-categorized #navSignOutBtn,
+#casepath-nav-quick-exit-slot .casepath-quick-exit-btn,
+#casepath-utility-quick-exit-slot .casepath-quick-exit-btn {
+  height: var(--cp-header-control-height) !important;
+  min-height: var(--cp-header-control-height) !important;
+  box-sizing: border-box;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+}
+
+.casepath-nav-categorized #navSignOutBtn[aria-hidden="true"] {
+  display: none !important;
+}
+
+header.header .nav-green-bar,
+header.header .cp-announcement-bar,
+.nav-green-bar.cp-announcement-bar {
+  min-height: var(--cp-context-strip-height) !important;
+  max-height: var(--cp-context-strip-height) !important;
+  padding: var(--cp-context-strip-pad-y) var(--cp-context-strip-pad-x) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  font-size: var(--cp-type-small) !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+.cp-context-banner,
+.cp-hero-green-section {
+  white-space: normal;
+  max-height: none;
+}
+
+/*
+ * Global privacy / device-safety banner.
+ * Sits flush beneath the green contextual strip inside the header stack so
+ * there is ZERO vertical gap. Synced to every page via the canonical header.
+ */
+header.header .cp-privacy-banner,
+.cp-privacy-banner {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: #F8F4EC;
+  border: 1px solid #E7D6B5;
+  color: inherit;
+  padding: 10px 16px;
+  margin-top: 0 !important;
+  margin-bottom: 0;
+  border-radius: 0 0 10px 10px;
+  font-size: inherit;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 0;
+  flex-shrink: 0;
+}
+
+header.header .nav-wrapper.casepath-nav-categorized {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 720px) {
+  header.header .cp-privacy-banner,
+  .cp-privacy-banner {
+    font-size: var(--cp-type-small);
+  }
+}
+
+/* On the smallest screens one line is not required (desktop-only), so allow
+   wrapping to avoid horizontal overflow while keeping it flush to the bar. */
+@media (max-width: 768px) {
+  header.header .cp-privacy-banner,
+  .cp-privacy-banner {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: var(--cp-type-caption);
+    line-height: 1.35;
+  }
+
+  header.header .nav-green-bar,
+  header.header .cp-announcement-bar,
+  .nav-green-bar.cp-announcement-bar {
+    max-height: none !important;
+    flex-wrap: wrap !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  body > .disclaimer-banner.disclaimer-banner--trust {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .disclaimer-banner--trust .disclaimer-banner__primary,
+  .disclaimer-banner--trust .disclaimer-banner__secondary {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --cp-header-pad-x: 0.75rem;
+    --cp-legal-strip-min-height: 36px;
+    --cp-primary-header-height: 58px;
+    --cp-header-control-height: 40px;
+    --cp-header-logo-height: 38px;
+    --cp-context-strip-height: 32px;
+    --cp-context-strip-font: 0.74rem;
+  }
+
+  body > .disclaimer-banner {
+    padding-top: 0.48rem !important;
+    padding-bottom: 0.48rem !important;
+  }
+
+  body > .casepath-utility-bar {
+    justify-content: center;
+  }
+
+  header.header .nav-top-row.header-inner,
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    width: 100%;
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+    gap: 0.55rem !important;
+  }
+
+  header.header .nav-green-bar,
+  header.header .cp-announcement-bar,
+  .nav-green-bar.cp-announcement-bar {
+    padding-left: 0.65rem !important;
+    padding-right: 0.65rem !important;
+  }
+}
+
+/*
+ * Shell rhythm lockdown (Phase 2)
+ * Do not redefine .cp-page-hero, .nav-green-bar.cp-announcement-bar, or header stack
+ * metrics in page CSS. Page hero: assets/css/casepath-page-hero.css only.
+ */

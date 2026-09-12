@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="casepath-build" content="20260727iosscroll1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script src="/assets/js/maintenance-mode.js?v=20260727iosscroll1"></script>
+<meta name="description" content="How CasePath protects your family law information — where it is stored, who can access it, trusted providers, and planned Secure Vault features.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casepath.com.au/your-data.html">
+<meta property="og:title" content="Your Data | CasePath Trust Centre">
+<meta property="og:description" content="Plain-language transparency about how CasePath stores and protects your sensitive family law information.">
+<meta property="og:image" content="https://casepath.com.au/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your Data | CasePath Trust Centre">
+<meta name="twitter:description" content="Plain-language transparency about how CasePath stores and protects your sensitive family law information.">
+<meta name="twitter:image" content="https://casepath.com.au/og-image.jpg">
+<link rel="canonical" href="https://casepath.com.au/your-data.html">
+<title>Your Data | CasePath</title>
+<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/public-static-pages.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-shell.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-polish-pass.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-nav-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-ui-governance.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-header-system.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-smart-search.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-page-hero.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-mobile-overflow-guard.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/casepath-icons.css?v=20260727iosscroll1">
+<link rel="stylesheet" href="/assets/css/static-guide-theme.css?v=20260727iosscroll1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="/assets/js/casepath-icon-repair.js?v=20260727iosscroll1" defer></script>
+<style>
+/* Trust Centre — horizontal status badges (never vertical) */
+#page-your-data .cp-trust-badge {
+  display:inline-flex;align-items:center;gap:0.2rem;
+  font-size:0.65rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
+  line-height:1;padding:0.3rem 0.55rem;border-radius:999px;
+  white-space:nowrap;writing-mode:horizontal-tb;text-orientation:mixed;
+  flex-shrink:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;
+}
+#page-your-data .cp-trust-badge--verified { background:#e8f5e9;color:#2e7d32;border:1px solid rgba(46,125,50,0.18); }
+#page-your-data .cp-trust-badge--planned { background:#fff8e1;color:#e65100;border:1px solid rgba(230,81,0,0.18); }
+#page-your-data .cp-trust-badge--progress { background:#e3f2fd;color:#1565c0;border:1px solid rgba(21,101,192,0.18); }
+#page-your-data .cp-trust-badge--tbc { background:#eceff1;color:#546e7a;border:1px solid rgba(84,110,122,0.18); }
+#page-your-data .cp-trust-badge--corner {
+  position:absolute;top:0.65rem;right:0.65rem;z-index:1;
+}
+#page-your-data .cp-trust-badge--inline { margin-right:0.45rem;vertical-align:middle;position:static; }
+#page-your-data .cp-trust-tile {
+  position:relative;background:var(--sage-pale);border-radius:12px;
+  padding:1.15rem 1rem 1rem;padding-top:2.35rem;min-width:0;box-sizing:border-box;
+}
+#page-your-data .cp-trust-tile strong { display:block;font-size:var(--cp-type-small);font-weight:700;margin:0 0 0.35rem;line-height:1.35; }
+#page-your-data .cp-trust-tile p { font-size:var(--cp-type-small);margin:0;line-height:1.65;color:var(--mid); }
+#page-your-data .cp-trust-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.85rem;margin-top:0.85rem; }
+#page-your-data .cp-trust-callout {
+  background:linear-gradient(135deg,rgba(232,240,235,0.95) 0%,#fff 55%);
+  border:1px solid rgba(74,124,89,0.22);border-left:4px solid var(--sage,#4a7c59);
+  border-radius:14px;padding:1.35rem 1.5rem;margin:0 0 1.25rem;
+}
+#page-your-data .cp-trust-callout h2 { margin:0 0 0.65rem;font-size:var(--cp-type-h3);color:var(--charcoal); }
+#page-your-data .cp-trust-callout p { margin:0 0 0.5rem;font-size:var(--cp-type-body);line-height:1.7;color:var(--mid); }
+#page-your-data .cp-trust-callout ul { margin:0.5rem 0 0.75rem;padding-left:1.25rem; }
+#page-your-data .cp-trust-callout li { margin:0.25rem 0;font-size:var(--cp-type-body);line-height:1.55;color:var(--charcoal); }
+#page-your-data .cp-trust-callout__lead { font-size:var(--cp-type-body);font-weight:600;color:var(--charcoal);margin-bottom:0.65rem; }
+#page-your-data .cp-trust-list { margin:0.5rem 0 0;padding-left:0;list-style:none; }
+#page-your-data .cp-trust-list li { margin:0.55rem 0;padding-left:0;font-size:var(--cp-type-small);line-height:1.65;color:var(--mid); }
+#page-your-data .cp-trust-list li strong { color:var(--charcoal); }
+#page-your-data .cp-data-table { width:100%;border-collapse:collapse;font-size:var(--cp-type-small);margin-top:0.75rem; }
+#page-your-data .cp-data-table th,
+#page-your-data .cp-data-table td { border:1px solid var(--border);padding:0.65rem 0.75rem;text-align:left;vertical-align:top; }
+#page-your-data .cp-data-table th { background:var(--off-white,#f8f9fa);font-weight:600; }
+#page-your-data .cp-data-table-wrap { overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:0.75rem; }
+#page-your-data .cp-compare-feature {
+  border:2px solid rgba(74,124,89,0.28);border-radius:16px;padding:1.35rem 1.5rem;
+  background:linear-gradient(180deg,rgba(232,240,235,0.45) 0%,#fff 38%);margin:1rem 0;
+}
+#page-your-data .cp-compare-feature__header { display:flex;flex-wrap:wrap;align-items:center;gap:0.65rem;margin-bottom:0.85rem; }
+#page-your-data .cp-compare-feature h3 { margin:0;font-size:var(--cp-type-h3);flex:1 1 auto; }
+#page-your-data .cp-compare-table { width:100%;border-collapse:collapse;font-size:var(--cp-type-small);margin-top:0.5rem; }
+#page-your-data .cp-compare-table th,
+#page-your-data .cp-compare-table td { border:1px solid var(--border);padding:0.75rem;text-align:left;vertical-align:top; }
+#page-your-data .cp-compare-table th { background:var(--off-white,#f8f9fa);font-weight:600;width:22%; }
+#page-your-data .cp-compare-table td:first-of-type { font-weight:600;color:var(--charcoal);background:rgba(248,249,250,0.6);width:18%; }
+#page-your-data .cp-compare-grid { display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem; }
+#page-your-data .cp-compare-card { position:relative;border:1px solid var(--border);border-radius:12px;padding:1.25rem;padding-top:2.35rem;background:#fff;min-width:0; }
+#page-your-data .cp-compare-card h3 { margin:0 0 0.65rem;font-size:var(--cp-type-h4); }
+#page-your-data .cp-compare-card ul { margin:0;padding-left:1.15rem; }
+#page-your-data .cp-compare-card li { margin:0.4rem 0;font-size:var(--cp-type-small);line-height:1.6; }
+#page-your-data .cp-trust-soon { border:1px dashed var(--border);border-radius:12px;padding:1.15rem 1.25rem;background:rgba(248,249,250,0.65);margin-top:0.5rem; }
+#page-your-data .cp-trust-soon h3 { margin:0 0 0.5rem;font-size:var(--cp-type-h4);color:var(--mid); }
+#page-your-data .cp-trust-soon ul { margin:0;padding-left:1.15rem; }
+#page-your-data .cp-trust-soon li { font-size:var(--cp-type-small);margin:0.3rem 0;color:var(--mid); }
+#page-your-data .info-card-wide { position:relative; }
+@media (max-width: 720px) {
+  #page-your-data .cp-compare-grid { grid-template-columns:1fr; }
+  #page-your-data .cp-trust-grid { grid-template-columns:1fr; }
+  #page-your-data .cp-compare-table th,
+  #page-your-data .cp-compare-table td { display:block;width:100%;box-sizing:border-box; }
+  #page-your-data .cp-compare-table tr { display:block;margin-bottom:0.75rem;border:1px solid var(--border);border-radius:8px;overflow:hidden; }
+  #page-your-data .cp-compare-table td:first-of-type { background:var(--off-white,#f8f9fa); }
+}
+</style>
+</head>
+<body class="public-static-shell" data-template-family="public-editorial" data-casepath-active-nav="your-data">
+
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<a class="casepath-skip-link" href="#main-content">Skip to main content</a>
+<!-- cp-header:disclaimer -->
+<div class="disclaimer-banner disclaimer-banner--trust" role="note" aria-label="Legal information notice">
+  <span class="disclaimer-banner__primary">CasePath helps you organise, prepare and understand family law processes &mdash; not replace a lawyer.</span>
+  <span class="disclaimer-banner__secondary">For legal advice about your specific situation, contact a qualified family lawyer or Legal Aid.</span>
+</div>
+
+<!-- cp-header:utility-bar -->
+<div class="casepath-utility-bar casepath-utility-bar--refined" role="toolbar" aria-label="Safety utilities">
+  <span id="casepath-utility-quick-exit-slot"></span>
+
+</div>
+
+<!-- cp-header:shell -->
+<header class="header cp-site-header">
+  <!-- cp-header:nav -->
+  <nav class="nav-wrapper casepath-nav-categorized" aria-label="Site">
+  <div class="nav-top-row header-inner">
+
+    <div class="header-logo-zone">
+      <a href="/" class="casepath-brand" aria-label="CasePath Home">
+        <img
+          src="/assets/branding/casepath-logo-horizontal.png"
+          srcset="
+            /assets/branding/casepath-logo-horizontal.png 1x,
+            /assets/branding/casepath-logo-horizontal@2x.png 2x
+          "
+          alt="CasePath"
+          class="casepath-brand-logo" width="220" height="44"
+          decoding="async"
+          fetchpriority="high"
+        >
+      </a>
+    </div>
+
+    <div class="header-nav-zone">
+    <div class="nav-site-links" aria-label="Main menu">
+
+      <button type="button" class="nav-mobile-toggle" id="nav-mobile-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-main-grid">
+
+        Menu <span class="nav-mobile-chevron" aria-hidden="true">&#9662;</span>
+
+      </button>
+
+      <a href="/glossary.html" id="nav-legislation" hidden>Legislation</a>
+
+      <div class="nav-grid" id="nav-main-grid">
+
+        <div class="nav-cat-row nav-cat-row--desktop" aria-label="Browse by category">
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-howitworks-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-howitworks-menu">How It Works <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-howitworks-menu" role="menu" hidden>
+
+              <a href="/how-it-works.html" id="nav-how-it-works" role="menuitem">How It Works</a>
+
+              <a href="/docs/quick-start.html" id="nav-quick-start" role="menuitem">Quick Start Guide</a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-learn-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-learn-menu">Learn <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-learn-menu" role="menu" hidden>
+
+              <a href="/mission.html" id="nav-mission" class="nav-mission-pulse" role="menuitem">Our Mission</a>
+
+              <a href="/glossary.html" id="nav-glossary" role="menuitem">Glossary</a>
+
+              <a href="/mental-health.html" id="nav-mental-health" role="menuitem">Mental Health</a>
+
+              <a href="/kids.html" id="nav-kids" role="menuitem">About the Kids</a>
+
+              <a href="/digital-parenting.html" id="nav-digital-parenting" role="menuitem">Digital Parenting</a>
+
+              <a href="/interstate-recognition.html" id="nav-interstate-recognition" role="menuitem">Interstate Recognition</a>
+
+              <a href="/what-list-is-my-case-in.html" id="nav-what-list" role="menuitem">What List Is My Case In?</a>
+
+              <a href="/your-data.html" id="nav-your-data" role="menuitem">Your Data</a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap">
+
+            <button type="button" class="nav-cat-toggle" id="nav-prepare-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-prepare-menu">Prepare <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-prepare-menu" role="menu" hidden>
+
+              <a href="/prepare.html" id="nav-prepare-hub" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--map-pin"></span></span><span class="nav-cat-item-label">Start Here</span></a>
+
+              <a href="/court-documents.html" id="nav-court-documents" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--file-text"></span></span><span class="nav-cat-item-label">Court Documents</span></a>
+
+              <a href="/app/mediation/index.html" id="nav-mediation" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--handshake"></span></span><span class="nav-cat-item-label">Mediation</span></a>
+
+              <a href="/court-day-preparation.html" id="nav-court-day" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--landmark"></span></span><span class="nav-cat-item-label">Court Day</span></a>
+
+              <a href="/checklists.html" id="nav-checklists" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--check"></span></span><span class="nav-cat-item-label">Checklists</span></a>
+
+              <a href="/self-represented-guide.html" id="nav-self-represented-guide" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--book"></span></span><span class="nav-cat-item-label">Self-Representation Guide</span></a>
+
+              <a href="/more-tools.html" id="nav-more-tools" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--toolbox"></span></span><span class="nav-cat-item-label">More Tools</span></a>
+
+              <a href="/trusted-partners.html" id="nav-trusted-partners" role="menuitem"><span class="nav-cat-item-icon" aria-hidden="true"><span class="cp-icon cp-icon--users"></span></span><span class="nav-cat-item-label">Trusted Partners</span></a>
+
+            </div>
+
+          </div>
+
+          <div class="nav-cat-wrap nav-cat-wrap--align-end">
+
+            <button type="button" class="nav-cat-toggle" id="nav-yourcase-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-yourcase-menu">Your Case <span class="nav-cat-chevron" aria-hidden="true">&#9662;</span></button>
+
+            <div class="nav-cat-menu" id="nav-yourcase-menu" role="menu" hidden>
+
+              <a href="/app/workspace/index.html" id="nav-your-case-pulse" role="menuitem" data-protected-nav>Your Case</a>
+
+              <a href="/parenting-orders.html" id="nav-parenting-orders" class="parenting-orders nav-parenting-centre" role="menuitem">Parenting Orders</a>
+
+              <a href="/app/calendar/index.html" id="nav-calendar" role="menuitem" data-protected-nav>Calendar <span class="nav-item-tag">Preview</span></a>
+
+              <a href="/index.html?goto=qa" id="nav-ai-assistant" role="menuitem">Ask a Question</a>
+
+              <a href="/lawyer-portal.html" id="nav-lawyer-portal" role="menuitem" data-protected-nav>Lawyer Portal</a>
+
+            </div>
+
+          </div>
+
+          <a href="/pricing.html" id="nav-pricing" class="nav-cat-link">Pricing</a>
+
+        </div>
+
+        <div class="nav-mobile-groups">
+
+          <div class="nav-mobile-quick-exit">
+            <span id="casepath-nav-mobile-quick-exit-slot" class="nav-quick-exit-slot nav-quick-exit-slot--mobile"></span>
+          </div>
+
+          <p class="nav-mobile-group-label">How It Works</p>
+
+          <a href="/how-it-works.html" class="nav-mobile-link" data-cp-mobile-nav="how-it-works">How It Works</a>
+
+          <a href="/docs/quick-start.html" class="nav-mobile-link" data-cp-mobile-nav="quick-start">Quick Start Guide</a>
+
+          <p class="nav-mobile-group-label">Learn</p>
+
+          <a href="/mission.html" class="nav-mobile-link" data-cp-mobile-nav="mission">Our Mission</a>
+
+          <a href="/glossary.html" class="nav-mobile-link" data-cp-mobile-nav="glossary">Glossary</a>
+
+          <a href="/mental-health.html" class="nav-mobile-link" data-cp-mobile-nav="mental-health">Mental Health</a>
+
+          <a href="/kids.html" class="nav-mobile-link" data-cp-mobile-nav="kids">About the Kids</a>
+
+          <a href="/digital-parenting.html" class="nav-mobile-link" data-cp-mobile-nav="digital-parenting">Digital Parenting</a>
+
+          <a href="/interstate-recognition.html" class="nav-mobile-link" data-cp-mobile-nav="interstate-recognition">Interstate Recognition</a>
+
+          <a href="/what-list-is-my-case-in.html" class="nav-mobile-link" data-cp-mobile-nav="what-list">What List Is My Case In?</a>
+
+          <a href="/your-data.html" class="nav-mobile-link" data-cp-mobile-nav="your-data">Your Data</a>
+
+          <p class="nav-mobile-group-label">Prepare</p>
+
+          <a href="/prepare.html" class="nav-mobile-link" data-cp-mobile-nav="prepare">Start Here</a>
+
+          <a href="/court-documents.html" class="nav-mobile-link" data-cp-mobile-nav="court-documents">Court Documents</a>
+
+          <a href="/app/mediation/index.html" class="nav-mobile-link" data-cp-mobile-nav="mediation">Mediation</a>
+
+          <a href="/court-day-preparation.html" class="nav-mobile-link" data-cp-mobile-nav="court-day">Court Day</a>
+
+          <a href="/checklists.html" class="nav-mobile-link" data-cp-mobile-nav="checklists">Checklists</a>
+
+          <a href="/self-represented-guide.html" class="nav-mobile-link" data-cp-mobile-nav="self-represented-guide">Self-Representation Guide</a>
+
+          <a href="/more-tools.html" class="nav-mobile-link" data-cp-mobile-nav="more-tools">More Tools</a>
+
+          <a href="/trusted-partners.html" class="nav-mobile-link" data-cp-mobile-nav="trusted-partners">Trusted Partners</a>
+
+          <p class="nav-mobile-group-label">Your Case</p>
+
+          <a href="/app/workspace/index.html" class="nav-mobile-link" data-cp-mobile-nav="your-case" data-protected-nav>Your Case</a>
+
+          <a href="/parenting-orders.html" class="nav-mobile-link" data-cp-mobile-nav="parenting">Parenting Orders</a>
+
+              <a href="/app/calendar/index.html" class="nav-mobile-link" data-cp-mobile-nav="calendar" data-protected-nav>Calendar <span class="nav-item-tag">Preview</span></a>
+
+          <a href="/index.html?goto=qa" class="nav-mobile-link" data-cp-mobile-nav="qa">Ask a Question</a>
+
+          <a href="/lawyer-portal.html" class="nav-mobile-link" data-cp-mobile-nav="lawyer" data-protected-nav>Lawyer Portal</a>
+
+          <a href="/pricing.html" class="nav-mobile-link" data-cp-mobile-nav="pricing">Pricing</a>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+
+    <div class="header-search-zone" aria-label="Site search">
+      <div id="cp-smart-search-slot" class="cp-smart-search-slot"></div>
+    </div>
+
+    <div class="header-account-zone">
+    <div class="nav-trailing">
+
+      <div class="header-actions">
+
+        <div id="lang-selector-wrap" class="lang-switch">
+
+          <button type="button" id="lang-btn" onclick="toggleLangDropdown(event)"><span id="lang-current-flag">&#127462;&#127482;</span><span id="lang-current-label">EN</span><span class="nav-mobile-chevron" aria-hidden="true">&#9662;</span></button>
+
+          <div id="lang-dropdown">
+
+          <div class="lang-divider">Select language</div>
+
+          <button type="button" class="lang-option active" onclick="setLang('en','&#127462;&#127482;','EN')"><span class="lang-flag">&#127462;&#127482;</span> English</button>
+
+          <button type="button" class="lang-option" onclick="setLang('zh-CN','&#127464;&#127475;','中文')"><span class="lang-flag">&#127464;&#127475;</span> Mandarin 中文</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ar','&#127480;&#127462;','عربي')"><span class="lang-flag">&#127480;&#127462;</span> Arabic عربي</button>
+
+          <button type="button" class="lang-option" onclick="setLang('vi','&#127483;&#127475;','Việt')"><span class="lang-flag">&#127483;&#127475;</span> Vietnamese</button>
+
+          <button type="button" class="lang-option" onclick="setLang('zh-TW','&#127469;&#127472;','廣東')"><span class="lang-flag">&#127469;&#127472;</span> Cantonese 廣東話</button>
+
+          <button type="button" class="lang-option" onclick="setLang('pa','&#127470;&#127475;','ਪੰਜਾਬੀ')"><span class="lang-flag">&#127470;&#127475;</span> Punjabi</button>
+
+          <button type="button" class="lang-option" onclick="setLang('el','&#127468;&#127479;','Ελληνικά')"><span class="lang-flag">&#127468;&#127479;</span> Greek</button>
+
+          <button type="button" class="lang-option" onclick="setLang('it','&#127470;&#127481;','Italiano')"><span class="lang-flag">&#127470;&#127481;</span> Italian</button>
+
+          <button type="button" class="lang-option" onclick="setLang('de','&#127465;&#127466;','Deutsch')"><span class="lang-flag">&#127465;&#127466;</span> German</button>
+
+          <button type="button" class="lang-option" onclick="setLang('fr','&#127467;&#127479;','Français')"><span class="lang-flag">&#127467;&#127479;</span> French</button>
+
+          <button type="button" class="lang-option" onclick="setLang('hi','&#127470;&#127475;','हिन्दी')"><span class="lang-flag">&#127470;&#127475;</span> Hindi</button>
+
+          <button type="button" class="lang-option" onclick="setLang('es','&#127466;&#127480;','Español')"><span class="lang-flag">&#127466;&#127480;</span> Spanish</button>
+
+          <button type="button" class="lang-option" onclick="setLang('tl','&#127477;&#127469;','Filipino')"><span class="lang-flag">&#127477;&#127469;</span> Filipino</button>
+
+          <button type="button" class="lang-option" onclick="setLang('tr','&#127481;&#127479;','Türkçe')"><span class="lang-flag">&#127481;&#127479;</span> Turkish</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ko','&#127472;&#127479;','한국어')"><span class="lang-flag">&#127472;&#127479;</span> Korean</button>
+
+          <button type="button" class="lang-option" onclick="setLang('ja','&#127471;&#127477;','日本語')"><span class="lang-flag">&#127471;&#127477;</span> Japanese 日本語</button>
+
+          <button type="button" class="lang-option" onclick="setLang('so','&#127480;&#127476;','Soomaali')"><span class="lang-flag">&#127480;&#127476;</span> Somali</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="nav-auth-area" class="header-actions">
+
+        <div id="nav-guest-actions">
+
+          <a id="nav-signin-btn" href="#" data-auth="signin">Sign in</a>
+
+          <a id="nav-signup-btn" href="#" data-auth="signup" class="nav-cta cta-primary">Create free account</a>
+
+        </div>
+
+        <a href="#" id="navSignOutBtn" role="button" aria-hidden="true">Sign out</a>
+
+        <span id="casepath-nav-quick-exit-slot" class="nav-quick-exit-slot nav-quick-exit-slot--desktop"></span>
+
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+
+  </nav>
+
+  <!-- cp-header:green-bar -->
+  <div class="nav-green-bar cp-announcement-bar">
+    Family law, parenting disputes &amp; protection orders — all in one place
+
+  </div>
+
+  <!-- cp-header:privacy-banner -->
+  <div class="cp-privacy-banner" role="note" aria-label="Privacy and safety notice">
+    Privacy: If your device access may be monitored, consider using a safer device. Quick Exit is in the top right of every page.
+  </div>
+
+</header>
+
+<main>
+<div class="page" id="page-your-data">
+
+  <!--
+  TEMPORARY HERO
+  Replace during branding phase
+  -->
+  <div class="cp-page-hero">
+    <div class="cp-page-hero__inner">
+      <div class="cp-page-hero__layout">
+        <div class="cp-page-hero__icon" aria-hidden="true">
+          <span class="cp-icon-badge cp-icon-badge--on-dark cp-icon-badge--grey"><span class="cp-icon cp-icon--shield"></span></span>
+        </div>
+        <div class="cp-page-hero__content">
+          <div class="cp-page-hero__eyebrow">Trust Centre</div>
+          <h1>YOUR DATA. YOUR PRIVACY. YOUR CONTROL.</h1>
+          <p class="cp-page-hero__statement">Family law matters involve sensitive information about you, your children, and your case. This page explains where your information is stored, how it is protected, who can access it, and what you control.</p>
+          <ul class="cp-page-hero__statement" style="margin:0.75rem 0 0;padding-left:1.25rem;">
+            <li>Where your information is stored</li>
+            <li>How your information is protected</li>
+            <li>Who can access your information</li>
+            <li>Backups and recovery</li>
+            <li>What you can control</li>
+            <li>Secure Vault (in active development)</li>
+          </ul>
+          <p class="cp-page-hero__support">This page explains how your information is handled, including what we have verified and what is still being confirmed. Information only &mdash; not legal advice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrap">
+
+    <div class="cp-trust-callout" id="why-this-matters">
+      <h2>Why this matters</h2>
+      <p class="cp-trust-callout__lead">Family law often involves some of the most personal information people will ever store online.</p>
+      <ul>
+        <li>Medical reports.</li>
+        <li>Children&rsquo;s information.</li>
+        <li>Court documents.</li>
+        <li>Personal journals.</li>
+        <li>Evidence.</li>
+      </ul>
+      <p>You deserve to understand how that information is protected, based on verified infrastructure and published policies.</p>
+    </div>
+
+    <div class="cp-notice" role="note">
+      <strong>How to read this page:</strong> Status labels show what is live today versus what is planned.
+      <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> means we can confirm this from current application code, configuration, or infrastructure records.
+      <span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> means under development, not yet generally available.
+      <span class="cp-trust-badge cp-trust-badge--progress cp-trust-badge--inline">In progress</span> means work has started but is not complete.
+      See the <a href="#verification-note">verification note</a> at the bottom.
+    </div>
+
+    <p class="cp-text-compact cp-leading-body">Last updated: July 2026</p>
+
+    <div class="info-card-wide" id="privacy-promise">
+      <h2>1. Privacy Promise</h2>
+      <ul class="cp-trust-list">
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> CasePath is built for <strong>private</strong> family-law preparation &mdash; not public sharing, behavioural advertising, or selling your personal information.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> This page is a transparency document. It describes how your information is handled &mdash; not marketing copy.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> Private workspace materials (vault uploads, evidence files, chronology entries) are <strong>not</strong> intended for routine human review by CasePath staff.</li>
+      </ul>
+      <p style="margin-top:0.85rem;">For collection, use, retention, and your rights, see our <a href="/privacy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="info-card-wide" id="your-information">
+      <h2>2. Your Information</h2>
+      <p>Depending on how you use CasePath, we may store:</p>
+      <div class="cp-trust-grid">
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Account</strong>
+          <p>Email address, sign-in sessions, account status, and plan access.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Billing</strong>
+          <p>Subscription status and payment records. Card numbers are handled by Stripe &mdash; not stored on CasePath.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Case data</strong>
+          <p>Case profiles, chronology, checklists, and preparation progress when you use signed-in workspace features and they are available for your account.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Documents</strong>
+          <p>Drafts and documents you create or save through platform tools. Some standalone tools may also use device-local storage.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Uploads</strong>
+          <p>Files you attach through your workspace vault are stored in private, access-controlled cloud storage linked to your account. File uploads are encrypted in your browser before upload when Secure Vault is set up.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Support requests</strong>
+          <p>Messages and contact details you submit through the contact form.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card-wide" id="where-data-lives">
+      <h2>3. Where Your Information Is Stored</h2>
+      <p>Your signed-in account, database and file storage for CasePath’s primary backend are hosted on <strong>Supabase</strong> in the <strong>Oceania (Sydney)</strong> region (verified from the live project configuration on 27 July 2026). Other providers used for delivery, security, payments, email, analytics or AI may process information in other countries — see the <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div class="cp-trust-grid">
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Account &amp; case data</strong>
+          <p>Stored in an encrypted cloud database, accessible through your signed-in account under row-level security. Authorised operators may access systems for support and security.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Uploaded files</strong>
+          <p>Stored in a private file vault. Files are not publicly listed or browsable.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Sign-in &amp; email</strong>
+          <p>Authentication and account recovery emails are handled through our auth provider.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Public pages</strong>
+          <p>Informational pages (like this one) are served as static web pages.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card-wide" id="how-protected">
+      <h2>4. How Your Information Is Protected</h2>
+      <p>Current protections include:</p>
+      <ul class="cp-trust-list">
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> <strong>Encrypted connections</strong> &mdash; Your browser connects to CasePath and our backend over HTTPS (TLS). Edge hardening (e.g. HSTS) is being verified with hosting.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> <strong>Account sign-in</strong> &mdash; Email verification, password reset, and session management through our auth provider.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> <strong>Access controls</strong> &mdash; Your workspace data is scoped to your account. Other users cannot access your case by default. If you use Lawyer Collaboration, access you grant to your lawyer is an exception.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> <strong>Private file storage</strong> &mdash; Uploads sit in a private vault with time-limited download links.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> <strong>Encryption at rest</strong> &mdash; Database and metadata rely on provider encryption at rest. Vault files use browser-side encryption when Secure Vault is enabled. CasePath does not add a separate encryption layer for standard workspace data today.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> <strong>Bot protection</strong> &mdash; Cloudflare Turnstile helps reduce automated abuse on sign-up and authentication.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> <strong>Multi-factor authentication (TOTP)</strong> &mdash; Optional authenticator-app MFA via Supabase Auth. Supported apps include Google Authenticator, Microsoft Authenticator, Authy, 1Password, Bitwarden, and other standard TOTP apps. Recovery codes are available as a backup.</li>
+      </ul>
+      <div class="cp-notice cp-notice--warning" role="note" style="margin-top:1rem;">
+        <strong>What we do not claim today:</strong> CasePath does <em>not</em> currently offer platform-wide end-to-end encryption, zero-knowledge storage for all data, or a generally available Secure Vault product. Vault file encryption is available after setup; the full Secure Vault product remains <span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span>.
+      </div>
+    </div>
+
+    <div class="info-card-wide" id="administrator-access">
+      <h2>5. Who Can Access Your Information</h2>
+
+      <h3 class="cp-text-md">You</h3>
+      <p><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> When signed in, you can access your own case data, documents, and vault uploads through your account.</p>
+      <p><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> If you use Lawyer Collaboration, you control what your connected lawyer can access. Sharing is initiated by you, not by CasePath.</p>
+
+      <h3 class="cp-text-md">CasePath operators</h3>
+      <p><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> A small number of authorised administrators can access account metadata (email, plan, credits) for support, billing, and security operations.</p>
+      <p><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> With server-side access, operators <em>could</em> read stored file contents in principle for standard storage. Secure Vault ciphertext is not readable without your keys. CasePath policy is that private workspace materials are not intended for routine human review.</p>
+      <p>Limited access may occur for security incidents, abuse reports, legal obligations, or support you request &mdash; as described in the <a href="/privacy.html">Privacy Policy</a>.</p>
+
+      <h3 class="cp-text-md">Secure Vault (in active development)</h3>
+      <p><span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> Secure Vault is intended to encrypt selected uploads in your browser before they reach storage, with keys held only by you. When available, the design goal is that CasePath operators should not be able to decrypt those files without your vault passphrase and recovery key.</p>
+      <p><span class="cp-trust-badge cp-trust-badge--progress cp-trust-badge--inline">In progress</span> Core encryption path is live for vault uploads; full product documentation and general availability are not complete.</p>
+    </div>
+
+    <div class="info-card-wide" id="secure-vault-planned">
+      <h2>6. Secure Vault (Planned)</h2>
+      <div class="cp-compare-feature">
+        <div class="cp-compare-feature__header">
+          <h3>Current Protection vs Secure Vault</h3>
+          <span class="cp-trust-badge cp-trust-badge--planned">Planned feature</span>
+        </div>
+        <p>Secure Vault encryption is available for vault uploads after setup. The full Secure Vault product is <strong>not</strong> generally available today. This comparison explains what you have now versus what is planned.</p>
+        <div class="cp-data-table-wrap">
+          <table class="cp-compare-table">
+            <thead>
+              <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Current protection (today)</th>
+                <th scope="col">Secure Vault (planned)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Who can access data</td>
+                <td><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> You, plus authorised CasePath operators with server-side access in limited circumstances. Secure Vault ciphertext is not readable without your keys.</td>
+                <td><span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> You hold the keys. CasePath operators should not be able to decrypt vault files without your passphrase and recovery key.</td>
+              </tr>
+              <tr>
+                <td>Recovery options</td>
+                <td><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> Reset your account password via email. Restores access to your workspace under standard controls.</td>
+                <td><span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> Separate vault passphrase and recovery key. Losing both means encrypted files cannot be recovered.</td>
+              </tr>
+              <tr>
+                <td>Privacy level</td>
+                <td><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> Strong account isolation and private storage. Operators could read standard file bytes in principle; Secure Vault ciphertext is not readable without your keys.</td>
+                <td><span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> Stronger confidentiality for selected uploads &mdash; CasePath stores encrypted data it cannot read.</td>
+              </tr>
+              <tr>
+                <td>Encryption model</td>
+                <td><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> TLS in transit + cloud-provider encryption at rest. Browser-side encryption for vault files when Secure Vault is set up.</td>
+                <td><span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> Browser-side encryption before upload, with user-held keys.</td>
+              </tr>
+              <tr>
+                <td>Support implications</td>
+                <td><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> CasePath can help with account access and standard workspace recovery.</td>
+                <td><span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> CasePath cannot recover lost vault keys or decrypt files for you.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cp-compare-grid">
+        <div class="cp-compare-card">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <h3>Standard protection (today)</h3>
+          <ul>
+            <li>Encrypted connections (HTTPS)</li>
+            <li>Account-scoped access controls</li>
+            <li>Private vault storage with signed links</li>
+            <li>Cloud encryption at rest</li>
+            <li>Browser-side encryption for vault files (when Secure Vault is set up)</li>
+            <li>Password reset via email</li>
+          </ul>
+        </div>
+        <div class="cp-compare-card">
+          <span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--corner">Planned</span>
+          <h3>Secure Vault (planned)</h3>
+          <ul>
+            <li>Encrypt files in your browser before upload</li>
+            <li>You hold the passphrase and recovery key</li>
+            <li>CasePath should not be able to decrypt Secure Vault files without your keys</li>
+            <li>Stronger privacy, with less recovery help from us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card-wide" id="backups">
+      <h2>7. Backups &amp; Recovery</h2>
+
+      <h3 class="cp-text-md">Account recovery (today)</h3>
+      <ul class="cp-trust-list">
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> Reset your password using email recovery links to regain access to your account and workspace.</li>
+        <li><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> If you lose access to your email account, password recovery may not be possible until you regain that email.</li>
+      </ul>
+
+      <h3 class="cp-text-md">Infrastructure backups</h3>
+      <p><span class="cp-trust-badge cp-trust-badge--tbc cp-trust-badge--inline">To be confirmed</span> CasePath relies on cloud-provider backup practices. Specific backup frequency, retention, and restore procedures will be published here once verified.</p>
+      <p><span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--inline">Verified ✓</span> Signed-in users can start staged account deletion from Account Security. Approved account records and user-owned storage objects are removed through a server-side job; previously downloaded or shared copies cannot be recalled. The <a href="/privacy.html">Privacy Policy</a> notes that some copies may persist for a limited period in backups and operational systems.</p>
+
+      <h3 class="cp-text-md">Secure Vault recovery (planned)</h3>
+      <p><span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--inline">Planned</span> Secure Vault is intended to use a separate recovery key. If you lose both your vault passphrase and recovery key, encrypted files would not be recoverable &mdash; even by CasePath.</p>
+    </div>
+
+    <div class="info-card-wide" id="trusted-service-providers">
+      <h2>8. Key Service Providers</h2>
+      <p>CasePath uses a small number of core infrastructure providers (below). These partners process data on our behalf or provide essential infrastructure. Analytics and AI features use additional providers described in our <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div class="cp-data-table-wrap">
+        <table class="cp-data-table">
+          <thead>
+            <tr>
+              <th scope="col">Provider</th>
+              <th scope="col">Purpose</th>
+              <th scope="col">Information processed</th>
+              <th scope="col">Privacy policy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Supabase</strong></td>
+              <td>Account authentication, database, file storage, and server functions</td>
+              <td>Account details, case data, vault files and metadata, and application audit logs we store in Supabase</td>
+              <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td><strong>Cloudflare</strong></td>
+              <td>Bot protection (Turnstile) on sign-up and authentication</td>
+              <td>Browser signals and challenge tokens during auth flows</td>
+              <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></td>
+            </tr>
+            <tr>
+              <td><strong>Resend</strong></td>
+              <td>Transactional email delivery (via auth provider)</td>
+              <td>Email address and authentication message content</td>
+              <td><a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">resend.com/legal/privacy-policy</a></td>
+            </tr>
+            <tr>
+              <td><strong>Stripe</strong></td>
+              <td>Payments and subscriptions</td>
+              <td>Email, billing identifiers, payment status (card numbers handled by Stripe)</td>
+              <td><a href="https://stripe.com/au/privacy" target="_blank" rel="noopener">stripe.com/au/privacy</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cp-text-compact cp-leading-body" style="margin-top:0.85rem;">We do not sell your personal information. We use a small set of providers for core operations (listed above). Analytics and AI features use additional providers described in our <a href="/privacy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="info-card-wide" id="security-roadmap">
+      <h2>9. What We&rsquo;re Working On</h2>
+      <div class="cp-trust-grid">
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Live today</strong>
+          <p>Account sign-in, access controls, private vault storage, Stripe payments, and bot protection on authentication.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--progress cp-trust-badge--corner">In progress</span>
+          <strong>Under development</strong>
+          <p>Secure Vault user experience, production readiness, and verified backup documentation for this page.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--verified cp-trust-badge--corner">Verified ✓</span>
+          <strong>Multi-factor authentication</strong>
+          <p>Optional TOTP authenticator-app MFA with recovery codes. Available during beta; not required unless you enable it.</p>
+        </div>
+        <div class="cp-trust-tile">
+          <span class="cp-trust-badge cp-trust-badge--planned cp-trust-badge--corner">Planned</span>
+          <strong>On the roadmap</strong>
+          <p>Secure Vault general availability and expanded transparency reporting.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card-wide" id="coming-soon">
+      <h2>Coming soon to the Trust Centre</h2>
+      <p>Future transparency initiatives we plan to add to this page:</p>
+      <div class="cp-trust-soon">
+        <ul>
+          <li>Secure Vault &mdash; full product documentation when generally available</li>
+          <li>Independent security reviews</li>
+          <li>Responsible disclosure programme</li>
+          <li>Platform status page</li>
+          <li>Security advisories</li>
+          <li>Data residency details</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-card-wide" id="verification-note">
+      <h2>Verification note</h2>
+      <p>This page was prepared from application code, configuration, and internal audits, with gaps noted as To be confirmed. It describes how your information is handled &mdash; not legal advice.</p>
+      <p>A detailed statement-by-statement verification report is maintained for internal review at <code>docs/verification/TRUST-CENTRE-FACT-CHECK.md</code>. Cross-artefact consistency is recorded in <code>docs/verification/TRUST-CENTRE-FINAL-CONSISTENCY.md</code>.</p>
+      <p class="cp-text-compact cp-leading-body"><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/ai-use-disclosure.html">AI Use Disclosure</a> &middot; <a href="/terms.html">Terms of Use</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/">Back to CasePath</a></p>
+    </div>
+
+  </div>
+
+  <div class="legal-disclaimer-bar">This page describes how CasePath handles information technically. It does not provide legal advice.<br>For advice about your situation, contact a qualified family lawyer or Legal Aid.</div>
+</div>
+</main>
+<footer class="casepath-site-footer" aria-label="CasePath footer">
+  <div class="casepath-site-footer-inner">
+
+    <div class="casepath-site-footer__main">
+      <div class="casepath-site-footer__brand">
+        <div class="casepath-site-footer__brand-name">CasePath</div>
+        <p class="casepath-site-footer__tagline">Helping Australians navigate family court with clearer preparation alongside appropriate legal help.</p>
+      </div>
+      <nav class="casepath-site-footer__col" aria-label="Learn">
+        <p class="casepath-site-footer__col-label">Learn</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/mission.html">Our Mission</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+          <li><a href="/mental-health.html">Mental Health</a></li>
+          <li><a href="/kids.html">About the Kids</a></li>
+          <li><a href="/digital-parenting.html">Digital Parenting</a></li>
+          <li><a href="/interstate-recognition.html">Interstate Recognition</a></li>
+          <li><a href="/what-list-is-my-case-in.html">What List Is My Case In?</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Support">
+        <p class="casepath-site-footer__col-label">Support</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/support-tools.html">Support Tools</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/mental-health.html">Mental Health</a></li>
+          <li><a href="https://www.1800respect.org.au" target="_blank" rel="noopener">1800RESPECT</a></li>
+          <li><a href="https://www.legalaid.nsw.gov.au" target="_blank" rel="noopener">Legal Aid Australia</a></li>
+          <li><a href="https://www.familyrelationships.gov.au" target="_blank" rel="noopener">Family Relationships Online</a></li>
+          <li><a href="https://www.saferkidswifi.com.au/" target="_blank" rel="noopener noreferrer">Safer Kids WiFi</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Platform">
+        <p class="casepath-site-footer__col-label">Platform</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/prepare.html">Prepare</a></li>
+          <li><a href="/app/workspace/index.html">Your Case</a></li>
+          <li><a href="/index.html?goto=qa">Ask a Question</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/self-represented-guide.html">Self-Represented Guide</a></li>
+          <li><a href="/checklists.html">Checklists</a></li>
+          <li><a href="/referrals.html">Referrals</a></li>
+          <li><a href="/lawyer-portal.html">Lawyer Portal</a></li>
+        </ul>
+      </nav>
+      <nav class="casepath-site-footer__col" aria-label="Documentation">
+        <p class="casepath-site-footer__col-label">Documentation</p>
+        <ul class="casepath-site-footer__links">
+          <li><a href="/docs/">Documentation Centre</a></li>
+          <li><a href="/docs/quick-start.html">Quick Start Guide</a></li>
+          <li><a href="/docs/user-manual.html">User Manual</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="casepath-site-footer__meta">
+      <nav id="casepath-footer-legal-row" class="casepath-footer-legal" aria-label="Legal and site links">
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/your-data.html">Your Data</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/ai-use-disclosure.html">AI Use Disclosure</a>
+        <a href="/mission.html">Mission</a>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/kids.html">About the Kids</a>
+        <a href="/mental-health.html">Mental Health</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="casepath-site-footer__disclaimer">
+        <p class="casepath-site-footer__disclaimer-text">
+          <strong>Disclaimer:</strong> CasePath provides general legal information only. It does not provide legal advice. Laws can change &mdash; always check <a href="https://www.legislation.gov.au" target="_blank" rel="noopener">legislation.gov.au</a> for the current version of any Act. If you need advice about your situation, contact a family lawyer or Legal Aid in your state or territory. For complex matters &mdash; especially those involving family violence, child safety, or significant assets &mdash; you should consult a qualified family lawyer. Many community legal centres offer free initial consultations. The information on this platform does not constitute a solicitor-client relationship.
+        </p>
+        <p class="casepath-site-footer__copy">&copy; 2026 CasePath. Built for every Australian going through separation.</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.105.4/dist/umd/supabase.js" integrity="sha384-7SfFUrg31wOnGWBLLniKFCNmCSguYA5wI1WPDOt7kP/mom4R9/0pwghVEnv0uwYP" crossorigin="anonymous"></script>
+<script src="/assets/js/supabase.js?v=20260727iosscroll1"></script>
+<script src="/auth/redirect.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-lang-switch.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-routes.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-access.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-nav-auth.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-nav-access.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/nav-link-fallback.js?v=20260727iosscroll1" defer></script>
+<script src="/assets/js/core/casepath-quick-exit.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-shell-active-nav.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/core/casepath-nav-dropdowns.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-header-sync.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/public-static-nav.js?v=20260727iosscroll1"></script>
+<script src="/assets/js/casepath-smart-search.js?v=20260727iosscroll1"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"48b8eaf48843424caa301d0fd340c626","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>

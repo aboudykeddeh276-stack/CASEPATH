@@ -1,0 +1,47 @@
+[data-casepath-disabled="governance-review"] {
+  position: relative;
+}
+
+[data-casepath-disabled="governance-review"] > *:not(.cp-governance-quarantine-notice) {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.35;
+  filter: grayscale(0.15);
+}
+
+.cp-governance-quarantine-notice {
+  pointer-events: auto;
+  user-select: text;
+  opacity: 1 !important;
+  filter: none !important;
+  background: linear-gradient(135deg, #f0f7f2, #faf8f3);
+  border: 1px solid rgba(29, 77, 58, 0.2);
+  border-radius: 14px;
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1.5rem;
+  color: var(--charcoal, #1f2937);
+  line-height: 1.6;
+  z-index: 2;
+  position: relative;
+}
+
+.cp-governance-quarantine-notice p {
+  margin: 0 0 0.5rem;
+  font-size: var(--cp-type-small);
+}
+
+.cp-governance-quarantine-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.cp-governance-quarantine-sub {
+  font-size: var(--cp-type-small) !important;
+  color: var(--mid, #5c6b63) !important;
+}
+
+@media print {
+  .cp-export-governance-banner,
+  .cp-export-governance-footer {
+    page-break-inside: avoid;
+  }
+}

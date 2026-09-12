@@ -1,0 +1,417 @@
+/**
+ * CasePath Global Smart Search — desktop primary nav search.
+ * Shown with the desktop category row (≥1026px; shell/nav hide that row ≤1025px).
+ * Hidden on tablet/mobile. Matches header control styling.
+ */
+
+.visually-hidden,
+.cp-smart-search .visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.cp-smart-search-slot {
+  display: none;
+  position: relative;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.cp-smart-search {
+  position: relative;
+  width: 280px;
+  max-width: 320px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.cp-smart-search__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--cp-header-control-h, 44px);
+  min-height: var(--cp-header-control-h, 44px);
+  padding: 0 0.55rem 0 0.7rem;
+  background: #fff;
+  color: var(--cp-header-muted, #4a5548);
+  border: 1px solid rgba(74, 124, 89, 0.16);
+  border-radius: var(--cp-header-control-radius, 999px);
+  box-shadow: var(--cp-header-control-shadow, 0 1px 2px rgba(31, 45, 35, 0.06));
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.cp-smart-search__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: rgba(74, 124, 89, 0.72);
+  margin-right: 0.35rem;
+  pointer-events: none;
+}
+
+.cp-smart-search__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--cp-header-text, #243028);
+  font-family: var(--cp-font-sans, "DM Sans", system-ui, sans-serif);
+  font-size: var(--cp-type-small, 0.875rem);
+  font-weight: 500;
+  line-height: 1;
+  padding: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.cp-smart-search__input::placeholder {
+  color: rgba(74, 85, 72, 0.62);
+  font-weight: 500;
+}
+
+.cp-smart-search__input::-webkit-search-decoration,
+.cp-smart-search__input::-webkit-search-cancel-button,
+.cp-smart-search__input::-webkit-search-results-button,
+.cp-smart-search__input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.cp-smart-search__kbd {
+  flex: 0 0 auto;
+  margin-left: 0.35rem;
+  padding: 0.12rem 0.38rem;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(74, 124, 89, 0.18);
+  background: rgba(232, 240, 235, 0.65);
+  color: rgba(74, 85, 72, 0.78);
+  font-family: var(--cp-font-sans, "DM Sans", system-ui, sans-serif);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.cp-smart-search--focused .cp-smart-search__field,
+.cp-smart-search__field:focus-within {
+  background: var(--cp-header-soft, #e8f0eb);
+  border-color: rgba(74, 124, 89, 0.36);
+  box-shadow:
+    var(--cp-header-control-shadow-hover, 0 4px 12px rgba(31, 45, 35, 0.1)),
+    0 0 0 3px rgba(74, 124, 89, 0.16);
+}
+
+.cp-smart-search__listbox {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  right: 0;
+  z-index: calc(var(--cp-nav-dropdown-z, 200) + 5);
+  min-width: 320px;
+  max-width: 400px;
+  max-height: min(72vh, 34rem);
+  overflow-y: auto;
+  padding: 0.3rem;
+  background: rgba(255, 253, 250, 0.98);
+  border: 1px solid rgba(74, 124, 89, 0.13);
+  border-radius: var(--radius-lg, 0.85rem);
+  box-shadow: var(--cp-shadow-nav-dropdown, 0 12px 32px rgba(31, 45, 35, 0.14));
+  backdrop-filter: blur(10px);
+}
+
+.cp-smart-search-group + .cp-smart-search-group {
+  margin-top: 0.2rem;
+  padding-top: 0.2rem;
+  border-top: 1px solid rgba(74, 124, 89, 0.1);
+}
+
+.cp-smart-search-group__label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.45rem 0.12rem;
+  color: var(--mid, #4a5548);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.cp-smart-search-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  min-height: 60px;
+  max-height: 70px;
+  padding: 0.32rem 0.5rem;
+  border-radius: 0.55rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.14s ease;
+  box-sizing: border-box;
+}
+
+.cp-smart-search-option:hover,
+.cp-smart-search-option.is-active,
+.cp-smart-search-option[aria-selected="true"] {
+  background: rgba(232, 240, 235, 0.85);
+}
+
+.cp-smart-search-option:focus-visible {
+  outline: 2px solid rgba(74, 124, 89, 0.55);
+  outline-offset: 1px;
+}
+
+.cp-smart-search-option__icon {
+  flex: 0 0 auto;
+  margin-top: 0.12rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.cp-smart-search-option__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  min-width: 0;
+  justify-content: center;
+}
+
+.cp-smart-search-option__title {
+  font-size: 0.86rem;
+  font-weight: 650;
+  color: var(--forest, #243028);
+  line-height: 1.2;
+}
+
+.cp-smart-search-option__meta {
+  display: none;
+}
+
+.cp-smart-search-option__desc {
+  font-size: 0.72rem;
+  color: var(--mid, #4a5548);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cp-smart-search-mark {
+  background: rgba(74, 124, 89, 0.18);
+  color: inherit;
+  border-radius: 0.15rem;
+  padding: 0 0.05em;
+}
+
+.cp-smart-search-empty {
+  padding: 0.85rem 0.75rem 0.95rem;
+}
+
+.cp-smart-search-empty__title {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 650;
+  color: var(--forest, #243028);
+}
+
+.cp-smart-search-empty__hint {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  color: var(--mid, #4a5548);
+}
+
+.cp-smart-search-empty__links {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+}
+
+.cp-smart-search-empty__links a {
+  color: #4f765c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cp-smart-search-empty__links a:hover,
+.cp-smart-search-empty__links a:focus-visible {
+  text-decoration: underline;
+}
+
+/*
+ * Desktop category row is visible above 1025px (see casepath-nav-system.css).
+ * Search must share that floor — otherwise 1026–1199 shows Your Case + AU EN
+ * with a dead gap where search was CSS-hidden (display:none !important).
+ *
+ * Flex note: shell gives nav `flex: 1 1 auto` + `min-width: 0` while search /
+ * account are `flex-shrink: 0`. Under pressure only the nav shrinks, then
+ * `overflow: visible` paints "Your Case" on top of the search field. Override
+ * so the category capsule keeps intrinsic width and search may shrink first.
+ */
+@media (min-width: 1026px) {
+  .nav-top-row.header-inner .header-search-zone,
+  .casepath-nav-categorized .header-search-zone {
+    display: flex !important;
+    order: 3 !important;
+    flex: 0 1 auto !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .nav-top-row.header-inner .header-account-zone,
+  .casepath-nav-categorized .header-account-zone {
+    order: 4 !important;
+    margin-left: 0 !important;
+  }
+
+  .nav-top-row.header-inner .header-nav-zone,
+  .casepath-nav-categorized .header-nav-zone {
+    flex: 0 1 auto !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  /* Capsule hugs Smart Search (beat shell flex-start !important). */
+  .nav-top-row.header-inner .header-nav-zone,
+  .casepath-nav-categorized .header-nav-zone,
+  .nav-top-row.header-inner .header-nav-zone .nav-site-links,
+  .nav-top-row.header-inner .nav-site-links,
+  .casepath-nav-categorized .header-nav-zone .nav-site-links {
+    justify-content: flex-end !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop,
+  .nav-top-row.header-inner .nav-cat-row--desktop {
+    width: max-content !important;
+    max-width: 100% !important;
+    flex-shrink: 1 !important;
+  }
+
+  .cp-smart-search-slot {
+    display: flex !important;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .cp-smart-search {
+    width: 280px;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .casepath-nav-categorized .header-actions {
+    gap: 0.45rem;
+  }
+}
+
+/* Compact when search + auth share the row (mid-desktop crowding band). */
+@media (min-width: 1026px) and (max-width: 1600px) {
+  .cp-smart-search {
+    width: 220px !important;
+    min-width: 160px !important;
+    max-width: 240px !important;
+  }
+
+  .cp-smart-search__kbd {
+    display: none !important;
+  }
+
+  .cp-smart-search__listbox {
+    min-width: 300px;
+    left: auto;
+    right: 0;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-link,
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-wrap > .nav-cat-toggle {
+    padding-left: 0.42rem !important;
+    padding-right: 0.42rem !important;
+    font-size: var(--cp-type-caption) !important;
+  }
+
+  .casepath-nav-categorized .casepath-brand-logo {
+    max-width: 160px !important;
+  }
+}
+
+/*
+ * Extra-tight band: desktop chrome is on, but five nav labels + search +
+ * account rail barely fit. Prefer shrinking search / logo / account gaps
+ * over letting Your Case paint across the search field.
+ */
+@media (min-width: 1026px) and (max-width: 1199.98px) {
+  .nav-top-row.header-inner,
+  .casepath-nav-categorized .nav-top-row.header-inner {
+    gap: 0.35rem !important;
+  }
+
+  .casepath-nav-categorized .casepath-brand-logo {
+    height: 32px !important;
+    max-width: 132px !important;
+  }
+
+  .cp-smart-search {
+    width: 152px !important;
+    min-width: 140px !important;
+    max-width: 168px !important;
+  }
+
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-link,
+  .casepath-nav-categorized .nav-cat-row--desktop > .nav-cat-wrap > .nav-cat-toggle {
+    height: 32px !important;
+    min-height: 32px !important;
+    padding-left: 0.32rem !important;
+    padding-right: 0.32rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  .casepath-nav-categorized .header-account-zone,
+  .casepath-nav-categorized .header-account-zone .nav-trailing,
+  .casepath-nav-categorized .nav-trailing .header-actions,
+  .casepath-nav-categorized #nav-auth-area,
+  .casepath-nav-categorized #nav-guest-actions {
+    gap: 3px !important;
+  }
+
+  .casepath-nav-categorized #lang-btn,
+  .casepath-nav-categorized #nav-signin-btn,
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary,
+  #casepath-nav-quick-exit-slot .casepath-quick-exit-btn {
+    height: 32px !important;
+    min-height: 32px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .casepath-nav-categorized #nav-signup-btn.nav-cta.cta-primary {
+    padding-left: 0.45rem !important;
+    padding-right: 0.45rem !important;
+  }
+}
+
+@media (max-width: 1025.98px) {
+  .casepath-nav-categorized .header-search-zone,
+  .nav-top-row.header-inner .header-search-zone,
+  .cp-smart-search-slot,
+  #cp-smart-search {
+    display: none !important;
+  }
+}
