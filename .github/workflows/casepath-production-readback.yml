@@ -19,14 +19,42 @@ jobs:
         env:
           EXPECTED_MARKER: "20260727iosscroll1"
         run: |
-          python3 ops/production/readback.py \
-            --url https://casepath.com.au/ \
-            --expected-marker "$EXPECTED_MARKER" \
-            --output casepath-public-readback.json
+          set +e
+          curl --location --silent --show-error --fail \
+            --connect-timeout 15 --max-time 45 \
+            --dump-header casepath-response-headers.txt \
+            --output casepath-public.html \
+            https://casepath.com.au/
+          CURL_STATUS=$?
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          body = Path('casepath-public.html').read_bytes() if Path('casepath-public.html').exists() else b''
+          text = body.decode('utf-8', errors='replace')
+          marker = '20260727iosscroll1'
+          receipt = {
+              'url': 'https://casepath.com.au/',
+              'curl_exit_code': int(__import__('os').environ.get('CURL_STATUS', '0')),
+              'http_body_bytes': len(body),
+              'sha256': hashlib.sha256(body).hexdigest() if body else None,
+              'expected_marker': marker,
+              'marker_present': marker in text,
+              'headers_file_present': Path('casepath-response-headers.txt').exists(),
+          }
+          Path('casepath-public-readback.json').write_text(json.dumps(receipt, indent=2) + '\\n', encoding='utf-8')
+          print(json.dumps(receipt, indent=2))
+          PY
+          echo "CURL_STATUS=$CURL_STATUS" >> "$GITHUB_ENV"
+          if [ "$CURL_STATUS" -ne 0 ]; then exit "$CURL_STATUS"; fi
+          grep -Fq "$EXPECTED_MARKER" casepath-public.html || exit 3
 
       - name: Publish readback receipt
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: casepath-public-readback
-          path: casepath-public-readback.json
-          if-no-files-found: error
+          path: |
+            casepath-public-readback.json
+            casepath-response-headers.txt
+            casepath-public.html
+          if-no-files-found: warn
