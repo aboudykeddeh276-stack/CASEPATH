@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)#top -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-vinext-fonts="">/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_0tvmz3h { font-family: 'Geist', sans-serif; }
+
+.__variable_geist_0tvmz3h { --font-geist-sans: 'Geist', sans-serif; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_mono_1diim1n { font-family: 'Geist Mono', sans-serif; }
+
+.__variable_geist_mono_1diim1n { --font-geist-mono: 'Geist Mono', sans-serif; }
+</style><title>CasePath | Lawyer-ready legal preparation</title><meta name="description" content="Structure your story, evidence and questions into a professional preparation package for review by a relevant lawyer."><meta name="codex-preview" content="development"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style id="casepath-copy-refinement-v7">
+.hero-lead{max-width:760px}
+.function-grid article:nth-child(8){position:relative}
+.function-grid article:nth-child(8)::after{
+  content:"PROFESSIONAL TIME";
+  position:absolute;top:18px;right:18px;
+  font-size:10px;letter-spacing:.12em;font-weight:700;
+  opacity:.48
+}
+</style>
+
+<style id="casepath-runtime-integration-v8">
+.cp-runtime-workbench{overflow:hidden}
+.cp-app-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:20px 24px;border-bottom:1px solid rgba(24,47,44,.12)}
+.cp-app-top h3{margin:5px 0 0;font-size:20px}
+.cp-progress{height:4px;background:rgba(24,47,44,.08)}
+.cp-progress>div{height:100%;width:0;background:#1f5b53;transition:width .25s ease}
+.cp-step-host{padding:28px}
+.cp-step-host h2{font-size:clamp(28px,4vw,44px);line-height:1.08;margin:4px 0 10px}
+.cp-step-host .lead,.cp-step-host .hint{color:#66716f}
+.cp-step-host .field{display:grid;gap:9px;margin:22px 0}
+.cp-step-host label,.cp-step-host .legend{font-weight:700}
+.cp-step-host textarea,.cp-step-host input[type=text],.cp-step-host input[type=file],.cp-step-host select{
+ width:100%;box-sizing:border-box;border:1px solid #cfd8d5;border-radius:10px;background:#fff;
+ padding:13px 14px;font:inherit;color:#17312e
+}
+.cp-step-host textarea{min-height:210px;resize:vertical}
+.cp-step-host .choice-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.cp-step-host .choice{display:flex;gap:12px;border:1px solid #d4ddda;border-radius:12px;padding:16px;background:#fff;cursor:pointer}
+.cp-step-host .choice:has(input:checked){border-color:#1f5b53;background:#f2f7f5}
+.cp-step-host .choice span span{display:block;margin-top:4px;color:#697572;font-size:13px;line-height:1.45}
+.cp-step-host .step-actions{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:28px;padding-top:20px;border-top:1px solid #e1e6e4}
+.cp-step-host .btn{appearance:none;border:1px solid #bac8c4;border-radius:9px;padding:12px 17px;background:#fff;color:#183b36;font-weight:700;cursor:pointer}
+.cp-step-host .btn.primary{background:#183f3b;color:#fff;border-color:#183f3b}
+.cp-step-host .back-link{border:0;background:none;padding:0;color:#405b56;font-weight:700;cursor:pointer}
+.cp-step-host .step-eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#75634f;font-weight:800}
+.cp-step-host .error{display:none;color:#a12f2f;margin-top:10px}.cp-step-host .error.show{display:block}
+.cp-step-host .summary-stack{display:grid;gap:12px}
+.cp-step-host .summary-card{border:1px solid #d8e0de;border-radius:12px;padding:16px;background:#fff}
+.cp-step-host .summary-card button{border:0;background:none;padding:0;color:#1f5b53;font-weight:700;cursor:pointer}
+.cp-step-host .callout{border-left:3px solid #8b7456;background:#f8f4ed;padding:14px 16px;margin:18px 0}
+.cp-step-host .chain{display:grid;gap:10px;margin:18px 0}
+.cp-step-host .chain-row{display:grid;grid-template-columns:36px 1fr;gap:14px;padding:14px;border:1px solid #dce3e1;border-radius:10px;background:#fff}
+.cp-step-host .chain-n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#183f3b;color:#fff;font-weight:800}
+.cp-step-host .chain-row strong,.cp-step-host .chain-row small{display:block}
+.cp-step-host .output-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cp-step-host .output{border:1px solid #d8e0de;border-radius:12px;padding:17px;background:#fff}
+.cp-step-host .output h3{margin-top:0}
+.cp-step-host .micro{font-size:12px;color:#6b7774}
+@media(max-width:760px){
+ .cp-step-host{padding:20px}
+ .cp-step-host .choice-list,.cp-step-host .output-grid{grid-template-columns:1fr}
+ .cp-step-host .step-actions{align-items:stretch;flex-direction:column}
+ .cp-step-host .step-actions .btn{width:100%}
+ .cp-app-top{padding:16px 20px}
+}
+</style>
+
+<style id="casepath-embedded-design-v10">
+:root{
+  --ink:#172321;
+  --ink-soft:#43504d;
+  --muted:#687572;
+  --line:#dfe5e2;
+  --line-strong:#cdd7d3;
+  --paper:#fbfcfb;
+  --surface:#ffffff;
+  --surface-alt:#f3f6f4;
+  --brand:#173f3a;
+  --brand-2:#285f57;
+  --brand-soft:#eaf1ee;
+  --warm:#8b7255;
+  --warm-soft:#f5f0e8;
+  --danger:#8a342f;
+  --shadow:0 22px 64px rgba(24,49,45,.10);
+  --shadow-sm:0 8px 28px rgba(24,49,45,.07);
+  --radius:20px;
+  --radius-sm:12px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.58;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button,a{touch-action:manipulation}
+.site-header{
+  position:sticky;top:0;z-index:40;
+  min-height:76px;
+  display:flex;align-items:center;
+  gap:28px;
+  padding:0 max(28px,calc((100vw - var(--max))/2));
+  background:rgba(251,252,251,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(23,63,58,.09);
+}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{
+  width:38px;height:38px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--brand);color:white;
+  font-family:Georgia,"Times New Roman",serif;font-size:13px;font-weight:700;
+}
+.brand>span:last-child{display:grid;line-height:1.05}
+.brand strong{font-family:Georgia,"Times New Roman",serif;font-size:20px;letter-spacing:-.02em}
+.brand small{margin-top:4px;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.site-header nav{display:flex;align-items:center;gap:24px;color:var(--ink-soft);font-size:14px;font-weight:650}
+.site-header nav a:hover{color:var(--brand)}
+.header-cta,.button{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:48px;padding:0 19px;
+  border-radius:999px;
+  border:1px solid var(--line-strong);
+  background:white;color:var(--brand);
+  font-weight:750;font-size:14px;
+  transition:.18s ease;
+}
+.header-cta,.button.primary{background:var(--brand);border-color:var(--brand);color:white}
+.button:hover,.header-cta:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+.button.secondary{background:transparent}
+.hero{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr);
+  gap:72px;align-items:center;
+  padding:104px 28px 88px;
+}
+.hero-copy{max-width:720px}
+.eyebrow,.micro-label{
+  margin:0 0 18px;
+  color:var(--warm);
+  font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+}
+.eyebrow span{display:inline-block;width:20px;height:2px;background:currentColor;margin-right:8px;vertical-align:middle}
+.hero h1{
+  margin:0;
+  max-width:850px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+  font-size:clamp(48px,6.4vw,82px);
+  line-height:.98;
+  letter-spacing:-.045em;
+  color:var(--brand);
+}
+.hero h1 em{font-style:normal;color:var(--warm)}
+.hero-lead{
+  max-width:700px;margin:28px 0 0;
+  color:var(--ink-soft);
+  font-size:clamp(18px,2vw,22px);
+  line-height:1.55;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.boundary-compact{
+  display:flex;gap:12px;align-items:flex-start;
+  margin-top:34px;padding-top:24px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:13px;line-height:1.55;
+}
+.boundary-icon{
+  flex:0 0 28px;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;background:var(--warm-soft);color:var(--warm);font-weight:900
+}
+.boundary-compact p{margin:0}
+.hero-panel{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+.panel-top,.readback-top,.volume-form-top,.builder-status,.cp-app-top{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:18px
+}
+.panel-top h2,.readback-top h3,.volume-form-top h3,.cp-app-top h3{margin:4px 0 0}
+.private-pill,.adapter-state,.status-pill{
+  display:inline-flex;align-items:center;white-space:nowrap;
+  min-height:30px;padding:0 11px;border-radius:999px;
+  background:var(--brand-soft);color:var(--brand);
+  font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase
+}
+.readiness-row{display:grid;grid-template-columns:1fr;gap:14px;margin:28px 0 20px}
+.score-ring{display:none!important}
+.readiness-row strong{font-size:18px}
+.readiness-row p{margin:5px 0 0;color:var(--muted);font-size:14px}
+.pack-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.pack-list>div{
+  display:grid;grid-template-columns:38px 1fr auto;gap:12px;align-items:center;
+  min-height:56px;border-bottom:1px solid var(--line)
+}
+.pack-list span{color:var(--warm);font-size:12px;font-weight:800}
+.pack-list p{margin:0;font-size:14px}
+.pack-list b{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.panel-link{display:flex;justify-content:space-between;align-items:center;margin-top:22px;color:var(--brand);font-weight:800;font-size:14px}
+.trust-strip{
+  display:flex;justify-content:center;align-items:center;gap:20px;
+  padding:17px 28px;
+  background:var(--brand);color:#eef5f2;
+  font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase
+}
+.trust-strip i{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.45)}
+.section{max-width:var(--max);margin:0 auto;padding:96px 28px}
+.section-heading,.guide-heading,.volume-heading{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.55fr);
+  gap:64px;align-items:end;margin-bottom:42px
+}
+.section-heading.centered{display:block;max-width:760px;margin:0 auto 42px;text-align:center}
+.section-heading h2,.guide-heading h2,.volume-heading h2,.builder-intro h2,.safeguard-card h2,.resources-copy h2{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--brand);
+  font-weight:500;
+  letter-spacing:-.025em;
+  font-size:clamp(34px,4.2vw,54px);
+  line-height:1.06;
+}
+.section-heading>p,.guide-heading>p,.volume-heading>p,.builder-intro>p,.resources-copy>p{
+  margin:0;color:var(--muted);font-size:16px
+}
+.function-grid{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid var(--line);border-left:1px solid var(--line)
+}
+.function-grid article{
+  min-height:310px;padding:26px 24px;
+  background:var(--surface);
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  transition:.18s ease
+}
+.function-grid article:hover{background:#f8faf9;transform:translateY(-2px);box-shadow:var(--shadow-sm);z-index:1}
+.function-number{display:block;color:var(--warm);font-size:12px;font-weight:850;letter-spacing:.12em}
+.function-grid h3,.plane-grid h3,.package-grid h3,.perspective-grid h3{
+  margin:38px 0 12px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:24px;line-height:1.12;font-weight:500;color:var(--brand)
+}
+.function-grid p{margin:0;color:var(--ink-soft);font-size:14px}
+.function-grid article>div:last-child{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+.function-grid article>div:last-child span{
+  border:1px solid var(--line);border-radius:999px;padding:5px 9px;
+  color:var(--muted);background:var(--paper);font-size:10px;font-weight:750
+}
+.method{padding-top:74px}
+.plane-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.plane-grid article{
+  min-height:240px;padding:25px;border-radius:var(--radius);
+  background:linear-gradient(180deg,#fff,#f7f9f8);
+  border:1px solid var(--line)
+}
+.plane-grid article>span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);font-size:11px;font-weight:850}
+.plane-grid h3{margin:32px 0 10px}
+.plane-grid p{margin:0;color:var(--muted);font-size:14px}
+.runtime-flow{display:none!important}
+/* INTERNAL ENGINEERING PROJECTION: resident but not customer-visible */
+#volume,.legal-volume,.volume-contract,.volume-shell,.volume-form,.volume-readback,.operation-sequence,.adapter-state,.volume-rules{
+  display:none!important
+}
+.builder{
+  max-width:none;
+  background:linear-gradient(180deg,#eef4f1 0%,#f7f9f8 100%);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding-left:max(28px,calc((100vw - var(--max))/2));
+  padding-right:max(28px,calc((100vw - var(--max))/2));
+}
+.builder-intro{max-width:800px;margin-bottom:32px}
+.workbench{
+  max-width:980px;
+  background:white;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);
+  overflow:hidden
+}
+.cp-app-top{
+  padding:22px 26px;border-bottom:1px solid var(--line)
+}
+.cp-app-top h3{font-family:Georgia,"Times New Roman",serif;color:var(--brand);font-size:22px;font-weight:500}
+.cp-progress{height:4px;background:#edf1ef}
+.cp-progress>div{height:100%;background:var(--brand-2);transition:width .25s ease}
+.cp-step-host{padding:34px 34px 38px}
+.cp-step-host .step-eyebrow{color:var(--warm);font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+.cp-step-host h2{
+  margin:7px 0 12px;
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--brand);font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.08
+}
+.cp-step-host .lead,.cp-step-host .hint{color:var(--muted)}
+.cp-step-host .field{display:grid;gap:9px;margin:24px 0}
+.cp-step-host label,.cp-step-host .legend{font-weight:750;color:var(--ink)}
+.cp-step-host textarea,.cp-step-host input[type=text],.cp-step-host input[type=file],.cp-step-host select{
+  width:100%;border:1px solid var(--line-strong);border-radius:12px;background:#fff;color:var(--ink);
+  padding:14px 15px;outline:none
+}
+.cp-step-host textarea{min-height:220px;resize:vertical}
+.cp-step-host textarea:focus,.cp-step-host input:focus,.cp-step-host select:focus{border-color:var(--brand-2);box-shadow:0 0 0 3px rgba(40,95,87,.10)}
+.cp-step-host .choice-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.cp-step-host .choice{
+  display:flex;gap:12px;align-items:flex-start;padding:17px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer
+}
+.cp-step-host .choice:has(input:checked){border-color:var(--brand-2);background:var(--brand-soft)}
+.cp-step-host .choice span span{display:block;margin-top:4px;color:var(--muted);font-size:13px}
+.cp-step-host .step-actions{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.cp-step-host .btn{
+  min-height:48px;padding:0 18px;border-radius:999px;border:1px solid var(--line-strong);
+  background:#fff;color:var(--brand);font-weight:800;cursor:pointer
+}
+.cp-step-host .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.cp-step-host .back-link{border:0;background:none;color:var(--ink-soft);font-weight:750;cursor:pointer}
+.cp-step-host .summary-stack,.cp-step-host .chain{display:grid;gap:12px}
+.cp-step-host .summary-card,.cp-step-host .chain-row,.cp-step-host .output{
+  border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff
+}
+.cp-step-host .callout{border-left:3px solid var(--warm);background:var(--warm-soft);padding:15px 17px;margin:18px 0}
+.cp-step-host .output-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.package-grid article{
+  position:relative;padding:28px;border-radius:var(--radius);background:white;border:1px solid var(--line);box-shadow:var(--shadow-sm)
+}
+.package-grid article.featured{border-color:rgba(23,63,58,.35);box-shadow:var(--shadow)}
+.package-grid .package-kicker{color:var(--warm);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.1em}
+.package-grid h3{margin:16px 0 8px;font-size:28px}
+.package-grid p{color:var(--muted)}
+.package-grid ul{list-style:none;padding:0;margin:24px 0;display:grid;gap:10px}
+.package-grid li{font-size:14px;color:var(--ink-soft)}
+.package-grid li::first-letter{color:var(--brand)}
+.package-grid a{color:var(--brand);font-weight:800;font-size:14px}
+.delivery-guide{padding-top:74px}
+.perspective-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.perspective-grid article{padding:24px;border-radius:var(--radius);border:1px solid var(--line);background:white}
+.perspective-grid article>span{color:var(--warm);font-weight:850;font-size:11px}
+.perspective-grid h3{margin:22px 0 10px}
+.perspective-grid p{margin:0;color:var(--muted);font-size:14px}
+.artifact-table{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.artifact-table table{width:100%;border-collapse:collapse;min-width:780px}
+.artifact-table th,.artifact-table td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+.artifact-table th{background:var(--surface-alt);color:var(--brand);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.safeguards{padding-top:74px}
+.safeguard-card{
+  padding:42px;border-radius:28px;
+  background:var(--brand);color:#edf4f1
+}
+.safeguard-card .eyebrow{color:#cbbba5}
+.safeguard-card h2{color:white;max-width:780px}
+.safeguard-card>p{max-width:760px;color:#cbd8d4}
+.safeguard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:34px;background:rgba(255,255,255,.12)}
+.safeguard-grid>div{padding:22px;background:var(--brand)}
+.safeguard-grid span{color:#cbbba5;font-size:11px;font-weight:850}
+.safeguard-grid strong{display:block;margin:14px 0 5px;color:white}
+.safeguard-grid p{margin:0;color:#c9d5d1;font-size:13px}
+.resources{
+  display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start
+}
+.resource-links{display:grid;gap:10px}
+.resource-links a{
+  display:flex;justify-content:space-between;gap:20px;padding:18px 20px;
+  border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow-sm)
+}
+.resource-links a span{color:var(--muted);font-size:13px}
+.site-footer,footer{
+  max-width:var(--max);margin:0 auto;padding:34px 28px 48px;
+  border-top:1px solid var(--line);color:var(--muted);font-size:12px
+}
+.site-footer .brand,footer .brand{margin-bottom:14px}
+#sys,#sys-toggle,#cp-resident-kernel,#cp-resident-vfs,#cp-resident-ledger{display:none!important}
+@media(max-width:1020px){
+  .site-header nav{display:none}
+  .hero{grid-template-columns:1fr;gap:44px;padding-top:72px}
+  .hero-panel{max-width:700px}
+  .function-grid{grid-template-columns:repeat(2,1fr)}
+  .plane-grid{grid-template-columns:repeat(2,1fr)}
+  .section-heading,.guide-heading,.volume-heading{grid-template-columns:1fr;gap:18px}
+  .package-grid,.perspective-grid{grid-template-columns:1fr}
+  .safeguard-grid{grid-template-columns:repeat(2,1fr)}
+  .resources{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .site-header{min-height:68px;padding:0 18px}
+  .header-cta{display:none}
+  .hero,.section{padding-left:18px;padding-right:18px}
+  .hero{padding-top:54px;padding-bottom:62px}
+  .hero h1{font-size:48px}
+  .trust-strip{overflow:auto;justify-content:flex-start;padding-left:18px}
+  .function-grid,.plane-grid{grid-template-columns:1fr}
+  .function-grid article{min-height:0}
+  .cp-step-host{padding:24px 20px 28px}
+  .cp-step-host .choice-list,.cp-step-host .output-grid{grid-template-columns:1fr}
+  .cp-step-host .step-actions{flex-direction:column;align-items:stretch}
+  .cp-step-host .btn{width:100%}
+  .safeguard-grid{grid-template-columns:1fr}
+  .safeguard-card{padding:28px 22px}
+}
+</style>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2732%27 fill=%27%231b4a43%27/%3E%3Ctext x=%2732%27 y=%2739%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-size=%2724%27 fill=%27white%27%3ECP%3C/text%3E%3C/svg%3E">
+<style id="casepath-professional-hardening-v11">
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{overflow-x:hidden}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(37,91,83,.28);outline-offset:3px}
+.cp-package-selection{margin-top:4px;min-height:17px;font-size:12px;color:#6b7774}
+.text-button{appearance:none;border:0;background:transparent;padding:0;color:#264f49;font:inherit;font-weight:750;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.package-grid a[data-casepath-package]{display:inline-flex;align-items:center;gap:8px}
+.cp-step-host .output.preferred-output{border-color:#2c665d;box-shadow:0 0 0 2px rgba(44,102,93,.12);background:#f7fbfa}
+.cp-step-host .output.preferred-output::before{content:"Selected from packages";display:inline-block;margin-bottom:10px;font-size:10px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:#2c665d}
+@media(max-width:760px){
+  header nav{display:none}
+  .header-inner{gap:14px}
+  .header-cta{margin-left:auto}
+  .cp-app-top{gap:10px;flex-direction:column}
+  .private-pill{align-self:flex-start}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+<style id="casepath-product-hardening-v12">
+.draft-controls{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;margin-top:10px}
+.backup-label{cursor:pointer}.text-button.danger{color:#7b3934}.sr-only-input{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:640px){.draft-controls{align-items:flex-start;flex-direction:column;gap:10px}}
+</style>
+</head><body class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"><main><header class="site-header"><a class="brand" href="#top" aria-label="CasePath home"><span class="brand-mark">CP</span><span><strong>CasePath</strong><small>Legal preparation</small></span></a><nav aria-label="Main navigation"><a href="#functions">What you need</a><a href="#method">How it works</a><a href="#builder">Prepare my account</a><a href="#packages">Packages</a></nav><a class="header-cta" href="#builder">Start my preparation <span>→</span></a></header><section class="hero" id="top"><div class="hero-copy"><p class="eyebrow"><span></span> South Australia pilot</p><h1>Walk into your first lawyer meeting <em>prepared.</em></h1><p class="hero-lead">Navigating a legal matter can be stressful at the best of times. Knowing what to expect—and what to have prepared—before you speak with a professional can make the process easier to navigate.</p><div class="hero-actions"><a class="button primary" href="#builder">Start my preparation <span>→</span></a><a class="button secondary" href="#functions">See what’s included</a></div><div class="boundary-compact"><span class="boundary-icon">!</span><p><strong>Preparation, not representation.</strong> CasePath is not a law firm and does not provide legal advice. Use the prepared record with a suitably qualified professional, and obtain legal advice from a lawyer qualified in the relevant area and jurisdiction before acting, signing, sending or filing.</p></div></div><div class="hero-panel" aria-label="Example case readiness panel"><div class="panel-top"><div><span class="micro-label">Your preparation pack</span><h2>Lawyer meeting readiness</h2></div><span class="private-pill">Device-local draft</span></div><div class="readiness-row"><div class="score-ring" style="--score: 32.4deg;"><span>9%</span></div><div><strong>Start with the facts</strong><span id="hero-prep-state">Starting preparation</span><p>CasePath helps organise the account before professional review begins. Readiness reflects preparation only—not legal merit, prospects or validity.</p></div></div><div class="pack-list"><div class=""><span>01</span><p>Plain-language account</p><b>Needed</b></div><div class=""><span>02</span><p>Chronology and people</p><b>Needed</b></div><div class=""><span>03</span><p>Evidence and source mesh</p><b>Needed</b></div><div class=""><span>04</span><p>Professional review agenda</p><b>Needed</b></div></div><a href="#builder" class="panel-link">Continue my preparation <span>↘</span></a></div></section><section class="trust-strip" aria-label="Service boundaries"><span>INFORMATION &amp; ORGANISATION</span><i></i><span>NO AUTOMATED LEGAL CONCLUSIONS</span><i></i><span>LAWYER REVIEW REQUIRED</span><i></i><span>NO DIRECT COURT FILING</span></section><section class="functions section" id="functions"><div class="section-heading"><div><p class="eyebrow"><span></span> What people actually need</p><h2>From a difficult story to a reviewable record.</h2></div><p>Most people do not arrive with a neat legal issue. They arrive with events, documents, urgency and uncertainty. CasePath helps organise that raw material before professional review begins.</p></div><div class="function-grid"><article><span class="function-number">01</span><h3>Know what matters</h3><p>Turn an unstructured account into dates, people, decisions, disputed facts and questions that need professional advice.</p><div><span>Issue map</span><span>Jurisdiction</span><span>Urgency prompts</span></div></article><article><span class="function-number">02</span><h3>Preserve your account</h3><p>Keep your original expression intact while separating observed events, recollection, assumptions, quotations and requested outcomes.</p><div><span>Source account</span><span>People</span><span>Original wording</span></div></article><article><span class="function-number">03</span><h3>Build the chronology</h3><p>Map each event by date, actor, action, location and source so the sequence can be checked against records and competing accounts.</p><div><span>Timeline</span><span>Decision points</span><span>Unknown dates</span></div></article><article><span class="function-number">04</span><h3>Construct the evidence mesh</h3><p>Link each important proposition to material that may support, contradict or leave it unresolved—without declaring admissibility or weight.</p><div><span>Evidence index</span><span>Source links</span><span>Missing-proof list</span></div></article><article><span class="function-number">05</span><h3>Map the dispute</h3><p>Place your propositions, the other side’s likely position, inconsistencies and unanswered questions into separate review lanes.</p><div><span>Issue map</span><span>Alternative account</span><span>Contradictions</span></div></article><article><span class="function-number">06</span><h3>Resolve the pathway</h3><p>Identify possible defence, complaint, review, disclosure, civil and urgent pathways for a lawyer to confirm against current law and procedure.</p><div><span>Forum</span><span>Forms</span><span>Deadline questions</span></div></article><article><span class="function-number">07</span><h3>Schedule loss and remedy</h3><p>Record the outcome sought, claimed loss, supporting records, causation questions and alternative remedies without fixing liability or quantum.</p><div><span>Loss schedule</span><span>Receipts</span><span>Remedy conditions</span></div></article><article><span class="function-number">08</span><h3>Use professional time well</h3><p>Prepare the basic record in advance so costly professional time can stay focused on objective assessment, legal advice, evidence, risk and next steps—not reconstructing the basics.</p><div><span>Handover pack</span><span>Objective review</span><span>Cost clarity</span></div></article></div></section><section class="method section" id="method"><div class="section-heading"><div><p class="eyebrow"><span></span> Context-preserving legal preparation</p><h2>One matter. Four planes that never collapse.</h2></div><p>The architecture preserves the user’s source material while progressively organising it for legal review. An account does not become evidence, evidence does not become a legal conclusion, and a legal possibility does not become an authorised action.</p></div><div class="plane-grid"><article><span>01</span><h3>Source plane</h3><p>Preserve the user’s expression, dates, people, records and requested outcomes without silently rewriting them.</p></article><article><span>02</span><h3>Evidence plane</h3><p>Link propositions to supporting, contradicting and missing material while retaining provenance and uncertainty.</p></article><article><span>03</span><h3>Legal plane</h3><p>Present possible legal lenses and current official sources conditionally; application remains for the qualified lawyer.</p></article><article><span>04</span><h3>Action plane</h3><p>Prepare pathway questions, document drafts and a lawyer handover without filing, representing or promising an outcome.</p></article></div><div class="runtime-flow" hidden aria-hidden="true"></div></section><section class="legal-volume section" id="volume" hidden aria-hidden="true"><div class="volume-heading"><div><p class="eyebrow light"><span></span> DNA · Document Naturally Advised</p><h2>The document writes its governed structure into the matrix.</h2></div><p>A stable fourteen-locus document genome is instantiated as a bounded source variant. Integer traversal activates the linear tape, maps each locus to the zero-free matrix and emits only the services supported by traversed states.</p></div><div class="volume-contract" aria-label="Legal volume execution flow"><span>Preserve source</span><i>→</i><span>Instantiate DNA variant</span><i>→</i><span>Write static tape</span><i>→</i><span>Traverse integers</span><i>→</i><span>Map matrix</span><i>→</i><span>Emerge services</span><i>→</i><span>Read receipt</span></div><div class="volume-shell"><div class="volume-form"><div class="volume-form-top"><div><span class="micro-label">Law-ingestion pathway</span><h3>Source-to-matrix adapter</h3></div><span class="adapter-state">IDLE</span></div><p class="volume-boundary">Use this workbench for legislation, rules, forms, judgments and official guidance—not confidential case facts. Processing is transient; the latest receipt is retained only in this browser.</p><div class="field-grid volume-fields"><label>Source title<input value="South Australian Legislation — current and historical index"></label><label>Document class<select><option value="LEGISLATION">Legislation</option><option value="COURT_RULE">Court rule</option><option value="PRESCRIBED_FORM">Prescribed form</option><option value="JUDGMENT">Judgment</option><option value="OFFICIAL_GUIDANCE">Official guidance</option><option value="SECONDARY_MATERIAL">Secondary material</option><option value="USER_SOURCE">User-supplied source</option></select></label><label>Jurisdiction<input value="South Australia"></label><label>Official or source URL<input type="url" value="https://www.legislation.sa.gov.au/"></label><label>Source/access date<input type="date" value="2026-08-04"></label><label>Version label<input value="Current source page accessed for review"></label><label>Provision / rule / form<input value="Not yet selected"></label><label>Traversal cycles<select><option value="1">1 cycle</option><option value="2">2 cycles</option><option value="3">3 cycles</option><option value="5">5 cycles</option><option value="8">8 cycles</option></select></label></div><label>Source passage or source-led summary<textarea rows="4">The official legislation service provides current and historical legislation information. Select the exact Act, version and provision before applying it to a matter.</textarea></label><label>Proposition to map—not a conclusion about the matter<textarea rows="3">The selected authorised source and operative version must be confirmed before legal application.</textarea></label><div class="field-grid volume-fields"><label>Procedural object<input value="Authority and currency review"></label><label>Review pathway<input value="Official source → version → commencement → provision → lawyer application review"></label></div><label>Untranslated or undefined terms<input placeholder="Comma-separated; creates Mirror Lane tasks" value=""></label><button class="button volume-write" type="button">Write and traverse legal volume <span>→</span></button><p class="sr-status" role="status" aria-live="polite"></p></div><div class="volume-readback"><div class="readback-top"><div><span class="micro-label">Live architecture</span><h3>Static active-state tape</h3></div><span>Awaiting write</span></div><div class="operation-sequence" aria-label="Integer operation sequence"><span>-1</span><span>-2</span><span>+3</span><span>+2</span><span>+1</span><span>+2</span><span>+3</span><span>+2</span><span>+1</span></div><div class="tape-scroll" role="region" aria-label="Document active-state tape" tabindex="0"><div class="tape-cell "><span>01</span><strong>SOURCE IDENTITY</strong><small>Preserve a content-addressed source identity.</small></div><div class="tape-cell "><span>02</span><strong>DOCUMENT CLASS</strong><small>Separate legislation, rules, forms, judgments, guidance and user material.</small></div><div class="tape-cell "><span>03</span><strong>JURISDICTION</strong><small>Bind the source to the legal system whose authority is asserted.</small></div><div class="tape-cell "><span>04</span><strong>AUTHORITY TIER</strong><small>Record source authority without deciding application.</small></div><div class="tape-cell "><span>05</span><strong>TITLE</strong><small>Retain the official or supplied source title.</small></div><div class="tape-cell "><span>06</span><strong>SOURCE LOCATION</strong><small>Retain the official URL or local source reference.</small></div><div class="tape-cell "><span>07</span><strong>VERSION TIME</strong><small>Record version, access date and the need for currency review.</small></div><div class="tape-cell "><span>08</span><strong>COMMENCEMENT</strong><small>Keep commencement and transitional questions visible.</small></div><div class="tape-cell "><span>09</span><strong>PROVISION</strong><small>Address the section, rule, form or paragraph being mapped.</small></div><div class="tape-cell "><span>10</span><strong>PROPOSITION</strong><small>Separate what the source says from how it may apply.</small></div><div class="tape-cell "><span>11</span><strong>PROCEDURAL OBJECT</strong><small>Identify the proceeding, form, complaint, response or review object.</small></div><div class="tape-cell "><span>12</span><strong>PATHWAY</strong><small>Bind the object to a forum and decision pathway for review.</small></div><div class="tape-cell "><span>13</span><strong>LAWYER REVIEW</strong><small>Prevent automated promotion into advice, filing or outcome.</small></div><div class="tape-cell "><span>14</span><strong>LINEAGE</strong><small>Link the variant, parent genome, matrix write and readback receipt.</small></div></div><div class="matrix-readback"><div class="readback-label"><span class="micro-label">Zero-free matrix</span><p>Each column is a processing state—not legal merit.</p></div><div class="matrix-columns"><div class="matrix-column state-n3"><b>-3</b><span>Conflict</span><small>0 loci</small></div><div class="matrix-column state-n2"><b>-2</b><span>Unresolved</span><small>0 loci</small></div><div class="matrix-column state-1"><b>+1</b><span>Provisional</span><small>0 loci</small></div><div class="matrix-column state-2"><b>+2</b><span>Context</span><small>0 loci</small></div><div class="matrix-column state-3"><b>+3</b><span>Verified scope</span><small>0 loci</small></div></div></div><div class="service-readback"><div class="readback-label"><span class="micro-label">Emerged services</span><p>Failure stays local to the capability it supplies.</p></div><p class="empty-readback">Run the adapter to see which services the traversed source can support.</p></div></div></div><div class="volume-rules"><p><strong>Document Naturally Advised:</strong> A stable, ordered document volume whose own governed loci advise structural routing, verification, service activation and professional handover without issuing legal advice.</p><p><strong>Boundary:</strong> document advice governs structure and routing. It does not replace a lawyer’s legal advice, validate a filing or determine an outcome.</p></div></section><div id="casepath-app" tabindex="-1" aria-hidden="true"></div><section class="builder section" id="builder" data-casepath-runtime="v5.2"><div class="builder-intro"><p class="eyebrow light"><span></span> Interactive preparation tool</p><h2>Prepare your account.</h2><p>Answer in your own words. CasePath keeps your account, allegations, records and questions distinct, then prepares them for professional review. It does not decide whether a claim is true or legally valid.</p><div class="local-note"><span>⌁</span><p><strong>Private draft mode</strong><br>Your answers are saved only in this browser for this demonstration. Avoid shared devices and clear the draft when finished.</p></div><div class="draft-controls" aria-label="Draft controls">
+<button class="text-button" type="button" onclick="CasePath.exportMatter()">Save a backup</button>
+<label class="text-button backup-label" for="backup-import">Resume from a backup</label>
+<input id="backup-import" class="sr-only-input" type="file" accept="application/json,.json" onchange="CasePath.importMatterFile(this)" aria-label="Resume from a CasePath backup">
+<button class="text-button danger" type="button" onclick="CasePath.clearDraft()">Clear this browser draft</button>
+</div></div>
+<div class="workbench cp-runtime-workbench">
+  <div class="cp-app-top">
+    <div>
+      <span class="micro-label">Your preparation workspace</span>
+      <h3 id="matter-id">New matter</h3><div id="package-selection" class="cp-package-selection" aria-live="polite"></div>
+    </div>
+    <span class="private-pill" id="save-state" role="status" aria-live="polite">Checking local save…</span>
+  </div>
+  <div class="cp-progress" id="progress-track" role="progressbar" aria-label="Preparation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-bar"></div></div>
+  <div class="cp-step-host step" id="step-host"></div>
+</div>
+</section>
+<section class="market-workspace" id="preparation-state" aria-labelledby="prep-state-title">
+  <div class="workspace-shell">
+    <div class="workspace-head">
+      <div>
+        <p class="eyebrow"><span></span> Professional handoff workspace</p>
+        <h2 id="prep-state-title">Know what is ready before professional time begins.</h2>
+      </div>
+      <p>CasePath keeps the preparation state explicit: what has been captured, what remains unresolved, what should be done next, and what a professional could review now. This is preparation status—not a prediction about legal merit or outcome.</p>
+    </div>
+
+    <div class="prep-folio">
+      <div class="prep-main">
+        <div class="prep-kicker">
+          <div>
+            <small class="micro-label">Current matter</small>
+            <strong id="prep-matter-id">New matter</strong>
+          </div>
+          <span class="prep-state-badge" id="prep-state-badge">Starting preparation</span>
+        </div>
+
+        <div class="prep-track-list" id="prep-track-list" aria-live="polite"></div>
+
+        <div class="prep-next">
+          <small>Next best preparation action</small>
+          <h3 id="prep-next-title">Start with your account</h3>
+          <p id="prep-next-copy">Describe what happened in your own words. CasePath will preserve that account before structuring anything else.</p>
+          <button id="prep-next-action" type="button">Continue preparation</button>
+        </div>
+      </div>
+
+      <aside class="prep-side" aria-label="Professional handoff summary">
+        <small class="micro-label">Handoff view</small>
+        <h3>What a professional can review now</h3>
+
+        <div class="prep-panel">
+          <small>Established</small>
+          <ul id="prep-established"><li class="empty">No substantive matter information captured yet.</li></ul>
+        </div>
+
+        <div class="prep-panel">
+          <small>Still unresolved</small>
+          <ul id="prep-unresolved"><li class="empty">CasePath will identify unresolved preparation points as you continue.</li></ul>
+        </div>
+
+        <div class="prep-panel">
+          <small>Available outputs</small>
+          <ul id="prep-outputs"><li class="empty">Complete the guided preparation to generate a professional handoff document.</li></ul>
+          <div class="prep-actions">
+            <a href="#builder" class="primary">Open preparation</a>
+            <a href="#packages">Choose an output</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="packages section" id="packages"><div class="section-heading centered"><p class="eyebrow"><span></span> Preparation packages</p><h2>Use the right amount of preparation.</h2><p>Prepare what can be organised beforehand, then use professional time for the assessment, advice and decisions that require professional expertise. Every package ends with professional review.</p></div><div class="package-grid"><article class=""><div class="package-top"><span>Start here</span></div><h3>Matter Snapshot</h3><p>For an initial call or first appointment when the professional needs the essential facts quickly.</p><ul><li><span>✓</span>One-page matter summary</li><li><span>✓</span>Key dates and people</li><li><span>✓</span>Urgency and missing-information prompts</li><li><span>✓</span>Questions for the lawyer</li></ul><a href="#builder" data-casepath-package="MATTER_SNAPSHOT" onclick="CasePath.choosePackage('MATTER_SNAPSHOT')">Build this preparation pack <span>→</span></a></article><article class="featured"><div class="package-top"><span>Most useful</span><b>Recommended</b></div><h3>Lawyer Brief</h3><p>For a complex matter with multiple events or records.</p><ul><li><span>✓</span>Structured factual chronology</li><li><span>✓</span>Allegation and response map</li><li><span>✓</span>Evidence register with gaps</li><li><span>✓</span>Loss and remedy discussion schedule</li><li><span>✓</span>Professional review checklist</li></ul><a href="#builder" data-casepath-package="PREPARATION_BRIEF" onclick="CasePath.choosePackage('PREPARATION_BRIEF')">Build this preparation pack <span>→</span></a></article><article class=""><div class="package-top"><span>Before action</span></div><h3>Records &amp; Information Request</h3><p>For identifying the material needed to understand an allegation, decision or disputed sequence before professional review.</p><ul><li><span>✓</span>Reasoned record categories</li><li><span>✓</span>Unresolved-question mapping</li><li><span>✓</span>Information-flow and timing prompts</li><li><span>✓</span>Evidence-gap request logic</li><li><span>✓</span>Professional review boundary</li></ul><a href="#builder" data-casepath-package="ACCOUNTABILITY_CORRESPONDENCE" onclick="CasePath.choosePackage('ACCOUNTABILITY_CORRESPONDENCE')">Build this preparation pack <span>→</span></a></article></div></section><section class="delivery-guide section" id="delivery-guide"><div class="guide-heading"><p class="eyebrow"><span></span> Mandatory page in every delivery</p><h2>One package. Three distinct perspectives.</h2><p>The first substantive page tells the user exactly what each artifact is, who created it, what authority it has, and how it may be used. Conditional analysis never masquerades as settled law.</p></div><div class="perspective-grid"><article><span>01</span><h3>Your lawyer might, could or would say</h3><p>Possible questions, professional considerations and necessary review steps—never invented advice or a promised view.</p><b>Professional perspective · conditional</b></article><article><span>02</span><h3>How the law might, could or would see it</h3><p>Alternative characterisations tied to facts that still must be proved, the correct legal test, and the deciding authority.</p><b>Legal perspective · conditional</b></article><article><span>03</span><h3>What the law says about the conduct</h3><p>Current authorised legislation, rules and official pathways, described with links, currency and limits on application.</p><b>Authority source · verified, application unresolved</b></article></div><div class="artifact-table"><div class="artifact-row artifact-head"><span>Object / artifact</span><span>Purpose</span><span>Status boundary</span></div><div class="artifact-row"><strong>Matter snapshot</strong><span>Your instructions, parties, stage and dates</span><span>User-supplied account—not verified fact</span></div><div class="artifact-row"><strong>Chronology</strong><span>Events arranged by date with source references</span><span>Sequence aid—not proof of an event</span></div><div class="artifact-row"><strong>People and authority map</strong><span>People, organisations, roles and asserted decision-makers</span><span>Recorded identities and roles—not findings of authority</span></div><div class="artifact-row"><strong>Issue map</strong><span>Questions, disputed propositions and alternatives</span><span>Preparation framework—not legal advice</span></div><div class="artifact-row"><strong>Proposition register</strong><span>Each material statement and the status claimed for it</span><span>Allegation, recollection or question until substantiated</span></div><div class="artifact-row"><strong>Evidence register</strong><span>Material held, missing and requested</span><span>Inventory—not a ruling on admissibility</span></div><div class="artifact-row"><strong>Contradiction register</strong><span>Differences between accounts, records and expected process</span><span>Investigation prompt—not proof of dishonesty or misconduct</span></div><div class="artifact-row"><strong>Lawyer perspective</strong><span>What a practitioner might ask, could consider or would need</span><span>Conditional professional-review prompts</span></div><div class="artifact-row"><strong>Legal perspective</strong><span>How conduct might be characterised if required facts are established</span><span>Possible analysis—not a court finding</span></div><div class="artifact-row"><strong>Authority register</strong><span>Current official legislation, rules and service pathways</span><span>Source text—not personalised application</span></div><div class="artifact-row"><strong>Pathway register</strong><span>Possible forums, procedures, forms, dependencies and decision-makers</span><span>Options for confirmation—not filing instructions</span></div><div class="artifact-row"><strong>Loss and remedy schedule</strong><span>Claimed impact, records, causation questions and outcomes sought</span><span>Discussion schedule—not accepted loss, liability or quantum</span></div><div class="artifact-row"><strong>Draft documents</strong><span>Review versions for a defined audience and purpose</span><span>Not approved to send, sign or file</span></div></div></section><section class="safeguards section" id="safeguards"><div class="safeguard-card"><div><p class="eyebrow light"><span></span> The line we do not cross</p><h2>Software can prepare the record. A lawyer must assess the law.</h2><p>Clear boundaries make the pack more useful. CasePath labels what came from you, what is supported by a record, what remains unverified and what requires professional judgment.</p></div><ul><li><span>01</span><p><strong>No solicitor–client relationship</strong>Using this site does not retain a lawyer or create legal professional privilege.</p></li><li><span>02</span><p><strong>No legal conclusion</strong>A polished document is not proof that a fact, claim, defence, remedy or amount is legally valid.</p></li><li><span>03</span><p><strong>No filing authority</strong>Nothing is sent to a court, tribunal, police agency, opponent or lawyer by CasePath.</p></li><li><span>04</span><p><strong>No deadline assurance</strong>Urgent time limits can apply. Verify them immediately with a lawyer or the relevant official body.</p></li></ul></div></section><section class="resources section"><div class="resources-copy"><p class="eyebrow"><span></span> South Australia resources</p><h2>Need advice or urgent procedural help?</h2><p>Use an official service or a suitably qualified practitioner. These external services are independent of CasePath.</p></div><div class="resource-links"><a href="https://lsc.sa.gov.au/FreeLegalHelp" target="_blank" rel="noopener noreferrer" target="_blank" rel="noreferrer"><span>Free legal help</span><strong>Legal Services Commission of SA</strong><b>↗</b></a><a href="https://www.lawsocietysa.asn.au/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noreferrer"><span>Find a relevant practitioner</span><strong>Law Society of South Australia</strong><b>↗</b></a><a href="https://courtsa.courts.sa.gov.au/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noreferrer"><span>Official court portal</span><strong>CourtSA</strong><b>↗</b></a></div></section><footer><div class="brand footer-brand"><span class="brand-mark">CP</span><span><strong>CasePath</strong><small>Legal preparation</small></span></div><p>CasePath provides information-management and document-preparation tools only. It is not a law firm, does not provide legal advice or representation, and is not a substitute for a lawyer. Generated material may be incomplete, inaccurate, outdated or unsuitable. Obtain independent legal advice in the relevant jurisdiction before acting on, sending, signing or filing anything.</p><div><a href="#safeguards">Service boundary</a><a href="#builder">Draft privacy</a><span>© 2026 CasePath</span></div></footer></main>
+<div id="cp-resident-kernel" hidden></div>
+<div id="cp-resident-vfs" hidden></div>
+<div id="cp-resident-ledger" hidden></div>
+<button id="sys-toggle" type="button" hidden>CasePath OS</button>
+<aside id="sys" hidden><pre id="sys-pre"></pre></aside>
+
+<script>
+(() => {
+"use strict";
+
+/* ================================================================
+   CASEPATH SERVICE RUNTIME v5
+   Authoritative path:
+   SOURCE -> SKILLS -> DERIVED MODEL -> TEMPLATE -> DOCUMENT MODEL
+          -> RENDERER -> VFS -> RECEIPT -> USER ARTIFACT
+   ================================================================ */
+
+const RUNTIME_ROOT = "20e6592044230e6f9169f0ce449061ad89759e3e59ae4559080c403cbe84054c";
+const USER_XLSX_B64 = "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";
+const STORE = "casepath.service.v5";
+
+const State = {
+  version: 5,
+  matterId: null,
+  step: 0,
+  answers: {},
+  source: {},
+  derived: {},
+  chain: [],
+  outputs: [],
+  receipts: [],
+  skillRuns: [],
+  preferredTemplate: null,
+  lastSavedAt: null,
+  runtime: {
+    id: null,
+    root: RUNTIME_ROOT,
+    sharedRoot: RUNTIME_ROOT,
+    HERE: null,
+    STILL_HERE: null,
+    WITH_US: null
+  }
+};
+
+const VFS = new Map();
+
+const CPStorage = (() => {
+  const mem = new Map();
+  let persistent = false;
+  try {
+    const k="__casepath_storage_probe__";
+    globalThis.localStorage?.setItem(k,"1");
+    persistent = globalThis.localStorage?.getItem(k)==="1";
+    globalThis.localStorage?.removeItem(k);
+  } catch(e) { persistent=false; }
+  function getItem(k){
+    if(persistent){ try{return globalThis.localStorage.getItem(k)}catch(e){persistent=false} }
+    return mem.get(k) ?? null;
+  }
+  function setItem(k,v){
+    const s=String(v);
+    if(persistent){ try{globalThis.localStorage.setItem(k,s);return true}catch(e){persistent=false} }
+    mem.set(k,s);return false;
+  }
+  function removeItem(k){
+    if(persistent){ try{globalThis.localStorage.removeItem(k)}catch(e){persistent=false} }
+    mem.delete(k);
+  }
+  function mode(){ return persistent ? "device" : "session"; }
+  return Object.freeze({getItem,setItem,removeItem,mode});
+})();
+
+function rid(prefix){
+  const a = new Uint32Array(2);
+  if(globalThis.crypto?.getRandomValues){
+    crypto.getRandomValues(a);
+  } else {
+    const t=Date.now()>>>0;
+    a[0]=t;
+    a[1]=((t ^ Math.floor(Math.random()*0xffffffff))>>>0);
+  }
+  return prefix+"-"+[...a].map(x=>x.toString(16).padStart(8,"0")).join("");
+}
+function esc(s){
+  return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+}
+function canonical(v){
+  if(v===null || typeof v!=="object") return JSON.stringify(v);
+  if(Array.isArray(v)) return "["+v.map(canonical).join(",")+"]";
+  return "{"+Object.keys(v).sort().map(k=>JSON.stringify(k)+":"+canonical(v[k])).join(",")+"}";
+}
+function sha256Fallback(text){
+  function rr(v,a){return (v>>>a)|(v<<(32-a));}
+  const K=[
+    0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+    0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+    0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+    0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+    0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+    0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+    0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+    0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2
+  ];
+  const bytes=[...new TextEncoder().encode(text)];
+  const bitLen=bytes.length*8;
+  bytes.push(0x80);
+  while((bytes.length%64)!==56) bytes.push(0);
+  const hi=Math.floor(bitLen/0x100000000), lo=bitLen>>>0;
+  bytes.push((hi>>>24)&255,(hi>>>16)&255,(hi>>>8)&255,hi&255,(lo>>>24)&255,(lo>>>16)&255,(lo>>>8)&255,lo&255);
+  let H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  for(let off=0;off<bytes.length;off+=64){
+    const w=new Uint32Array(64);
+    for(let i=0;i<16;i++){
+      const j=off+i*4;
+      w[i]=((bytes[j]<<24)|(bytes[j+1]<<16)|(bytes[j+2]<<8)|bytes[j+3])>>>0;
+    }
+    for(let i=16;i<64;i++){
+      const a=w[i-15],b=w[i-2];
+      const s0=(rr(a,7)^rr(a,18)^(a>>>3))>>>0;
+      const s1=(rr(b,17)^rr(b,19)^(b>>>10))>>>0;
+      w[i]=(w[i-16]+s0+w[i-7]+s1)>>>0;
+    }
+    let [a,b,c,d,e,f,g,h]=H;
+    for(let i=0;i<64;i++){
+      const S1=(rr(e,6)^rr(e,11)^rr(e,25))>>>0;
+      const ch=((e&f)^((~e)&g))>>>0;
+      const t1=(h+S1+ch+K[i]+w[i])>>>0;
+      const S0=(rr(a,2)^rr(a,13)^rr(a,22))>>>0;
+      const maj=((a&b)^(a&c)^(b&c))>>>0;
+      const t2=(S0+maj)>>>0;
+      h=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+    }
+    H=[
+      (H[0]+a)>>>0,(H[1]+b)>>>0,(H[2]+c)>>>0,(H[3]+d)>>>0,
+      (H[4]+e)>>>0,(H[5]+f)>>>0,(H[6]+g)>>>0,(H[7]+h)>>>0
+    ];
+  }
+  return H.map(x=>x.toString(16).padStart(8,"0")).join("");
+}
+async function sha(v){
+  const text=typeof v==="string" ? v : canonical(v);
+  if(globalThis.crypto?.subtle?.digest){
+    const b=new TextEncoder().encode(text);
+    const h=await crypto.subtle.digest("SHA-256",b);
+    return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("");
+  }
+  return sha256Fallback(text);
+}
+function mount(path,value,meta={}){
+  VFS.set(path,{value,meta:{...meta,ts:new Date().toISOString()}});
+  syncRuntime();
+}
+function read(path){ return VFS.get(path)?.value; }
+function paths(){ return [...VFS.keys()].sort(); }
+function save(){
+  const serialisableVFS = [...VFS.entries()].filter(([p,v]) => !p.includes(".blob") && !(v?.value instanceof Blob));
+  CPStorage.setItem(STORE, JSON.stringify({...State,vfs:serialisableVFS}));
+  State.lastSavedAt=new Date().toISOString();
+  const n=document.getElementById("save-state");
+  if(n)n.textContent=CPStorage.mode()==="device" ? "Draft saved on this device" : "Draft saved for this session";
+  syncRuntime();
+}
+function load(){
+  try{
+    const x=JSON.parse(CPStorage.getItem(STORE)||"null");
+    if(x && x.version===5){
+      Object.assign(State,x);
+      for(const [k,v] of x.vfs||[])VFS.set(k,v);
+      return true;
+    }
+  }catch(e){}
+  return false;
+}
+async function receipt(type,payload){
+  const prev=State.receipts.at(-1)?.hash||"GENESIS";
+  const r={n:State.receipts.length+1,ts:new Date().toISOString(),type,prev,payload};
+  r.hash=await sha(r);
+  State.receipts.push(r);
+  mount("/receipts/"+String(r.n).padStart(6,"0")+".json",r,{class:"receipt"});
+  save();
+  return r;
+}
+function saveBlob(blob,name){
+  const u=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(u),1000);
+}
+
+/* ================================================================
+   SKILL REGISTRY
+   These are executable objects. Documents may only consume outputs
+   produced through this registry.
+   ================================================================ */
+
+const Skills = (() => {
+  const registry = new Map();
+
+  function register(def){
+    if(!def?.id || typeof def.run!=="function") throw new Error("Invalid skill");
+    registry.set(def.id,Object.freeze(def));
+  }
+  function get(id){
+    const s=registry.get(id);
+    if(!s)throw new Error("Unknown skill: "+id);
+    return s;
+  }
+  async function run(id,ctx){
+    const skill=get(id);
+    const deps={};
+    for(const dep of skill.dependsOn||[]){
+      deps[dep]=ctx.results?.[dep] ?? await run(dep,ctx);
+      ctx.results[dep]=deps[dep];
+    }
+    const started=performance.now();
+    const output=await skill.run({...ctx,deps});
+    const runRecord={
+      id:rid("SKR"),skill:id,version:skill.version||"1.0.0",
+      ms:Math.round((performance.now()-started)*100)/100,
+      ts:new Date().toISOString(),
+      inputRefs:skill.inputRefs||[],
+      outputRef:skill.outputRef||null
+    };
+    State.skillRuns.push(runRecord);
+    if(skill.outputRef)mount(skill.outputRef,output,{class:"skill-output",skill:id});
+    await receipt("SKILL_EXECUTED",runRecord);
+    return output;
+  }
+  async function pipeline(ids,ctx){
+    const results=ctx.results||{};
+    for(const id of ids){
+      if(!(id in results))results[id]=await run(id,{...ctx,results});
+    }
+    return results;
+  }
+  function manifest(){
+    return [...registry.values()].map(s=>({
+      id:s.id,version:s.version||"1.0.0",dependsOn:s.dependsOn||[],
+      purpose:s.purpose,inputRefs:s.inputRefs||[],outputRef:s.outputRef||null
+    }));
+  }
+  return {register,get,run,pipeline,manifest,registry};
+})();
+
+Skills.register({
+  id:"SOURCE_PRESERVER",version:"1.0.0",
+  purpose:"Preserve the user's original account and intake answers without overwriting them.",
+  inputRefs:["/matter/source.json"],outputRef:"/derived/source-preserved.json",
+  run:({source})=>structuredClone(source)
+});
+
+Skills.register({
+  id:"STORY_FORMALISER",version:"1.1.0",dependsOn:["SOURCE_PRESERVER"],
+  purpose:"Produce a concise professional summary without turning it into a legal conclusion.",
+  outputRef:"/derived/formal-summary.json",
+  run:({source})=>{
+    const a=source,story=String(a.story||"").trim();
+    const actor=a.actorType==="police"?"a police encounter":
+                a.actorType==="public"?"an encounter or decision involving a public authority":
+                a.actorType==="work"?"a workplace matter":
+                a.actorType==="private"?"a dispute involving a person or organisation":
+                "a matter requiring legal preparation";
+    const location=[a.state,a.location].filter(Boolean).join(", ");
+    const body=story.length>1500?story.slice(0,1500).replace(/\s+\S*$/,"")+"…":story;
+    return {
+      text:`The account describes ${actor}${location?` in ${location}`:""}. The account states: ${body}`,
+      status:"FORMALISED_FROM_SOURCE",
+      legalConclusion:false
+    };
+  }
+});
+
+Skills.register({
+  id:"EVENT_EXTRACTOR",version:"1.0.0",dependsOn:["SOURCE_PRESERVER"],
+  purpose:"Create event candidates from the user's account while retaining source status.",
+  outputRef:"/derived/events.json",
+  run:({source})=>{
+    const story=String(source.story||"");
+    return story.split(/(?<=[.!?])\s+|\n+/)
+      .map(x=>x.trim()).filter(x=>x.length>8)
+      .map((text,i)=>({id:"EV"+(i+1),text,source:"USER_ACCOUNT",status:"SOURCE_DERIVED"}));
+  }
+});
+
+Skills.register({
+  id:"ACTOR_EXTRACTOR",version:"1.0.0",dependsOn:["SOURCE_PRESERVER"],
+  purpose:"Identify explicit named or role-based participants without inventing identities.",
+  outputRef:"/derived/actors.json",
+  run:({source})=>{
+    const story=String(source.story||"");
+    const explicit=[...story.matchAll(/\b(?:Officer|Constable|Sergeant|Inspector|Mr|Mrs|Ms|Dr)\s+[A-Z][A-Za-z'-]+/g)].map(m=>m[0]);
+    const roles=[];
+    for(const term of ["police officer","officer","employer","manager","witness","neighbour","council","agency","prosecutor","lawyer"]){
+      if(story.toLowerCase().includes(term))roles.push(term);
+    }
+    return [...new Set([...explicit,...roles])].map((text,i)=>({id:"AC"+(i+1),text,status:"SOURCE_IDENTIFIED"}));
+  }
+});
+
+Skills.register({
+  id:"RECORD_REFERENCE_EXTRACTOR",version:"1.0.0",dependsOn:["SOURCE_PRESERVER"],
+  purpose:"Identify records expressly mentioned by the user.",
+  outputRef:"/derived/record-references.json",
+  run:({source})=>{
+    const story=String(source.story||"").toLowerCase();
+    const dictionary=[
+      ["CCTV","cctv"],["video","video"],["body-worn video","body-worn"],["body camera","body camera"],
+      ["email","email"],["message","message"],["letter","letter"],["notice","notice"],["charge sheet","charge"],
+      ["statement","statement"],["photo","photo"],["invoice","invoice"],["report","report"],["recording","recording"],
+      ["call log","call log"],["dispatch record","dispatch"],["radio record","radio"]
+    ];
+    const found=dictionary.filter(([label,needle])=>story.includes(needle)).map(([label])=>label);
+    if(source.fileMeta?.name)found.push(source.fileMeta.name);
+    return [...new Set(found)].map((text,i)=>({id:"RC"+(i+1),text,status:"SOURCE_REFERENCED"}));
+  }
+});
+
+Skills.register({
+  id:"POSITION_SEPARATOR",version:"1.0.0",dependsOn:["SOURCE_PRESERVER"],
+  purpose:"Keep allegation, user's agreement/disagreement and intended response as separate states.",
+  outputRef:"/derived/positions.json",
+  run:({source})=>({
+    allegation:{text:source.allegation||"",status:source.allegation?"ASSERTED_OTHER_POSITION":"NOT_RECORDED"},
+    agreement:{value:source.agreement||"",status:"USER_POSITION_ONLY"},
+    intent:{value:source.intent||"",status:"OUTPUT_ROUTING_ONLY"},
+    invariant:"USER_POSITION_DOES_NOT_ESTABLISH_ALLEGATION_OR_LIABILITY"
+  })
+});
+
+Skills.register({
+  id:"ACTION_CLASSIFIER",version:"1.0.0",dependsOn:["SOURCE_PRESERVER"],
+  purpose:"Route the accountability model by actor/action class without asking the user for legal classification.",
+  outputRef:"/derived/action-class.json",
+  run:({source})=>({
+    actorType:source.actorType||"unsure",
+    publicAuthority:["police","public"].includes(source.actorType),
+    police:source.actorType==="police",
+    status:"ROUTING_CLASSIFICATION_NOT_LEGAL_FINDING"
+  })
+});
+
+Skills.register({
+  id:"ACCOUNTABILITY_CHAIN_BUILDER",version:"1.2.0",
+  dependsOn:["ACTION_CLASSIFIER","POSITION_SEPARATOR","RECORD_REFERENCE_EXTRACTOR"],
+  purpose:"Construct a chained reasoning graph in which every later request depends on an unresolved prior link.",
+  outputRef:"/analysis/accountability-chain.json",
+  run:({source,deps})=>{
+    const cls=deps.ACTION_CLASSIFIER,records=deps.RECORD_REFERENCE_EXTRACTOR;
+    const pub=cls.publicAuthority,police=cls.police;
+    return [
+      {code:"C1",label:"Action",dependsOn:[],question:"What exactly was done, required, alleged or decided?",reason:"The action is the object being examined.",status:source.story?"PARTLY_SOURCED":"OPEN"},
+      {code:"C2",label:"Basis",dependsOn:["C1"],question:pub?"What authority or lawful basis was relied on for that action?":"What right, agreement, rule or asserted basis was relied on?",reason:"The asserted basis determines which conditions need testing.",status:"OPEN"},
+      {code:"C3",label:"Trigger facts",dependsOn:["C2"],question:pub?"What facts had to exist at that time before that power could be used?":"What facts had to be true for the asserted basis to apply?",reason:"The relevant conditions are tested at the time of the action, not reconstructed from later material.",status:"OPEN"},
+      {code:"C4",label:"Decision-maker",dependsOn:["C1","C3"],question:pub?"Who made the relevant decision, direction, arrest, search, demand or allegation?":"Who made the relevant decision or allegation?",reason:"The chain must identify whose act and information state are being examined.",status:"OPEN"},
+      {code:"C5",label:"Information then available",dependsOn:["C4"],question:"What information was available to that decision-maker before or when the action occurred?",reason:"This separates contemporaneous information from material obtained later.",status:"OPEN"},
+      {code:"C6",label:"Expected records",dependsOn:["C4","C5"],question:"What records should exist if that sequence occurred as described?",reason:"Expected records are derived from the action, decision-maker and information flow.",status:records.length?"PARTLY_SOURCED":"OPEN",
+       examples:police?["body-worn video","notebook entries","incident/event report","dispatch/CAD record","radio/communications record","CCTV","statements","notices or charge documents"]:[]},
+      {code:"C7",label:"Material supplied",dependsOn:["C6"],question:"What material has actually been supplied or is already available?",reason:"Expected material and available material must remain separate.",status:records.length?"PARTLY_SOURCED":"OPEN"},
+      {code:"C8",label:"Support / non-support",dependsOn:["C7"],question:"For each item, what does it support — and what does it not establish by itself?",reason:"An item may support one proposition without proving every link in the chain.",status:"OPEN"},
+      {code:"C9",label:"Missing links",dependsOn:["C3","C5","C6","C7","C8"],question:"Which required facts, records, transmissions or decisions remain missing, unclear or inconsistent?",reason:"Only unresolved links should produce further requests.",status:"OPEN"},
+      {code:"C10",label:"Reasoned request",dependsOn:["C9"],question:"What specific material should be requested, and which unresolved link would each item address?",reason:"The request is derived from the gap; it is not a generic demand for everything.",status:"OPEN"},
+      {code:"C11",label:"Professional review",dependsOn:["C8","C9","C10"],question:"What can now be verified, what remains unresolved, and what requires professional legal assessment?",reason:"The service preserves the boundary between preparation and legal judgment.",status:"OPEN"}
+    ];
+  }
+});
+
+Skills.register({
+  id:"EXPECTED_RECORD_DERIVER",version:"1.1.0",
+  dependsOn:["ACCOUNTABILITY_CHAIN_BUILDER","ACTION_CLASSIFIER"],
+  purpose:"Derive record categories from the accountability chain and encounter class.",
+  outputRef:"/analysis/expected-records.json",
+  run:({source,deps})=>{
+    const cls=deps.ACTION_CLASSIFIER;
+    const base=[
+      {category:"Primary allegation/decision document",why:"Identifies the asserted action, allegation or decision being examined.",addresses:["C1","C2"]},
+      {category:"Contemporaneous notes or event record",why:"May show observations, timing, reasons and information recorded when the action occurred.",addresses:["C3","C5"]},
+      {category:"Communications relating to the event",why:"May show what information was transmitted, by whom and when.",addresses:["C4","C5"]}
+    ];
+    if(cls.police)base.push(
+      {category:"Body-worn video / relevant video",why:"May record the encounter, words used, sequence and observations contemporaneously.",addresses:["C1","C3","C5","C8"]},
+      {category:"Dispatch / CAD / tasking record",why:"May identify the source, timing and content of information supplied before attendance or action.",addresses:["C3","C5"]},
+      {category:"Radio / operational communications",why:"May identify inter-officer information flow and timing.",addresses:["C4","C5"]},
+      {category:"Officer notebook / incident / event report",why:"May record observations, reasons, actions and later reconstruction.",addresses:["C3","C4","C5"]},
+      {category:"Associated CCTV or third-party recording",why:"May independently record parts of the sequence.",addresses:["C1","C8"]}
+    );
+    if(source.fileMeta?.name)base.unshift({category:`User-supplied file: ${source.fileMeta.name}`,why:"Already supplied source material; must be tested before requesting duplicates.",addresses:["C7","C8"]});
+    return base;
+  }
+});
+
+Skills.register({
+  id:"EVIDENCE_SUPPORT_NON_SUPPORT",version:"1.0.0",
+  dependsOn:["RECORD_REFERENCE_EXTRACTOR","EXPECTED_RECORD_DERIVER"],
+  purpose:"Create an evidence analysis contract that states both possible support and explicit non-support.",
+  outputRef:"/analysis/evidence-support.json",
+  run:({deps})=>({
+    supplied:deps.RECORD_REFERENCE_EXTRACTOR.map(x=>({
+      item:x.text,
+      maySupport:["existence/content/timing depending on provenance and complete context"],
+      doesNotByItselfEstablish:["authenticity","completeness","legal effect","every prerequisite","liability or guilt","causation"]
+    })),
+    expected:deps.EXPECTED_RECORD_DERIVER,
+    invariant:"EVIDENCE_ITEM != LEGAL_CONCLUSION"
+  })
+});
+
+Skills.register({
+  id:"MISSING_LINK_DETECTOR",version:"1.0.0",
+  dependsOn:["ACCOUNTABILITY_CHAIN_BUILDER","EVIDENCE_SUPPORT_NON_SUPPORT"],
+  purpose:"Identify unresolved chain links and convert them into bounded next-information needs.",
+  outputRef:"/analysis/missing-links.json",
+  run:({deps})=>{
+    const evidence=deps.EVIDENCE_SUPPORT_NON_SUPPORT;
+    const suppliedNames=new Set(evidence.supplied.map(x=>x.item.toLowerCase()));
+    return deps.ACCOUNTABILITY_CHAIN_BUILDER
+      .filter(x=>x.status==="OPEN" || x.status==="PARTLY_SOURCED")
+      .map(x=>({
+        chainCode:x.code,label:x.label,question:x.question,reason:x.reason,
+        status:x.status,
+        nextAction:x.code==="C6"||x.code==="C7"||x.code==="C9"||x.code==="C10"
+          ?"Resolve through specific record/material request or professional review"
+          :"Resolve through source clarification, record review or professional analysis"
+      }));
+  }
+});
+
+Skills.register({
+  id:"CORRESPONDENCE_REQUEST_DERIVER",version:"1.0.0",
+  dependsOn:["MISSING_LINK_DETECTOR","EXPECTED_RECORD_DERIVER"],
+  purpose:"Generate specific request objects tied to unresolved chain links.",
+  outputRef:"/analysis/correspondence-requests.json",
+  run:({deps})=>{
+    const gaps=deps.MISSING_LINK_DETECTOR;
+    return deps.EXPECTED_RECORD_DERIVER.map((r,i)=>({
+      id:"REQ"+String(i+1).padStart(2,"0"),
+      category:r.category,
+      reason:r.why,
+      addresses:r.addresses,
+      unresolvedQuestions:gaps.filter(g=>r.addresses.includes(g.chainCode)).map(g=>g.question),
+      requestText:`Please provide or identify ${r.category.toLowerCase()} relevant to this matter.`,
+      ifUnavailable:"If the material is not held, no longer available, withheld, or said not to exist, identify that position and the applicable basis where appropriate."
+    }));
+  }
+});
+
+Skills.register({
+  id:"MATTER_MODEL_BUILDER",version:"1.0.0",
+  dependsOn:["STORY_FORMALISER","EVENT_EXTRACTOR","ACTOR_EXTRACTOR","RECORD_REFERENCE_EXTRACTOR","POSITION_SEPARATOR","ACCOUNTABILITY_CHAIN_BUILDER","EVIDENCE_SUPPORT_NON_SUPPORT","MISSING_LINK_DETECTOR"],
+  purpose:"Assemble the canonical document-ready matter model from skill outputs.",
+  outputRef:"/derived/document-matter-model.json",
+  run:({source,deps})=>({
+    schema:"casepath.document-matter-model.v1",
+    matterId:State.matterId,
+    sourceAccount:source.story||"",
+    formalSummary:deps.STORY_FORMALISER.text,
+    location:[source.state,source.location].filter(Boolean).join(" — "),
+    actorType:source.actorType||"unsure",
+    events:deps.EVENT_EXTRACTOR,
+    actors:deps.ACTOR_EXTRACTOR,
+    recordReferences:deps.RECORD_REFERENCE_EXTRACTOR,
+    positions:deps.POSITION_SEPARATOR,
+    accountabilityChain:deps.ACCOUNTABILITY_CHAIN_BUILDER,
+    evidenceAnalysis:deps.EVIDENCE_SUPPORT_NON_SUPPORT,
+    missingLinks:deps.MISSING_LINK_DETECTOR,
+    createdAt:new Date().toISOString()
+  })
+});
+
+/* ================================================================
+   TEMPLATE REGISTRY
+   Templates are declarative contracts. They declare required skills
+   and section derivation. No document is built outside this registry.
+   ================================================================ */
+
+const Templates = (() => {
+  const registry=new Map();
+  function register(def){
+    if(!def?.id || !Array.isArray(def.skills) || typeof def.buildModel!=="function" || typeof def.render!=="function")throw new Error("Invalid template");
+    registry.set(def.id,Object.freeze(def));
+  }
+  function get(id){
+    const t=registry.get(id);
+    if(!t)throw new Error("Unknown template: "+id);
+    return t;
+  }
+  function manifest(){
+    return [...registry.values()].map(t=>({id:t.id,version:t.version,skills:t.skills,output:t.output,purpose:t.purpose}));
+  }
+  return {register,get,manifest,registry};
+})();
+
+const baseDocumentCSS=`
+:root{--ink:#152724;--brand:#173f3a;--muted:#63706d;--line:#d8e1de;--paper:#fff;--soft:#f5f8f7;--warm:#8f7452}
+*{box-sizing:border-box}body{font:15px/1.62 Arial,Helvetica,sans-serif;max-width:860px;margin:0 auto;padding:52px 54px 72px;color:var(--ink);background:var(--paper)}
+body:before{content:"CASEPATH · LEGAL PREPARATION";display:block;padding-bottom:16px;margin-bottom:34px;border-bottom:2px solid var(--brand);font-size:10px;font-weight:800;letter-spacing:.14em;color:var(--brand)}
+h1,h2{font-family:Georgia,"Times New Roman",serif;color:var(--brand);font-weight:500}h1{font-size:34px;line-height:1.1;margin:0 0 14px}h2{font-size:22px;line-height:1.25;margin:0 0 12px}section{margin:30px 0;padding-top:2px}.box{border:1px solid var(--line);border-radius:10px;padding:17px;background:var(--soft)}small,.muted{color:var(--muted)}li{margin-bottom:10px}.reason{color:#536360;font-size:13px;margin-top:4px}code{font-size:12px;word-break:break-all}p{margin:9px 0 14px}ul,ol{padding-left:22px}
+@media print{body{max-width:none;padding:18mm 16mm;font-size:10.5pt}body:before{margin-bottom:8mm}section{break-inside:avoid-page}.box{background:#fff}a{color:inherit;text-decoration:none}}
+`;
+
+Templates.register({
+  id:"PREPARATION_BRIEF",version:"2.0.0",
+  purpose:"Lawyer-ready preparation record derived from source and analytical skills.",
+  output:{mime:"text/html",suffix:"Preparation_Brief.html"},
+  skills:["MATTER_MODEL_BUILDER"],
+  buildModel:({results})=>{
+    const m=results.MATTER_MODEL_BUILDER;
+    return {
+      title:"CasePath Preparation Brief",
+      matter:m,
+      sections:[
+        {id:"source",title:"1. Original account",type:"source",body:m.sourceAccount},
+        {id:"summary",title:"2. Formalised summary",type:"paragraph",body:m.formalSummary},
+        {id:"context",title:"3. Matter context",type:"context",body:m},
+        {id:"events",title:"4. Event sequence",type:"list",body:m.events},
+        {id:"records",title:"5. Records identified",type:"list",body:m.recordReferences},
+        {id:"chain",title:"6. Chained accountability analysis",type:"chain",body:m.accountabilityChain},
+        {id:"gaps",title:"7. Unresolved questions",type:"gaps",body:m.missingLinks},
+        {id:"review",title:"8. Professional review agenda",type:"paragraph",body:"Confirm the applicable law and procedure; test each chain link against actual records; distinguish what each item supports from what it does not establish; identify deadlines and any issue requiring legal judgment."}
+      ]
+    };
+  },
+  render:(d)=>{
+    const sec=d.sections.map(s=>{
+      if(s.type==="source")return `<section><h2>${esc(s.title)}</h2><div class="box">${esc(s.body)}</div></section>`;
+      if(s.type==="paragraph")return `<section><h2>${esc(s.title)}</h2><p>${esc(s.body)}</p></section>`;
+      if(s.type==="context")return `<section><h2>${esc(s.title)}</h2><p><b>Location:</b> ${esc(s.body.location||"Not specified")}<br><b>Action by:</b> ${esc(s.body.actorType)}<br><b>Allegation:</b> ${esc(s.body.positions.allegation.text||"Not recorded")}<br><b>User position:</b> ${esc(s.body.positions.agreement.value||"Not recorded")}<br><b>Preparation direction:</b> ${esc(s.body.positions.intent.value||"Not recorded")}</p></section>`;
+      if(s.type==="list")return `<section><h2>${esc(s.title)}</h2><ul>${s.body.length?s.body.map(x=>`<li>${esc(x.text||x)}</li>`).join(""):"<li>None identified from the current source.</li>"}</ul></section>`;
+      if(s.type==="chain")return `<section><h2>${esc(s.title)}</h2><ol>${s.body.map(x=>`<li><b>${esc(x.question)}</b><div class="reason">${esc(x.reason)}</div><div class="muted">Depends on: ${esc((x.dependsOn||[]).join(", ")||"source event")}</div></li>`).join("")}</ol></section>`;
+      if(s.type==="gaps")return `<section><h2>${esc(s.title)}</h2><ul>${s.body.map(x=>`<li><b>${esc(x.label)}:</b> ${esc(x.question)}<div class="reason">${esc(x.nextAction)}</div></li>`).join("")}</ul></section>`;
+      return "";
+    }).join("");
+    return `<!doctype html><html><head><meta charset="utf-8"><title>${esc(d.title)} ${esc(d.matter.matterId)}</title><style>${baseDocumentCSS}</style></head><body><h1>${esc(d.title)}</h1><p><b>Matter:</b> ${esc(d.matter.matterId)}</p><p><small>Generated locally through the CasePath skill and template pipeline. This preparation record does not itself determine liability, guilt, admissibility or outcome.</small></p>${sec}</body></html>`;
+  }
+});
+
+Templates.register({
+  id:"ACCOUNTABILITY_CORRESPONDENCE",version:"2.0.0",
+  purpose:"Reasoned request correspondence derived from unresolved chain links and expected records.",
+  output:{mime:"text/html",suffix:"Accountability_Correspondence.html"},
+  skills:["MATTER_MODEL_BUILDER","CORRESPONDENCE_REQUEST_DERIVER"],
+  buildModel:({source,results})=>({
+    title:"Request for information and relevant material",
+    matter:results.MATTER_MODEL_BUILDER,
+    requests:results.CORRESPONDENCE_REQUEST_DERIVER,
+    addressee:source.actorType==="police"?"Relevant police / prosecution disclosure or records contact":"Relevant organisation / authority"
+  }),
+  render:(d)=>`<!doctype html><html><head><meta charset="utf-8"><title>CasePath Accountability Correspondence ${esc(d.matter.matterId)}</title><style>${baseDocumentCSS}</style></head><body>
+    <p>${new Date().toLocaleDateString("en-AU")}</p>
+    <p><b>To:</b> ${esc(d.addressee)}</p>
+    <h1>${esc(d.title)}</h1>
+    <p>I am seeking to identify and obtain the information and material necessary to understand the factual basis, sequence, decision-making and evidence relating to the matter described below.</p>
+    <p><b>Matter reference:</b> ${esc(d.matter.matterId)}<br><b>Location:</b> ${esc(d.matter.location||"Not specified")}</p>
+    <h2>Background</h2><p>${esc(d.matter.formalSummary)}</p>
+    <h2>Requested categories and chained reason</h2>
+    <ol>${d.requests.map(r=>`<li><b>${esc(r.category)}</b><p>${esc(r.requestText)}</p><div class="reason"><b>Why this is requested:</b> ${esc(r.reason)}</div><div class="reason"><b>Chain links addressed:</b> ${esc(r.addresses.join(", "))}</div>${r.unresolvedQuestions.length?`<div class="reason"><b>Questions this is intended to resolve:</b><ul>${r.unresolvedQuestions.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>`:""}<div class="reason">${esc(r.ifUnavailable)}</div></li>`).join("")}</ol>
+    <p>Where material is provided, please preserve sufficient identifying information to understand its source, date, author or custodian, and relationship to the event or decision concerned.</p>
+    <p>This correspondence identifies unresolved factual and evidentiary questions. It does not assume that an allegation, defence, statutory condition or legal conclusion has already been established.</p>
+  </body></html>`
+});
+
+Templates.register({
+  id:"MATTER_SNAPSHOT",version:"1.0.0",
+  purpose:"Short professional summary for first review.",
+  output:{mime:"text/html",suffix:"Matter_Snapshot.html"},
+  skills:["MATTER_MODEL_BUILDER"],
+  buildModel:({results})=>({title:"CasePath Matter Snapshot",matter:results.MATTER_MODEL_BUILDER}),
+  render:(d)=>`<!doctype html><html><head><meta charset="utf-8"><title>${esc(d.title)}</title><style>${baseDocumentCSS}</style>
+<style id="casepath-market-workspace-v13">
+/* Market-derived professional-service workspace: not a dashboard, not OS telemetry. */
+.market-workspace{
+  background:#f4f2ec;
+  border-top:1px solid #ded8cc;
+  border-bottom:1px solid #ded8cc;
+  padding:72px 0;
+}
+.market-workspace .workspace-shell{
+  width:min(1180px,calc(100% - 40px));
+  margin:0 auto;
+}
+.market-workspace .workspace-head{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+  gap:48px;
+  align-items:end;
+  margin-bottom:34px;
+}
+.market-workspace .workspace-head h2{
+  margin:8px 0 0;
+  max-width:760px;
+}
+.market-workspace .workspace-head>p{
+  margin:0;
+  color:#596663;
+  font-size:16px;
+  line-height:1.7;
+}
+.prep-folio{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);
+  border:1px solid #d7d0c4;
+  background:#fff;
+  box-shadow:0 18px 50px rgba(24,44,40,.07);
+}
+.prep-main{
+  padding:32px;
+  border-right:1px solid #e2ddd3;
+}
+.prep-side{padding:32px;background:#faf9f6}
+.prep-kicker{
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+  margin-bottom:22px;padding-bottom:17px;border-bottom:1px solid #e5e0d7
+}
+.prep-kicker strong{font-size:17px;color:#173f3a}
+.prep-state-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  border:1px solid #bfcfc9;border-radius:999px;padding:7px 11px;
+  color:#285c54;background:#f5faf8;font-size:12px;font-weight:800
+}
+.prep-state-badge::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:#2f6b61
+}
+.prep-track-list{display:grid;gap:0}
+.prep-track{
+  display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:14px;align-items:start;
+  padding:17px 0;border-bottom:1px solid #ebe7df
+}
+.prep-track:last-child{border-bottom:0}
+.prep-track .track-mark{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid #c9d3cf;color:#60716d;font-size:12px;font-weight:850
+}
+.prep-track[data-state="complete"] .track-mark{
+  background:#173f3a;border-color:#173f3a;color:#fff
+}
+.prep-track strong{display:block;color:#203b37;margin-bottom:4px}
+.prep-track p{margin:0;color:#66716e;font-size:13px;line-height:1.5}
+.prep-track .track-state{
+  font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  color:#71807c;font-weight:850;padding-top:5px
+}
+.prep-track[data-state="complete"] .track-state{color:#285e55}
+.prep-next{
+  margin-top:24px;padding:20px;border-left:3px solid #8f7452;background:#faf6ef
+}
+.prep-next small,.prep-panel small{
+  display:block;text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:850;color:#7a6a55
+}
+.prep-next h3{margin:6px 0 7px;font-size:20px;color:#243b37}
+.prep-next p{margin:0 0 14px;color:#5f6966}
+.prep-next button{
+  border:0;background:#173f3a;color:#fff;border-radius:8px;
+  padding:11px 15px;font:inherit;font-weight:750;cursor:pointer
+}
+.prep-side h3{margin:6px 0 18px;color:#213b37}
+.prep-panel{padding:17px 0;border-bottom:1px solid #e3ded5}
+.prep-panel:last-child{border-bottom:0}
+.prep-panel ul{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:9px}
+.prep-panel li{display:flex;gap:10px;color:#4f5d59;font-size:13px;line-height:1.45;margin:0}
+.prep-panel li::before{content:"—";color:#9a7f5b}
+.prep-panel .empty{color:#7d8784;font-style:italic}
+.prep-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.prep-actions a,.prep-actions button{
+  display:inline-flex;align-items:center;gap:7px;
+  border:1px solid #bfcac6;background:#fff;color:#244b45;
+  border-radius:8px;padding:10px 12px;font:inherit;font-weight:750;
+  text-decoration:none;cursor:pointer
+}
+.prep-actions .primary{background:#173f3a;color:#fff;border-color:#173f3a}
+
+/* Replace arbitrary hero readiness percentage with meaningful preparation state. */
+.hero-panel .score-ring{display:none!important}
+.hero-panel .readiness-row{grid-template-columns:1fr!important}
+.hero-panel .readiness-row::before{
+  content:"Preparation state";
+  display:block;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#827058;
+  margin-bottom:5px
+}
+#hero-prep-state{display:block;margin:3px 0 4px;font-size:16px;color:#173f3a}
+
+@media(max-width:860px){
+  .market-workspace{padding:52px 0}
+  .market-workspace .workspace-head{grid-template-columns:1fr;gap:18px}
+  .prep-folio{grid-template-columns:1fr}
+  .prep-main{border-right:0;border-bottom:1px solid #e2ddd3;padding:24px}
+  .prep-side{padding:24px}
+}
+@media(max-width:540px){
+  .market-workspace .workspace-shell{width:min(100% - 24px,1180px)}
+  .prep-track{grid-template-columns:30px 1fr}
+  .prep-track .track-state{grid-column:2}
+  .prep-kicker{align-items:flex-start;flex-direction:column}
+}
+</style>
+
+</head><body><h1>${esc(d.title)}</h1><p><b>Matter:</b> ${esc(d.matter.matterId)}</p><h2>Formalised summary</h2><p>${esc(d.matter.formalSummary)}</p><h2>Current unresolved questions</h2><ul>${d.matter.missingLinks.slice(0,8).map(x=>`<li>${esc(x.question)}</li>`).join("")}</ul></body></html>`
+});
+
+/* ================================================================
+   DOCUMENT RESOLVER
+   The only supported document generation entry point.
+   ================================================================ */
+
+const Documents = (() => {
+  async function generate(templateId){
+    captureVisible();
+    const template=Templates.get(templateId);
+    const source=structuredClone(State.source);
+    mount("/matter/source.json",source,{class:"authoritative-user-source"});
+    const ctx={source,state:State,vfs:VFS,results:{}};
+
+    const results=await Skills.pipeline(template.skills,ctx);
+    const model=template.buildModel({source,state:State,results});
+    const modelHash=await sha(model);
+    const modelPath=`/documents/models/${templateId}-${State.matterId}.json`;
+    mount(modelPath,model,{class:"document-model",templateId,sha256:modelHash});
+
+    const content=template.render(model);
+    const contentHash=await sha(content);
+    const artifact={
+      id:rid("DOC"),templateId,templateVersion:template.version,
+      matterId:State.matterId,createdAt:new Date().toISOString(),
+      modelPath,modelHash,contentHash,
+      skills:template.skills.map(id=>({id,version:Skills.get(id).version||"1.0.0"})),
+      path:`/documents/artifacts/${templateId}-${State.matterId}.html`
+    };
+    mount(artifact.path,content,{class:"document-artifact",...artifact});
+    State.outputs.push(artifact);
+    await receipt("DOCUMENT_DERIVED",artifact);
+    save();
+    return {artifact,model,content,template};
+  }
+  async function download(templateId){
+    const r=await generate(templateId);
+    saveBlob(new Blob([r.content],{type:r.template.output.mime}),`CasePath_${State.matterId}_${r.template.output.suffix}`);
+    await receipt("DOCUMENT_DELIVERED",{artifactId:r.artifact.id,templateId});
+    showGenerated(r.template.id.replaceAll("_"," "),r.artifact.contentHash,r.artifact.skills);
+    return r;
+  }
+  return {generate,download};
+})();
+
+/* ================================================================
+   INTAKE / HCI
+   ================================================================ */
+
+const Steps=[
+ {id:"story", title:"What happened, and why are you seeking legal preparation?", lead:"Tell it the way you would explain it to someone you trust. You do not need legal words or a perfectly ordered timeline.", type:"textarea", key:"story", placeholder:"Start wherever makes sense. What happened? What has brought you here now?", required:true},
+ {id:"where", title:"Where did this happen?", lead:"A state or territory is enough to start. Add a suburb, town or location if that helps.", type:"where", required:true},
+ {id:"actor", title:"Who is this matter mainly about?", lead:"Choose the closest answer. You do not need to know the legal category.", type:"choice", key:"actorType", options:[
+   ["police","Police","An officer, police service, arrest, search, direction, charge or police encounter."],
+   ["public","Another public authority","A regulator, council, government department, court officer or other public body."],
+   ["private","A person, business or organisation","A private dispute, service provider, neighbour, company or other organisation."],
+   ["work","An employer or workplace","Workplace conduct, discipline, dismissal, pay or employment issue."],
+   ["unsure","I’m not sure","CasePath can continue without you classifying it."]
+ ], required:true},
+ {id:"allegation", title:"What are they saying happened?", lead:"If an allegation, charge, notice, complaint or decision has been made, describe it in ordinary words. If you do not know exactly, say what you do know.", type:"textarea", key:"allegation", placeholder:"What have they alleged, charged, written, decided or told you?", required:false, when:s=>["police","public","private","work"].includes(s.answers.actorType)},
+ {id:"agree", title:"Do you agree with the allegation as it has been made?", lead:"This does not decide the analysis. It only helps CasePath prepare the right kind of correspondence and lawyer handover.", type:"choice", key:"agreement", options:[
+   ["disagree","No — I disagree","The allegation or account is wrong in an important way."],
+   ["partly","Partly","Some of it is right, but important parts are wrong or incomplete."],
+   ["agree","Yes — broadly","You broadly accept the factual allegation as stated."],
+   ["unsure","I’m not sure yet","You want the material organised before deciding."]
+ ], required:true, when:s=>!!s.answers.allegation},
+ {id:"intent", title:"What would you like to do next?", lead:"This helps CasePath prepare the most useful document for you. It does not change how the facts are checked.", type:"choice", key:"intent", options:[
+   ["challenge","Challenge it","Prepare to dispute or contest what has been alleged or decided."],
+   ["accept","Accept it","Prepare on the basis that you are not presently contesting the allegation."],
+   ["accountability","I want the full record first","Prepare a comprehensive accountability and evidence request before deciding."],
+   ["unsure","I’m not sure","Prepare the record without forcing a position."]
+ ], required:true, when:s=>!!s.answers.allegation},
+ {id:"file", title:"Do you have a main document or file about this?", lead:"A notice, charge sheet, letter, statement, screenshot or PDF is enough to start. This is optional.", type:"file", required:false},
+ {id:"review", title:"Is this an accurate starting point?", lead:"Review what CasePath understood before it derives the preparation record. You can go back and change anything.", type:"review", required:false},
+ {id:"result", title:"Choose what you want CasePath to prepare", lead:"Your account has been organised. Choose the preparation document you want to create.", type:"result", required:false}
+];
+
+function activeSteps(){return Steps.filter(s=>!s.when||s.when(State))}
+function current(){return activeSteps()[State.step]||activeSteps().at(-1)}
+function progress(){const a=activeSteps();return Math.round(((State.step+1)/a.length)*100)}
+function answer(k,v){State.answers[k]=v;State.source[k]=v;mount("/matter/source.json",State.source,{class:"source"});save()}
+function validate(step){
+  const a=State.answers;
+  if(!step.required)return true;
+  if(step.type==="textarea"&&!String(a[step.key]||"").trim())return false;
+  if(step.type==="choice"&&!a[step.key])return false;
+  if(step.type==="where"&&!a.state)return false;
+  return true;
+}
+function captureVisible(){
+  document.querySelectorAll("[data-answer]").forEach(n=>{
+    if(n.type==="radio"){if(n.checked)answer(n.name,n.value)}
+    else answer(n.dataset.answer,n.value);
+  });
+}
+async function captureFile(input){
+  if(!input.files?.[0])return;
+  const f=input.files[0];
+  State.answers.fileMeta={name:f.name,type:f.type||"unknown",size:f.size,lastModified:f.lastModified};
+  State.source.fileMeta=State.answers.fileMeta;
+  mount("/matter/main-file.meta.json",State.answers.fileMeta,{matterData:true});
+  mount("/matter/main-file.blob",f,{localOnly:true,matterData:true});
+  await receipt("LOCAL_FILE_SELECTED",{name:f.name,type:f.type||"unknown",size:f.size});
+  save();render();
+}
+async function derivePreview(){
+  captureVisible();
+  const ctx={source:structuredClone(State.source),state:State,vfs:VFS,results:{}};
+  const results=await Skills.pipeline(["MATTER_MODEL_BUILDER"],ctx);
+  State.derived=results.MATTER_MODEL_BUILDER;
+  State.chain=results.MATTER_MODEL_BUILDER.accountabilityChain;
+  save();
+  return State.derived;
+}
+function err(show,msg="Please answer this before continuing."){
+  const e=document.getElementById("step-error");
+  if(e){e.textContent=msg;e.classList.toggle("show",show)}
+}
+async function next(){
+  captureVisible();
+  const step=current();
+  if(!validate(step)){err(true);return}
+  err(false);
+  await receipt("STEP_COMPLETED",{step:step.id});
+  if(step.id==="review")await derivePreview();
+  if(State.step<activeSteps().length-1){State.step++;save();render()}
+}
+function back(){if(State.step>0){captureVisible();State.step--;save();render()}}
+function jumpTo(id){
+  const a=activeSteps(),i=a.findIndex(x=>x.id===id);
+  if(i>=0){State.step=i;save();render();document.getElementById("casepath-app").scrollIntoView({block:"start"})}
+}
+function labelFor(k,v){
+  const s=Steps.find(x=>x.key===k);
+  return s?.options?.find(x=>x[0]===v)?.[1]||v||"Not specified";
+}
+function choiceHTML(step){
+  return `<fieldset style="border:0;padding:0;margin:0"><legend class="legend">Choose one</legend><div class="choice-list">${step.options.map(([v,t,d])=>`
+   <label class="choice"><input type="radio" name="${step.key}" value="${v}" data-answer="${step.key}" ${State.answers[step.key]===v?"checked":""}>
+   <span><b>${esc(t)}</b><span>${esc(d)}</span></span></label>`).join("")}</div></fieldset>`;
+}
+function reviewHTML(){
+  const a=State.answers;
+  return `<div class="summary-stack">
+   <article class="summary-card"><small>Your account</small><p>${esc(a.story||"")}</p><button type="button" onclick="CasePath.jumpTo('story')">Change</button></article>
+   <article class="summary-card"><small>Where</small><p>${esc([a.state,a.location].filter(Boolean).join(" — ")||"Not specified")}</p><button type="button" onclick="CasePath.jumpTo('where')">Change</button></article>
+   <article class="summary-card"><small>Who took the action</small><p>${esc(labelFor("actorType",a.actorType))}</p><button type="button" onclick="CasePath.jumpTo('actor')">Change</button></article>
+   ${a.allegation?`<article class="summary-card"><small>What they say happened</small><p>${esc(a.allegation)}</p><button type="button" onclick="CasePath.jumpTo('allegation')">Change</button></article>`:""}
+   ${a.agreement?`<article class="summary-card"><small>Your position</small><p>${esc(labelFor("agreement",a.agreement))}</p><button type="button" onclick="CasePath.jumpTo('agree')">Change</button></article>`:""}
+   ${a.intent?`<article class="summary-card"><small>Preparation direction</small><p>${esc(labelFor("intent",a.intent))}</p><button type="button" onclick="CasePath.jumpTo('intent')">Change</button></article>`:""}
+   <article class="summary-card"><small>Main file</small><p>${esc(a.fileMeta?.name||"No file added")}</p><button type="button" onclick="CasePath.jumpTo('file')">Change</button></article>
+  </div>
+  <div class="callout"><b>Next:</b> CasePath will run the resident derivation skills. Your agreement, disagreement or intended response remains a separate user-position field and does not establish the allegation.</div>`;
+}
+function chainHTML(){
+  const groups=[
+    {n:1,title:"What happened",text:"Identify the action, allegation, direction or decision that needs to be understood."},
+    {n:2,title:"What it was based on",text:"Work out what basis was relied on, who made the decision and what information was available at the time."},
+    {n:3,title:"What records should exist",text:"Identify the records that would normally help show what happened and how the decision was made."},
+    {n:4,title:"What we already have",text:"Separate material already available from what it can support and what it cannot establish by itself."},
+    {n:5,title:"What is still missing",text:"Identify important gaps, inconsistencies or unanswered questions."},
+    {n:6,title:"What should be requested",text:"Turn the unresolved gaps into specific requests and questions for professional review."}
+  ];
+  return `<div class="chain">${groups.map(g=>`<div class="chain-row"><div class="chain-n">${g.n}</div><div><small>CasePath check</small><strong>${esc(g.title)}</strong><p>${esc(g.text)}</p></div></div>`).join("")}</div>`;
+}
+
+const PACKAGE_LABELS=Object.freeze({
+  MATTER_SNAPSHOT:"Matter Snapshot",
+  PREPARATION_BRIEF:"Lawyer Brief",
+  ACCOUNTABILITY_CORRESPONDENCE:"Records & Information Request"
+});
+function choosePackage(templateId){
+  if(!PACKAGE_LABELS[templateId])return;
+  State.preferredTemplate=templateId;
+  save();
+  const label=document.getElementById("package-selection");
+  if(label)label.textContent="Selected output: "+PACKAGE_LABELS[templateId];
+  document.getElementById("builder")?.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function clearDraft(){
+  const ok=globalThis.confirm ? globalThis.confirm("Clear this CasePath draft from this browser? This cannot be undone unless you exported a backup.") : true;
+  if(!ok)return;
+  CPStorage.removeItem(STORE);
+  VFS.clear();
+  State.matterId=null;State.step=0;State.answers={};State.source={};State.derived={};State.chain=[];
+  State.outputs=[];State.receipts=[];State.skillRuns=[];State.preferredTemplate=null;State.lastSavedAt=null;
+  State.runtime={id:null,root:RUNTIME_ROOT,sharedRoot:RUNTIME_ROOT,HERE:null,STILL_HERE:null,WITH_US:null};
+  boot();
+}
+let draftSaveTimer=null;
+function stageDraftAnswer(node){
+  if(!node?.dataset?.answer)return;
+  if(node.type==="radio" && !node.checked)return;
+  const k=node.type==="radio" ? node.name : node.dataset.answer;
+  const v=node.value;
+  State.answers[k]=v;State.source[k]=v;
+  clearTimeout(draftSaveTimer);
+  draftSaveTimer=setTimeout(()=>{mount("/matter/source.json",State.source,{class:"source"});save()},300);
+}
+document.addEventListener("input",e=>{
+  if(e.target?.closest?.("#step-host") && e.target.matches?.("[data-answer]"))stageDraftAnswer(e.target);
+});
+document.addEventListener("change",e=>{
+  if(e.target?.closest?.("#step-host") && e.target.matches?.("[data-answer]"))stageDraftAnswer(e.target);
+});
+
+function resultHTML(){
+  const d=State.derived||{};
+  return `<div class="summary-card" style="margin-bottom:16px"><small>Derived formalised summary</small><p>${esc(d.formalSummary||"Run derivation to create the summary.")}</p></div>
+   <div class="callout"><b>What CasePath checked:</b> your account remains separate from the questions CasePath identified. The checklist below shows the preparation process in plain language; the detailed reasoning stays in the audit record.</div>
+   ${chainHTML()}
+   <h3 style="margin-top:28px">Build an output</h3>
+   <div class="output-grid">
+    <article class="output" data-template="MATTER_SNAPSHOT"><h3>Matter summary</h3><p>A short professional summary of what happened, based on your account and the details you provided.</p><button class="btn" onclick="CasePath.generate('MATTER_SNAPSHOT')">Prepare matter summary</button></article>
+    <article class="output" data-template="PREPARATION_BRIEF"><h3>Lawyer preparation brief</h3><p>Your original account, organised sequence, records mentioned, important unanswered questions and preparation points for professional review.</p><button class="btn primary" onclick="CasePath.generate('PREPARATION_BRIEF')">Prepare lawyer-ready brief</button></article>
+    <article class="output" data-template="ACCOUNTABILITY_CORRESPONDENCE"><h3>Request the records and information</h3><p>Prepare a reasoned letter asking for the records and information needed to answer the important unresolved questions.</p><button class="btn primary" onclick="CasePath.generate('ACCOUNTABILITY_CORRESPONDENCE')">Prepare my request</button></article>
+    <article class="output"><h3>Download a CasePath backup</h3><p>Keep a portable backup of this CasePath matter so you can preserve the structured record later.</p><button class="btn" onclick="CasePath.exportMatter()">Download my backup</button></article>
+    
+    
+   </div><div id="generated" style="margin-top:18px"></div>`;
+}
+function render(){
+  const host=document.getElementById("step-host"),step=current(),a=activeSteps();
+  document.getElementById("matter-id").textContent=State.matterId;
+  const pct=progress();
+  document.getElementById("progress-bar").style.width=pct+"%";
+  document.getElementById("progress-track")?.setAttribute("aria-valuenow",String(Math.round(pct)));
+  const saveState=document.getElementById("save-state");
+  if(saveState)saveState.textContent=CPStorage.mode()==="device" ? "Draft saved on this device" : "Draft saved for this session";
+  const pkg=document.getElementById("package-selection");
+  if(pkg)pkg.textContent=State.preferredTemplate ? "Selected output: "+PACKAGE_LABELS[State.preferredTemplate] : "";
+  let body="";
+  if(step.type==="textarea")body=`<div class="field"><label for="f-${step.key}">${esc(step.title)}</label><span class="hint">${esc(step.lead)}</span><textarea id="f-${step.key}" data-answer="${step.key}" placeholder="${esc(step.placeholder)}">${esc(State.answers[step.key]||"")}</textarea></div>`;
+  if(step.type==="where")body=`<div class="field"><label for="state">State or territory</label><select id="state" data-answer="state"><option value="">Choose one</option>${["South Australia","Victoria","New South Wales","Queensland","Western Australia","Tasmania","Australian Capital Territory","Northern Territory","Outside Australia"].map(x=>`<option ${State.answers.state===x?"selected":""}>${x}</option>`).join("")}</select></div><div class="field"><label for="location">Suburb, town or general location <span style="font-weight:400">(optional)</span></label><input id="location" type="text" data-answer="location" value="${esc(State.answers.location||"")}" placeholder="For example: Adelaide CBD"></div>`;
+  if(step.type==="choice")body=choiceHTML(step);
+  if(step.type==="file")body=`<div class="field"><label for="main-file">Add a file <span style="font-weight:400">(optional)</span></label><span class="hint">The selected file stays local to this browser session. CasePath records its name and metadata in the draft; reselect the file after reopening or restoring a backup.</span><input id="main-file" type="file" onchange="CasePath.captureFile(this)">${State.answers.fileMeta?`<div class="callout">Selected: <b>${esc(State.answers.fileMeta.name)}</b> · ${Math.max(1,Math.round(State.answers.fileMeta.size/1024))} KB</div>`:""}</div>`;
+  if(step.type==="review")body=reviewHTML();
+  if(step.type==="result")body=resultHTML();
+  const isLast=step.type==="result";
+  host.innerHTML=`
+   ${State.step>0?`<button class="back-link" type="button" onclick="CasePath.back()">← Back</button>`:""}
+   <div class="step-eyebrow">Step ${State.step+1}</div>
+   ${step.type!=="textarea"?`<h2>${esc(step.title)}</h2><p class="lead">${esc(step.lead)}</p>`:""}
+   ${body}
+   <div class="error" id="step-error" role="alert"></div>
+   ${!isLast?`<div class="step-actions"><span class="micro">You can go back and change any answer.</span><button class="btn primary" type="button" onclick="CasePath.next()">Continue <span aria-hidden="true">→</span></button></div>`:""}
+  `;
+  if(step.type==="result" && State.preferredTemplate){
+    const preferred=host.querySelector(`[data-template="${State.preferredTemplate}"]`);
+    if(preferred){preferred.classList.add("preferred-output");preferred.setAttribute("aria-label","Selected output: "+PACKAGE_LABELS[State.preferredTemplate]);}
+  }
+  host.querySelector("textarea,input,select")?.focus({preventScroll:true});
+  syncRuntime();
+}
+
+async function generate(templateId){
+  const r=await Documents.download(templateId);
+  return r;
+}
+async function exportMatter(){
+  captureVisible();
+  const pack={
+    schema:"casepath.matter.v6",
+    appVersion:6,
+    exportedAt:new Date().toISOString(),
+    matterId:State.matterId,
+    step:State.step,
+    preferredTemplate:State.preferredTemplate,
+    answers:State.answers,
+    source:State.source,
+    derived:State.derived,
+    chain:State.chain,
+    outputs:State.outputs,
+    skillRuns:State.skillRuns,
+    receipts:State.receipts,
+    runtimeRoot:RUNTIME_ROOT,
+    skills:Skills.manifest(),
+    templates:Templates.manifest(),
+    attachmentNotice:State.answers.fileMeta ? "Attachment metadata is included; the file bytes are not embedded in this JSON backup and must be reselected." : "No attachment metadata recorded."
+  };
+  const raw=JSON.stringify(pack,null,2),hash=await sha(raw);
+  await receipt("MATTER_EXPORTED",{schema:pack.schema,sha256:hash});
+  saveBlob(new Blob([raw],{type:"application/json"}),`CasePath_${State.matterId}_Backup.json`);
+  showGenerated("CASEPATH BACKUP",hash,[]);
+}
+async function importMatterFile(input){
+  const file=input?.files?.[0];
+  if(!file)return;
+  try{
+    if(file.size>5*1024*1024)throw new Error("Backup is larger than the 5 MB local import limit.");
+    const pack=JSON.parse(await file.text());
+    if(!["casepath.matter.v6","casepath.matter.v5"].includes(pack?.schema))throw new Error("This is not a recognised CasePath matter backup.");
+    const importedAnswers=(pack.answers && typeof pack.answers==="object") ? pack.answers : (pack.source||{});
+    State.matterId=String(pack.matterId||rid("CP").slice(0,9));
+    State.answers=structuredClone(importedAnswers);
+    State.source=structuredClone(pack.source||importedAnswers);
+    State.derived=(pack.derived && typeof pack.derived==="object")?structuredClone(pack.derived):{};
+    State.chain=Array.isArray(pack.chain)?structuredClone(pack.chain):[];
+    State.outputs=Array.isArray(pack.outputs)?structuredClone(pack.outputs):[];
+    State.skillRuns=Array.isArray(pack.skillRuns)?structuredClone(pack.skillRuns):[];
+    State.receipts=Array.isArray(pack.receipts)?structuredClone(pack.receipts):[];
+    State.preferredTemplate=PACKAGE_LABELS[pack.preferredTemplate]?pack.preferredTemplate:null;
+    VFS.clear();
+    mount("/matter/source.json",State.source,{class:"source",restored:true});
+    const maxStep=Math.max(0,activeSteps().length-1);
+    State.step=Math.max(0,Math.min(Number.isInteger(pack.step)?pack.step:0,maxStep));
+    await receipt("MATTER_IMPORTED",{schema:pack.schema,sourceFile:file.name,fileBytes:file.size,attachmentBytesRestored:false});
+    save();render();
+    const n=document.getElementById("save-state");if(n)n.textContent="Backup restored locally";
+    document.getElementById("builder")?.scrollIntoView({behavior:"smooth",block:"start"});
+  }catch(error){
+    const e=document.getElementById("step-error");
+    if(e){e.textContent=error?.message||"The backup could not be restored.";e.classList.add("show");}
+    else globalThis.alert?.(error?.message||"The backup could not be restored.");
+  }finally{
+    input.value="";
+  }
+}
+async function exportProof(){
+  const proof={
+    schema:"casepath.derivation-proof.v1",
+    matterId:State.matterId,
+    runtimeRoot:RUNTIME_ROOT,
+    skillRegistry:Skills.manifest(),
+    templateRegistry:Templates.manifest(),
+    skillRuns:State.skillRuns,
+    outputs:State.outputs,
+    receiptRoot:State.receipts.at(-1)?.hash||"GENESIS"
+  };
+  proof.hash=await sha(proof);
+  saveBlob(new Blob([JSON.stringify(proof,null,2)],{type:"application/json"}),`CasePath_${State.matterId}_Derivation_Proof.json`);
+  await receipt("DERIVATION_PROOF_EXPORTED",{sha256:proof.hash});
+}
+function downloadUser(){
+  const raw=atob(USER_XLSX_B64),u=new Uint8Array(raw.length);
+  for(let i=0;i<raw.length;i++)u[i]=raw.charCodeAt(i);
+  saveBlob(new Blob([u],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}),"USER.xlsx");
+  receipt("USER_XLSX_DELIVERED",{matterPayload:false,bytes:u.length});
+}
+function showGenerated(name,hash,skills){
+  const n=document.getElementById("generated");
+  if(n)n.innerHTML=`<div class="callout"><b>${esc(name)} generated through the resident pipeline.</b><br>SHA-256: <code>${esc(hash)}</code>${skills?.length?`<br>Skills: ${skills.map(s=>esc(s.id+"@"+s.version)).join(" → ")}`:""}</div>`;
+}
+function syncRuntime(){
+  const o={
+    runtime:State.runtime,matterId:State.matterId,step:current()?.id,
+    skills:Skills.manifest(),templates:Templates.manifest(),
+    latestSkillRuns:State.skillRuns.slice(-12),
+    outputs:State.outputs.slice(-6),paths:paths(),
+    receipts:State.receipts.slice(-8)
+  };
+  const a=document.getElementById("cp-resident-kernel");if(a)a.textContent=JSON.stringify(o);
+  const b=document.getElementById("cp-resident-vfs");if(b)b.textContent=JSON.stringify(paths());
+  const c=document.getElementById("cp-resident-ledger");if(c)c.textContent=JSON.stringify(State.receipts);
+  const pre=document.getElementById("sys-pre");if(pre)pre.textContent=JSON.stringify(o,null,2);
+}
+
+/* ================================================================
+   SELF-TEST: proves registry/template wiring by generating from
+   a controlled synthetic matter and checking execution receipts.
+   ================================================================ */
+async function selfTest(){
+  const sourceBackup=structuredClone(State.source),answersBackup=structuredClone(State.answers);
+  const outputsBefore=State.outputs.length,skillsBefore=State.skillRuns.length;
+  State.source={
+    story:"Police attended after a report. An officer directed me to provide information. I dispute part of what was later alleged. I have a notice and there may be body-worn video.",
+    state:"South Australia",location:"Adelaide",
+    actorType:"police",allegation:"A failure to comply was alleged.",
+    agreement:"disagree",intent:"accountability"
+  };
+  State.answers=structuredClone(State.source);
+  const r=await Documents.generate("ACCOUNTABILITY_CORRESPONDENCE");
+  const newRuns=State.skillRuns.slice(skillsBefore);
+  const required=["MATTER_MODEL_BUILDER","CORRESPONDENCE_REQUEST_DERIVER"];
+  const passed=required.every(id=>newRuns.some(x=>x.skill===id))
+    && r.content.includes("Requested categories and chained reason")
+    && r.model.requests.length>=5
+    && r.artifact.skills.some(x=>x.id==="CORRESPONDENCE_REQUEST_DERIVER");
+  const report={
+    status:passed?"PASS":"FAIL",
+    generatedTemplate:r.artifact.templateId,
+    requestCount:r.model.requests.length,
+    skillsExecuted:[...new Set(newRuns.map(x=>x.skill))],
+    artifactHash:r.artifact.contentHash,
+    modelHash:r.artifact.modelHash
+  };
+  mount("/system/tests/skill-template-wiring.json",report,{class:"self-test"});
+  await receipt("SELF_TEST_SKILL_TEMPLATE_WIRING",report);
+  State.source=sourceBackup;State.answers=answersBackup;
+  State.outputs=State.outputs.slice(0,outputsBefore);
+  save();
+  return report;
+}
+
+async function boot(){
+  const restored=load();
+  if(!State.matterId)State.matterId="CP-"+Math.floor(100000+Math.random()*899999);
+  if(!State.runtime.id)State.runtime.id=rid("RT");
+  mount("/system/manifest.json",{schema:"casepath.service.v5",runtimeRoot:RUNTIME_ROOT,matterBackend:false,userXlsxEmbedded:true,authoritativeDocumentPath:"SOURCE->SKILLS->DERIVED_MODEL->TEMPLATE->DOCUMENT_MODEL->RENDERER->VFS->RECEIPT"});
+  mount("/skills/registry.json",Skills.manifest(),{class:"executable-skill-registry"});
+  mount("/templates/registry.json",Templates.manifest(),{class:"document-template-registry"});
+  mount("/system/binary/USER.xlsx",USER_XLSX_B64,{matterData:false});
+  State.runtime.HERE={ts:new Date().toISOString(),runtimeId:State.runtime.id};
+  State.runtime.WITH_US={ts:new Date().toISOString(),status:State.runtime.root===State.runtime.sharedRoot?"WITH_US":"DIVERGENT"};
+  await receipt("BOOT",{restored,runtimeRoot:RUNTIME_ROOT});
+  await receipt("HERE",{runtimeId:State.runtime.id,matterPayload:false});
+  await receipt(State.runtime.WITH_US.status,{runtimeRoot:State.runtime.root,sharedRoot:State.runtime.sharedRoot,matterPayload:false});
+  setTimeout(async()=>{State.runtime.STILL_HERE={ts:new Date().toISOString(),sequence:1};await receipt("STILL_HERE",{runtimeId:State.runtime.id,sequence:1,matterPayload:false});syncRuntime()},1300);
+  render();
+}
+
+document.getElementById("sys-toggle").addEventListener("click",()=>document.getElementById("sys").classList.toggle("open"));
+
+window.CasePath={
+  next,back,jumpTo,captureFile,clearDraft,choosePackage,importMatterFile,
+  generate,exportMatter,exportProof,downloadUser,selfTest,
+  Skills,Templates,Documents,State,VFS
+};
+boot();
+})();
+</script>
+
+<script id="casepath-preparation-state-engine-v13">
+(() => {
+  "use strict";
+  const TRACKS = Object.freeze([
+    {id:"account", title:"Account captured", desc:"Your original account is preserved before formalisation."},
+    {id:"context", title:"Context anchored", desc:"Jurisdiction and the main actor or organisation are identified."},
+    {id:"position", title:"Position and records separated", desc:"Allegations, your position and available material remain distinct."},
+    {id:"handoff", title:"Professional handoff prepared", desc:"The matter has been reviewed and at least one preparation output is available."}
+  ]);
+
+  function state(){
+    return globalThis.CasePath?.State || {answers:{},outputs:[],step:0};
+  }
+  function activeStepId(){
+    const host=document.getElementById("step-host");
+    const text=(host?.innerText||"").toLowerCase();
+    if(text.includes("what happened"))return "story";
+    if(text.includes("where did this happen"))return "where";
+    if(text.includes("who is this matter"))return "actor";
+    if(text.includes("what are they saying"))return "allegation";
+    if(text.includes("do you agree"))return "agree";
+    if(text.includes("what would you like"))return "intent";
+    if(text.includes("main document")||text.includes("add a file"))return "file";
+    if(text.includes("accurate starting point"))return "review";
+    if(text.includes("choose what you want"))return "result";
+    return "story";
+  }
+
+  function compute(){
+    const s=state(), a=s.answers||{}, outputs=s.outputs||[];
+    const story=String(a.story||"").trim();
+    const hasAccount=story.length>=40;
+    const hasContext=!!a.state && !!a.actorType;
+    const allegationRelevant=!!a.allegation;
+    const hasPosition=!allegationRelevant || (!!a.agreement && !!a.intent);
+    const hasRecord=!!a.fileMeta;
+    const reviewed=Object.keys(s.derived||{}).length>0 || activeStepId()==="result" || outputs.length>0;
+    const handoff=reviewed && outputs.length>0;
+
+    const tracks=[
+      {...TRACKS[0], complete:hasAccount},
+      {...TRACKS[1], complete:hasContext},
+      {...TRACKS[2], complete:hasPosition && (hasRecord || reviewed)},
+      {...TRACKS[3], complete:handoff}
+    ];
+
+    const established=[];
+    if(hasAccount) established.push("Your source account has been captured.");
+    if(a.state) established.push("Jurisdiction: "+a.state+(a.location ? " — "+a.location : "")+".");
+    if(a.actorType) established.push("Main actor category has been identified.");
+    if(a.allegation) established.push("The allegation, notice, complaint or decision has been recorded separately.");
+    if(a.agreement) established.push("Your position on that allegation has been recorded separately.");
+    if(hasRecord) established.push("Main file identified: "+a.fileMeta.name+".");
+    if(reviewed) established.push("A derived preparation model is available for review.");
+    if(outputs.length) established.push(outputs.length+" generated preparation output"+(outputs.length===1?" is":"s are")+" available.");
+
+    const unresolved=[];
+    if(!hasAccount) unresolved.push("A substantive account of what happened is still needed.");
+    if(!a.state) unresolved.push("The jurisdiction or state/territory is not yet identified.");
+    if(!a.actorType) unresolved.push("The main person, authority, employer or organisation is not yet identified.");
+    if(allegationRelevant && !a.agreement) unresolved.push("Your position on the allegation has not yet been recorded.");
+    if(allegationRelevant && !a.intent) unresolved.push("Your preferred preparation direction has not yet been recorded.");
+    if(!hasRecord) unresolved.push("No primary notice, letter, charge sheet, screenshot or other main file has been identified yet.");
+    if(!reviewed) unresolved.push("The structured review/derivation step has not yet been completed.");
+    if(reviewed && !outputs.length) unresolved.push("No professional handoff document has been generated yet.");
+
+    let next={
+      title:"Start with your account",
+      copy:"Describe what happened in your own words. CasePath preserves this before any structure or analysis is derived.",
+      step:"story"
+    };
+    if(hasAccount && !a.state) next={title:"Anchor the jurisdiction",copy:"Identify where the matter occurred so later preparation can be kept jurisdiction-specific.",step:"where"};
+    else if(hasAccount && a.state && !a.actorType) next={title:"Identify who took the action",copy:"Record the main person, authority, employer or organisation involved.",step:"actor"};
+    else if(hasContext && allegationRelevant && !a.agreement) next={title:"Separate your position",copy:"Record whether you agree, partly agree, disagree or remain unsure. This stays separate from the allegation itself.",step:"agree"};
+    else if(hasContext && allegationRelevant && !a.intent) next={title:"Choose the preparation direction",copy:"Tell CasePath whether you want to challenge, accept, obtain the full record first, or remain undecided.",step:"intent"};
+    else if(hasContext && !hasRecord && !reviewed) next={title:"Identify the main record",copy:"Add or identify the notice, letter, charge sheet, screenshot or other primary document if you have one.",step:"file"};
+    else if(!reviewed) next={title:"Review the captured account",copy:"Check the source account and context before CasePath derives the structured preparation record.",step:"review"};
+    else if(!outputs.length) next={title:"Create the professional handoff",copy:"The preparation model is ready. Choose the output that best matches the professional review you are preparing for.",step:"result"};
+    else next={title:"Use the prepared record with a professional",copy:"A handoff document is available. Review it for factual accuracy, save a backup, and take it to the appropriately qualified professional.",step:"result"};
+
+    let label="Starting preparation";
+    if(hasAccount)label="Core account captured";
+    if(hasAccount && hasContext && hasPosition)label="Structured for review";
+    if(reviewed)label="Review record prepared";
+    if(handoff)label="Professional handoff available";
+
+    const availableOutputs=outputs.slice(-3).reverse().map(o => {
+      const names={
+        MATTER_SNAPSHOT:"Matter Snapshot",
+        PREPARATION_BRIEF:"Lawyer Brief",
+        ACCOUNTABILITY_CORRESPONDENCE:"Records & Information Request"
+      };
+      return names[o.templateId] || o.templateId?.replaceAll("_"," ") || "Preparation document";
+    });
+
+    return {
+      schema:"casepath.preparation-state.v13",
+      matterId:s.matterId||"New matter",
+      label, tracks, established, unresolved, next, availableOutputs,
+      generatedOutputs:outputs.length,
+      updatedAt:new Date().toISOString()
+    };
+  }
+
+  function li(text){const n=document.createElement("li");n.textContent=text;return n}
+  function renderList(id,items,empty){
+    const ul=document.getElementById(id); if(!ul)return;
+    ul.replaceChildren();
+    if(!items.length){const n=li(empty);n.className="empty";ul.appendChild(n);return}
+    items.forEach(x=>ul.appendChild(li(x)));
+  }
+  function update(){
+    if(!globalThis.CasePath)return;
+    const m=compute();
+    const s=globalThis.CasePath.State;
+    s.preparationState=m;
+    globalThis.CasePath.VFS?.set?.("/matter/preparation-state.json",{
+      value:m,
+      meta:{class:"derived-preparation-state",ts:m.updatedAt}
+    });
+
+    const matter=document.getElementById("prep-matter-id");
+    const badge=document.getElementById("prep-state-badge");
+    const hero=document.getElementById("hero-prep-state");
+    if(matter)matter.textContent=m.matterId;
+    if(badge)badge.textContent=m.label;
+    if(hero)hero.textContent=m.label;
+
+    const trackHost=document.getElementById("prep-track-list");
+    if(trackHost){
+      trackHost.innerHTML=m.tracks.map((t,i)=>`
+        <div class="prep-track" data-state="${t.complete?"complete":"open"}">
+          <span class="track-mark">${t.complete?"✓":String(i+1).padStart(2,"0")}</span>
+          <div><strong>${t.title}</strong><p>${t.desc}</p></div>
+          <span class="track-state">${t.complete?"Complete":"Open"}</span>
+        </div>`).join("");
+    }
+    const nt=document.getElementById("prep-next-title");
+    const nc=document.getElementById("prep-next-copy");
+    const nb=document.getElementById("prep-next-action");
+    if(nt)nt.textContent=m.next.title;
+    if(nc)nc.textContent=m.next.copy;
+    if(nb){
+      nb.textContent=m.generatedOutputs ? "Open prepared record" : "Continue preparation";
+      nb.onclick=()=>{
+        globalThis.CasePath.jumpTo(m.next.step);
+        document.getElementById("builder")?.scrollIntoView({behavior:"smooth",block:"start"});
+      };
+    }
+    renderList("prep-established",m.established,"No substantive matter information captured yet.");
+    renderList("prep-unresolved",m.unresolved,"No unresolved preparation items are currently identified.");
+    renderList("prep-outputs",m.availableOutputs,"Complete the guided preparation to generate a professional handoff document.");
+  }
+
+  let timer;
+  function schedule(){clearTimeout(timer);timer=setTimeout(update,80)}
+  document.addEventListener("input",schedule,true);
+  document.addEventListener("change",schedule,true);
+  document.addEventListener("click",schedule,true);
+  document.addEventListener("DOMContentLoaded",()=>setTimeout(update,120),{once:true});
+  window.addEventListener("load",()=>setTimeout(update,120),{once:true});
+  setInterval(update,1200);
+
+  globalThis.CasePathPreparationState=Object.freeze({compute,update});
+})();
+</script>
+
+</body>
+</html>

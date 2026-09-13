@@ -1,0 +1,469 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRAINK Domain Suite Engineering Report R1</title><style>
+:root{color-scheme:dark;--bg:#061018;--panel:#0b1720;--line:#1d3a49;--text:#d7e8ef;--muted:#7fa0ae;--good:#7be0b6;--warn:#f2c66d;--bad:#ef8c98;--accent:#62d5ff}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;background:radial-gradient(circle at 20% 0,#0d2634 0,transparent 32%),var(--bg);color:var(--text)}
+header{position:sticky;top:0;z-index:2;background:rgba(6,16,24,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:16px 20px}
+h1,h2,h3{margin:.2em 0}.sub{color:var(--muted)}main{padding:18px;max-width:1500px;margin:auto}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+.card{grid-column:span 4;background:linear-gradient(180deg,#0d1c26,#09151d);border:1px solid var(--line);border-radius:14px;padding:14px}.wide{grid-column:span 8}.full{grid-column:1/-1}
+button,a.btn{appearance:none;border:1px solid #285a70;background:#0c2633;color:#dff7ff;border-radius:9px;padding:9px 12px;text-decoration:none;cursor:pointer}button:hover,a.btn:hover{border-color:var(--accent)}
+.status{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:3px 8px;margin:2px}.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+pre{white-space:pre-wrap;word-break:break-word;background:#050c11;border:1px solid #142d3a;border-radius:10px;padding:12px;max-height:520px;overflow:auto}
+table{width:100%;border-collapse:collapse}td,th{padding:7px;border-bottom:1px solid #17303d;text-align:left;vertical-align:top}.mono{font-family:inherit}.small{font-size:12px;color:var(--muted)}
+@media(max-width:900px){.card,.wide{grid-column:1/-1}}
+
+.hero{padding:26px 20px;background:linear-gradient(135deg,#0a1c28,#07131b);border-bottom:1px solid var(--line)}
+.kpi{font-size:28px;font-weight:800;color:var(--accent)}.lane{display:flex;justify-content:space-between;border-bottom:1px solid #17303d;padding:6px 0}
+</style></head><body>
+<div class="hero"><h1>BRAINK Domain Authority & PKI Suite · Engineering Report R1</h1>
+<p class="sub">Local-first · file-as-tool · complete 170-skill traversal · five sovereign domain volumes · proof-bearing receipts</p></div>
+<main><div class="grid">
+<section class="card"><div class="kpi">170</div><b>Library skills traversed</b><p>60 relation-routed · 1 source-only · 109 explicit no-route</p></section>
+<section class="card"><div class="kpi">5</div><b>sovereign domain tools</b><p>keddeh.com, claimpath.org, braink.com.au, braink.store, braink.studio</p></section>
+<section class="card"><div class="kpi">100,000</div><b>state-isolation transitions</b><p class="good">PASS · no cross-domain mutation</p></section>
+
+<section class="card wide"><h2>Logical architecture</h2><pre>braink://local/domain-suite
+├─ tool://domain/keddeh.com
+├─ tool://domain/claimpath.org
+├─ tool://domain/braink.com.au
+├─ tool://domain/braink.store
+├─ tool://domain/braink.studio
+├─ runtime://local/domain-probe
+│  ├─ native DNS packet client (UDP + TCP fallback)
+│  ├─ RDAP client
+│  ├─ legacy WHOIS observer
+│  ├─ SNI/TLS X.509 observer
+│  ├─ HTTPS/HSTS observer
+│  └─ append-only receipt ledger
+└─ braink://skills/170
+   └─ relation-routed interfaces only</pre></section>
+<section class="card"><h2>Core laws</h2><pre>[
+  &quot;Each domain is an independent addressable state volume.&quot;,
+  &quot;Registration/RDAP/WHOIS exposure, DNS, TLS, HTTPS and operations are separate evidence relations.&quot;,
+  &quot;Public registrant data redaction does not prove a paid WHOIS privacy product.&quot;,
+  &quot;Hash equality is byte-integrity evidence, not semantic proof.&quot;,
+  &quot;No browser-only observation is promoted to DNS/TLS authority.&quot;,
+  &quot;GitHub is source/data projection only.&quot;,
+  &quot;External state is never inherited between domain names.&quot;,
+  &quot;All 170 Library skills are traversed; only relation-valid skills are routed.&quot;
+]</pre></section>
+
+<section class="card full"><h2>Qualification matrix</h2><table><thead><tr><th>Gate</th><th>Result</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Python compile + contract tests</td><td class="good">PASS</td><td>8 tests</td></tr>
+<tr><td>Native DNS packet parser fixture</td><td class="good">PASS</td><td>No shell <code>dig</code> dependency</td></tr>
+<tr><td>Local HTTP API + HTML serving</td><td class="good">PASS</td><td>health + master/domain surfaces</td></tr>
+<tr><td>Inline JavaScript syntax</td><td class="good">PASS</td><td>6 HTML volumes</td></tr>
+<tr><td>Domain state isolation</td><td class="good">PASS</td><td>100,000 transitions</td></tr>
+<tr><td>Ephemeral replication</td><td class="good">PASS</td><td>128 replicas × 8 tracked core files, zero persistent replica pollution</td></tr>
+<tr><td>Template determinism</td><td class="good">PASS</td><td>5 domain volumes normalize to one contract</td></tr>
+<tr><td>Partitioned mutable state</td><td class="good">PASS</td><td>5.759× modeled write amplification avoided vs five-domain monolith</td></tr>
+<tr><td>Append-only receipt scaling</td><td class="good">PASS</td><td>186 bytes/reference-event fixture</td></tr>
+</tbody></table></section>
+
+<section class="card wide"><h2>Skill lanes routed from the full registry</h2>
+<div class="lane"><span>COORDINATION</span><b>11</b></div><div class="lane"><span>DOMAIN_EDGE</span><b>3</b></div><div class="lane"><span>ENGINEERING_ASSURANCE</span><b>7</b></div><div class="lane"><span>EVIDENCE_PROMOTION</span><b>11</b></div><div class="lane"><span>HCI_WEB</span><b>2</b></div><div class="lane"><span>IL_LLM_TRAVERSAL</span><b>8</b></div><div class="lane"><span>LIBRARY_IO</span><b>2</b></div><div class="lane"><span>REPORTING</span><b>4</b></div><div class="lane"><span>RUNTIME_CONTINUITY</span><b>12</b></div>
+</section>
+<section class="card"><h2>Repository boundary</h2><p><b>GitHub = SOURCE_ONLY</b></p><p>It can supply source data. It cannot substitute for local execution, evidence, product state or promotion.</p></section>
+
+<section class="card full"><h2>Domain instrument contract</h2><table><thead><tr><th>Relation</th><th>Mechanic</th><th>Claim boundary</th></tr></thead><tbody>
+<tr><td>Registration</td><td>RDAP + legacy WHOIS</td><td>Public data only; registrar account authority not inferred</td></tr>
+<tr><td>WHOIS privacy posture</td><td>Public-field/redaction classifier</td><td>Never infers a paid privacy service merely from redaction</td></tr>
+<tr><td>DNS</td><td>Native packet client</td><td>A/AAAA/NS/MX/TXT/CAA/DS/DNSKEY kept relation-local</td></tr>
+<tr><td>DNSSEC</td><td>AD + DS/DNSKEY</td><td>Record presence alone does not equal full chain validation</td></tr>
+<tr><td>TLS certificate</td><td>Local SNI socket</td><td>SAN/chain verification/protocol/cipher/fingerprint from this observer</td></tr>
+<tr><td>HTTPS</td><td>Local HTTP client</td><td>Status/final URL/HSTS from this observer</td></tr>
+<tr><td>Operations</td><td>Receipt ledger + G8</td><td>Renewal/monitoring stays OPEN without durable operating evidence</td></tr>
+</tbody></table></section>
+
+<section class="card full"><h2>Validation-container external adapter boundary</h2>
+<p class="warn">Outbound name resolution is unavailable in this validation container. The suite recorded that boundary and did not promote any current external domain state. Run <code>RUN_LOCAL_ADAPTER_PROBE.command</code> on the target machine to populate fresh domain-specific receipts.</p>
+<pre>{
+  &quot;keddeh.com&quot;: {
+    &quot;receipt_sha256&quot;: &quot;8b343841fcec612c16c8c066b91072b713b5da7021582cbef6f452295876b91f&quot;,
+    &quot;adapter_state&quot;: &quot;EXTERNAL_STATE_NOT_OBSERVED_IN_VALIDATION_CONTAINER&quot;,
+    &quot;rdap_ok&quot;: false,
+    &quot;legacy_whois_ok&quot;: false,
+    &quot;dns_observed&quot;: false,
+    &quot;tls_observed&quot;: false,
+    &quot;https_observed&quot;: false
+  },
+  &quot;claimpath.org&quot;: {
+    &quot;receipt_sha256&quot;: &quot;c9b2360feebd04c9194fd70a788045328e3d07290c51697e60a1d9654ae55eed&quot;,
+    &quot;adapter_state&quot;: &quot;EXTERNAL_STATE_NOT_OBSERVED_IN_VALIDATION_CONTAINER&quot;,
+    &quot;rdap_ok&quot;: false,
+    &quot;legacy_whois_ok&quot;: false,
+    &quot;dns_observed&quot;: false,
+    &quot;tls_observed&quot;: false,
+    &quot;https_observed&quot;: false
+  },
+  &quot;braink.com.au&quot;: {
+    &quot;receipt_sha256&quot;: &quot;2f744f9ef0920e668066289671eb170cf713bae21c72d12695428f4eae3660c7&quot;,
+    &quot;adapter_state&quot;: &quot;EXTERNAL_STATE_NOT_OBSERVED_IN_VALIDATION_CONTAINER&quot;,
+    &quot;rdap_ok&quot;: false,
+    &quot;legacy_whois_ok&quot;: false,
+    &quot;dns_observed&quot;: false,
+    &quot;tls_observed&quot;: false,
+    &quot;https_observed&quot;: false
+  },
+  &quot;braink.store&quot;: {
+    &quot;receipt_sha256&quot;: &quot;cd5235e1587e1436b78e39eca0dca9447df82acbc7dc54b2afe89b2a9206d283&quot;,
+    &quot;adapter_state&quot;: &quot;EXTERNAL_STATE_NOT_OBSERVED_IN_VALIDATION_CONTAINER&quot;,
+    &quot;rdap_ok&quot;: false,
+    &quot;legacy_whois_ok&quot;: false,
+    &quot;dns_observed&quot;: false,
+    &quot;tls_observed&quot;: false,
+    &quot;https_observed&quot;: false
+  },
+  &quot;braink.studio&quot;: {
+    &quot;receipt_sha256&quot;: &quot;3e39a9f73a7edf6f1400c3af5f53973554838d10df2e017da1457562279e2780&quot;,
+    &quot;adapter_state&quot;: &quot;EXTERNAL_STATE_NOT_OBSERVED_IN_VALIDATION_CONTAINER&quot;,
+    &quot;rdap_ok&quot;: false,
+    &quot;legacy_whois_ok&quot;: false,
+    &quot;dns_observed&quot;: false,
+    &quot;tls_observed&quot;: false,
+    &quot;https_observed&quot;: false
+  }
+}</pre></section>
+
+<section class="card full"><h2>Routed skill identities</h2><pre>[
+  {
+    &quot;ordinal&quot;: 13,
+    &quot;skill&quot;: &quot;braink-live-skill-agent-fleet&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 14,
+    &quot;skill&quot;: &quot;evidence-gated-architecture-review&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 16,
+    &quot;skill&quot;: &quot;kex-acar-rectification&quot;,
+    &quot;lane&quot;: &quot;ENGINEERING_ASSURANCE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 17,
+    &quot;skill&quot;: &quot;kex-active-state-modeling&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 18,
+    &quot;skill&quot;: &quot;kex-adversarial-validation-agent&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 21,
+    &quot;skill&quot;: &quot;kex-alignment-manifest&quot;,
+    &quot;lane&quot;: &quot;ENGINEERING_ASSURANCE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 22,
+    &quot;skill&quot;: &quot;kex-api-capability-governance&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 23,
+    &quot;skill&quot;: &quot;kex-api-skill-factory&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 28,
+    &quot;skill&quot;: &quot;kex-braink-recursive-closure-agent&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 29,
+    &quot;skill&quot;: &quot;kex-braink-runtime-integrity-agent&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 32,
+    &quot;skill&quot;: &quot;kex-callback-bridge&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 34,
+    &quot;skill&quot;: &quot;kex-deterministic-fleet&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 35,
+    &quot;skill&quot;: &quot;kex-domain-hosting-handoff&quot;,
+    &quot;lane&quot;: &quot;DOMAIN_EDGE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 38,
+    &quot;skill&quot;: &quot;kex-engineering-benchmark-agent&quot;,
+    &quot;lane&quot;: &quot;ENGINEERING_ASSURANCE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 39,
+    &quot;skill&quot;: &quot;kex-engineering-suite&quot;,
+    &quot;lane&quot;: &quot;ENGINEERING_ASSURANCE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 40,
+    &quot;skill&quot;: &quot;kex-evidence-assurance-team&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 41,
+    &quot;skill&quot;: &quot;kex-execution-governance&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 42,
+    &quot;skill&quot;: &quot;kex-expanded-engineering-suite&quot;,
+    &quot;lane&quot;: &quot;ENGINEERING_ASSURANCE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 43,
+    &quot;skill&quot;: &quot;kex-external-anchor-agent&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 44,
+    &quot;skill&quot;: &quot;kex-fabric-verification&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 45,
+    &quot;skill&quot;: &quot;kex-fresh-completed-promotion-gate&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 47,
+    &quot;skill&quot;: &quot;kex-illlm-autofill&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 48,
+    &quot;skill&quot;: &quot;kex-illlm-runtime&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 49,
+    &quot;skill&quot;: &quot;kex-illlm-traversal-exposer&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 50,
+    &quot;skill&quot;: &quot;kex-lineage-residue-agent&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 52,
+    &quot;skill&quot;: &quot;kex-outbound-self-host-lease-loop&quot;,
+    &quot;lane&quot;: &quot;DOMAIN_EDGE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 53,
+    &quot;skill&quot;: &quot;kex-platform-attestation-agent&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 55,
+    &quot;skill&quot;: &quot;kex-professional-engineering-super-agent&quot;,
+    &quot;lane&quot;: &quot;ENGINEERING_ASSURANCE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 56,
+    &quot;skill&quot;: &quot;kex-promotion-guard-agent&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 57,
+    &quot;skill&quot;: &quot;kex-promotion-release-team&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 58,
+    &quot;skill&quot;: &quot;kex-proof-falsifier-agent&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 59,
+    &quot;skill&quot;: &quot;kex-proof-rehydration&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 61,
+    &quot;skill&quot;: &quot;kex-recursive-cross-iteration-foundry&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 62,
+    &quot;skill&quot;: &quot;kex-recursive-runtime-evolution&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 63,
+    &quot;skill&quot;: &quot;kex-research-substantiation&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 64,
+    &quot;skill&quot;: &quot;kex-runtime-modular-suite&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 65,
+    &quot;skill&quot;: &quot;kex-runtime-module-rehydration&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 66,
+    &quot;skill&quot;: &quot;kex-runtime-portability&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 68,
+    &quot;skill&quot;: &quot;kex-sector-conformance&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 69,
+    &quot;skill&quot;: &quot;kex-self-host-domain-runtime-suite&quot;,
+    &quot;lane&quot;: &quot;DOMAIN_EDGE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 70,
+    &quot;skill&quot;: &quot;kex-sentinel-rehydration&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 72,
+    &quot;skill&quot;: &quot;kex-skill-lineage-governance&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 73,
+    &quot;skill&quot;: &quot;kex-skill-set-composer&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 75,
+    &quot;skill&quot;: &quot;kex-source-material-evolution&quot;,
+    &quot;lane&quot;: &quot;IL_LLM_TRAVERSAL&quot;
+  },
+  {
+    &quot;ordinal&quot;: 76,
+    &quot;skill&quot;: &quot;kex-sovereign-capacity-fabric-suite&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 77,
+    &quot;skill&quot;: &quot;kex-sovereign-compute-audit&quot;,
+    &quot;lane&quot;: &quot;ENGINEERING_ASSURANCE&quot;
+  },
+  {
+    &quot;ordinal&quot;: 78,
+    &quot;skill&quot;: &quot;kex-state-transition-agent&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 79,
+    &quot;skill&quot;: &quot;kex-stream-ledger-audit&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 82,
+    &quot;skill&quot;: &quot;kex-visual-buffer-projection-hci&quot;,
+    &quot;lane&quot;: &quot;HCI_WEB&quot;
+  },
+  {
+    &quot;ordinal&quot;: 83,
+    &quot;skill&quot;: &quot;kex-web-experience-production-suite&quot;,
+    &quot;lane&quot;: &quot;HCI_WEB&quot;
+  },
+  {
+    &quot;ordinal&quot;: 86,
+    &quot;skill&quot;: &quot;kex-zeroless-conformance&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 87,
+    &quot;skill&quot;: &quot;rgbk-runtime-reconstruction&quot;,
+    &quot;lane&quot;: &quot;RUNTIME_CONTINUITY&quot;
+  },
+  {
+    &quot;ordinal&quot;: 93,
+    &quot;skill&quot;: &quot;onboarding-parallel-research&quot;,
+    &quot;lane&quot;: &quot;COORDINATION&quot;
+  },
+  {
+    &quot;ordinal&quot;: 127,
+    &quot;skill&quot;: &quot;library-rclone&quot;,
+    &quot;lane&quot;: &quot;LIBRARY_IO&quot;
+  },
+  {
+    &quot;ordinal&quot;: 128,
+    &quot;skill&quot;: &quot;library&quot;,
+    &quot;lane&quot;: &quot;LIBRARY_IO&quot;
+  },
+  {
+    &quot;ordinal&quot;: 129,
+    &quot;skill&quot;: &quot;artifact-template-analytics-dashboard&quot;,
+    &quot;lane&quot;: &quot;REPORTING&quot;
+  },
+  {
+    &quot;ordinal&quot;: 132,
+    &quot;skill&quot;: &quot;artifact-template-experiment-analysis&quot;,
+    &quot;lane&quot;: &quot;REPORTING&quot;
+  },
+  {
+    &quot;ordinal&quot;: 141,
+    &quot;skill&quot;: &quot;artifact-template-project-tracker&quot;,
+    &quot;lane&quot;: &quot;REPORTING&quot;
+  },
+  {
+    &quot;ordinal&quot;: 146,
+    &quot;skill&quot;: &quot;artifact-template-system-design&quot;,
+    &quot;lane&quot;: &quot;REPORTING&quot;
+  },
+  {
+    &quot;ordinal&quot;: 168,
+    &quot;skill&quot;: &quot;review-agent&quot;,
+    &quot;lane&quot;: &quot;EVIDENCE_PROMOTION&quot;
+  }
+]</pre></section>
+<section class="card full"><h2>Source-tool integrity</h2><pre>{
+  &quot;skill_registry&quot;: {
+    &quot;source_name&quot;: &quot;04_ALL_170_SKILLS_DNA_REGISTRY_R1.json&quot;,
+    &quot;bytes&quot;: 837675,
+    &quot;sha256&quot;: &quot;8bb58c57add6e12e49b9fabf415bf5bf24db98b8ee8e7b6729d1664f89ecadee&quot;,
+    &quot;bundled_path&quot;: &quot;sources/04_ALL_170_SKILLS_DNA_REGISTRY_R1.json&quot;
+  },
+  &quot;bilateral_volume&quot;: {
+    &quot;source_name&quot;: &quot;BRAINK_CANONICAL_BILATERAL_VOLUME_OPEN_ENDED_IL_LLM_v1.json&quot;,
+    &quot;bytes&quot;: 205494,
+    &quot;sha256&quot;: &quot;717bba2dc20450f66b39b97d8bba02e6d85a4de0ecb16845e9bcd14be8c1a0e3&quot;,
+    &quot;bundled_path&quot;: &quot;sources/BRAINK_CANONICAL_BILATERAL_VOLUME_OPEN_ENDED_IL_LLM_v1.json&quot;
+  },
+  &quot;kos_bos&quot;: {
+    &quot;source_name&quot;: &quot;KOS_BOS_Control_Surface_v2_2026-08-12.html&quot;,
+    &quot;bytes&quot;: 19403,
+    &quot;sha256&quot;: &quot;b984b1f45a5e66c016e55ba6b5356d52ffb558df788a07408fb126366f36bbf1&quot;,
+    &quot;bundled_path&quot;: &quot;sources/KOS_BOS_Control_Surface_v2_2026-08-12.html&quot;
+  },
+  &quot;edge_operator&quot;: {
+    &quot;source_name&quot;: &quot;KEDDEH_V50_CHILD_ALPHA_OPERATOR_KNOWLEDGE_D1.html&quot;,
+    &quot;bytes&quot;: 6988728,
+    &quot;sha256&quot;: &quot;2c79677cb5904d78945c3e3b0d0b510a9a7dde178150bc6320531fb0011625a4&quot;,
+    &quot;bundled_path&quot;: null,
+    &quot;compact_derivative&quot;: &quot;sources/EDGE_DOMAIN_RUNBOOKS_EXTRACT_R1.json&quot;
+  },
+  &quot;orchestrator_r2&quot;: {
+    &quot;source_name&quot;: &quot;KEDDEH_BRAINK_VOLUME_OF_VOLUMES_ORCHESTRATOR_R2.html&quot;,
+    &quot;bytes&quot;: 16637,
+    &quot;sha256&quot;: &quot;6c7c3653774f8c32aebdfeb26fe3b57a1f12358b060a1cc5a9c22dd19645e604&quot;,
+    &quot;bundled_path&quot;: &quot;sources/KEDDEH_BRAINK_VOLUME_OF_VOLUMES_ORCHESTRATOR_R2.html&quot;
+  },
+  &quot;library_dna&quot;: {
+    &quot;source_name&quot;: &quot;KEDDEH_BRAINK_LIBRARY_DNA_EVOLUTION_R1.html&quot;,
+    &quot;bytes&quot;: 766963,
+    &quot;sha256&quot;: &quot;3dbd9009b34c41f88e1349e9faec3d786f93f6ce79e974da07f3c2036b4c650e&quot;,
+    &quot;bundled_path&quot;: null,
+    &quot;compact_derivative&quot;: &quot;sources/LIBRARY_DNA_CONTINUITY_BINDING_R1.json&quot;
+  }
+}</pre></section>
+</div></main></body></html>
