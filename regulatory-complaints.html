@@ -108,7 +108,7 @@
 .__font_geist_mono_1diim1n { font-family: 'Geist Mono', sans-serif; }
 
 .__variable_geist_mono_1diim1n { --font-geist-mono: 'Geist Mono', sans-serif; }
-</style><title>CasePath | Lawyer-ready legal preparation</title><meta name="description" content="Structure your story, evidence and questions into a professional preparation package for review by a relevant lawyer."><meta name="codex-preview" content="development"><meta name="viewport" content="width=device-width, initial-scale=1">
+</style><title>Council, Ombudsman & Regulator Investigation Preparation | CasePath</title><meta name="description" content="Structured preparation for government regulatory investigations, council compliance notices, and ombudsman complaints across Australia. Preserve your source facts and evidence."><meta name="codex-preview" content="development"><meta name="viewport" content="width=device-width, initial-scale=1">
 <style id="casepath-copy-refinement-v7">
 .hero-lead{max-width:760px}
 .function-grid article:nth-child(8){position:relative}
@@ -529,7 +529,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .backup-label{cursor:pointer}.text-button.danger{color:#7b3934}.sr-only-input{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 @media(max-width:640px){.draft-controls{align-items:flex-start;flex-direction:column;gap:10px}}
 </style>
-<link rel="canonical" href="https://casepath.com.au/prepare.html">
+<link rel="canonical" href="https://casepath.com.au/regulatory-complaints.html">
 </head><body class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"><main><header class="site-header"><a class="brand" href="#top" aria-label="CasePath home"><span class="brand-mark">CP</span><span><strong>CasePath</strong><small>Legal preparation</small></span></a><nav aria-label="Main navigation"><a href="#functions">What you need</a><a href="#method">How it works</a><a href="#builder">Prepare my account</a><a href="#packages">Packages</a></nav><a class="header-cta" href="#builder">Start my preparation <span>→</span></a></header>
 <div class="situations-nav-bar" id="situations-bar" style="background: #102d28; padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.1);">
   <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
@@ -1206,7 +1206,7 @@ Templates.register({
       if(s.type==="gaps")return `<section><h2>${esc(s.title)}</h2><ul>${s.body.map(x=>`<li><b>${esc(x.label)}:</b> ${esc(x.question)}<div class="reason">${esc(x.nextAction)}</div></li>`).join("")}</ul></section>`;
       return "";
     }).join("");
-    return `<!doctype html><html><head><meta charset="utf-8"><title>${esc(d.title)} ${esc(d.matter.matterId)}</title><style>${baseDocumentCSS}</style><link rel="canonical" href="https://casepath.com.au/prepare.html">
+    return `<!doctype html><html><head><meta charset="utf-8"><title>Council, Ombudsman & Regulator Investigation Preparation | CasePath</title><style>${baseDocumentCSS}</style><link rel="canonical" href="https://casepath.com.au/regulatory-complaints.html">
 </head><body><h1>${esc(d.title)}</h1><p><b>Matter:</b> ${esc(d.matter.matterId)}</p><p><small>Generated locally through the CasePath skill and template pipeline. This preparation record does not itself determine liability, guilt, admissibility or outcome.</small></p>${sec}</body></html>`;
   }
 });
@@ -1222,7 +1222,7 @@ Templates.register({
     requests:results.CORRESPONDENCE_REQUEST_DERIVER,
     addressee:source.actorType==="police"?"Relevant police / prosecution disclosure or records contact":"Relevant organisation / authority"
   }),
-  render:(d)=>`<!doctype html><html><head><meta charset="utf-8"><title>CasePath Accountability Correspondence ${esc(d.matter.matterId)}</title><style>${baseDocumentCSS}</style><link rel="canonical" href="https://casepath.com.au/prepare.html">
+  render:(d)=>`<!doctype html><html><head><meta charset="utf-8"><title>Council, Ombudsman & Regulator Investigation Preparation | CasePath</title><style>${baseDocumentCSS}</style><link rel="canonical" href="https://casepath.com.au/regulatory-complaints.html">
 </head><body>
     <p>${new Date().toLocaleDateString("en-AU")}</p>
     <p><b>To:</b> ${esc(d.addressee)}</p>
@@ -1243,7 +1243,7 @@ Templates.register({
   output:{mime:"text/html",suffix:"Matter_Snapshot.html"},
   skills:["MATTER_MODEL_BUILDER"],
   buildModel:({results})=>({title:"CasePath Matter Snapshot",matter:results.MATTER_MODEL_BUILDER}),
-  render:(d)=>`<!doctype html><html><head><meta charset="utf-8"><title>${esc(d.title)}</title><style>${baseDocumentCSS}</style>
+  render:(d)=>`<!doctype html><html><head><meta charset="utf-8"><title>Council, Ombudsman & Regulator Investigation Preparation | CasePath</title><style>${baseDocumentCSS}</style>
 <style id="casepath-market-workspace-v13">
 /* Market-derived professional-service workspace: not a dashboard, not OS telemetry. */
 .market-workspace{
@@ -1376,7 +1376,7 @@ Templates.register({
 }
 </style>
 
-<link rel="canonical" href="https://casepath.com.au/prepare.html">
+<link rel="canonical" href="https://casepath.com.au/regulatory-complaints.html">
 </head><body><h1>${esc(d.title)}</h1><p><b>Matter:</b> ${esc(d.matter.matterId)}</p><h2>Formalised summary</h2><p>${esc(d.matter.formalSummary)}</p><h2>Current unresolved questions</h2><ul>${d.matter.missingLinks.slice(0,8).map(x=>`<li>${esc(x.question)}</li>`).join("")}</ul></body></html>`
 });
 
@@ -2042,6 +2042,13 @@ function selectSituation(key) {
     window.CasePath.State.source.actorType = cfg.actor;
   }
 }
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  selectSituation('regulatory');
+});
 </script>
 
 </body>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="casepath-build" content="20260913tricky2">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="index, follow">
+<meta name="description" content="2-minute interactive Case &amp; Dispute Readiness Assessment. Identify critical evidentiary gaps, calculate your statutory urgency score, and generate your action plan." />
+<link rel="canonical" href="https://casepath.com.au/assessment.html">
+<title>Case Readiness &amp; Dispute Strength Assessment — CasePath</title>
+<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css?v=20260913tricky2">
+<link rel="stylesheet" href="/assets/css/casepath-shell.css?v=20260913tricky2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cp-brand: #173f3a;
+  --cp-brand-dark: #0f2b27;
+  --cp-gold: #b58d3d;
+  --cp-gold-light: #dfb96c;
+  --cp-warm-bg: #f8f6f0;
+  --cp-border: #e2ddd3;
+  --cp-text: #2c3531;
+  --cp-muted: #5e6b66;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #fff;
+  color: var(--cp-text);
+  line-height: 1.6;
+}
+.carrier-bar {
+  background: #0b1c19;
+  border-bottom: 1px solid #1c3631;
+  padding: 6px 24px;
+  font-size: 11px;
+  font-family: ui-monospace, monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7d9691;
+}
+.carrier-bar a { color: #a9c1bd; text-decoration: none; margin-left: 16px; }
+.carrier-bar a:hover { color: #fff; }
+.carrier-bar a.active { color: var(--cp-gold-light); font-weight: bold; }
+
+header.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--cp-border);
+  padding: 16px 24px;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cp-brand);
+  text-decoration: none;
+}
+nav.main-nav a {
+  color: var(--cp-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 24px;
+}
+nav.main-nav a:hover, nav.main-nav a.active { color: var(--cp-brand); }
+.btn-cta {
+  background: var(--cp-brand);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.hero {
+  background: var(--cp-warm-bg);
+  padding: 60px 24px 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--cp-border);
+}
+.hero-tag {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cp-gold);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--cp-brand-dark);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.hero p {
+  font-size: 17px;
+  color: var(--cp-muted);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.assess-wrap {
+  max-width: 860px;
+  margin: -24px auto 80px auto;
+  background: #fff;
+  border: 1px solid var(--cp-border);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(23,63,58,0.06);
+}
+.step-heading {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cp-gold);
+  margin-bottom: 8px;
+}
+.question-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cp-brand-dark);
+  margin-bottom: 16px;
+}
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.opt-card {
+  border: 1px solid var(--cp-border);
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.2s;
+}
+.opt-card:hover { border-color: var(--cp-brand); background: #faf8f5; }
+.opt-card.selected { border-color: var(--cp-brand); background: #f0f6f4; border-width: 2px; }
+.opt-radio { margin-top: 4px; }
+.opt-label { font-weight: 600; font-size: 15px; color: var(--cp-brand-dark); }
+.opt-desc { font-size: 13px; color: var(--cp-muted); margin-top: 2px; }
+
+.result-card {
+  display: none;
+  background: var(--cp-warm-bg);
+  border: 1px solid var(--cp-border);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  margin-top: 24px;
+}
+.score-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--cp-brand);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+.score-circle span.num { font-size: 32px; font-weight: 800; line-height: 1; }
+.score-circle span.lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+footer.site-footer {
+  background: var(--cp-brand-dark);
+  color: #e5edea;
+  padding: 60px 24px 30px;
+  border-top: 1px solid #1d3d37;
+  font-size: 13px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+@media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; } }
+.footer-inner h4 {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-gold-light);
+  margin-bottom: 16px;
+}
+.footer-inner ul { list-style: none; }
+.footer-inner ul li { margin-bottom: 8px; }
+.footer-inner a { color: #c4d7d3; text-decoration: none; }
+.footer-inner a:hover { color: #fff; }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #1d3d37;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #8fa8a2;
+}
+</style>
+</head>
+<body>
+
+  <!-- Unified Sovereign Carrier Mesh Bar -->
+  <div class="carrier-bar">
+    <div>SOVEREIGN CARRIER MESH // THE LAYNA COMPANY PTY LIMITED</div>
+    <div>
+      <a href="https://casepath.com.au" class="active">CasePath (Prep)</a>
+      <a href="https://claimpath.ai">ClaimPath (Claims)</a>
+      <a href="https://braink.com.au">BrainK (AI Substrate)</a>
+      <a href="https://keddeh-systems.com">Keddeh Systems (Mesh)</a>
+      <a href="https://keddeh.com">Keddeh (Holding)</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/index.html" class="brand-title">CasePath</a>
+      <nav class="main-nav">
+        <a href="/index.html">Situations</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/compare.html">Cost Comparison</a>
+        <a href="/assessment.html" class="active">Readiness Check</a>
+        <a href="/glossary.html">Glossary</a>
+      </nav>
+      <a href="/index.html?mode=prepare" class="btn-cta">Start Preparation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-tag">EVIDENTIARY DIAGNOSTIC</div>
+      <h1>2-Minute Case &amp; Dispute Readiness Assessment</h1>
+      <p>
+        Answer 4 questions about your situation. We calculate your evidence strength, identify critical limitation risks, and give you an immediate preparation roadmap.
+      </p>
+    </section>
+
+    <div class="assess-wrap">
+      <div id="quiz-container">
+        <!-- Q1 -->
+        <div class="step-heading">Question 1 of 4</div>
+        <div class="question-title">What category does your tricky situation fall under?</div>
+        <div class="options-grid">
+          <label class="opt-card">
+            <input type="radio" name="q1" value="workplace" class="opt-radio" checked>
+            <div>
+              <div class="opt-label">Workplace or Employment Dispute</div>
+              <div class="opt-desc">Dismissal, underpayment, sham contracting, PIP or performance bullying (Fair Work Ombudsman / Commission).</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q1" value="police" class="opt-radio">
+            <div>
+              <div class="opt-label">Police Encounter or Regulatory Inquiry</div>
+              <div class="opt-desc">Notice to interview, search warrant, ASIC / ATO / ACCC investigation, LECC / IBAC complaint.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q1" value="tenancy" class="opt-radio">
+            <div>
+              <div class="opt-label">Tenancy Eviction or Residential Dispute</div>
+              <div class="opt-desc">Notice to vacate, bond withholding, urgent repair breach, tribunal hearing (NCAT, VCAT, QCAT).</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q1" value="contracts" class="opt-radio">
+            <div>
+              <div class="opt-label">Commercial Contracts or Debt Recovery</div>
+              <div class="opt-desc">Unpaid invoices, service breach, partnership deadlock, contractor dispute.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q1" value="personal" class="opt-radio">
+            <div>
+              <div class="opt-label">Personal or Domestic Transition</div>
+              <div class="opt-desc">De facto / separation balance sheet, sensitive communication record, estate disagreement.</div>
+            </div>
+          </label>
+        </div>
+
+        <!-- Q2 -->
+        <div class="step-heading">Question 2 of 4</div>
+        <div class="question-title">How intact is your documentary evidence?</div>
+        <div class="options-grid">
+          <label class="opt-card">
+            <input type="radio" name="q2" value="30" class="opt-radio" checked>
+            <div>
+              <div class="opt-label">Comprehensive &amp; Date-Stamped</div>
+              <div class="opt-desc">I have signed agreements, email chains, payment receipts, and text exports in chronological order.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q2" value="15" class="opt-radio">
+            <div>
+              <div class="opt-label">Partial / Disorganized</div>
+              <div class="opt-desc">I have several key messages and bank records, but they are scattered across different apps and folders.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q2" value="5" class="opt-radio">
+            <div>
+              <div class="opt-label">Verbal / Minimal Written Trace</div>
+              <div class="opt-desc">Most discussions happened verbally or in phone calls; I have very few written documents.</div>
+            </div>
+          </label>
+        </div>
+
+        <!-- Q3 -->
+        <div class="step-heading">Question 3 of 4</div>
+        <div class="question-title">What is your statutory urgency &amp; timeline?</div>
+        <div class="options-grid">
+          <label class="opt-card">
+            <input type="radio" name="q3" value="urgent" class="opt-radio">
+            <div>
+              <div class="opt-label">Immediate Statutory Deadline (&lt; 21 Days)</div>
+              <div class="opt-desc">Fair Work unfair dismissal (21d limitation), upcoming tribunal hearing date, or police notice.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q3" value="moderate" class="opt-radio" checked>
+            <div>
+              <div class="opt-label">Active Dispute (Within Last 3 Months)</div>
+              <div class="opt-desc">Matter is escalating; opposing party has made formal demands or threatened legal action.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q3" value="early" class="opt-radio">
+            <div>
+              <div class="opt-label">Early Stage / Pre-emptive</div>
+              <div class="opt-desc">Anticipating a potential conflict; securing evidence before relations deteriorate further.</div>
+            </div>
+          </label>
+        </div>
+
+        <!-- Q4 -->
+        <div class="step-heading">Question 4 of 4</div>
+        <div class="question-title">What is your primary strategic objective?</div>
+        <div class="options-grid">
+          <label class="opt-card">
+            <input type="radio" name="q4" value="settle" class="opt-radio" checked>
+            <div>
+              <div class="opt-label">Fast Settlement &amp; Formal Closure</div>
+              <div class="opt-desc">A well-reasoned statement of facts to compel negotiation without expensive litigation.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q4" value="lawyer" class="opt-radio">
+            <div>
+              <div class="opt-label">Professional Lawyer Handover</div>
+              <div class="opt-desc">Bring a clear, chronologically indexed brief to an Australian solicitor to minimize billable intake.</div>
+            </div>
+          </label>
+          <label class="opt-card">
+            <input type="radio" name="q4" value="tribunal" class="opt-radio">
+            <div>
+              <div class="opt-label">Self-Represent at Tribunal (NCAT / VCAT / FWC)</div>
+              <div class="opt-desc">Present structured evidence directly to a member or registrar without incurring legal fees.</div>
+            </div>
+          </label>
+        </div>
+
+        <button onclick="calculateReadiness()" class="btn-cta" style="width:100%; padding:14px; font-size:16px; cursor:pointer;">
+          Calculate My Case Readiness Score
+        </button>
+      </div>
+
+      <!-- Result Card -->
+      <div id="result-container" class="result-card">
+        <div class="score-circle">
+          <span class="num" id="score-num">78</span>
+          <span class="lbl">READINESS</span>
+        </div>
+        <h2 style="font-size:24px; font-weight:700; color:var(--cp-brand-dark); margin-bottom:8px;" id="score-headline">
+          Strong Evidentiary Foundation &mdash; Action Required
+        </h2>
+        <p style="color:var(--cp-muted); max-width:600px; margin:0 auto 24px;" id="score-summary">
+          You have substantial written evidence, but missing timeline cohesion poses billable risk.
+        </p>
+        <div style="display:flex; justify-content:center; gap:16px;">
+          <a id="result-cta-btn" href="/index.html?mode=prepare" class="btn-cta" style="padding:12px 24px;">
+            Begin Structured Preparation ($149 Pass)
+          </a>
+          <button onclick="location.reload()" style="background:none; border:1px solid var(--cp-border); padding:12px 20px; border-radius:6px; font-weight:600; cursor:pointer;">
+            Retake Assessment
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-size:18px; font-weight:700; color:#fff; margin-bottom:12px;">CasePath</div>
+        <p style="color:#a4bdb7; line-height:1.6; max-width:320px;">
+          Structured preparation for tricky life situations. Turn chaos into reviewable, admissible records.
+        </p>
+        <p style="margin-top:16px; font-size:11px; color:#7e9c95;">
+          Operating Division of <strong>Keddeh systems</strong><br>
+          Parent Entity: <strong>THE LAYNA COMPANY PTY LIMITED</strong><br>
+          ABN: 79 691 036 236 &bull; ACN: 691 036 236<br>
+          Author: Aboudy Keddeh &lt;aboudy@keddeh.com&gt;
+        </p>
+      </div>
+      <div>
+        <h4>Situations</h4>
+        <ul>
+          <li><a href="/workplace-disputes.html">Workplace Disputes</a></li>
+          <li><a href="/police-encounters.html">Police Encounters</a></li>
+          <li><a href="/regulatory-complaints.html">Regulatory Complaints</a></li>
+          <li><a href="/tenancy-disputes.html">Tenancy Evictions</a></li>
+          <li><a href="/contracts-and-debts.html">Contracts &amp; Debts</a></li>
+          <li><a href="/personal-and-family.html">Personal &amp; Transitions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Calculators &amp; Tools</h4>
+        <ul>
+          <li><a href="/compare.html">Lawyer Cost Comparison</a></li>
+          <li><a href="/assessment.html">Readiness Diagnostic</a></li>
+          <li><a href="/pricing.html">Pricing Tiers</a></li>
+          <li><a href="/glossary.html">Legal Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sovereign Mesh</h4>
+        <ul>
+          <li><a href="https://claimpath.ai">ClaimPath</a></li>
+          <li><a href="https://braink.com.au">BrainK Substrate</a></li>
+          <li><a href="https://keddeh-systems.com">Keddeh Systems</a></li>
+          <li><a href="https://keddeh.com">Keddeh Family Office</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 THE LAYNA COMPANY PTY LIMITED. All rights reserved.</div>
+      <div>AUSTRALIAN SOVEREIGN ENTERPRISE INFRASTRUCTURE</div>
+    </div>
+  </footer>
+
+  <script>
+    function calculateReadiness() {
+      var q1 = document.querySelector('input[name="q1"]:checked').value;
+      var q2 = parseInt(document.querySelector('input[name="q2"]:checked').value, 10);
+      var q3 = document.querySelector('input[name="q3"]:checked').value;
+      var q4 = document.querySelector('input[name="q4"]:checked').value;
+
+      var baseScore = 45 + q2;
+      if (q3 === 'urgent') baseScore += 10;
+      else if (q3 === 'moderate') baseScore += 18;
+      else baseScore += 15;
+
+      if (q4 === 'lawyer') baseScore += 5;
+
+      if (baseScore > 95) baseScore = 95;
+
+      document.getElementById('quiz-container').style.display = 'none';
+      var res = document.getElementById('result-container');
+      res.style.display = 'block';
+
+      document.getElementById('score-num').innerText = baseScore;
+      document.getElementById('result-cta-btn').href = '/index.html?situation=' + q1 + '&mode=prepare';
+
+      if (q3 === 'urgent') {
+        document.getElementById('score-headline').innerText = 'Urgent Limitation Warning &mdash; Immediate Action Needed';
+        document.getElementById('score-summary').innerText = 'You flagged an urgent deadline (< 21 days). In Australia, statutory limitation bars (e.g. Fair Work 21-day unfair dismissal) are strictly enforced. Lock your chronology immediately.';
+      } else {
+        document.getElementById('score-headline').innerText = 'Readiness Score: ' + baseScore + '% &mdash; Solid Base for Preparation';
+        document.getElementById('score-summary').innerText = 'Your evidence provides a viable foundation, but unindexed records cost $450–$750/hr with a lawyer. Build your structured CasePath brief today.';
+      }
+    }
+  </script>
+</body>
+</html>

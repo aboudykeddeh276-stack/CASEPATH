@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="casepath-build" content="20260913tricky2">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Compare CasePath preparation vs traditional lawyer hourly rates. See how structured legal preparation saves $2,000 to $4,500 in wasted billable hours across tricky life situations." />
+<link rel="canonical" href="https://casepath.com.au/compare.html">
+<title>CasePath vs Traditional Lawyers — Cost Comparison &amp; Savings ROI</title>
+<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css?v=20260913tricky2">
+<link rel="stylesheet" href="/assets/css/casepath-shell.css?v=20260913tricky2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cp-brand: #173f3a;
+  --cp-brand-dark: #0f2b27;
+  --cp-gold: #b58d3d;
+  --cp-gold-light: #dfb96c;
+  --cp-warm-bg: #f8f6f0;
+  --cp-border: #e2ddd3;
+  --cp-text: #2c3531;
+  --cp-muted: #5e6b66;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #fff;
+  color: var(--cp-text);
+  line-height: 1.6;
+}
+/* Unified Sovereign Carrier Mesh Bar */
+.carrier-bar {
+  background: #0b1c19;
+  border-bottom: 1px solid #1c3631;
+  padding: 6px 24px;
+  font-size: 11px;
+  font-family: ui-monospace, monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7d9691;
+}
+.carrier-bar a { color: #a9c1bd; text-decoration: none; margin-left: 16px; }
+.carrier-bar a:hover { color: #fff; }
+.carrier-bar a.active { color: var(--cp-gold-light); font-weight: bold; }
+
+header.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--cp-border);
+  padding: 16px 24px;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cp-brand);
+  text-decoration: none;
+}
+nav.main-nav a {
+  color: var(--cp-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 24px;
+}
+nav.main-nav a:hover, nav.main-nav a.active { color: var(--cp-brand); }
+.btn-cta {
+  background: var(--cp-brand);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+.btn-cta:hover { background: var(--cp-brand-dark); }
+
+.hero {
+  background: var(--cp-warm-bg);
+  padding: 60px 24px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--cp-border);
+}
+.hero-tag {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cp-gold);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--cp-brand-dark);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.hero p {
+  font-size: 18px;
+  color: var(--cp-muted);
+  max-width: 760px;
+  margin: 0 auto 32px auto;
+}
+
+/* Calculator Card */
+.calc-container {
+  max-width: 900px;
+  margin: -32px auto 60px auto;
+  background: #fff;
+  border: 1px solid var(--cp-border);
+  border-radius: 12px;
+  padding: 36px;
+  box-shadow: 0 10px 30px rgba(23,63,58,0.06);
+}
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+@media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
+.calc-inputs label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-brand-dark);
+  margin-bottom: 6px;
+}
+.calc-inputs select, .calc-inputs input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--cp-border);
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.calc-results {
+  background: var(--cp-warm-bg);
+  border: 1px solid var(--cp-border);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+.calc-savings-num {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--cp-brand);
+  line-height: 1;
+  margin: 12px 0 6px;
+}
+.calc-savings-sub {
+  font-size: 13px;
+  color: var(--cp-muted);
+}
+
+/* Comparison Table */
+.table-section {
+  max-width: 1100px;
+  margin: 0 auto 80px auto;
+  padding: 0 24px;
+}
+.table-title {
+  text-align: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--cp-brand-dark);
+  margin-bottom: 24px;
+}
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--cp-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.comp-table th, .comp-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--cp-border);
+  text-align: left;
+  font-size: 14px;
+}
+.comp-table th {
+  background: var(--cp-brand-dark);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.comp-table th.col-highlight {
+  background: var(--cp-brand);
+  color: var(--cp-gold-light);
+}
+.comp-table td.col-highlight {
+  background: #f1f6f4;
+  font-weight: 600;
+  color: var(--cp-brand-dark);
+}
+.badge-check { color: #15803d; font-weight: bold; }
+.badge-cross { color: #b91c1c; font-weight: bold; }
+
+footer.site-footer {
+  background: var(--cp-brand-dark);
+  color: #e5edea;
+  padding: 60px 24px 30px;
+  border-top: 1px solid #1d3d37;
+  font-size: 13px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+@media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; } }
+.footer-inner h4 {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-gold-light);
+  margin-bottom: 16px;
+}
+.footer-inner ul { list-style: none; }
+.footer-inner ul li { margin-bottom: 8px; }
+.footer-inner a { color: #c4d7d3; text-decoration: none; }
+.footer-inner a:hover { color: #fff; }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #1d3d37;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #8fa8a2;
+}
+</style>
+</head>
+<body>
+
+  <!-- Unified Sovereign Carrier Mesh Bar -->
+  <div class="carrier-bar">
+    <div>SOVEREIGN CARRIER MESH // THE LAYNA COMPANY PTY LIMITED</div>
+    <div>
+      <a href="https://casepath.com.au" class="active">CasePath (Prep)</a>
+      <a href="https://claimpath.ai">ClaimPath (Claims)</a>
+      <a href="https://braink.com.au">BrainK (AI Substrate)</a>
+      <a href="https://keddeh-systems.com">Keddeh Systems (Mesh)</a>
+      <a href="https://keddeh.com">Keddeh (Holding)</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/index.html" class="brand-title">CasePath</a>
+      <nav class="main-nav">
+        <a href="/index.html">Situations</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/compare.html" class="active">Cost Comparison</a>
+        <a href="/assessment.html">Readiness Check</a>
+        <a href="/glossary.html">Glossary</a>
+      </nav>
+      <a href="/index.html?mode=prepare" class="btn-cta">Start Preparation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-tag">COST BENEFIT &amp; RETURN ON INVESTMENT</div>
+      <h1>Lawyer Hourly Rates vs. Structured Preparation</h1>
+      <p>
+        Australian lawyers bill between $450 and $750 per hour. When you arrive with an unindexed shoe-box of emails, you pay thousands just for them to understand what happened.
+      </p>
+    </section>
+
+    <!-- ROI Calculator -->
+    <div class="calc-container">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:16px; color:var(--cp-brand-dark);">Estimate Your Legal Fee Savings</h3>
+          <label>Dispute Category</label>
+          <select id="calc-cat" onchange="updateSavings()">
+            <option value="workplace" selected>Workplace Dismissal / Underpayment (Fair Work)</option>
+            <option value="police">Police Encounter / Regulatory Investigation</option>
+            <option value="tenancy">Tenancy Eviction / Bond Dispute (NCAT/VCAT/QCAT)</option>
+            <option value="contracts">Commercial Contract Breach / Debt Recovery</option>
+            <option value="personal">Personal Transitions / Property Settlement</option>
+          </select>
+
+          <label>Estimated Lawyer Hourly Rate ($)</label>
+          <select id="calc-rate" onchange="updateSavings()">
+            <option value="450">$450/hr (Junior Associate / Regional)</option>
+            <option value="550" selected>$550/hr (Standard Commercial / Employment)</option>
+            <option value="650">$650/hr (Senior Associate / Specialist)</option>
+            <option value="750">$750/hr (Principal / Partner)</option>
+          </select>
+
+          <label>Volume of Evidence (Emails, Messages, Receipts)</label>
+          <select id="calc-volume" onchange="updateSavings()">
+            <option value="small">Modest (Under 50 documents / 2-3 hours intake saved)</option>
+            <option value="medium" selected>Substantial (50–200 documents / 5-7 hours intake saved)</option>
+            <option value="heavy">Extensive (200+ documents / 8-12 hours intake saved)</option>
+          </select>
+        </div>
+
+        <div class="calc-results">
+          <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--cp-gold);">Estimated Client Savings</div>
+          <div class="calc-savings-num" id="savings-display">$3,150</div>
+          <div class="calc-savings-sub" id="savings-detail">Based on 6 billable hours saved @ $550/hr minus $149 CasePath Pass.</div>
+          <div style="margin-top:24px;">
+            <a href="/index.html?mode=prepare" class="btn-cta" style="display:block; padding:12px;">Prepare Your Matter ($149 Pass)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <section class="table-section">
+      <h2 class="table-title">Side-by-Side Capability Matrix</h2>
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th style="width:30%;">Dimension</th>
+            <th class="col-highlight" style="width:25%;">CasePath Preparation</th>
+            <th style="width:25%;">Unassisted Lawyer Hire</th>
+            <th style="width:20%;">Self-Representation (Raw)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Initial Intake Cost</strong></td>
+            <td class="col-highlight"><strong>$0 Starter / $149 Pass</strong></td>
+            <td>$450 &ndash; $750/hr from minute one</td>
+            <td>$0 (Zero structure)</td>
+          </tr>
+          <tr>
+            <td><strong>Chronology Generation</strong></td>
+            <td class="col-highlight"><span class="badge-check">✓</span> Automated, date-locked timeline</td>
+            <td>Billed at hourly rate (approx. 3-6 hrs)</td>
+            <td><span class="badge-cross">✗</span> Disorganized memory recall</td>
+          </tr>
+          <tr>
+            <td><strong>Statutory Limitation Warning</strong></td>
+            <td class="col-highlight"><span class="badge-check">✓</span> Built-in 21d / 28d alert flags</td>
+            <td>Lawyer identifies (if consulted in time)</td>
+            <td><span class="badge-cross">✗</span> Severe risk of out-of-time bar</td>
+          </tr>
+          <tr>
+            <td><strong>Handover Quality to Lawyer</strong></td>
+            <td class="col-highlight"><span class="badge-check">✓</span> Indexed Matter Handover Brief</td>
+            <td>None &mdash; client dumps raw files</td>
+            <td><span class="badge-cross">✗</span> Submissions rejected by tribunal</td>
+          </tr>
+          <tr>
+            <td><strong>Predictable Outlay</strong></td>
+            <td class="col-highlight"><span class="badge-check">✓</span> 100% Fixed One-Off Fee</td>
+            <td><span class="badge-cross">✗</span> Uncapped open retainer bills</td>
+            <td>Free, but high loss risk</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-size:18px; font-weight:700; color:#fff; margin-bottom:12px;">CasePath</div>
+        <p style="color:#a4bdb7; line-height:1.6; max-width:320px;">
+          Structured preparation for tricky life situations. Turn chaos into reviewable, admissible records.
+        </p>
+        <p style="margin-top:16px; font-size:11px; color:#7e9c95;">
+          Operating Division of <strong>Keddeh systems</strong><br>
+          Parent Entity: <strong>THE LAYNA COMPANY PTY LIMITED</strong><br>
+          ABN: 79 691 036 236 &bull; ACN: 691 036 236<br>
+          Author: Aboudy Keddeh &lt;aboudy@keddeh.com&gt;
+        </p>
+      </div>
+      <div>
+        <h4>Situations</h4>
+        <ul>
+          <li><a href="/workplace-disputes.html">Workplace Disputes</a></li>
+          <li><a href="/police-encounters.html">Police Encounters</a></li>
+          <li><a href="/regulatory-complaints.html">Regulatory Complaints</a></li>
+          <li><a href="/tenancy-disputes.html">Tenancy Evictions</a></li>
+          <li><a href="/contracts-and-debts.html">Contracts &amp; Debts</a></li>
+          <li><a href="/personal-and-family.html">Personal &amp; Transitions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Calculators &amp; Tools</h4>
+        <ul>
+          <li><a href="/compare.html">Lawyer Cost Comparison</a></li>
+          <li><a href="/assessment.html">Readiness Diagnostic</a></li>
+          <li><a href="/pricing.html">Pricing Tiers</a></li>
+          <li><a href="/glossary.html">Legal Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sovereign Mesh</h4>
+        <ul>
+          <li><a href="https://claimpath.ai">ClaimPath</a></li>
+          <li><a href="https://braink.com.au">BrainK Substrate</a></li>
+          <li><a href="https://keddeh-systems.com">Keddeh Systems</a></li>
+          <li><a href="https://keddeh.com">Keddeh Family Office</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 THE LAYNA COMPANY PTY LIMITED. All rights reserved.</div>
+      <div>AUSTRALIAN SOVEREIGN ENTERPRISE INFRASTRUCTURE</div>
+    </div>
+  </footer>
+
+  <script>
+    function updateSavings() {
+      var rate = parseInt(document.getElementById('calc-rate').value, 10);
+      var vol = document.getElementById('calc-volume').value;
+      var hours = vol === 'small' ? 3 : (vol === 'medium' ? 6 : 10);
+      var grossSavings = rate * hours;
+      var netSavings = grossSavings - 149;
+      document.getElementById('savings-display').innerText = '$' + netSavings.toLocaleString();
+      document.getElementById('savings-detail').innerText = 'Based on ' + hours + ' billable hours saved @ $' + rate + '/hr minus $149 CasePath Pass.';
+    }
+  </script>
+</body>
+</html>
