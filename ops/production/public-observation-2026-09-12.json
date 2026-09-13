@@ -1,0 +1,25 @@
+{
+  "schema": "casepath.public-observation.v1",
+  "observed_at": "2026-09-12T13:59:00Z",
+  "target": "https://casepath.com.au/",
+  "observation_class": "EXTERNAL_PUBLIC_READABILITY",
+  "routes": {
+    "/": "OBSERVED",
+    "/ai-use-disclosure.html": "OBSERVED",
+    "/how-it-works.html": "OBSERVED",
+    "/document-centre.html": "OBSERVED",
+    "/contact.html": "OBSERVED",
+    "/app/workspace/index.html": "OBSERVED",
+    "/pricing.html": "OBSERVED"
+  },
+  "observed_characteristics": [
+    "public CasePath navigation rendered",
+    "story/preparation product surface rendered",
+    "account/workspace surface rendered",
+    "document centre rendered",
+    "contact/support surface rendered",
+    "pricing surface rendered"
+  ],
+  "important_boundary": "This observation proves public readability of the observed projection only. It does not prove that the current repository revision or the v16 canonical artifact is the bytes being served, nor does it prove production mutation authority or rollback.",
+  "promotion_state": "NOT_VERIFIED_PRODUCTION_DEPLOYMENT"
+}

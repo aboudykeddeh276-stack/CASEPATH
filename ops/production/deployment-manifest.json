@@ -1,0 +1,52 @@
+{
+  "system": "CasePath",
+  "internal_identity": "app://casepath",
+  "repository": "aboudykeddeh276-stack/CASEPATH",
+  "source_revision": "991ac191839aab2f8561be7084799fb171934e8b",
+  "source_revision_role": "deployment-control-head",
+  "canonical_product_artifact": {
+    "release": "CasePath_Adaptive_Intake_Master_v16.html",
+    "sha256": "fbc20b42aad01cac2f003ed1ff11ecffe62a3a3e23332327e3cc16f52800c90d",
+    "bytes": 207990,
+    "role": "adaptive story-first public product surface"
+  },
+  "runtime_artifact": {
+    "release": "CasePath_Deployable_Product_Master_v15.html",
+    "sha256": "e209c4ddc20f6a16a6394a04002e55c7e3f7f7c6b0abb00f93217e66fbae358d",
+    "bytes": 193812,
+    "role": "deployable product/runtime master"
+  },
+  "public_target": "https://casepath.com.au/",
+  "deployment_claim_state": "PUBLIC_LIVE_OBSERVED_RECONCILIATION_PENDING",
+  "deployment_actuator": "UNRESOLVED_IN_CONNECTED_CHAT_TOOLING",
+  "product_contract": [
+    "story-first intake",
+    "structured follow-up only for material gaps",
+    "free matter summary and service availability before paid selection",
+    "payment must be confirmed before paid entitlement is promoted",
+    "purchased outputs must be delivered before post-output expansion",
+    "professional legal judgment remains outside the software boundary"
+  ],
+  "required_chain": [
+    "source revision",
+    "build or materialisation",
+    "deployment actuator",
+    "origin or edge mutation",
+    "deployment receipt",
+    "outside-in readback",
+    "source/readback reconciliation",
+    "rollback route"
+  ],
+  "promotion_rule": "Do not promote to VERIFIED_PRODUCTION_DEPLOYMENT unless the deployment actuator reports success and the externally read-back target corresponds to the intended source/materialisation.",
+  "current_observation": {
+    "public_url_is_observable": true,
+    "public_content_is_observable": true,
+    "v16_artifact_verified_locally": true,
+    "v16_javascript_syntax_verified_locally": true,
+    "source_to_public_byte_identity_proven_here": false,
+    "deployment_actuator_proven_here": false,
+    "rollback_proven_here": false,
+    "github_public_readback_workflow": "FAILED_RUN_RETAINED_AS_OPEN_EVIDENCE"
+  },
+  "fail_closed": true
+}
