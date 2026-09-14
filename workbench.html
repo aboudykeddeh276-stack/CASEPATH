@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="casepath-build" content="20260914-beta-unlocked">
+  <title>CasePath &mdash; Sovereign Dispute Preparation Workbench (Beta Unlocked)</title>
+  <meta name="description" content="Unlocked Beta Workbench for structuring tricky life disputes: chronology, evidence index, statement of facts, and admissible brief generator.">
+  <meta name="author" content="Aboudy Keddeh <aboudy@keddeh.com> // Keddeh Systems">
+  <meta name="licensee" content="THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS (ABN 79 691 036 236)">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/casepath-shell.css">
+  <style>
+    :root {
+      --cp-brand: #173f3a;
+      --cp-brand-dark: #0f2b27;
+      --cp-gold: #b58d3d;
+      --cp-gold-light: #dfb96c;
+      --cp-warm-bg: #f8f6f0;
+      --cp-border: #e2ddd3;
+      --cp-text: #2c3531;
+      --cp-muted: #5e6b66;
+      --cp-emerald: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fdfbf7; color: var(--cp-text); line-height: 1.6; }
+    .carrier-bar { background: #0b1c19; border-bottom: 1px solid #1c3631; padding: 6px 24px; font-size: 11px; font-family: ui-monospace, monospace; display: flex; justify-content: space-between; align-items: center; color: #7d9691; }
+    .carrier-bar a { color: #a9c1bd; text-decoration: none; margin-left: 16px; }
+    .carrier-bar a:hover { color: #fff; }
+    .carrier-bar a.active { color: var(--cp-gold-light); font-weight: bold; }
+    
+    header.site-header { background: #fff; border-bottom: 1px solid var(--cp-border); padding: 14px 24px; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .brand-title { font-size: 24px; font-weight: 800; color: var(--cp-brand); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .badge-beta { background: rgba(181, 141, 61, 0.15); color: var(--cp-gold); border: 1px solid rgba(181, 141, 61, 0.3); font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; }
+    
+    .workbench-layout { max-width: 1300px; margin: 24px auto; padding: 0 20px; display: grid; grid-template-columns: 320px 1fr; gap: 24px; }
+    @media (max-width: 960px) { .workbench-layout { grid-template-columns: 1fr; } }
+    
+    .panel { background: #fff; border: 1px solid var(--cp-border); border-radius: 10px; padding: 24px; box-shadow: 0 4px 12px rgba(23,63,58,0.03); }
+    .panel h2 { font-size: 17px; font-weight: 700; color: var(--cp-brand-dark); margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+    
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--cp-muted); margin-bottom: 6px; }
+    .form-control { width: 100%; padding: 10px 12px; border: 1px solid var(--cp-border); border-radius: 6px; font-size: 14px; background: #fff; color: var(--cp-text); }
+    .form-control:focus { outline: none; border-color: var(--cp-brand); box-shadow: 0 0 0 3px rgba(23,63,58,0.1); }
+    
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; border: none; transition: all 0.2s; }
+    .btn-primary { background: var(--cp-brand); color: #fff; }
+    .btn-primary:hover { background: var(--cp-brand-dark); }
+    .btn-gold { background: var(--cp-gold); color: #fff; }
+    .btn-gold:hover { background: #9c772e; }
+    .btn-outline { background: transparent; border: 1px solid var(--cp-border); color: var(--cp-text); }
+    .btn-outline:hover { background: var(--cp-warm-bg); border-color: var(--cp-brand); }
+    
+    .timeline-list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+    .timeline-item { background: var(--cp-warm-bg); border: 1px solid var(--cp-border); border-radius: 8px; padding: 16px; position: relative; }
+    .timeline-date { font-size: 12px; font-weight: 800; color: var(--cp-gold); margin-bottom: 4px; font-family: monospace; }
+    .timeline-title { font-size: 15px; font-weight: 700; color: var(--cp-brand-dark); margin-bottom: 6px; }
+    .timeline-desc { font-size: 13px; color: var(--cp-text); line-height: 1.5; }
+    .timeline-evidence { margin-top: 8px; font-size: 11px; background: #fff; padding: 4px 8px; border-radius: 4px; border: 1px solid var(--cp-border); display: inline-block; color: var(--cp-muted); }
+    
+    .output-card { background: #111e1b; color: #e5edea; border-radius: 10px; padding: 24px; font-family: ui-monospace, monospace; font-size: 13px; line-height: 1.6; white-space: pre-wrap; max-height: 600px; overflow-y: auto; border: 1px solid #1f3b35; }
+    
+    footer.site-footer { background: var(--cp-brand-dark); color: #a4bdb7; padding: 40px 24px 20px; border-top: 1px solid #1c3631; font-size: 12px; margin-top: 60px; }
+    .footer-inner { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Real-Time Edge Publishing Topology & Invariant Status Bar -->
+  <aside class="top-status-bar" style="background:#000; border-bottom:1px solid #27272a; padding:8px 24px; font-family:ui-monospace,monospace; font-size:11px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; color:#a1a1aa;" aria-label="Sovereign Edge Ingress Status">
+    <div style="display:inline-flex; align-items:center; gap:6px;">
+      <span style="width:8px; height:8px; border-radius:50%; background:#38bdf8; box-shadow:0 0 8px #38bdf8; display:inline-block;"></span>
+      <span style="color:#f4f4f5;">EDGE INGRESS: <strong>casepath.com.au</strong> ↔ AS297014 ↔ Carrier Mesh (:8080) ↔ Origin (:8081)</span>
+    </div>
+    <div style="display:inline-flex; align-items:center; gap:6px;">
+      <span style="width:8px; height:8px; border-radius:50%; background:#10b981; box-shadow:0 0 8px #10b981; display:inline-block;"></span>
+      <span style="color:#f4f4f5;">INVARIANT LOCK: <strong>0.297014</strong> [LOCKED]</span>
+    </div>
+    <div style="display:inline-flex; align-items:center; gap:6px;">
+      <span style="width:8px; height:8px; border-radius:50%; background:#38bdf8; box-shadow:0 0 8px #38bdf8; display:inline-block;"></span>
+      <span>ToT CONSENSUS: <strong>2.97s OVERLAP</strong> [9 NODES ONLINE]</span>
+    </div>
+    <div style="display:inline-flex; align-items:center; gap:6px;">
+      <span style="width:8px; height:8px; border-radius:50%; background:#10b981; box-shadow:0 0 8px #10b981; display:inline-block;"></span>
+      <span>RADAR: <strong>59 / 60</strong> (R_B = 0.0)</span>
+    </div>
+  </aside>
+
+  <!-- Canonical Sovereign Carrier Fleet Navigation -->
+  <div class="carrier-bar" style="background:#0f1117; border-bottom:1px solid #1f2430; padding:8px 24px; font-size:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+    <div style="font-family:ui-monospace,monospace; color:#38bdf8; font-weight:700;">
+      SOVEREIGN CARRIER FLEET // THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS
+    </div>
+    <div style="display:flex; gap:12px; font-size:11px;">
+      <a href="/casepath/" class="active" style="color:#10b981; font-weight:700; text-decoration:none;">CasePath AU</a>
+      <a href="/casepath-uk/" style="color:#a1a1aa; text-decoration:none;">CasePath UK</a>
+      <a href="/claimpath/" style="color:#a1a1aa; text-decoration:none;">ClaimPath AI</a>
+      <a href="/claimpath-au/" style="color:#a1a1aa; text-decoration:none;">ClaimPath AU</a>
+      <a href="/braink/" style="color:#a1a1aa; text-decoration:none;">BrainK Substrate</a>
+      <a href="/keddeh-systems/" style="color:#a1a1aa; text-decoration:none;">Keddeh Systems</a>
+      <a href="/ksys-codesource/" style="color:#a1a1aa; text-decoration:none;">Ksys CodeSource</a>
+      <a href="/" style="color:#38bdf8; text-decoration:none;">Mesh Hub &rarr;</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand-title">
+        CasePath <span class="badge-beta">BETA WORKBENCH UNLOCKED</span>
+      </a>
+      <div style="display:flex; gap:12px;">
+        <button onclick="exportBrief()" class="btn btn-gold">
+          <span>Export Case Brief (Markdown)</span>
+        </button>
+        <button onclick="window.print()" class="btn btn-outline">
+          <span>Print / PDF Brief</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="workbench-layout">
+    <!-- Sidebar / Matter Setup -->
+    <aside>
+      <div class="panel">
+        <h2>1. Matter Identity</h2>
+        <div class="form-group">
+          <label for="matter-situation">Dispute Category</label>
+          <select id="matter-situation" class="form-control" onchange="updateCategoryGuidance()">
+            <option value="workplace">Workplace / Employment (FWC / FWO)</option>
+            <option value="police">Police Encounter / Regulatory Inquiry</option>
+            <option value="tenancy">Tenancy / Eviction (NCAT/VCAT/QCAT)</option>
+            <option value="contracts">Contracts & Commercial Debts</option>
+            <option value="personal">Personal & De Facto Transition</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="matter-title">Matter Reference / Title</label>
+          <input type="text" id="matter-title" class="form-control" placeholder="e.g. Smith vs Tech Pty Ltd" value="Matter: Primary Statement of Facts">
+        </div>
+        <div class="form-group">
+          <label for="matter-parties">Opposing Party</label>
+          <input type="text" id="matter-parties" class="form-control" placeholder="e.g. Apex Logistics Pty Ltd" value="Respondent / Opposing Party">
+        </div>
+        <div class="form-group">
+          <label for="matter-statute">Governing Statutory Framework</label>
+          <input type="text" id="matter-statute" class="form-control" readonly value="Fair Work Act 2009 (Cth) / National Employment Standards">
+        </div>
+        <div style="background:var(--cp-warm-bg); border:1px solid var(--cp-border); padding:12px; border-radius:6px; font-size:12px; color:var(--cp-muted);" id="matter-guidance">
+          <strong>Statutory Focus:</strong> 21-day limitation bar for unfair dismissal / general protections with dismissal. Chronological nexus is critical.
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:20px;">
+        <h2>2. Data Sovereign Storage</h2>
+        <p style="font-size:12px; color:var(--cp-muted); line-height:1.5;">
+          In compliance with <strong>ISO/IEC 27001</strong> and the <em>Privacy Act 1988 (Cth)</em>, this workbench executes 100% in-browser. No sensitive evidentiary notes are sent to third parties without local consent.
+        </p>
+        <div style="margin-top:12px; font-size:11px; font-family:monospace; color:var(--cp-emerald);">
+          &#9679; LOCAL STORAGE ACTIVE (Zero Leakage)
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace / Chronology & Brief Generator -->
+    <section>
+      <div class="panel">
+        <h2>
+          <span>3. Chronological Event & Evidence Intake</span>
+          <span style="font-size:12px; font-weight:normal; color:var(--cp-muted);" id="event-count">0 Events Recorded</span>
+        </h2>
+
+        <!-- Event Input Form -->
+        <div style="background:var(--cp-warm-bg); border:1px solid var(--cp-border); padding:18px; border-radius:8px; margin-bottom:20px;">
+          <div style="display:grid; grid-template-columns:160px 1fr; gap:12px; margin-bottom:12px;">
+            <div>
+              <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Event Date</label>
+              <input type="date" id="event-date" class="form-control">
+            </div>
+            <div>
+              <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Event Title / Incident</label>
+              <input type="text" id="event-title" class="form-control" placeholder="e.g. Formal Performance Meeting or Notice Received">
+            </div>
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Detailed Fact Summary (Contemporaneous Notes)</label>
+            <textarea id="event-desc" class="form-control" rows="2" placeholder="Describe exactly what was stated, who was present, and what occurred..."></textarea>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 140px; gap:12px; margin-bottom:14px;">
+            <div>
+              <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Supporting Evidence Document (Exhibit Reference)</label>
+              <input type="text" id="event-evidence" class="form-control" placeholder="e.g. Email_Chain_04March2026.pdf (Exhibit A)">
+            </div>
+            <div>
+              <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Evidence Type</label>
+              <select id="event-type" class="form-control">
+                <option value="Email / Message">Email / SMS</option>
+                <option value="Contract / Formal">Signed Document</option>
+                <option value="Bank / Invoice">Financial Record</option>
+                <option value="Audio / Video">Recording / Photo</option>
+                <option value="Diary Note">Contemporaneous Note</option>
+              </select>
+            </div>
+          </div>
+          <button onclick="addEvent()" class="btn btn-primary" style="width:100%;">
+            Add Event to Admissible Chronology
+          </button>
+        </div>
+
+        <!-- Rendered Chronology -->
+        <div id="timeline-container" class="timeline-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Generated Statement of Facts / Brief -->
+      <div class="panel" style="margin-top:24px;">
+        <h2>
+          <span>4. Live Generated Case Brief (Court & Solicitor Ready)</span>
+          <button onclick="copyBrief()" class="btn btn-outline" style="padding:6px 12px; font-size:12px;">Copy Text</button>
+        </h2>
+        <div id="brief-output" class="output-card">
+          Click 'Add Event to Admissible Chronology' above to compile your live case preparation brief...
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>CasePath Sovereign Legal Preparation Workbench</strong><br>
+        Statutory Parent: <strong>THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS</strong> (ABN 79 691 036 236) trading as <strong>KEDDEH SYSTEMS</strong><br>
+        Chief Architect & Sovereign Authority: <strong>Aboudy Keddeh</strong> &lt;<a href="mailto:aboudy@keddeh.com" style="color: #38bdf8;">aboudy@keddeh.com</a>&gt;
+      </div>
+      <div>
+        &copy; 2026 THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS. All rights reserved.<br>
+        Physical Invariant Lock: <code>0.297014</code> &bull; Zero Cloud Telemetry &bull; 100% Device-Local Sovereign Custody
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var events = [];
+
+    // Pre-populate with a starter example event
+    var today = new Date().toISOString().split('T')[0];
+    events.push({
+      date: today,
+      title: 'Initial Adverse Notification / Dispute Inception',
+      desc: 'Received written correspondence regarding disputed terms. Retained immediate contemporaneous record.',
+      evidence: 'Letter_Dated_' + today + '.pdf (Exhibit A)',
+      type: 'Email / Message'
+    });
+
+    function updateCategoryGuidance() {
+      var cat = document.getElementById('matter-situation').value;
+      var stat = document.getElementById('matter-statute');
+      var guid = document.getElementById('matter-guidance');
+
+      if (cat === 'workplace') {
+        stat.value = 'Fair Work Act 2009 (Cth) / National Employment Standards';
+        guid.innerHTML = '<strong>Statutory Focus:</strong> 21-day limitation bar for unfair dismissal / general protections. Chronological nexus between protected action and adverse action is vital.';
+      } else if (cat === 'police') {
+        stat.value = 'Law Enforcement (Powers and Responsibilities) Act 2002 / Evidence Act 1995';
+        guid.innerHTML = '<strong>Statutory Focus:</strong> Section 138 exclusion of improperly obtained evidence. Record exact officer IDs, warnings given, and contemporaneous timeline.';
+      } else if (cat === 'tenancy') {
+        stat.value = 'Residential Tenancies Act / State Tribunal Rules (NCAT/VCAT/QCAT)';
+        guid.innerHTML = '<strong>Statutory Focus:</strong> Strict statutory notice periods (e.g. 14-day breach remedy). Condition reports and photo evidence establish definitive baseline.';
+      } else if (cat === 'contracts') {
+        stat.value = 'Australian Consumer Law (CCA 2010) / Common Law Contract';
+        guid.innerHTML = '<strong>Statutory Focus:</strong> Breach of essential term vs warranty. Liquidated damages, quantum meruit, and formal Letter of Demand compliance.';
+      } else {
+        stat.value = 'Family Law Act 1975 (Cth) / Uniform Evidence Acts';
+        guid.innerHTML = '<strong>Statutory Focus:</strong> Section 60I dispute resolution certificates, best interests principle, and comprehensive balance sheet disclosure.';
+      }
+      render();
+    }
+
+    function addEvent() {
+      var d = document.getElementById('event-date').value;
+      var t = document.getElementById('event-title').value.trim();
+      var desc = document.getElementById('event-desc').value.trim();
+      var ev = document.getElementById('event-evidence').value.trim();
+      var type = document.getElementById('event-type').value;
+
+      if (!d || !t) {
+        alert('Please enter both an Event Date and Event Title.');
+        return;
+      }
+
+      events.push({
+        date: d,
+        title: t,
+        desc: desc || 'No additional details noted.',
+        evidence: ev || 'Contemporaneous statement of party',
+        type: type
+      });
+
+      // Sort events chronologically
+      events.sort(function(a, b) { return a.date.localeCompare(b.date); });
+
+      // Clear input fields
+      document.getElementById('event-title').value = '';
+      document.getElementById('event-desc').value = '';
+      document.getElementById('event-evidence').value = '';
+
+      render();
+    }
+
+    function removeEvent(idx) {
+      events.splice(idx, 1);
+      render();
+    }
+
+    function render() {
+      var cont = document.getElementById('timeline-container');
+      cont.innerHTML = '';
+      document.getElementById('event-count').innerText = events.length + ' Events Recorded';
+
+      events.forEach(function(ev, idx) {
+        var el = document.createElement('div');
+        el.className = 'timeline-item';
+        el.innerHTML = '<div style="position:absolute; right:12px; top:12px;"><button onclick="removeEvent(' + idx + ')" style="background:none; border:none; color:#ef4444; font-size:12px; cursor:pointer;">&times; Remove</button></div>' +
+          '<div class="timeline-date">' + ev.date + ' &bull; ' + ev.type + '</div>' +
+          '<div class="timeline-title">' + ev.title + '</div>' +
+          '<div class="timeline-desc">' + ev.desc + '</div>' +
+          '<div class="timeline-evidence"><strong>Exhibit:</strong> ' + ev.evidence + '</div>';
+        cont.appendChild(el);
+      });
+
+      compileBrief();
+    }
+
+    function compileBrief() {
+      var title = document.getElementById('matter-title').value;
+      var parties = document.getElementById('matter-parties').value;
+      var statute = document.getElementById('matter-statute').value;
+      var cat = document.getElementById('matter-situation').value.toUpperCase();
+
+      var text = '================================================================================
+';
+      text += '               CASEPATH EVIDENTIARY CASE PREPARATION BRIEF
+';
+      text += '       Prepared under the Authority of THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS
+';
+      text += '================================================================================
+
+';
+      text += 'MATTER TITLE    : ' + title + '
+';
+      text += 'OPPOSING PARTY  : ' + parties + '
+';
+      text += 'DISPUTE JURISD. : ' + cat + ' (COMMON LAW / AUSTRALIA)
+';
+      text += 'STATUTORY BASIS : ' + statute + '
+';
+      text += 'COMPILED AT     : ' + new Date().toISOString() + '
+';
+      text += 'EVIDENCE LOCK   : UNLOCKED FOR BETA DISPUTE ASSESSMENT
+
+';
+      text += '--------------------------------------------------------------------------------
+';
+      text += 'I. CHRONOLOGICAL STATEMENT OF ADMISSIBLE FACTS
+';
+      text += '--------------------------------------------------------------------------------
+
+';
+
+      events.forEach(function(ev, idx) {
+        text += '[' + (idx + 1) + '] DATE: ' + ev.date + ' | ' + ev.title + '
+';
+        text += '    NARRATIVE: ' + ev.desc + '
+';
+        text += '    EVIDENCE : ' + ev.evidence + ' (' + ev.type + ')
+
+';
+      });
+
+      text += '--------------------------------------------------------------------------------
+';
+      text += 'II. STATUTORY COMPLIANCE & LEGAL NOTICES
+';
+      text += '--------------------------------------------------------------------------------
+';
+      text += '1. Contemporaneous Evidence: Documents identified herein were created contemporaneously
+';
+      text += '   with the transactions in accordance with Section 69 of the Evidence Act 1995 (Cth).
+';
+      text += '2. Settlement Privilege: Without Prejudice discussions (s131) are strictly segregated
+';
+      text += '   from the open factual timeline recorded above.
+';
+      text += '3. Data Sovereignty: Generated locally on the CasePath client runtime.
+
+';
+      text += '================================================================================
+';
+      text += 'END OF BRIEF &bull; THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS
+';
+      text += '================================================================================';
+
+      document.getElementById('brief-output').innerText = text;
+    }
+
+    function exportBrief() {
+      var text = document.getElementById('brief-output').innerText;
+      var blob = new Blob([text], { type: 'text/markdown' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'CasePath_Brief_' + new Date().toISOString().split('T')[0] + '.md';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function copyBrief() {
+      var text = document.getElementById('brief-output').innerText;
+      navigator.clipboard.writeText(text).then(function() {
+        alert('Case brief copied to clipboard!');
+      });
+    }
+
+    // Initial render
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('event-date').value = today;
+      updateCategoryGuidance();
+    });
+  </script>
+</body>
+</html>

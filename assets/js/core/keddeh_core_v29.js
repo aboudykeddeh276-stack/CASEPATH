@@ -1,7 +1,7 @@
 /**
  * KEDDEH / BRAINK Core Engine Evolution v29
  * Advanced Transactional VFS, Merkle Receipt Ledger, and DAG Skill Dispatcher
- * Operating Authority: THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236)
+ * Operating Authority: THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS (ABN 79 691 036 236)
  */
 
 class TransactionalVFS {

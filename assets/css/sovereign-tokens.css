@@ -1,0 +1,164 @@
+/**
+ * Sovereign Design & Architecture Tokens v2.0
+ * Authority: THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236)
+ * Architect: Aboudy Keddeh <aboudy@keddeh.com>
+ *
+ * Universal Deterministic Design Token Engine.
+ * All HTMLs, components, buttons, margins, columns, and color schemes tie into these CSS Custom Properties.
+ * Controlled dynamically at runtime by SovereignControlColor, SovereignControlButton, and SovereignControlLayout.
+ */
+
+:root {
+  /* --------------------------------------------------------------------------
+     1. COLOR SCHEME CONVENTIONS (Default: Sovereign Emerald & British Racing Green)
+     -------------------------------------------------------------------------- */
+  --cp-color-primary: #173f3a;
+  --cp-color-primary-dark: #0f2b27;
+  --cp-color-primary-light: #235c55;
+  --cp-color-secondary: #2e6f65;
+  --cp-color-accent: #3a887c;
+  --cp-color-gold: #b58d3d;
+  --cp-color-gold-light: #fef8eb;
+  
+  /* Backgrounds & Surfaces */
+  --cp-color-bg: #ffffff;
+  --cp-color-bg-alt: #f8f6f0;
+  --cp-color-card-bg: #ffffff;
+  --cp-color-card-border: #e2ddd3;
+  --cp-color-card-border-hover: #173f3a;
+  --cp-color-card-featured-bg: #fdfcfb;
+  
+  /* Text & Contrast Hierarchy */
+  --cp-color-text: #172321;
+  --cp-color-text-body: #3b4644;
+  --cp-color-text-muted: #667571;
+  --cp-color-text-subtle: #8a9995;
+  --cp-color-text-inverse: #ffffff;
+
+  /* Status Indicators */
+  --cp-color-success: #1a6b47;
+  --cp-color-success-bg: #e6f4ea;
+  --cp-color-warning: #b45309;
+  --cp-color-warning-bg: #fef3c7;
+  --cp-color-danger: #b91c1c;
+  --cp-color-danger-bg: #fee2e2;
+  --cp-color-info: #1d4ed8;
+  --cp-color-info-bg: #dbeafe;
+
+  /* --------------------------------------------------------------------------
+     2. BUTTON DESIGN CONVENTIONS
+     -------------------------------------------------------------------------- */
+  --cp-btn-radius: 10px;
+  --cp-btn-padding-y: 14px;
+  --cp-btn-padding-x: 22px;
+  --cp-btn-font-size: 1rem;
+  --cp-btn-font-weight: 700;
+  --cp-btn-letter-spacing: 0.01em;
+  --cp-btn-shadow: 0 4px 14px rgba(23, 63, 58, 0.12);
+  --cp-btn-shadow-hover: 0 8px 22px rgba(23, 63, 58, 0.2);
+  --cp-btn-transform: translateY(-1px);
+  --cp-btn-border-width: 1px;
+
+  /* --------------------------------------------------------------------------
+     3. LAYOUT, MARGINS & COLUMN CONVENTIONS
+     -------------------------------------------------------------------------- */
+  --cp-container-max: 1200px;
+  --cp-page-margin: 24px;
+  --cp-section-padding-y: 64px;
+  --cp-grid-cols: 3;
+  --cp-col-gap: 24px;
+  --cp-row-gap: 28px;
+  --cp-card-radius: 16px;
+  --cp-card-padding: 32px;
+  --cp-card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --cp-card-shadow-hover: 0 16px 40px rgba(23, 63, 58, 0.1);
+
+  /* --------------------------------------------------------------------------
+     4. TYPOGRAPHY HIERARCHY
+     -------------------------------------------------------------------------- */
+  --cp-font-serif: 'Cormorant Garamond', Georgia, serif;
+  --cp-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --cp-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ----------------------------------------------------------------------------
+   UNIVERSAL COMPONENT ADAPTER CLASSES TIED TO TOKENS
+   ---------------------------------------------------------------------------- */
+
+.sov-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--cp-btn-padding-y) var(--cp-btn-padding-x);
+  border-radius: var(--cp-btn-radius);
+  font-family: var(--cp-font-sans);
+  font-size: var(--cp-btn-font-size);
+  font-weight: var(--cp-btn-font-weight);
+  letter-spacing: var(--cp-btn-letter-spacing);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: var(--cp-btn-border-width) solid transparent;
+  box-sizing: border-box;
+}
+
+.sov-btn--primary {
+  background: var(--cp-color-primary);
+  color: var(--cp-color-text-inverse);
+  box-shadow: var(--cp-btn-shadow);
+  border-color: var(--cp-color-primary);
+}
+
+.sov-btn--primary:hover {
+  background: var(--cp-color-primary-dark);
+  box-shadow: var(--cp-btn-shadow-hover);
+  transform: var(--cp-btn-transform);
+}
+
+.sov-btn--outline {
+  background: transparent;
+  color: var(--cp-color-primary);
+  border-color: var(--cp-color-primary);
+}
+
+.sov-btn--outline:hover {
+  background: var(--cp-color-bg-alt);
+  transform: var(--cp-btn-transform);
+}
+
+.sov-card {
+  background: var(--cp-color-card-bg);
+  border: 1px solid var(--cp-color-card-border);
+  border-radius: var(--cp-card-radius);
+  padding: var(--cp-card-padding);
+  box-shadow: var(--cp-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.sov-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--cp-card-shadow-hover);
+  border-color: var(--cp-color-card-border-hover);
+}
+
+.sov-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cp-grid-cols), minmax(0, 1fr));
+  gap: var(--cp-row-gap) var(--cp-col-gap);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .sov-grid {
+    grid-template-columns: repeat(min(2, var(--cp-grid-cols)), minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .sov-grid {
+    grid-template-columns: 1fr;
+  }
+}

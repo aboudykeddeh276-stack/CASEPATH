@@ -1,7 +1,7 @@
 /**
  * CASEPATH AUSTRALIAN FAMILY LAW STATUTORY RULE ENGINE (v2026.08.26)
  * Direct implementation of Family Law Act 1975 (Cth), 2024 Amendments, and FCFCOA Rules.
- * Operating Authority: THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236)
+ * Operating Authority: THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS (ABN 79 691 036 236)
  */
 
 (function(window) {

@@ -224,7 +224,7 @@ footer.site-footer {
 
   <!-- Unified Sovereign Carrier Mesh Bar -->
   <div class="carrier-bar">
-    <div>SOVEREIGN CARRIER MESH // THE LAYNA COMPANY PTY LIMITED</div>
+    <div>SOVEREIGN CARRIER MESH // THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS</div>
     <div>
       <a href="https://casepath.com.au" class="active">CasePath (Prep)</a>
       <a href="https://claimpath.ai">ClaimPath (Claims)</a>
@@ -239,12 +239,13 @@ footer.site-footer {
       <a href="/index.html" class="brand-title">CasePath</a>
       <nav class="main-nav">
         <a href="/index.html">Situations</a>
+        <a href="/workbench.html" style="color:var(--cp-gold); font-weight:700;">Workbench (Beta)</a>
         <a href="/pricing.html">Pricing</a>
         <a href="/compare.html">Cost Comparison</a>
         <a href="/assessment.html" class="active">Readiness Check</a>
         <a href="/glossary.html">Glossary</a>
       </nav>
-      <a href="/index.html?mode=prepare" class="btn-cta">Start Preparation</a>
+      <a href="/workbench.html" class="btn-cta">Launch Workbench</a>
     </div>
   </header>
 
@@ -399,8 +400,8 @@ footer.site-footer {
           You have substantial written evidence, but missing timeline cohesion poses billable risk.
         </p>
         <div style="display:flex; justify-content:center; gap:16px;">
-          <a id="result-cta-btn" href="/index.html?mode=prepare" class="btn-cta" style="padding:12px 24px;">
-            Begin Structured Preparation ($149 Pass)
+          <a id="result-cta-btn" href="/workbench.html" class="btn-cta" style="padding:12px 24px;">
+            Open Interactive Preparation Workbench (Unlocked Beta)
           </a>
           <button onclick="location.reload()" style="background:none; border:1px solid var(--cp-border); padding:12px 20px; border-radius:6px; font-weight:600; cursor:pointer;">
             Retake Assessment
@@ -419,7 +420,7 @@ footer.site-footer {
         </p>
         <p style="margin-top:16px; font-size:11px; color:#7e9c95;">
           Operating Division of <strong>Keddeh systems</strong><br>
-          Parent Entity: <strong>THE LAYNA COMPANY PTY LIMITED</strong><br>
+          Parent Entity: <strong>THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS</strong><br>
           ABN: 79 691 036 236 &bull; ACN: 691 036 236<br>
           Author: Aboudy Keddeh &lt;aboudy@keddeh.com&gt;
         </p>
@@ -455,7 +456,7 @@ footer.site-footer {
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 THE LAYNA COMPANY PTY LIMITED. All rights reserved.</div>
+      <div>&copy; 2026 THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS. All rights reserved.</div>
       <div>AUSTRALIAN SOVEREIGN ENTERPRISE INFRASTRUCTURE</div>
     </div>
   </footer>
@@ -481,7 +482,7 @@ footer.site-footer {
       res.style.display = 'block';
 
       document.getElementById('score-num').innerText = baseScore;
-      document.getElementById('result-cta-btn').href = '/index.html?situation=' + q1 + '&mode=prepare';
+      document.getElementById('result-cta-btn').href = '/workbench.html?situation=' + q1;
 
       if (q3 === 'urgent') {
         document.getElementById('score-headline').innerText = 'Urgent Limitation Warning &mdash; Immediate Action Needed';

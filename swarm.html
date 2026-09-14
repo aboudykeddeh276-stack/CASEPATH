@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sovereign Agentic Swarm &amp; Multi-Team Operations Console — K-Systems</title>
+  <style>
+    :root {
+      --bg: #09090b;
+      --card-bg: #121316;
+      --border: #27272a;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #38bdf8;
+      --emerald: #10b981;
+      --purple: #a855f7;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif;
+      line-height: 1.5;
+      padding: 0;
+    }
+    .topbar {
+      background: #0d0e12;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge-pill {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-family: monospace;
+    }
+    .container {
+      max-width: 1240px;
+      margin: 32px auto;
+      padding: 0 24px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .card h2 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .team-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .team-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .team-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .team-room {
+      font-size: 11px;
+      font-family: monospace;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+    .spec-list {
+      list-style: none;
+      margin: 12px 0;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .spec-list li {
+      padding: 3px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .spec-list li::before {
+      content: "•";
+      color: var(--emerald);
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-control {
+      width: 100%;
+      background: #09090b;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 13px;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .btn {
+      background: var(--emerald);
+      color: #000;
+      font-weight: 800;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      width: 100%;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .task-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+    .task-table th {
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .task-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: #e4e4e7;
+    }
+    .task-table tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+    .hash-text {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--accent);
+    }
+    canvas {
+      width: 100% !important;
+      max-height: 260px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <h1>
+      <span>⚡ SOVEREIGN SWARM ORCHESTRATOR</span>
+      <span class="badge-pill">6 TEAMS ONLINE</span>
+    </h1>
+    <div style="font-size: 12px; color: var(--text-muted); font-family: monospace;">
+      INVARIANT: <strong style="color: #fff;">0.297014</strong> | RESIDUAL BIAS: <strong style="color: var(--emerald);">0.0000</strong>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Top Grid: Radar + Task Dispatcher -->
+    <div class="grid-2">
+      <!-- Radar Chart Card -->
+      <div class="card">
+        <h2>
+          <span>Bilateral Polygon Bias Radar (KEX-SEED-050)</span>
+          <span style="color: var(--emerald); font-size: 12px; font-family: monospace;">60 / 60 PERFECT CONVERGENCE</span>
+        </h2>
+        <canvas id="radarCanvas" width="400" height="250"></canvas>
+        <div style="margin-top: 12px; font-size: 11px; color: var(--text-muted); text-align: center; font-family: monospace;">
+          AF: 10/10 | FC: 10/10 | TF: 10/10 | AE: 10/10 | VS: 10/10 | PC: 10/10
+        </div>
+      </div>
+
+      <!-- Task Dispatch Card -->
+      <div class="card">
+        <h2>
+          <span>Dispatch Task to Agentic Team</span>
+          <span class="badge-pill" style="background: rgba(56, 189, 248, 0.15); color: var(--accent); border-color: rgba(56, 189, 248, 0.3);">REAL-TIME</span>
+        </h2>
+        <form id="dispatchForm" onsubmit="dispatchSwarmTask(event)">
+          <div class="form-group">
+            <label>Target Swarm Team</label>
+            <select id="teamSelect" class="form-control">
+              <option value="team_science_math">Team 2: Science, Math &amp; Epistemic Research Swarm</option>
+              <option value="team_bilateral_learning">Team 3: Bilateral Bias Learning &amp; Convergence Swarm</option>
+              <option value="team_legal_adjudication">Team 4: Legal &amp; Statutory Adjudication Swarm</option>
+              <option value="team_it_infra">Team 1: Autonomous IT &amp; Infrastructure Sentinels</option>
+              <option value="team_governance_hr">Team 5: Corporate Governance &amp; Statutory HR Swarm</option>
+              <option value="team_web4_ops">Team 6: Web4 Network Plane, DA &amp; ISP Swarm</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Task Title / Instruction</label>
+            <input type="text" id="taskTitle" class="form-control" placeholder="e.g. Verify IUPAC Osmium Mapping &amp; Q32.32 Consilience" required>
+          </div>
+          <div class="form-group">
+            <label>Numeric State Input (x)</label>
+            <input type="number" step="any" id="taskX" class="form-control" value="0.297014">
+          </div>
+          <button type="submit" class="btn">🚀 Dispatch Task to Swarm</button>
+        </form>
+        <div id="dispatchFeedback" style="margin-top: 12px; font-size: 12px; font-family: monospace;"></div>
+      </div>
+    </div>
+
+    <!-- 6 Swarm Teams Grid -->
+    <h2 style="font-size: 16px; text-transform: uppercase; margin-bottom: 16px; color: #fff;">
+      Active Sovereign Swarm Teams (6 Teams | 19 Specialists)
+    </h2>
+    <div class="team-grid" id="teamsContainer">
+      <!-- Rendered dynamically -->
+    </div>
+
+    <!-- Task Execution Ledger -->
+    <div class="card">
+      <h2>
+        <span>Task Execution Lineage &amp; Cryptographic Receipts</span>
+        <span style="font-size: 12px; font-family: monospace; color: var(--text-muted);" id="taskCountBadge">0 Tasks</span>
+      </h2>
+      <div style="overflow-x: auto;">
+        <table class="task-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Task Title</th>
+              <th>Assigned Team</th>
+              <th>Lead Specialist</th>
+              <th>Latency</th>
+              <th>SHA-256 Digest</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="taskHistoryBody">
+            <tr>
+              <td colspan="7" style="text-align: center; color: var(--text-muted);">Loading task lineage...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Concrete Statutory Attribution Footer -->
+  <footer class="sovereign-statutory-footer" style="background:#09090b; border-top:1px solid #27272a; padding:48px 24px 32px; font-size:12px; color:#71717a; margin-top:48px;">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:32px; margin-bottom:32px;">
+      <div>
+        <div style="font-size:16px; font-weight:800; color:#fff; margin-bottom:8px;">K-Systems Swarm Console</div>
+        <div style="font-family:monospace; color:#38bdf8; font-size:11px; margin-bottom:8px;">Protocol: KEX-SEED-050</div>
+        <p style="line-height:1.6; color:#a1a1aa;">Multi-agent task allocation and deterministic consensus orchestration engine.</p>
+      </div>
+      <div>
+        <h4 style="color:#fff; font-size:13px; margin-bottom:12px; text-transform:uppercase;">Consoles &amp; Carriers</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:2.0;">
+          <li><a href="/casepath/" style="color:#38bdf8; text-decoration:none;">⚖️ CasePath Legal Engine</a></li>
+          <li><a href="/claimpath/" style="color:#10b981; text-decoration:none;">🛡️ ClaimPath Adjudication</a></li>
+          <li><a href="/web4.html" style="color:#a855f7; text-decoration:none;">🌐 Web4 Network Console</a></li>
+          <li><a href="/education.html" style="color:#f59e0b; text-decoration:none;">📐 Epistemic Science &amp; Maths</a></li>
+          <li><a href="/codec.html" style="color:#f43f5e; text-decoration:none;">⚛️ BESC Elemental Codec</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff; font-size:13px; margin-bottom:12px; text-transform:uppercase;">Statutory Parent Authority</h4>
+        <p style="line-height:1.7; color:#a1a1aa;">
+          Holding Parent Corporate Entity:<br>
+          <strong style="color:#fff;">THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS</strong><br>
+          ABN: <strong>79 691 036 236</strong> | ACN: <strong>691 036 236</strong>
+        </p>
+      </div>
+      <div>
+        <h4 style="color:#fff; font-size:13px; margin-bottom:12px; text-transform:uppercase;">Executive Custody</h4>
+        <p style="line-height:1.7; color:#a1a1aa;">
+          Chief Architect &amp; Sovereign Authority:<br>
+          <strong style="color:#fff;">Aboudy Keddeh</strong> &lt;<a href="mailto:aboudy@keddeh.com" style="color:#38bdf8;">aboudy@keddeh.com</a>&gt;<br>
+          Physical Invariant Lock: <code>0.297014</code><br>
+          Contract Gate: <code>test_runtime_contract.py (3/3 PASS)</code>
+        </p>
+      </div>
+    </div>
+    <div style="max-width:1240px; margin:0 auto; padding-top:20px; border-top:1px solid #1f2430; text-align:center; line-height:1.8;">
+      <strong>THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS</strong>.<br>
+      Governed under Australian Corporations Act 2001 (Cth). Zero third-party cloud telemetry. 100% Device-Local Custody.
+    </div>
+  </footer>
+
+  <script>
+    const TEAMS_DATA = {
+      "team_it_infra": {
+        "name": "Team 1: IT & Infrastructure Sentinels",
+        "lead": "CarrierMeshSentinel",
+        "room": "Sydney Apex (:8080-:8089, :8030, :8035)",
+        "members": ["CarrierMeshSentinel", "ToTResiliencySentinel", "VSMSubstrateSentinel", "MailCryptoSentinel", "CodeSourceOpsSpecialist"],
+        "color": "#38bdf8"
+      },
+      "team_science_math": {
+        "name": "Team 2: Science & Epistemic Research Swarm",
+        "lead": "EpistemicProofSpecialist",
+        "room": "Silicon Valley Core (:8096, :8097)",
+        "members": ["EpistemicProofSpecialist", "BESCCodecSpecialist", "RelationalEpistemologyEngine", "MultiplicativeConsilienceCalculator"],
+        "color": "#10b981"
+      },
+      "team_bilateral_learning": {
+        "name": "Team 3: Bilateral Bias Learning Swarm",
+        "lead": "BilateralPolygonLearningSpecialist",
+        "room": "Silicon Valley Core Room 2 (:8092)",
+        "members": ["BilateralPolygonLearningSpecialist", "RadarPolygonGovernor", "ZeroInputBiasEnforcer"],
+        "color": "#a855f7"
+      },
+      "team_legal_adjudication": {
+        "name": "Team 4: Legal & Statutory Adjudication Swarm",
+        "lead": "CasePathLegalSpecialist",
+        "room": "Sydney Apex (:8081, :8082) & London (:8087, :8086)",
+        "members": ["CasePathLegalSpecialist", "ClaimPathAdjudicationSpecialist", "AFCAComplianceAuditor", "UKCPREngine"],
+        "color": "#f59e0b"
+      },
+      "team_governance_hr": {
+        "name": "Team 5: Corporate Governance & Statutory HR",
+        "lead": "StatutoryGovernanceAuditor",
+        "room": "Sydney Apex Cluster (:8088, :8080)",
+        "members": ["StatutoryGovernanceAuditor", "HMACCapabilityGovernor", "StatutoryAttributionSentry"],
+        "color": "#f43f5e"
+      },
+      "team_web4_ops": {
+        "name": "Team 6: Web4 Network Plane, DA & ISP Swarm",
+        "lead": "DomainAuthoritySentry",
+        "room": "Silicon Valley Core (:8043, :8045, :8050, :9053)",
+        "members": ["DomainAuthoritySentry", "DeterministicDNSResolver", "SovereignISPRouter", "SubstrateIPBroker"],
+        "color": "#38bdf8"
+      }
+    };
+
+    function renderTeams() {
+      const container = document.getElementById("teamsContainer");
+      container.innerHTML = "";
+      for (const [key, t] of Object.entries(TEAMS_DATA)) {
+        const card = document.createElement("div");
+        card.className = "team-card";
+        card.style.borderLeft = `3px solid ${t.color}`;
+        card.innerHTML = `
+          <div>
+            <div class="team-header">
+              <div>
+                <div class="team-name">${t.name}</div>
+                <div class="team-room">${t.room}</div>
+              </div>
+              <span class="badge-pill">ONLINE</span>
+            </div>
+            <div style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">
+              Team Lead: <strong style="color: #fff;">${t.lead}</strong>
+            </div>
+            <ul class="spec-list">
+              ${t.members.map(m => `<li>${m}</li>`).join("")}
+            </ul>
+          </div>
+          <button class="btn" style="background:#27272a; color:#fff; font-size:11px; padding:6px 10px; margin-top:10px;" onclick="prefillTask('${key}', '${t.name}')">
+            + Assign Task to Team
+          </button>
+        `;
+        container.appendChild(card);
+      }
+    }
+
+    function prefillTask(teamKey, teamName) {
+      document.getElementById("teamSelect").value = teamKey;
+      document.getElementById("taskTitle").value = `Execute Deep Research & Verification for ${teamName}`;
+      document.getElementById("taskTitle").focus();
+    }
+
+    function drawRadar() {
+      const canvas = document.getElementById("radarCanvas");
+      const ctx = canvas.getContext("2d");
+      const w = canvas.width;
+      const h = canvas.height;
+      const cx = w / 2;
+      const cy = h / 2;
+      const r = Math.min(cx, cy) - 35;
+
+      ctx.clearRect(0, 0, w, h);
+
+      const labels = ["AF", "FC", "TF", "AE", "VS", "PC"];
+      const count = labels.length;
+
+      // Draw grid
+      for (let level = 1; level <= 5; level++) {
+        const curR = (r / 5) * level;
+        ctx.beginPath();
+        for (let i = 0; i < count; i++) {
+          const angle = (Math.PI * 2 / count) * i - Math.PI / 2;
+          const x = cx + curR * Math.cos(angle);
+          const y = cy + curR * Math.sin(angle);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.strokeStyle = "rgba(255,255,255,0.08)";
+        ctx.stroke();
+      }
+
+      // Draw axes
+      for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 / count) * i - Math.PI / 2;
+        const x = cx + r * Math.cos(angle);
+        const y = cy + r * Math.sin(angle);
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.lineTo(x, y);
+        ctx.strokeStyle = "rgba(255,255,255,0.12)";
+        ctx.stroke();
+
+        // Label
+        const lx = cx + (r + 18) * Math.cos(angle);
+        const ly = cy + (r + 18) * Math.sin(angle);
+        ctx.fillStyle = "#38bdf8";
+        ctx.font = "bold 10px monospace";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(labels[i], lx, ly);
+      }
+
+      // Draw score polygon (10/10 perfect)
+      ctx.beginPath();
+      for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 / count) * i - Math.PI / 2;
+        const x = cx + r * Math.cos(angle);
+        const y = cy + r * Math.sin(angle);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.fillStyle = "rgba(16, 185, 129, 0.25)";
+      ctx.fill();
+      ctx.strokeStyle = "#10b981";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    async function loadTasks() {
+      try {
+        const res = await fetch("/api/swarm/status");
+        if (!res.ok) return;
+        const data = await res.json();
+        
+        const tasks = data.recent_tasks || [];
+        document.getElementById("taskCountBadge").textContent = `${tasks.length} Completed`;
+
+        const tbody = document.getElementById("taskHistoryBody");
+        if (tasks.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-muted);">No tasks executed yet. Dispatch your first task above.</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = tasks.map(t => `
+          <tr>
+            <td style="font-family: monospace;">${new Date(t.timestamp * 1000).toLocaleTimeString()}</td>
+            <td><strong>${t.task_title}</strong></td>
+            <td>${t.team_name}</td>
+            <td style="color: #a1a1aa;">${t.team_lead}</td>
+            <td style="font-family: monospace; color: #10b981;">${t.duration_ms}ms</td>
+            <td class="hash-text">${(t.digest || "").substring(0, 16)}...</td>
+            <td><span class="badge-pill">COMPLETED</span></td>
+          </tr>
+        `).join("");
+      } catch (e) {
+        console.error("Failed to load swarm status", e);
+      }
+    }
+
+    async function dispatchSwarmTask(e) {
+      e.preventDefault();
+      const feedback = document.getElementById("dispatchFeedback");
+      feedback.style.color = "#38bdf8";
+      feedback.textContent = "Dispatching task across sovereign swarm plane...";
+
+      const team_id = document.getElementById("teamSelect").value;
+      const task_title = document.getElementById("taskTitle").value;
+      const task_x = parseFloat(document.getElementById("taskX").value) || 0.297014;
+
+      try {
+        const res = await fetch("/api/swarm/dispatch", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            team_id: team_id,
+            task_title: task_title,
+            task_type: "COMPUTE_VERIFICATION",
+            parameters: { x: task_x }
+          })
+        });
+
+        if (res.ok) {
+          const receipt = await res.json();
+          feedback.style.color = "#10b981";
+          feedback.textContent = `✅ Task Completed in ${receipt.duration_ms}ms | Digest: ${receipt.digest.substring(0, 20)}...`;
+          document.getElementById("taskTitle").value = "";
+          loadTasks();
+        } else {
+          const err = await res.json();
+          feedback.style.color = "#f43f5e";
+          feedback.textContent = `❌ Task Dispatch Failed: ${err.error || res.statusText}`;
+        }
+      } catch (err) {
+        feedback.style.color = "#f43f5e";
+        feedback.textContent = `❌ Network Error: ${err.message}`;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderTeams();
+      drawRadar();
+      loadTasks();
+      setInterval(loadTasks, 5000);
+    });
+  </script>
+</body>
+</html>

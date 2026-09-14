@@ -1,31 +1,14 @@
 
 <!DOCTYPE html>
-<html lang="en" class="casepath-booting" data-casepath-surface="app-workspace">
+<html lang="en" data-casepath-surface="app-workspace">
 <head>
-<meta name="casepath-build" content="20260727iosscroll1">
+<meta name="casepath-build" content="20260914-sovereign-beta">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<style id="casepath-boot-placeholder">
-  html.casepath-booting {
-    min-height: 100%;
-    background: #f7f4ed;
-  }
-  html.casepath-booting::before {
-    content: "Loading CasePath...";
-    position: fixed;
-    inset: 0;
-    z-index: 2147483647;
-    display: grid;
-    place-items: center;
-    padding: 2rem;
-    background: #f7f4ed;
-    color: #244236;
-    font-family: var(--cp-font-body);
-    font-size: var(--cp-type-body);
-    font-weight: var(--cp-weight-bold);
-    letter-spacing: 0.02em;
-  }
-</style>
+<script>
+  window.__CASEPATH_BETA_UNLOCKED = true;
+  document.documentElement.classList.remove('casepath-booting');
+</script>
 <meta name="casepath-supabase-auth-captcha" content="true">
 <meta name="casepath-turnstile-site-key" content="0x4AAAAAADUYDl4M5bsDNyNJ">
 <script>window.CASEPATH_SUPABASE_AUTH_CAPTCHA=true;</script>

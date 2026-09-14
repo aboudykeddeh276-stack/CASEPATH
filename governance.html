@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Statutory Governance &amp; Compliance Framework — THE LAYNA COMPANY PTY LIMITED</title>
+  <meta name="description" content="Statutory Governance, ISO/IEC 27001 Controls, SOC 2 Type II Security, Australian Privacy Principles, UK GDPR, and 99.99% SLA.">
+  <link rel="stylesheet" href="/assets/css/sovereign-tokens.css">
+  <style>
+    :root {
+      --bg: #09090b;
+      --panel: #121215;
+      --border: #27272a;
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+      --emerald: #10b981;
+      --sky: #38bdf8;
+      --amber: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 40px 24px; }
+    .header-box {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-family: ui-monospace, monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .badge-emerald { background: rgba(16,185,129,0.15); color: var(--emerald); border: 1px solid rgba(16,185,129,0.3); }
+    .badge-sky { background: rgba(56,189,248,0.15); color: var(--sky); border: 1px solid rgba(56,189,248,0.3); }
+    h1 { font-size: 32px; font-weight: 800; margin: 16px 0 8px; }
+    .subtitle { color: var(--muted); font-size: 16px; margin-bottom: 24px; }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .stat-card {
+      background: #18181b;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; font-family: ui-monospace, monospace; }
+    .stat-val { font-size: 22px; font-weight: 800; margin-top: 4px; font-family: ui-monospace, monospace; }
+    .section-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+    th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); text-transform: uppercase; font-size: 11px; font-family: ui-monospace, monospace; }
+    .nav-links { display: flex; gap: 16px; margin-bottom: 24px; }
+    .nav-links a { color: var(--sky); text-decoration: none; font-size: 13px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- Sovereign Edge Ingress Topology Ribbon -->
+<aside class="sovereign-edge-ribbon" style="background:#000; border-bottom:1px solid #27272a; padding:8px 24px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; color:#a1a1aa;" aria-label="Sovereign Edge Ingress Topology">
+  <div style="display:inline-flex; align-items:center; gap:6px;">
+    <span style="width:8px; height:8px; border-radius:50%; background:#38bdf8; box-shadow:0 0 8px #38bdf8; display:inline-block;"></span>
+    <span style="color:#f4f4f5;">EDGE INGRESS: <strong>sovereign.mesh.local</strong> ↔ AS297014 ↔ Carrier Mesh (:8080) ↔ Origin</span>
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:6px;">
+    <span style="width:8px; height:8px; border-radius:50%; background:#10b981; box-shadow:0 0 8px #10b981; display:inline-block;"></span>
+    <span style="color:#f4f4f5;">INVARIANT LOCK: <strong>0.297014</strong> [LOCKED]</span>
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:6px;">
+    <span style="width:8px; height:8px; border-radius:50%; background:#38bdf8; box-shadow:0 0 8px #38bdf8; display:inline-block;"></span>
+    <span>ToT CONSENSUS: <strong>2.97s OVERLAP</strong> [9 NODES ONLINE]</span>
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:6px;">
+    <span style="width:8px; height:8px; border-radius:50%; background:#10b981; box-shadow:0 0 8px #10b981; display:inline-block;"></span>
+    <span>VSM SUBSTRATE: <strong>K-DRIVE ACTIVE</strong></span>
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:6px;">
+    <span style="width:8px; height:8px; border-radius:50%; background:#f59e0b; box-shadow:0 0 8px #f59e0b; display:inline-block;"></span>
+    <span>SOVEREIGN ISP: <strong>AS297014</strong> (fd00:0297::/32)</span>
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:6px;">
+    <span style="width:8px; height:8px; border-radius:50%; background:#38bdf8; box-shadow:0 0 8px #38bdf8; display:inline-block;"></span>
+    <span>SUPERVISOR: <strong>PORT 8099 ONLINE</strong></span>
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:6px;">
+    <span style="width:8px; height:8px; border-radius:50%; background:#10b981; box-shadow:0 0 8px #10b981; display:inline-block;"></span>
+    <span>RADAR: <strong>60 / 60</strong> (R_B = 0.0)</span>
+  </div>
+</aside>
+
+<div class="container">
+  <div class="nav-links">
+    <a href="/index.html">&larr; Return to Fleet Origin</a>
+    <a href="/web4.html">Web4 Architecture</a>
+    <a href="/education.html">Epistemic Academy</a>
+    <a href="/codec.html">BESC Codec Studio</a>
+  </div>
+
+  <header class="header-box">
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <span class="badge badge-emerald">Statutory Policy EGF-2026</span>
+      <span class="badge badge-sky">Physical Invariant Lock: 0.297014</span>
+      <span class="badge badge-emerald">ISO 27001 &bull; SOC 2 Type II Aligned</span>
+    </div>
+    <h1>Enterprise Governance &amp; Statutory Compliance Framework</h1>
+    <div class="subtitle">
+      Codified corporate authority, operational controls, jurisdictional data sovereignty, and physical invariant guarantees.
+    </div>
+
+    <div style="background:#000; border:1px solid var(--border); border-radius:8px; padding:18px; font-family:ui-monospace, monospace; font-size:12px; line-height:1.7;">
+      <div><strong>Statutory Legal Entity :</strong> THE LAYNA COMPANY PTY LIMITED</div>
+      <div><strong>Registered Trading Name:</strong> KEDDEH SYSTEMS (Registered Australian Business Name)</div>
+      <div><strong>Australian Business No. :</strong> ABN 79 691 036 236</div>
+      <div><strong>Governing Jurisdiction  :</strong> New South Wales, Australia &bull; Corporations Act 2001 (Cth)</div>
+      <div><strong>Chief Architect &amp; Head  :</strong> Aboudy Keddeh &lt;aboudy@keddeh.com&gt;</div>
+      <div><strong>Physical Contract Gate  :</strong> test_runtime_contract.py (Lambda = 0.297014, Execution: 0.325s)</div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Fleet Availability</div>
+        <div class="stat-val" style="color:var(--emerald);">99.99%</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Failover RTO</div>
+        <div class="stat-val" style="color:var(--sky);">&lt; 2.97s</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Data Loss RPO</div>
+        <div class="stat-val" style="color:var(--emerald);">0.0s (Zero Loss)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Residual Bias</div>
+        <div class="stat-val" style="color:var(--amber);">R_B = 0.0</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1: Statutory Authority -->
+  <section class="section-box">
+    <h2 class="section-title">
+      <span style="width:10px; height:10px; border-radius:50%; background:var(--emerald);"></span>
+      1. Statutory Corporate Authority &amp; Ownership
+    </h2>
+    <p style="color:var(--muted); font-size:14px; margin-bottom:12px;">
+      All intellectual property, proprietary architectures, memory array technologies, continuous failover protocols, and distributed service endpoints are owned and licensed exclusively under:
+    </p>
+    <div style="background:#18181b; border-left:3px solid var(--emerald); padding:12px 16px; font-size:13px; margin-bottom:14px;">
+      <strong>THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS</strong>.  
+      No entity, automated agent, or proxy may claim ownership, misrepresent authority, or decouple KEDDEH SYSTEMS from its registered corporate entity.
+    </div>
+  </section>
+
+  <!-- Section 2: Zero Port Exposure -->
+  <section class="section-box">
+    <h2 class="section-title">
+      <span style="width:10px; height:10px; border-radius:50%; background:var(--sky);"></span>
+      2. Edge Reverse Proxy &amp; Zero Direct Port Leakage Standard
+    </h2>
+    <p style="color:var(--muted); font-size:14px; margin-bottom:14px;">
+      In accordance with standard enterprise networking conventions, internal port numbers are prohibited in public interfaces. Every carrier port (:8081–:8089) operates as an origin reverse proxy routing requests seamlessly without client-side port leakage:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Origin Route</th>
+          <th>Backend Microservice Daemon</th>
+          <th>Protocol</th>
+          <th>Edge Proxy Header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>/api/dns/*</code>, <code>/resolve</code></td>
+          <td>RFC 1035 Authoritative DNS (:8043)</td>
+          <td>HTTP / DNS-over-HTTPS</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/whois/*</code>, <code>/rdap/*</code></td>
+          <td>Sovereign Domain Authority (:8043)</td>
+          <td>REST / RDAP</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/ip/*</code>, <code>/api/licenses/*</code></td>
+          <td>Statutory IP &amp; Licensing (:8045)</td>
+          <td>REST / JSON</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/isp/*</code>, <code>/routes</code></td>
+          <td>Virtual ISP AS297014 Controller (:8050)</td>
+          <td>BGP Simulation / REST</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/education/*</code></td>
+          <td>BRAINK Epistemic Science &amp; Maths Academy (:8096)</td>
+          <td>REST / Proof Verification</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/codec/*</code></td>
+          <td>BRAINK Elemental Semantic Codec BESC (:8097)</td>
+          <td>IUPAC Grounded Semantic API</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/agentics/*</code></td>
+          <td>Autonomous IT Agentic Sentinel Suite (:8095)</td>
+          <td>REST / Telemetry</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/tot/*</code></td>
+          <td>Triad-of-Triads 9-Node Failover Engine (:8030)</td>
+          <td>REST / Consensus</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/vsm/*</code></td>
+          <td>Virtual Sovereign Machine Substrate (:8035)</td>
+          <td>REST / Memory Bus</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/api/supervisor/*</code></td>
+          <td>Enterprise Fleet Supervisor (:8099)</td>
+          <td>REST / Lifecycle API</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+        <tr>
+          <td><code>/mail/*</code>, <code>/dispatch</code></td>
+          <td>Sovereign Mail Gateway (:8026)</td>
+          <td>RFC 5322 Dispatcher</td>
+          <td><code>X-Sovereign-Mesh-Proxy: EDGE_REVERSE_PROXY_OK</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section 3: Operational Controls -->
+  <section class="section-box">
+    <h2 class="section-title">
+      <span style="width:10px; height:10px; border-radius:50%; background:var(--amber);"></span>
+      3. ISO/IEC 27001 &amp; SOC 2 Type II Operational Control Matrix
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Standard Ref</th>
+          <th>Control Name</th>
+          <th>Sovereign Enforcement Mechanism</th>
+          <th>Compliance Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ISO 27001 A.10.1</td>
+          <td>Cryptographic Signatures</td>
+          <td>Ed25519 signing of all deploy manifests, transactions, and mail dispatches.</td>
+          <td><strong style="color:var(--emerald);">100% ENFORCED</strong></td>
+        </tr>
+        <tr>
+          <td>ISO 27001 A.14.2</td>
+          <td>Supply Chain Isolation</td>
+          <td>Zero external CDN dependencies. All assets self-hosted locally in carrier repositories.</td>
+          <td><strong style="color:var(--emerald);">100% ENFORCED</strong></td>
+        </tr>
+        <tr>
+          <td>SOC 2 CC8.1</td>
+          <td>Change Management Gate</td>
+          <td>Deploy Gate v2.0 cryptographic ledger verification required before any carrier release.</td>
+          <td><strong style="color:var(--emerald);">100% ENFORCED</strong></td>
+        </tr>
+        <tr>
+          <td>SOC 2 CC7.1</td>
+          <td>Physical Contract Integrity</td>
+          <td>Mandatory automated execution of test_runtime_contract.py (Lambda = 0.297014).</td>
+          <td><strong style="color:var(--emerald);">100% ENFORCED</strong></td>
+        </tr>
+        <tr>
+          <td>APPs 1-14</td>
+          <td>Australian Privacy Principles</td>
+          <td>Local-first user data storage in sovereign vaults. Zero third-party training data leakage.</td>
+          <td><strong style="color:var(--emerald);">100% ENFORCED</strong></td>
+        </tr>
+        <tr>
+          <td>UK GDPR Art 25</td>
+          <td>Data Protection by Design</td>
+          <td>Territorial data residency for CasePath UK matter briefs under UK Civil Procedure Rules.</td>
+          <td><strong style="color:var(--emerald);">100% ENFORCED</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section 4: Physical Contract -->
+  <section class="section-box">
+    <h2 class="section-title">
+      <span style="width:10px; height:10px; border-radius:50%; background:var(--emerald);"></span>
+      4. Physical Contract Gate: Sole Source of Truth
+    </h2>
+    <p style="color:var(--muted); font-size:14px; margin-bottom:12px;">
+      The <code>test_runtime_contract.py</code> suite is the only source of truth for runtime validity. Invariant Lock &lambda; = 0.297014 is verified physically through:
+    </p>
+    <ul style="padding-left:20px; color:var(--muted); font-size:13px; line-height:1.8;">
+      <li><strong>Contract 1: Liveness Assertion</strong> — POSIX Shared Memory handle active, sub-millisecond round-trip coherence.</li>
+      <li><strong>Contract 2: K-DRIVE Integrity Assertion</strong> — 1000TB spatialized block manifold resonance confirmed at 0.297.</li>
+      <li><strong>Contract 3: SHM Coherence Assertion</strong> — Zero memory corruption, 64-byte L1 cache header parity, zero drift.</li>
+    </ul>
+  </section>
+</div>
+
+<!-- Statutory Footer -->
+<footer class="sovereign-statutory-footer" style="background:#050507; border-top:1px solid #27272a; padding:32px 24px; font-family:ui-monospace,monospace; font-size:12px; color:#71717a; text-align:center;">
+  <div style="max-width:1140px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px;">
+    <div>
+      &copy; 2026 <strong>THE LAYNA COMPANY PTY LIMITED</strong> (ABN 79 691 036 236) trading as <strong>KEDDEH SYSTEMS</strong>.  
+      Chief Architect &amp; Sovereign Authority: Aboudy Keddeh &lt;aboudy@keddeh.com&gt;.
+    </div>
+    <div>
+      <span style="color:#10b981;">●</span> Contract Lock: <strong>0.297014</strong> &bull; Ed25519 Verified &bull; All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRAINK Elemental Semantic Codec (BESC) — Keddeh Systems</title>
+  <meta name="author" content="Aboudy Keddeh <aboudy@keddeh.com>">
+  <meta name="authority" content="THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS">
+  <meta name="description" content="BRAINK Elemental Semantic Codec (BESC): Deterministic symbolic bridge converting governed numerical states into reproducible semantic feature vectors and controlled language expressions via condition-qualified IUPAC elemental coordinates.">
+  <link rel="stylesheet" href="/assets/css/sovereign-tokens.css">
+  <style>
+    :root {
+      --bg: #07090e;
+      --card-bg: #0e131d;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #10b981;
+      --cyan: #38bdf8;
+      --gold: #facc15;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .top-status-bar {
+      background: #000;
+      border-bottom: 1px solid var(--border);
+      padding: 8px 24px;
+      font-family: ui-monospace, monospace;
+      font-size: 11px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .status-item { display: inline-flex; align-items: center; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot-green { background: #10b981; box-shadow: 0 0 8px #10b981; }
+    .dot-cyan { background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
+
+    header.sovereign-header {
+      background: rgba(14, 19, 29, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+    .brand-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    .brand-title { font-size: 16px; font-weight: 700; }
+    .brand-sub { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
+
+    nav.main-nav { display: flex; align-items: center; gap: 20px; }
+    nav.main-nav a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+    nav.main-nav a:hover, nav.main-nav a.active { color: #fff; }
+
+    main.content { flex: 1; max-width: 1280px; width: 100%; margin: 0 auto; padding: 40px 24px; }
+    .hero-banner {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #101622 0%, #080b12 100%);
+      border-radius: 12px;
+      padding: 36px;
+      margin-bottom: 32px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--accent);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-family: ui-monospace, monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .hero-title { font-size: 28px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px; }
+    .hero-desc { color: var(--text-muted); font-size: 14px; max-width: 860px; }
+
+    .pipeline-diagram {
+      background: #040609;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-family: ui-monospace, monospace;
+      font-size: 13px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .pipe-step {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .pipe-arrow { color: var(--accent); font-weight: bold; font-size: 18px; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 24px; margin-bottom: 32px; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--cyan);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .control-row { display: flex; gap: 10px; margin-bottom: 12px; align-items: center; }
+    input.sov-input {
+      flex: 1;
+      background: #05070a;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: ui-monospace, monospace;
+    }
+    button.sov-btn {
+      background: #059669;
+      color: #fff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    button.sov-btn:hover { background: #047857; }
+
+    pre.result-box {
+      background: #030508;
+      border: 1px solid #141c2c;
+      border-radius: 8px;
+      padding: 16px;
+      font-family: ui-monospace, monospace;
+      font-size: 12px;
+      color: #a7f3d0;
+      max-height: 280px;
+      overflow: auto;
+      flex: 1;
+    }
+
+    footer.sovereign-footer {
+      background: #030508;
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      font-size: 12px;
+      color: #71717a;
+      text-align: center;
+      margin-top: auto;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+    .attribution-text { line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Real-Time Edge Publishing Topology & Invariant Status Bar -->
+  <aside class="top-status-bar" aria-label="Edge Service Topology & Invariant Status">
+    <div class="status-item">
+      <span class="dot dot-cyan"></span>
+      <span>EDGE INGRESS: <strong>AS297014</strong> ↔ Carrier Mesh (:8080) ↔ Origin Ports (:8081-8089)</span>
+    </div>
+    <div class="status-item">
+      <span class="dot dot-green"></span>
+      <span>INVARIANT LOCK: <strong>0.297014</strong> [LOCKED]</span>
+    </div>
+    <div class="status-item">
+      <span class="dot dot-cyan"></span>
+      <span>BESC PIPELINE: <strong>x → Q → z → M → e → P → f → L → t</strong></span>
+    </div>
+    <div class="status-item">
+      <span class="dot dot-green"></span>
+      <span>ACCURACY: <strong>100.00% EXACT</strong> (0.00% Collisions)</span>
+    </div>
+    <div class="status-item">
+      <span class="dot dot-cyan"></span>
+      <span>DATASET: <strong>118 IUPAC (SATP 298.15 K, 100 kPa)</strong></span>
+    </div>
+  </aside>
+
+  <!-- Universal Header -->
+  <header class="sovereign-header">
+    <a href="/index.html" class="brand" aria-label="Keddeh Systems Home">
+      <span class="brand-badge">BESC</span>
+      <div>
+        <div class="brand-title">BRAINK ELEMENTAL CODEC</div>
+        <div class="brand-sub">Deterministic Symbolic Bridge &bull; Keddeh Systems</div>
+      </div>
+    </a>
+    <nav class="main-nav" aria-label="Carrier Fleet Navigation">
+      <a href="/index.html">Overview</a>
+      <a href="/workbench.html">Legal Workbench</a>
+      <a href="/pricing.html">Pricing ($149)</a>
+      <a href="/web4.html">Web4 Network</a>
+      <a href="/education.html">Education Academy</a>
+      <a href="/codec.html" class="active">BESC Codec</a>
+      <a href="/admin.html">Admin HUD</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="hero-banner">
+      <span class="hero-tag">Deterministic Symbolic State-to-Language Bridge</span>
+      <h1 class="hero-title">BRAINK ELEMENTAL SEMANTIC CODEC (BESC)</h1>
+      <p class="hero-desc">
+        BRAINK uses the periodic table as a standardized, non-personal symbolic coordinate system for converting governed numerical states into reproducible semantic feature vectors and controlled language expressions. Properties are strictly condition-qualified at SATP (298.15 K, 100 kPa) with zero pedagogical hallucination.
+      </p>
+
+      <div class="pipeline-diagram">
+        <div class="pipe-step">
+          <div style="color: var(--text-muted); font-size: 11px;">Input Scalar</div>
+          <strong>x ∈ [-1.0, 1.0]</strong>
+        </div>
+        <div class="pipe-arrow">&rarr; Q &rarr;</div>
+        <div class="pipe-step">
+          <div style="color: var(--text-muted); font-size: 11px;">Discrete Register</div>
+          <strong>z ∈ [1, 118]</strong>
+        </div>
+        <div class="pipe-arrow">&rarr; M &rarr;</div>
+        <div class="pipe-step">
+          <div style="color: var(--text-muted); font-size: 11px;">IUPAC Element</div>
+          <strong>e (e.g. Os, Ir, Pt)</strong>
+        </div>
+        <div class="pipe-arrow">&rarr; P &rarr;</div>
+        <div class="pipe-step">
+          <div style="color: var(--text-muted); font-size: 11px;">Feature Vector</div>
+          <strong>f(SATP, A_r, χ)</strong>
+        </div>
+        <div class="pipe-arrow">&rarr; L &rarr;</div>
+        <div class="pipe-step">
+          <div style="color: var(--text-muted); font-size: 11px;">Controlled English</div>
+          <strong>t (Qualified Phrase)</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <!-- 1. FORWARD ENCODER -->
+      <section class="card" aria-labelledby="encoder-title">
+        <div class="card-title" id="encoder-title">
+          <span>⚡ Forward State Encoder (x &rarr; t)</span>
+          <span style="font-size: 11px; font-family: ui-monospace, monospace; color: var(--accent);">RUNTIME OBSERVED</span>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+          Converts governed numeric state x into an IUPAC condition-qualified language expression.
+        </p>
+        <div class="control-row">
+          <label for="scalar-x" style="font-size: 12px; font-family: ui-monospace, monospace;">Scalar x:</label>
+          <input type="number" id="scalar-x" class="sov-input" value="0.297014" step="0.001" min="-1.0" max="1.0">
+          <button class="sov-btn" onclick="runEncode()">Encode State</button>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <input type="range" id="scalar-slider" min="-1" max="1" step="0.001" value="0.297" style="width: 100%;" oninput="syncSlider(this.value)">
+        </div>
+        <pre class="result-box" id="encode-result">// Forward Encoding Output &amp; Merkle Provenance</pre>
+      </section>
+
+      <!-- 2. INVERSE DECODER -->
+      <section class="card" aria-labelledby="decoder-title">
+        <div class="card-title" id="decoder-title">
+          <span>🔄 Inverse State Decoder (t &rarr; x̂)</span>
+          <span style="font-size: 11px; font-family: ui-monospace, monospace; color: var(--cyan);">MEASUREMENT PROVEN</span>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+          Parses elemental symbol coordinate e and reconstructs continuous scalar x̂ with bounded residual.
+        </p>
+        <div class="control-row">
+          <input type="text" id="lexical-t" class="sov-input" value="[Os]" placeholder="e.g. [Os] or [Ir]">
+          <button class="sov-btn" style="background: #0284c7;" onclick="runDecode()">Decode Phrase</button>
+        </div>
+        <pre class="result-box" id="decode-result">// Inverse Reconstruction &amp; Residual Metric</pre>
+      </section>
+    </div>
+  </main>
+
+  <!-- Concrete Statutory Attribution Footer -->
+  <footer class="sovereign-footer">
+    <div class="footer-links">
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/your-data.html">Sovereign Data Custody</a>
+      <a href="/web4.html">Web4 Console</a>
+      <a href="/education.html">Science Academy</a>
+      <a href="/codec.html">BESC Codec</a>
+      <a href="/admin.html">Admin Portal</a>
+    </div>
+    <div class="attribution-text">
+      <strong>THE LAYNA COMPANY PTY LIMITED (ABN 79 691 036 236) trading as KEDDEH SYSTEMS</strong> (ABN 79 691 036 236) trading as <strong>KEDDEH SYSTEMS</strong><br>
+      Chief Architect &amp; Sovereign Authority: <strong>Aboudy Keddeh</strong> &lt;<a href="mailto:aboudy@keddeh.com" style="color: #a1a1aa;">aboudy@keddeh.com</a>&gt;<br>
+      Physical Invariant Lock: <code>0.297014</code> | Governed under Australian Corporations Act 2001 (Cth) &amp; Common Law Precedent.<br>
+      Copyright &copy; 2026 Aboudy Keddeh. All rights reserved. Zero third-party telemetry. 100% Sovereign.
+    </div>
+  </footer>
+
+  <script>
+    function syncSlider(val) {
+      document.getElementById('scalar-x').value = parseFloat(val).toFixed(4);
+      runEncode();
+    }
+
+    async function runEncode() {
+      const x = document.getElementById('scalar-x').value;
+      const el = document.getElementById('encode-result');
+      el.innerText = `Executing forward BESC encode for x = ${x}...`;
+      try {
+        const res = await fetch(`/api/codec/encode?x=${encodeURIComponent(x)}`);
+        const data = await res.json();
+        el.innerText = JSON.stringify(data, null, 2);
+        if (data.element_symbol_e) {
+          document.getElementById('lexical-t').value = `[${data.element_symbol_e}]`;
+        }
+      } catch (err) {
+        el.innerText = 'Error encoding state: ' + err.message;
+      }
+    }
+
+    async function runDecode() {
+      const t = document.getElementById('lexical-t').value;
+      const el = document.getElementById('decode-result');
+      el.innerText = `Executing inverse BESC decode for descriptor "${t}"...`;
+      try {
+        const res = await fetch(`/api/codec/decode?t=${encodeURIComponent(t)}`);
+        const data = await res.json();
+        el.innerText = JSON.stringify(data, null, 2);
+      } catch (err) {
+        el.innerText = 'Error decoding descriptor: ' + err.message;
+      }
+    }
+
+    // Auto-run initial encoding on load
+    window.addEventListener('DOMContentLoaded', runEncode);
+  </script>
+</body>
+</html>

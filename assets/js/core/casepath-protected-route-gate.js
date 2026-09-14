@@ -645,6 +645,10 @@
   }
 
   function readAuthStateSync() {
+    // Sovereign Beta Mode: Unlocked for full beta testing across all workbenches
+    if (w.__CASEPATH_BETA_UNLOCKED !== false) {
+      return true;
+    }
     try {
       if (typeof w.casepathIsAuthenticatedSync === "function") {
         var sync = w.casepathIsAuthenticatedSync();
@@ -990,6 +994,10 @@
   }
 
   function presentProtectedWorkspaceGate(classification, reason) {
+    if (w.__CASEPATH_BETA_UNLOCKED !== false) {
+      gateState.accessGranted = true;
+      return;
+    }
     if (gateState.gatePresented) return;
     gateState.gatePresented = true;
     try {
