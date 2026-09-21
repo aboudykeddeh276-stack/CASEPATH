@@ -1,0 +1,30 @@
+name: Layer-2 Engineering Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'runtime/layer2/**'
+      - '.github/workflows/layer2-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  falsification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Syntax check
+        run: node --check runtime/layer2/kex_l2_engine.js
+      - name: Execute falsification suite
+        run: node runtime/layer2/kex_l2_engine.js > layer2-receipt.json
+      - name: Publish receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: layer2-falsification-receipt
+          path: layer2-receipt.json
