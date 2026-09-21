@@ -5,14 +5,14 @@
     "repository": "aboudykeddeh276-stack/CASEPATH",
     "visibility": "public",
     "branch": "main",
-    "commit": "34b3ab81e131ce46f4339bd9204913b83a472b6c",
+    "commit": "887501a7bd08a6a3aebada2ecd56797ab05566e9",
     "verified": true
   },
   "executable_assets_verified": true,
   "live_domain": {
     "url": "https://casepath.com.au/runtime/kex-node/",
     "verified": false,
-    "reason": "Current public site is served, but this runtime path is not yet reachable from the observed public carrier."
+    "reason": "The public CasePath homepage is reachable and serves the existing production site, but the newly added runtime path is not yet reachable from the observed public serving carrier."
   },
   "github_pages": {
     "enabled": false,
