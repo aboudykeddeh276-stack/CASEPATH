@@ -18,9 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 24
+      - uses: actions/configure-pages@v5
+        id: pages
       - name: Validate runtime assets
         run: |
           node --check runtime/kex-node/runtime.js
@@ -34,6 +33,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp -R runtime/kex-node/. _site/
+          printf '%s\n' '{"runtime":"casepath.kex.public.runtime.v1","seed":"KEX-NODE-PUBLIC-CASEPATH-20260921-7A3F91C2","build":"validated"}' > _site/build-receipt.json
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
