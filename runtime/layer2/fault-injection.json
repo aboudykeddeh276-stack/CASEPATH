@@ -1,0 +1,15 @@
+{
+  "schema":"kex.layer2.fault-injection.v2",
+  "execution_target":"runtime/layer2/kex_l2_engine.js",
+  "faults":[
+    {"id":"duplicate","injection":"re-submit identical event","expected":"REJECTED"},
+    {"id":"replay","injection":"re-submit an older sequence","expected":"REJECTED"},
+    {"id":"stale_epoch","injection":"submit an event from an earlier epoch","expected":"REJECTED"},
+    {"id":"chain_break","injection":"alter predecessor hash","expected":"REJECTED"},
+    {"id":"zero_coordinate","injection":"submit coordinate 0:1","expected":"REJECTED"},
+    {"id":"coordinate_collision","injection":"register divergent node at occupied coordinate","expected":"REJECTED"},
+    {"id":"hash_tamper","injection":"mutate payload after payload hash creation","expected":"REJECTED"},
+    {"id":"unknown_predecessor","injection":"start a non-genesis chain with an unknown predecessor","expected":"REJECTED"},
+    {"id":"same_order_divergence","injection":"merge two independently admitted divergent states at the same order","expected":"CONFLICT"}
+  ]
+}
