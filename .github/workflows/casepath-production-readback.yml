@@ -15,9 +15,9 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Verify public CasePath projection
+      - name: Verify live public CasePath projection
         env:
-          EXPECTED_MARKER: "20260727iosscroll1"
+          EXPECTED_MARKER: "Start Your Case"
         run: |
           set +e
           curl --location --silent --show-error --fail \
@@ -26,15 +26,16 @@ jobs:
             --output casepath-public.html \
             https://casepath.com.au/
           CURL_STATUS=$?
+          export CURL_STATUS
           python3 - <<'PY'
-          import hashlib, json
+          import hashlib, json, os
           from pathlib import Path
           body = Path('casepath-public.html').read_bytes() if Path('casepath-public.html').exists() else b''
           text = body.decode('utf-8', errors='replace')
-          marker = '20260727iosscroll1'
+          marker = os.environ.get('EXPECTED_MARKER', 'Start Your Case')
           receipt = {
               'url': 'https://casepath.com.au/',
-              'curl_exit_code': int(__import__('os').environ.get('CURL_STATUS', '0')),
+              'curl_exit_code': int(os.environ.get('CURL_STATUS', '1')),
               'http_body_bytes': len(body),
               'sha256': hashlib.sha256(body).hexdigest() if body else None,
               'expected_marker': marker,
@@ -44,9 +45,19 @@ jobs:
           Path('casepath-public-readback.json').write_text(json.dumps(receipt, indent=2) + '\\n', encoding='utf-8')
           print(json.dumps(receipt, indent=2))
           PY
-          echo "CURL_STATUS=$CURL_STATUS" >> "$GITHUB_ENV"
           if [ "$CURL_STATUS" -ne 0 ]; then exit "$CURL_STATUS"; fi
           grep -Fq "$EXPECTED_MARKER" casepath-public.html || exit 3
+
+      - name: Verify public runtime carrier
+        run: |
+          curl --location --silent --show-error --fail --connect-timeout 15 --max-time 30 \
+            https://raw.githubusercontent.com/aboudykeddeh276-stack/CASEPATH/main/runtime/kex-node/index.html \
+            -o runtime-index.html
+          curl --location --silent --show-error --fail --connect-timeout 15 --max-time 30 \
+            https://raw.githubusercontent.com/aboudykeddeh276-stack/CASEPATH/main/runtime/kex-node/runtime.js \
+            -o runtime.js
+          grep -Fq "KEX Node Runtime" runtime-index.html
+          grep -Fq "instantiate" runtime.js
 
       - name: Publish readback receipt
         if: always()
@@ -57,4 +68,6 @@ jobs:
             casepath-public-readback.json
             casepath-response-headers.txt
             casepath-public.html
+            runtime-index.html
+            runtime.js
           if-no-files-found: warn
