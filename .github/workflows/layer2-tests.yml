@@ -19,22 +19,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Syntax check
-        run: node --check runtime/layer2/kex_l2_engine.js
-      - name: Execute falsification suite
-        id: execute
-        continue-on-error: true
+      - name: Execute and capture
         run: |
-          node runtime/layer2/kex_l2_engine.js > layer2-receipt.json
-          code=$?
-          cat layer2-receipt.json
-          exit $code
-      - name: Publish receipt
+          set +e
+          node --check runtime/layer2/kex_l2_engine.js > syntax.txt 2>&1
+          syntax=$?
+          node runtime/layer2/kex_l2_engine.js > layer2-receipt.json 2> runtime-error.txt
+          runtime=$?
+          printf '{"syntax_exit":%s,"runtime_exit":%s}\n' "$syntax" "$runtime" > execution-status.json
+          cat syntax.txt
+          cat runtime-error.txt
+          cat layer2-receipt.json || true
+      - name: Publish evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: layer2-falsification-receipt
-          path: layer2-receipt.json
-      - name: Assert suite passed
+          name: layer2-falsification-evidence
+          path: |
+            syntax.txt
+            runtime-error.txt
+            layer2-receipt.json
+            execution-status.json
+      - name: Assert execution
         run: |
-          node -e "const r=require('./layer2-receipt.json'); if(!r.all_passed) { console.error(JSON.stringify(r.tests,null,2)); process.exit(1); }"
+          node -e "const fs=require('fs'); const s=JSON.parse(fs.readFileSync('execution-status.json')); if(s.syntax_exit!==0||s.runtime_exit!==0) process.exit(1); const r=JSON.parse(fs.readFileSync('layer2-receipt.json')); if(!r.all_passed) process.exit(1);"
