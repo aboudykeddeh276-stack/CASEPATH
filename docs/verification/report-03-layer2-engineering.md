@@ -311,3 +311,43 @@ The executable engine produces a JSON receipt containing:
 - receipt hash.
 
 The receipt is generated from the observed execution result, not from a manually asserted success flag.
+
+
+## 15. Gate transition matrix
+
+| Gate | Required transition | Dependencies | Proof artifact | E4 acceptance | E5 acceptance |
+|---|---|---|---|---|---|
+| E2.1 Admission | raw event -> admitted/rejected state | ToT kernel | admission receipt | deterministic rejection of specified malformed/replay/tamper cases | independent nodes produce equivalent admission results |
+| E2.2 Coordinate | candidate coordinate -> directory record | directory + node identity | registration receipt | invalid/zero coordinates rejected; divergent local occupancy rejected | cross-node ownership conflict detected and retained |
+| E2.3 Reconciliation | admitted events -> APPLIED/IGNORED/CONFLICT | E2.1 + E2.2 | reconciliation receipt | deterministic duplicate/older/divergence handling | replicas converge under defined recovery protocol |
+| E2.4 Persistence | accepted state -> durable recoverable state | journal + checkpoint | recovery receipt | restart restores exact state and chain | crash injection preserves invariants |
+| E2.5 Transport | node state -> authenticated exchange | transport + identity | transport receipt | loss/duplication/reorder observable and handled | independent nodes exchange and recover state over real transport |
+| E2.6 Membership | node identity -> authorised participant | identity/key lifecycle | membership receipt | unauthorised participant rejected | join/leave/rekey/equivocation independently demonstrated |
+| E2.7 Partition | connected replicas -> partition -> recovery | transport + persistence + reconciliation | partition/recovery receipt | partitioned state retained without silent loss | recovery produces defined convergence result |
+| E2.8 Agreement | conflicting proposals -> defined outcome | membership + transport + reconciliation | agreement receipt | no undefined outcome | agreement property demonstrated under injected faults |
+
+E2 is a sequence of transitions, not a single system-works switch. Passing one gate does not establish later gates.
+
+E4 acceptance requires reproducible execution of the gate contract and defined fault cases. E5 acceptance requires independent execution across the external dependency boundary. For distributed gates this means independent processes or nodes and an actually exercised transport. Repository presence is not E5 runtime proof.
+
+## 16. Current observed CI state
+
+The Layer-2 workflow was pushed to main and triggered repeatedly. GitHub recorded completed runs with conclusion failure. The available GitHub connector did not expose step logs or artifacts for those runs; direct job-log retrieval returned a BlobNotFound response. Therefore the observed state is: CI INVOKED = YES; CI SUCCESS = NO; CI FAILURE CAUSE = NOT OBSERVABLE THROUGH THE AVAILABLE JOB-LOG INTERFACE. No passing CI result is claimed.
+
+The Layer-2 workflow is stored under .github/workflows/layer2-tests.yml, the documented GitHub Actions workflow location. GitHub documents runner selection and configurable GITHUB_TOKEN permissions. The repository's existing public-readback workflow is also failing on the same commits. This makes an Actions execution-environment or repository-workflow problem plausible, but the available evidence does not establish which one. That distinction remains explicit.
+
+## 17. E4/E5 status
+
+E2.1 LOCAL CONTRACT = IMPLEMENTED
+E2.2 LOCAL CONTRACT = IMPLEMENTED
+E2.3 LOCAL CONTRACT = IMPLEMENTED
+E2.4 DURABILITY = ABSENT
+E2.5 TRANSPORT = ABSENT
+E2.6 MEMBERSHIP = ABSENT
+E2.7 PARTITION/RECOVERY = ABSENT
+E2.8 AGREEMENT = ABSENT
+
+E4 LOCAL ACCEPTANCE = PARTIAL because repository CI execution is currently failing and its step-level cause is not observable through the available interface.
+E5 EXTERNAL/INDEPENDENT ACCEPTANCE = NOT MET.
+
+No E4/E5 status is promoted beyond the evidence actually obtained.
