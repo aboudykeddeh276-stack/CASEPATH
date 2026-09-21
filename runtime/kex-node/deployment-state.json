@@ -1,0 +1,22 @@
+{
+  "runtime_id": "casepath.kex.public.runtime.v1",
+  "seed_id": "KEX-NODE-PUBLIC-CASEPATH-20260921-7A3F91C2",
+  "carrier": {
+    "repository": "aboudykeddeh276-stack/CASEPATH",
+    "visibility": "public",
+    "branch": "main",
+    "commit": "34b3ab81e131ce46f4339bd9204913b83a472b6c",
+    "verified": true
+  },
+  "executable_assets_verified": true,
+  "live_domain": {
+    "url": "https://casepath.com.au/runtime/kex-node/",
+    "verified": false,
+    "reason": "Current public site is served, but this runtime path is not yet reachable from the observed public carrier."
+  },
+  "github_pages": {
+    "enabled": false,
+    "observed_from_repository_metadata": true
+  },
+  "next_transition": "Bind the public runtime artifact to the existing public serving carrier or enable/configure GitHub Pages without changing the protected authoritative service boundary."
+}
