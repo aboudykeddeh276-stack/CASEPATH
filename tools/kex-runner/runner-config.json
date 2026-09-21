@@ -1,0 +1,10 @@
+{
+  "schema": "kex.self-runner.config.v1",
+  "authority": "local-self-hosted",
+  "github_role": "source_distribution_only",
+  "execution": "native-node",
+  "evidence_directory": "evidence/self-runner",
+  "github_actions_required": false,
+  "external_services_required": false,
+  "success_condition": "syntax=PASS AND runtime=PASS AND passed=total"
+}
