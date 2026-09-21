@@ -22,9 +22,19 @@ jobs:
       - name: Syntax check
         run: node --check runtime/layer2/kex_l2_engine.js
       - name: Execute falsification suite
-        run: node runtime/layer2/kex_l2_engine.js > layer2-receipt.json
+        id: execute
+        continue-on-error: true
+        run: |
+          node runtime/layer2/kex_l2_engine.js > layer2-receipt.json
+          code=$?
+          cat layer2-receipt.json
+          exit $code
       - name: Publish receipt
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: layer2-falsification-receipt
           path: layer2-receipt.json
+      - name: Assert suite passed
+        run: |
+          node -e "const r=require('./layer2-receipt.json'); if(!r.all_passed) { console.error(JSON.stringify(r.tests,null,2)); process.exit(1); }"
