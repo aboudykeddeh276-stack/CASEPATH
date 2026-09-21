@@ -1,0 +1,50 @@
+name: CASEPATH KEX Public Runtime
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'runtime/kex-node/**'
+      - '.github/workflows/casepath-kex-public-runtime.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Validate runtime assets
+        run: |
+          node --check runtime/kex-node/runtime.js
+          node -e "const fs=require('fs'); for(const f of ['runtime/kex-node/node-definition.json','runtime/kex-node/manifest.json']) JSON.parse(fs.readFileSync(f,'utf8'));"
+          test -s runtime/kex-node/index.html
+          test -s runtime/kex-node/runtime.js
+          test -s runtime/kex-node/node-definition.json
+          test -s runtime/kex-node/manifest.json
+      - name: Build Pages artifact
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -R runtime/kex-node/. _site/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,19 @@
+{
+  "runtime_id":"casepath.kex.public.runtime.v1",
+  "seed_id":"KEX-NODE-PUBLIC-CASEPATH-20260921-7A3F91C2",
+  "definition":"./node-definition.json",
+  "entrypoint":"./index.html",
+  "runtime":"./runtime.js",
+  "execution":"client-side ES module",
+  "external_dependencies":[],
+  "public_source_repository":"aboudykeddeh276-stack/CASEPATH",
+  "authority_boundary":"public projection; authoritative services remain separate",
+  "verification_contract":[
+    "definition loads",
+    "deterministic canonicalisation rejects unsafe numbers",
+    "instance identity differs from definition identity",
+    "capability escalation is rejected",
+    "observer boundary is read-only",
+    "integration edges remain definition-bound"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "definition_id":"kex.node.casepath.public.runtime",
+  "version":"2.1.0",
+  "title":"CASEPATH Public Runtime Node",
+  "typed_ports":[
+    {"name":"target","type":"TargetProfile","direction":"input"},
+    {"name":"instance","type":"NodeInstance","direction":"output"},
+    {"name":"evidence","type":"RuntimeEvidence","direction":"output"}
+  ],
+  "attributes":{
+    "sector":"casepath",
+    "surface":"public-runtime",
+    "execution_model":"browser-static-module"
+  },
+  "attribution_graph":[
+    {"source":"KEX-NODE-SIP-02","relation":"derived-from"},
+    {"source":"CASEPATH","relation":"instantiated-for"}
+  ],
+  "capability_class":["observe","execute"],
+  "integration_edges":[
+    {"id":"casepath-public-hci","target":"public-hci","mode":"projection"},
+    {"id":"kex-node-identity","target":"node-identity-v2.1","mode":"runtime"}
+  ],
+  "target_constraints":{
+    "required":["observe","execute"]
+  }
+}
